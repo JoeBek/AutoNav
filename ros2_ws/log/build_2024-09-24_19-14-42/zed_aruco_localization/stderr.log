@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:69 (file):
+  file INSTALL cannot find
+  "/home/vtcro/ros2_ws/src/zed-ros2-examples/examples/zed_aruco_localization/DIRECTORY":
+  No such file or directory.
+
+[0m

@@ -1,0 +1,34 @@
+[35m[1mConsolidate compiler generated dependencies of target zed_rgb_convert_component[0m
+[ 50%] Built target zed_rgb_convert_component
+[35m[1mConsolidate compiler generated dependencies of target zed_rgb_convert[0m
+[100%] Built target zed_rgb_convert
+-- Install configuration: "Release"
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/lib/zed_rgb_convert/zed_rgb_convert
+-- Set runtime path of "/home/vtcro/ros2_ws/install/zed_rgb_convert/lib/zed_rgb_convert/zed_rgb_convert" to ""
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/lib/libzed_rgb_convert_component.so
+-- Set runtime path of "/home/vtcro/ros2_ws/install/zed_rgb_convert/lib/libzed_rgb_convert_component.so" to ""
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/include/zed_rgb_convert/
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/include/zed_rgb_convert//cvt_visibility_control.hpp
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/launch
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/launch/zed_rgb_convert.launch.py
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/environment/library_path.sh
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/environment/library_path.dsv
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/ament_index/resource_index/package_run_dependencies/zed_rgb_convert
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/ament_index/resource_index/parent_prefix_path/zed_rgb_convert
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/environment/ament_prefix_path.sh
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/environment/ament_prefix_path.dsv
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/environment/path.sh
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/environment/path.dsv
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/local_setup.bash
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/local_setup.sh
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/local_setup.zsh
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/local_setup.dsv
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/package.dsv
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/ament_index/resource_index/packages/zed_rgb_convert
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/ament_index/resource_index/rclcpp_components/zed_rgb_convert
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/cmake/zed_rgb_convertConfig.cmake
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/cmake/zed_rgb_convertConfig-version.cmake
+-- Installing: /home/vtcro/ros2_ws/install/zed_rgb_convert/share/zed_rgb_convert/package.xml

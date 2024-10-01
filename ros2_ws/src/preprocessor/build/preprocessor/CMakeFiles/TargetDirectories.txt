@@ -1,0 +1,10 @@
+/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor/CMakeFiles/uninstall.dir
+/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor/CMakeFiles/preprocessor_uninstall.dir
+/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor/CMakeFiles/preprocess.dir
+/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor/CMakeFiles/test.dir
+/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor/CMakeFiles/edit_cache.dir
+/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor/CMakeFiles/rebuild_cache.dir
+/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor/CMakeFiles/list_install_components.dir
+/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor/CMakeFiles/install.dir
+/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor/CMakeFiles/install/local.dir
+/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor/CMakeFiles/install/strip.dir

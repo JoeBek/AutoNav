@@ -1,0 +1,26 @@
+[0.022s] Invoking command in '/home/vtcro/ros2_ws/build/preprocessor': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vtcro/ros2_ws/build/preprocessor -- -j16 -l16
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target preprocess[0m
+[0.058s] [ 50%] [32mBuilding CXX object CMakeFiles/preprocess.dir/src/preprocess.cpp.o[0m
+[5.227s] [100%] [32m[1mLinking CXX executable preprocess[0m
+[5.662s] [100%] Built target preprocess
+[5.672s] Invoked command in '/home/vtcro/ros2_ws/build/preprocessor' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vtcro/ros2_ws/build/preprocessor -- -j16 -l16
+[5.695s] Invoking command in '/home/vtcro/ros2_ws/build/preprocessor': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vtcro/ros2_ws/build/preprocessor
+[5.701s] -- Install configuration: ""
+[5.701s] -- Execute custom install script
+[5.701s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/lib/preprocessor/preprocess
+[5.701s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/ament_index/resource_index/package_run_dependencies/preprocessor
+[5.702s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/ament_index/resource_index/parent_prefix_path/preprocessor
+[5.702s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/environment/ament_prefix_path.sh
+[5.702s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/environment/ament_prefix_path.dsv
+[5.702s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/environment/path.sh
+[5.702s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/environment/path.dsv
+[5.702s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/local_setup.bash
+[5.702s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/local_setup.sh
+[5.702s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/local_setup.zsh
+[5.702s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/local_setup.dsv
+[5.702s] -- Symlinking: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/package.dsv
+[5.708s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/ament_index/resource_index/packages/preprocessor
+[5.708s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/cmake/preprocessorConfig.cmake
+[5.708s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/cmake/preprocessorConfig-version.cmake
+[5.708s] -- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/package.xml
+[5.709s] Invoked command in '/home/vtcro/ros2_ws/build/preprocessor' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vtcro/ros2_ws/build/preprocessor

@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from zed_interfaces/msg/GnssFusionStatus.msg
+// generated code does not contain a copyright notice
+
+
+module zed_interfaces {
+  module msg {
+    module GnssFusionStatus_Constants {
+      const uint8 OK = 0;
+      const uint8 OFF = 1;
+      const uint8 CALIBRATION_IN_PROGRESS = 2;
+      const uint8 RECALIBRATION_IN_PROGRESS = 3;
+    };
+    @verbatim (language="comment", text=
+      "GNSS_FUSION_STATUS" "\n"
+      "Represents the current state of GNSS fusion for global localization." "\n"
+      "OK - The GNSS fusion module is calibrated and working successfully." "\n"
+      "OFF - The GNSS fusion module is not enabled." "\n"
+      "CALIBRATION_IN_PROGRESS - Calibration of the GNSS/VIO fusion module is in progress." "\n"
+      "RECALIBRATION_IN_PROGRESS- Re-alignment of GNSS/VIO data is in progress, leading to potentially inaccurate global position.")
+    struct GnssFusionStatus {
+      uint8 gnss_fusion_status;
+    };
+  };
+};

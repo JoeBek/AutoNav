@@ -1,0 +1,54 @@
+[0.008s] Invoking command in '/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/vtcro/ros2_ws/src/preprocessor -DCMAKE_INSTALL_PREFIX=/home/vtcro/ros2_ws/src/preprocessor/install/preprocessor
+[0.017s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.092s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.095s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.111s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.112s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.115s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.120s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.127s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.145s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.146s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.206s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.233s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.248s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.256s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.306s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.306s] -- Configured cppcheck include dirs: 
+[0.306s] -- Configured cppcheck exclude dirs and/or files: 
+[0.307s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.310s] -- Added test 'lint_cmake' to check CMake code style
+[0.311s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.320s] -- Added test 'uncrustify' to check C / C++ code style
+[0.320s] -- Configured uncrustify additional arguments: 
+[0.322s] -- Added test 'xmllint' to check XML markup files
+[0.322s] -- Configuring done
+[0.328s] -- Generating done
+[0.329s] -- Build files have been written to: /home/vtcro/ros2_ws/src/preprocessor/build/preprocessor
+[0.334s] Invoked command in '/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/vtcro/ros2_ws/src/preprocessor -DCMAKE_INSTALL_PREFIX=/home/vtcro/ros2_ws/src/preprocessor/install/preprocessor
+[0.336s] Invoking command in '/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vtcro/ros2_ws/src/preprocessor/build/preprocessor -- -j16 -l16
+[0.373s] [35m[1mConsolidate compiler generated dependencies of target preprocess[0m
+[0.386s] [ 50%] [32mBuilding CXX object CMakeFiles/preprocess.dir/src/preprocess.cpp.o[0m
+[5.305s] [100%] [32m[1mLinking CXX executable preprocess[0m
+[5.734s] [100%] Built target preprocess
+[5.745s] Invoked command in '/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vtcro/ros2_ws/src/preprocessor/build/preprocessor -- -j16 -l16
+[5.782s] Invoking command in '/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vtcro/ros2_ws/src/preprocessor/build/preprocessor
+[5.788s] -- Install configuration: ""
+[5.788s] -- Execute custom install script
+[5.788s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/lib/preprocessor/preprocess
+[5.788s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/ament_index/resource_index/package_run_dependencies/preprocessor
+[5.789s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/ament_index/resource_index/parent_prefix_path/preprocessor
+[5.789s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/preprocessor/environment/ament_prefix_path.sh
+[5.789s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/preprocessor/environment/ament_prefix_path.dsv
+[5.789s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/preprocessor/environment/path.sh
+[5.789s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/preprocessor/environment/path.dsv
+[5.789s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/preprocessor/local_setup.bash
+[5.789s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/preprocessor/local_setup.sh
+[5.789s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/preprocessor/local_setup.zsh
+[5.789s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/preprocessor/local_setup.dsv
+[5.789s] -- Symlinking: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/preprocessor/package.dsv
+[5.795s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/ament_index/resource_index/packages/preprocessor
+[5.795s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/preprocessor/cmake/preprocessorConfig.cmake
+[5.795s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/preprocessor/cmake/preprocessorConfig-version.cmake
+[5.795s] -- Up-to-date symlink: /home/vtcro/ros2_ws/src/preprocessor/install/preprocessor/share/preprocessor/package.xml
+[5.797s] Invoked command in '/home/vtcro/ros2_ws/src/preprocessor/build/preprocessor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vtcro/ros2_ws/src/preprocessor/build/preprocessor

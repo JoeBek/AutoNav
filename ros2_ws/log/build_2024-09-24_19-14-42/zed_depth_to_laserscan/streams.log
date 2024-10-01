@@ -1,0 +1,70 @@
+[0.029s] Invoking command in '/home/vtcro/ros2_ws/build/zed_depth_to_laserscan': CMAKE_PREFIX_PATH=/home/vtcro/ros2_ws/install/zed_wrapper:/home/vtcro/ros2_ws/install/zed_components:/home/vtcro/ros2_ws/install/zed_interfaces:/home/vtcro/ros2_ws/install/zed_ros2:/opt/ros/humble LD_LIBRARY_PATH=/home/vtcro/ros2_ws/install/zed_components/lib:/home/vtcro/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-12/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12/lib64 /usr/bin/cmake /home/vtcro/ros2_ws/src/zed-ros2-examples/examples/zed_depth_to_laserscan -DCMAKE_INSTALL_PREFIX=/home/vtcro/ros2_ws/install/zed_depth_to_laserscan
+[0.090s] -- The C compiler identification is GNU 11.4.0
+[0.163s] -- The CXX compiler identification is GNU 11.4.0
+[0.173s] -- Detecting C compiler ABI info
+[0.248s] -- Detecting C compiler ABI info - done
+[0.255s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.256s] -- Detecting C compile features
+[0.256s] -- Detecting C compile features - done
+[0.259s] -- Detecting CXX compiler ABI info
+[0.344s] -- Detecting CXX compiler ABI info - done
+[0.355s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.356s] -- Detecting CXX compile features
+[0.356s] -- Detecting CXX compile features - done
+[0.359s] -- Found ament_cmake_auto: 1.3.10 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.550s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.811s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.824s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.836s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.851s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.879s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.943s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.948s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.066s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.103s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.144s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.156s] -- Looking for pthread.h
+[1.243s] -- Looking for pthread.h - found
+[1.243s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.323s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.325s] -- Found Threads: TRUE  
+[1.600s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.602s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.602s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.868s] -- Found zed_wrapper: 4.1.0 (/home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/cmake)
+[1.870s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.894s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.896s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.897s] -- Added test 'lint_cmake' to check CMake code style
+[1.897s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.898s] -- Added test 'xmllint' to check XML markup files
+[1.900s] -- Configuring done
+[1.907s] -- Generating done
+[1.909s] -- Build files have been written to: /home/vtcro/ros2_ws/build/zed_depth_to_laserscan
+[1.922s] Invoked command in '/home/vtcro/ros2_ws/build/zed_depth_to_laserscan' returned '0': CMAKE_PREFIX_PATH=/home/vtcro/ros2_ws/install/zed_wrapper:/home/vtcro/ros2_ws/install/zed_components:/home/vtcro/ros2_ws/install/zed_interfaces:/home/vtcro/ros2_ws/install/zed_ros2:/opt/ros/humble LD_LIBRARY_PATH=/home/vtcro/ros2_ws/install/zed_components/lib:/home/vtcro/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-12/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12/lib64 /usr/bin/cmake /home/vtcro/ros2_ws/src/zed-ros2-examples/examples/zed_depth_to_laserscan -DCMAKE_INSTALL_PREFIX=/home/vtcro/ros2_ws/install/zed_depth_to_laserscan
+[1.924s] Invoking command in '/home/vtcro/ros2_ws/build/zed_depth_to_laserscan': CMAKE_PREFIX_PATH=/home/vtcro/ros2_ws/install/zed_wrapper:/home/vtcro/ros2_ws/install/zed_components:/home/vtcro/ros2_ws/install/zed_interfaces:/home/vtcro/ros2_ws/install/zed_ros2:/opt/ros/humble LD_LIBRARY_PATH=/home/vtcro/ros2_ws/install/zed_components/lib:/home/vtcro/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-12/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12/lib64 /usr/bin/cmake --build /home/vtcro/ros2_ws/build/zed_depth_to_laserscan -- -j16 -l16
+[1.971s] Invoked command in '/home/vtcro/ros2_ws/build/zed_depth_to_laserscan' returned '0': CMAKE_PREFIX_PATH=/home/vtcro/ros2_ws/install/zed_wrapper:/home/vtcro/ros2_ws/install/zed_components:/home/vtcro/ros2_ws/install/zed_interfaces:/home/vtcro/ros2_ws/install/zed_ros2:/opt/ros/humble LD_LIBRARY_PATH=/home/vtcro/ros2_ws/install/zed_components/lib:/home/vtcro/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-12/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12/lib64 /usr/bin/cmake --build /home/vtcro/ros2_ws/build/zed_depth_to_laserscan -- -j16 -l16
+[1.997s] Invoking command in '/home/vtcro/ros2_ws/build/zed_depth_to_laserscan': CMAKE_PREFIX_PATH=/home/vtcro/ros2_ws/install/zed_wrapper:/home/vtcro/ros2_ws/install/zed_components:/home/vtcro/ros2_ws/install/zed_interfaces:/home/vtcro/ros2_ws/install/zed_ros2:/opt/ros/humble LD_LIBRARY_PATH=/home/vtcro/ros2_ws/install/zed_components/lib:/home/vtcro/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-12/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12/lib64 /usr/bin/cmake --install /home/vtcro/ros2_ws/build/zed_depth_to_laserscan
+[2.006s] -- Install configuration: ""
+[2.006s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/launch
+[2.006s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/launch/zed_depth_to_laserscan.launch.py
+[2.006s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/config
+[2.006s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/config/zed_depth_to_laserscan.yaml
+[2.006s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/rviz2
+[2.006s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/rviz2/zed_depth_to_laserscan.rviz
+[2.006s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/ament_index/resource_index/package_run_dependencies/zed_depth_to_laserscan
+[2.007s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/ament_index/resource_index/parent_prefix_path/zed_depth_to_laserscan
+[2.007s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/environment/ament_prefix_path.sh
+[2.007s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/environment/ament_prefix_path.dsv
+[2.007s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/environment/path.sh
+[2.007s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/environment/path.dsv
+[2.007s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/local_setup.bash
+[2.008s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/local_setup.sh
+[2.008s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/local_setup.zsh
+[2.008s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/local_setup.dsv
+[2.008s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/package.dsv
+[2.008s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/ament_index/resource_index/packages/zed_depth_to_laserscan
+[2.008s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/cmake/zed_depth_to_laserscanConfig.cmake
+[2.008s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/cmake/zed_depth_to_laserscanConfig-version.cmake
+[2.009s] -- Installing: /home/vtcro/ros2_ws/install/zed_depth_to_laserscan/share/zed_depth_to_laserscan/package.xml
+[2.011s] Invoked command in '/home/vtcro/ros2_ws/build/zed_depth_to_laserscan' returned '0': CMAKE_PREFIX_PATH=/home/vtcro/ros2_ws/install/zed_wrapper:/home/vtcro/ros2_ws/install/zed_components:/home/vtcro/ros2_ws/install/zed_interfaces:/home/vtcro/ros2_ws/install/zed_ros2:/opt/ros/humble LD_LIBRARY_PATH=/home/vtcro/ros2_ws/install/zed_components/lib:/home/vtcro/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-12/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12/lib64 /usr/bin/cmake --install /home/vtcro/ros2_ws/build/zed_depth_to_laserscan

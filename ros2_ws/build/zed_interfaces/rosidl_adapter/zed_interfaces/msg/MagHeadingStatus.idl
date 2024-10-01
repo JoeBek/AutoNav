@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from zed_interfaces/msg/MagHeadingStatus.msg
+// generated code does not contain a copyright notice
+
+
+module zed_interfaces {
+  module msg {
+    module MagHeadingStatus_Constants {
+      const uint8 GOOD = 0;
+      const uint8 OK = 1;
+      const uint8 NOT_GOOD = 2;
+      const uint8 NOT_CALIBRATED = 3;
+      const uint8 MAG_NOT_AVAILABLE = 4;
+    };
+    @verbatim (language="comment", text=
+      "Status constants" "\n"
+      " GOOD               The heading is reliable and not affected by iron interferences." "\n"
+      " OK                 The heading is reliable, but affected by slight iron interferences." "\n"
+      " NOT_GOOD           The heading is not reliable because affected by strong iron interferences." "\n"
+      " NOT_CALIBRATED     The magnetometer has not been calibrated." "\n"
+      " MAG_NOT_AVAILABLE  The magnetometer sensor is not available.")
+    struct MagHeadingStatus {
+      @verbatim (language="comment", text=
+        "Status")
+      uint8 status;
+    };
+  };
+};

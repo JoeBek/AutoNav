@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target preprocess[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/preprocess.dir/src/preprocess.cpp.o[0m
+[100%] [32m[1mLinking CXX executable preprocess[0m
+[100%] Built target preprocess
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/lib/preprocessor/preprocess
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/ament_index/resource_index/package_run_dependencies/preprocessor
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/ament_index/resource_index/parent_prefix_path/preprocessor
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/environment/path.sh
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/environment/path.dsv
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/local_setup.bash
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/local_setup.sh
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/local_setup.zsh
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/local_setup.dsv
+-- Symlinking: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/package.dsv
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/ament_index/resource_index/packages/preprocessor
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/cmake/preprocessorConfig.cmake
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/cmake/preprocessorConfig-version.cmake
+-- Up-to-date symlink: /home/vtcro/ros2_ws/install/preprocessor/share/preprocessor/package.xml

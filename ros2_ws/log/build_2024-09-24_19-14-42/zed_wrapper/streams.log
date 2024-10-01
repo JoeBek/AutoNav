@@ -1,0 +1,40 @@
+[0.015s] Invoking command in '/home/vtcro/ros2_ws/build/zed_wrapper': CMAKE_PREFIX_PATH=/home/vtcro/ros2_ws/install/zed_components:/home/vtcro/ros2_ws/install/zed_interfaces:/home/vtcro/ros2_ws/install/zed_ros2:/home/vtcro/ros2_ws/install/zed_wrapper:/opt/ros/humble LD_LIBRARY_PATH=/home/vtcro/ros2_ws/install/zed_components/lib:/home/vtcro/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-12/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12/lib64 /usr/bin/cmake --build /home/vtcro/ros2_ws/build/zed_wrapper -- -j16 -l16
+[0.051s] [35m[1mConsolidate compiler generated dependencies of target zed_wrapper[0m
+[0.072s] [100%] Built target zed_wrapper
+[0.084s] Invoked command in '/home/vtcro/ros2_ws/build/zed_wrapper' returned '0': CMAKE_PREFIX_PATH=/home/vtcro/ros2_ws/install/zed_components:/home/vtcro/ros2_ws/install/zed_interfaces:/home/vtcro/ros2_ws/install/zed_ros2:/home/vtcro/ros2_ws/install/zed_wrapper:/opt/ros/humble LD_LIBRARY_PATH=/home/vtcro/ros2_ws/install/zed_components/lib:/home/vtcro/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-12/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12/lib64 /usr/bin/cmake --build /home/vtcro/ros2_ws/build/zed_wrapper -- -j16 -l16
+[0.113s] Invoking command in '/home/vtcro/ros2_ws/build/zed_wrapper': CMAKE_PREFIX_PATH=/home/vtcro/ros2_ws/install/zed_components:/home/vtcro/ros2_ws/install/zed_interfaces:/home/vtcro/ros2_ws/install/zed_ros2:/home/vtcro/ros2_ws/install/zed_wrapper:/opt/ros/humble LD_LIBRARY_PATH=/home/vtcro/ros2_ws/install/zed_components/lib:/home/vtcro/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-12/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12/lib64 /usr/bin/cmake --install /home/vtcro/ros2_ws/build/zed_wrapper
+[0.122s] -- Install configuration: "Release"
+[0.122s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/lib/zed_wrapper/zed_wrapper
+[0.122s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/config
+[0.122s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/config/zed.yaml
+[0.122s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/config/ffmpeg.yaml
+[0.122s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/config/zed2i.yaml
+[0.122s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/config/virtual.yaml
+[0.122s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/config/zedxm.yaml
+[0.122s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/config/zedm.yaml
+[0.123s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/config/zedx.yaml
+[0.123s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/config/common.yaml
+[0.123s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/config/zed2.yaml
+[0.123s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/urdf
+[0.123s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/urdf/include
+[0.123s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/urdf/include/materials.urdf.xacro
+[0.123s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/urdf/zed_macro.urdf.xacro
+[0.124s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/urdf/zed_descr.urdf.xacro
+[0.124s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/launch
+[0.124s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/launch/zed_camera.launch.py
+[0.124s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/ament_index/resource_index/package_run_dependencies/zed_wrapper
+[0.124s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/ament_index/resource_index/parent_prefix_path/zed_wrapper
+[0.124s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/environment/ament_prefix_path.sh
+[0.125s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/environment/ament_prefix_path.dsv
+[0.126s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/environment/path.sh
+[0.126s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/environment/path.dsv
+[0.126s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/local_setup.bash
+[0.126s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/local_setup.sh
+[0.126s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/local_setup.zsh
+[0.126s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/local_setup.dsv
+[0.126s] -- Installing: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/package.dsv
+[0.126s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/ament_index/resource_index/packages/zed_wrapper
+[0.126s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/cmake/zed_wrapperConfig.cmake
+[0.126s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/cmake/zed_wrapperConfig-version.cmake
+[0.127s] -- Up-to-date: /home/vtcro/ros2_ws/install/zed_wrapper/share/zed_wrapper/package.xml
+[0.127s] Invoked command in '/home/vtcro/ros2_ws/build/zed_wrapper' returned '0': CMAKE_PREFIX_PATH=/home/vtcro/ros2_ws/install/zed_components:/home/vtcro/ros2_ws/install/zed_interfaces:/home/vtcro/ros2_ws/install/zed_ros2:/home/vtcro/ros2_ws/install/zed_wrapper:/opt/ros/humble LD_LIBRARY_PATH=/home/vtcro/ros2_ws/install/zed_components/lib:/home/vtcro/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-12/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12/lib64 /usr/bin/cmake --install /home/vtcro/ros2_ws/build/zed_wrapper
