@@ -1,4 +1,0 @@
-Invoking command in '/home/vtcro/ros2_ws/build/preprocessor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vtcro/ros2_ws/build/preprocessor -- -j16 -l16
-Invoked command in '/home/vtcro/ros2_ws/build/preprocessor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vtcro/ros2_ws/build/preprocessor -- -j16 -l16
-Invoking command in '/home/vtcro/ros2_ws/build/preprocessor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vtcro/ros2_ws/build/preprocessor
-Invoked command in '/home/vtcro/ros2_ws/build/preprocessor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vtcro/ros2_ws/build/preprocessor
