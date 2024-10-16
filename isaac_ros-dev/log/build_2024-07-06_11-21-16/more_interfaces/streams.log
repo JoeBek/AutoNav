@@ -1,0 +1,34 @@
+[0.027s] Invoking command in '/workspaces/isaac_ros-dev/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/more_interfaces -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/more_interfaces
+[0.054s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.349s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.353s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.359s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.437s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.086s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.622s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.275s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.349s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.356s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.452s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.452s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.452s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.452s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[2.510s] -- Found PythonExtra: .so  
+[2.632s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[2.919s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.931s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.336s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.433s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.558s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.596s] -- Looking for pthread.h
+[3.818s] -- Looking for pthread.h - found
+[3.819s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.015s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.018s] -- Found Threads: TRUE  
+[4.427s] [31mCMake Error at CMakeLists.txt:35 (rosidl_get_typesupport):
+[4.427s]   Unknown CMake command "rosidl_get_typesupport".
+[4.427s] 
+[4.428s] [0m
+[4.428s] -- Configuring incomplete, errors occurred!
+[4.428s] See also "/workspaces/isaac_ros-dev/build/more_interfaces/CMakeFiles/CMakeOutput.log".
+[4.447s] Invoked command in '/workspaces/isaac_ros-dev/build/more_interfaces' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/more_interfaces -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/more_interfaces

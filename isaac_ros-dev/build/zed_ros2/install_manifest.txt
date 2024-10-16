@@ -1,0 +1,15 @@
+/workspaces/isaac_ros-dev/install/zed_ros2/share/ament_index/resource_index/package_run_dependencies/zed_ros2
+/workspaces/isaac_ros-dev/install/zed_ros2/share/ament_index/resource_index/parent_prefix_path/zed_ros2
+/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/environment/ament_prefix_path.sh
+/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/environment/ament_prefix_path.dsv
+/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/environment/path.sh
+/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/environment/path.dsv
+/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/local_setup.bash
+/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/local_setup.sh
+/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/local_setup.zsh
+/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/local_setup.dsv
+/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/package.dsv
+/workspaces/isaac_ros-dev/install/zed_ros2/share/ament_index/resource_index/packages/zed_ros2
+/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/cmake/zed_ros2Config.cmake
+/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/cmake/zed_ros2Config-version.cmake
+/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/package.xml

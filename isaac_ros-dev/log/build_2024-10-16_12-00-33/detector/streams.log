@@ -1,0 +1,43 @@
+[0.044s] Invoking command in '/workspaces/isaac_ros-dev/build/detector': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/detector -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/detector
+[0.239s] -- The C compiler identification is GNU 11.4.0
+[0.410s] -- The CXX compiler identification is GNU 11.4.0
+[0.428s] -- Detecting C compiler ABI info
+[0.596s] -- Detecting C compiler ABI info - done
+[0.619s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.620s] -- Detecting C compile features
+[0.622s] -- Detecting C compile features - done
+[0.634s] -- Detecting CXX compiler ABI info
+[0.813s] -- Detecting CXX compiler ABI info - done
+[0.829s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.830s] -- Detecting CXX compile features
+[0.832s] -- Detecting CXX compile features - done
+[0.843s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.785s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[3.046s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[3.161s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.175s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.197s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.226s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.265s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.375s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.384s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.619s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.697s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.816s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.844s] -- Looking for pthread.h
+[4.002s] -- Looking for pthread.h - found
+[4.004s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.174s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.176s] -- Found Threads: TRUE  
+[4.307s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[4.376s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.567s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.568s] -- Configured cppcheck include dirs: 
+[4.568s] -- Configured cppcheck exclude dirs and/or files: 
+[4.569s] -- Added test 'lint_cmake' to check CMake code style
+[4.571s] -- Added test 'uncrustify' to check C / C++ code style
+[4.571s] -- Configured uncrustify additional arguments: 
+[4.572s] -- Added test 'xmllint' to check XML markup files
+[4.575s] -- Configuring done
+[4.598s] -- Generating done
+[4.601s] -- Build files have been written to: /workspaces/isaac_ros-dev/build/detector

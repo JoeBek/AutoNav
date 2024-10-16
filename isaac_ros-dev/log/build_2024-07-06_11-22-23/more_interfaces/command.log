@@ -1,0 +1,2 @@
+Invoking command in '/workspaces/isaac_ros-dev/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/more_interfaces -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/more_interfaces
+Invoked command in '/workspaces/isaac_ros-dev/build/more_interfaces' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/more_interfaces -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/more_interfaces

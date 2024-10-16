@@ -1,0 +1,60 @@
+[0.028s] Invoking command in '/workspaces/isaac_ros-dev/build/more_interfaces': /usr/bin/cmake /workspaces/isaac_ros-dev/src/more_interfaces -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/more_interfaces
+[2.309s] -- The C compiler identification is GNU 11.4.0
+[3.524s] -- The CXX compiler identification is GNU 11.4.0
+[3.566s] -- Detecting C compiler ABI info
+[3.758s] -- Detecting C compiler ABI info - done
+[3.775s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.779s] -- Detecting C compile features
+[3.781s] -- Detecting C compile features - done
+[3.796s] -- Detecting CXX compiler ABI info
+[4.006s] -- Detecting CXX compiler ABI info - done
+[4.029s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.030s] -- Detecting CXX compile features
+[4.032s] -- Detecting CXX compile features - done
+[4.062s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[5.712s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[6.044s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[6.059s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.086s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[6.254s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.780s] Error parsing '/workspaces/isaac_ros-dev/src/more_interfaces/package.xml':
+[6.780s] Traceback (most recent call last):
+[6.781s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 610, in parse_package_string
+[6.784s]     root = dom.parseString(data)
+[6.784s]   File "/usr/lib/python3.10/xml/dom/minidom.py", line 2000, in parseString
+[6.788s]     return expatbuilder.parseString(string)
+[6.788s]   File "/usr/lib/python3.10/xml/dom/expatbuilder.py", line 925, in parseString
+[6.790s]     return builder.parseString(string)
+[6.790s]   File "/usr/lib/python3.10/xml/dom/expatbuilder.py", line 223, in parseString
+[6.791s]     parser.Parse(string, True)
+[6.791s] xml.parsers.expat.ExpatError: mismatched tag: line 14, column 46
+[6.791s] 
+[6.791s] During handling of the above exception, another exception occurred:
+[6.791s] 
+[6.791s] Traceback (most recent call last):
+[6.791s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[6.792s]     main()
+[6.792s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[6.792s]     raise e
+[6.792s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[6.792s]     package = parse_package_string(
+[6.792s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 612, in parse_package_string
+[6.792s]     raise InvalidPackage('The manifest contains invalid XML:\n%s' % ex, filename)
+[6.792s] catkin_pkg.package.InvalidPackage: Error(s) in package '/workspaces/isaac_ros-dev/src/more_interfaces/package.xml':
+[6.793s] The manifest contains invalid XML:
+[6.793s] mismatched tag: line 14, column 46
+[6.815s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[6.815s]   execute_process(/usr/bin/python3
+[6.815s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[6.816s]   /workspaces/isaac_ros-dev/src/more_interfaces/package.xml
+[6.816s]   /workspaces/isaac_ros-dev/build/more_interfaces/ament_cmake_core/package.cmake)
+[6.816s]   returned error code 1
+[6.816s] Call Stack (most recent call first):
+[6.816s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[6.817s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+[6.817s]   CMakeLists.txt:19 (rosidl_generate_interfaces)
+[6.817s] 
+[6.817s] [0m
+[6.818s] -- Configuring incomplete, errors occurred!
+[6.818s] See also "/workspaces/isaac_ros-dev/build/more_interfaces/CMakeFiles/CMakeOutput.log".
+[6.845s] Invoked command in '/workspaces/isaac_ros-dev/build/more_interfaces' returned '1': /usr/bin/cmake /workspaces/isaac_ros-dev/src/more_interfaces -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/more_interfaces

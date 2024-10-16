@@ -1,0 +1,150 @@
+[0.000000] (-) TimerEvent: {}
+[0.000904] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.001080] (-) JobUnselected: {'identifier': 'cpp_srvcli'}
+[0.001374] (-) JobUnselected: {'identifier': 'isaac_ros_apriltag_interfaces'}
+[0.001888] (-) JobUnselected: {'identifier': 'isaac_ros_bi3d_interfaces'}
+[0.002199] (-) JobUnselected: {'identifier': 'isaac_ros_common'}
+[0.002300] (-) JobUnselected: {'identifier': 'isaac_ros_launch_utils'}
+[0.002342] (-) JobUnselected: {'identifier': 'isaac_ros_nitros_bridge_interfaces'}
+[0.002460] (-) JobUnselected: {'identifier': 'isaac_ros_nova_interfaces'}
+[0.002550] (-) JobUnselected: {'identifier': 'isaac_ros_pointcloud_interfaces'}
+[0.002624] (-) JobUnselected: {'identifier': 'isaac_ros_tensor_list_interfaces'}
+[0.002691] (-) JobUnselected: {'identifier': 'isaac_ros_test'}
+[0.002756] (-) JobUnselected: {'identifier': 'my_package'}
+[0.002811] (-) JobUnselected: {'identifier': 'py_pubsub'}
+[0.002843] (-) JobUnselected: {'identifier': 'py_srvcli'}
+[0.002873] (-) JobUnselected: {'identifier': 'turtlesim'}
+[0.002902] (-) JobUnselected: {'identifier': 'tutorial_interfaces'}
+[0.002938] (more_interfaces) JobQueued: {'identifier': 'more_interfaces', 'dependencies': OrderedDict()}
+[0.002978] (more_interfaces) JobStarted: {'identifier': 'more_interfaces'}
+[0.029505] (more_interfaces) JobProgress: {'identifier': 'more_interfaces', 'progress': 'cmake'}
+[0.029949] (more_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/workspaces/isaac_ros-dev/src/more_interfaces', '-DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/more_interfaces'], 'cwd': '/workspaces/isaac_ros-dev/build/more_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('PYTHONWARNINGS', 'ignore:::setuptools.command.install,ignore:::setuptools.command.easy_install,ignore:::pkg_resources,ignore:::setuptools.command.develop'), ('NV_LIBCUBLAS_VERSION', '12.2.5.6-1'), ('TMUX', '/tmp/tmux-1000/default,5943,0'), ('USER', 'vtcro'), ('HOSTNAME', 'carcass'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib'), ('HOME', '/home/admin'), ('OLDPWD', '/workspaces/isaac_ros-dev/src/more_interfaces'), ('TERM_PROGRAM_VERSION', '3.2a'), ('NV_LIBCUBLAS_DEV_VERSION', '12.2.5.6-1'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('USER_UID', '1000'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-2=12.2.1.4-1'), ('CUDA_VERSION', '12.2.12'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-2'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.2'), ('JETSON_MODULE', ''), ('JETSON_SERIAL_NUMBER', '1421223035915'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.1.2.141-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.2.12-1'), ('NV_NVML_DEV_VERSION', '12.2.140-1'), ('USERNAME', 'admin'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-2=12.2.1.4-1'), ('TERM', 'screen'), ('ISAAC_ROS_WS', '/workspaces/isaac_ros-dev'), ('NV_CUDA_CUDART_VERSION', '12.2.140-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/src/tensorrt/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/nvidia/tao'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/usr/local/share/middleware_profiles/rtps_udp_profile.xml'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-2'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-2=12.2.5.6-1'), ('NVARCH', 'arm64'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.1.2.141-1'), ('DISPLAY', ':1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('NV_CUDA_CUDART_DEV_VERSION', '12.2.140-1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('ROS_ROOT', '/opt/ros/humble'), ('TERM_PROGRAM', 'tmux'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('TRT_INCLUDE_PATH', '/usr/include/aarch64-linux-gnu'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-2=12.2.5.6-1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NVIDIA_REQUIRE_JETPACK_HOST_MOUNTS', 'base-only'), ('NV_NVTX_VERSION', '12.2.140-1'), ('NV_LIBNPP_VERSION', '12.2.1.4-1'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/workspaces/isaac_ros-dev/build/more_interfaces'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('USER_GID', '1000'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.2.1.4-1'), ('TMUX_PANE', '%0'), ('JETSON_JETPACK', '6.0'), ('TRT_LIB_PATH', '/usr/lib/aarch64-linux-gnu')]), 'shell': False}
+[0.099919] (-) TimerEvent: {}
+[0.200628] (-) TimerEvent: {}
+[0.301327] (-) TimerEvent: {}
+[0.401989] (-) TimerEvent: {}
+[0.502694] (-) TimerEvent: {}
+[0.603533] (-) TimerEvent: {}
+[0.704569] (-) TimerEvent: {}
+[0.805529] (-) TimerEvent: {}
+[0.906459] (-) TimerEvent: {}
+[1.007469] (-) TimerEvent: {}
+[1.108449] (-) TimerEvent: {}
+[1.209368] (-) TimerEvent: {}
+[1.310156] (-) TimerEvent: {}
+[1.410849] (-) TimerEvent: {}
+[1.511514] (-) TimerEvent: {}
+[1.612194] (-) TimerEvent: {}
+[1.712878] (-) TimerEvent: {}
+[1.813696] (-) TimerEvent: {}
+[1.914823] (-) TimerEvent: {}
+[2.015874] (-) TimerEvent: {}
+[2.116933] (-) TimerEvent: {}
+[2.217974] (-) TimerEvent: {}
+[2.310838] (more_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[2.318114] (-) TimerEvent: {}
+[2.419031] (-) TimerEvent: {}
+[2.520102] (-) TimerEvent: {}
+[2.621278] (-) TimerEvent: {}
+[2.722350] (-) TimerEvent: {}
+[2.823440] (-) TimerEvent: {}
+[2.924442] (-) TimerEvent: {}
+[3.025420] (-) TimerEvent: {}
+[3.126491] (-) TimerEvent: {}
+[3.227611] (-) TimerEvent: {}
+[3.328738] (-) TimerEvent: {}
+[3.429688] (-) TimerEvent: {}
+[3.526508] (more_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[3.529796] (-) TimerEvent: {}
+[3.568449] (more_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.630046] (-) TimerEvent: {}
+[3.731231] (-) TimerEvent: {}
+[3.760496] (more_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[3.777775] (more_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[3.781235] (more_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[3.783964] (more_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[3.798303] (more_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[3.831339] (-) TimerEvent: {}
+[3.932147] (-) TimerEvent: {}
+[4.008181] (more_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[4.031543] (more_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[4.032194] (-) TimerEvent: {}
+[4.032820] (more_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[4.034545] (more_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[4.064440] (more_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[4.132515] (-) TimerEvent: {}
+[4.233440] (-) TimerEvent: {}
+[4.334376] (-) TimerEvent: {}
+[4.435253] (-) TimerEvent: {}
+[4.535814] (-) TimerEvent: {}
+[4.636402] (-) TimerEvent: {}
+[4.736959] (-) TimerEvent: {}
+[4.837527] (-) TimerEvent: {}
+[4.938124] (-) TimerEvent: {}
+[5.038937] (-) TimerEvent: {}
+[5.139775] (-) TimerEvent: {}
+[5.240344] (-) TimerEvent: {}
+[5.340941] (-) TimerEvent: {}
+[5.441499] (-) TimerEvent: {}
+[5.542059] (-) TimerEvent: {}
+[5.642649] (-) TimerEvent: {}
+[5.714553] (more_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[5.742827] (-) TimerEvent: {}
+[5.843592] (-) TimerEvent: {}
+[5.944319] (-) TimerEvent: {}
+[6.045527] (-) TimerEvent: {}
+[6.046445] (more_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[6.061626] (more_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.088658] (more_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[6.145713] (-) TimerEvent: {}
+[6.246615] (-) TimerEvent: {}
+[6.256231] (more_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[6.346736] (-) TimerEvent: {}
+[6.447287] (-) TimerEvent: {}
+[6.547970] (-) TimerEvent: {}
+[6.648839] (-) TimerEvent: {}
+[6.749408] (-) TimerEvent: {}
+[6.782507] (more_interfaces) StderrLine: {'line': b"Error parsing '/workspaces/isaac_ros-dev/src/more_interfaces/package.xml':\n"}
+[6.783205] (more_interfaces) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[6.783423] (more_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 610, in parse_package_string\n'}
+[6.786442] (more_interfaces) StderrLine: {'line': b'    root = dom.parseString(data)\n'}
+[6.786789] (more_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3.10/xml/dom/minidom.py", line 2000, in parseString\n'}
+[6.790690] (more_interfaces) StderrLine: {'line': b'    return expatbuilder.parseString(string)\n'}
+[6.790920] (more_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3.10/xml/dom/expatbuilder.py", line 925, in parseString\n'}
+[6.793038] (more_interfaces) StderrLine: {'line': b'    return builder.parseString(string)\n'}
+[6.793265] (more_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3.10/xml/dom/expatbuilder.py", line 223, in parseString\n'}
+[6.793446] (more_interfaces) StderrLine: {'line': b'    parser.Parse(string, True)\n'}
+[6.793643] (more_interfaces) StderrLine: {'line': b'xml.parsers.expat.ExpatError: mismatched tag: line 14, column 46\n'}
+[6.793774] (more_interfaces) StderrLine: {'line': b'\n'}
+[6.793951] (more_interfaces) StderrLine: {'line': b'During handling of the above exception, another exception occurred:\n'}
+[6.794076] (more_interfaces) StderrLine: {'line': b'\n'}
+[6.794193] (more_interfaces) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[6.794309] (more_interfaces) StderrLine: {'line': b'  File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>\n'}
+[6.794460] (more_interfaces) StderrLine: {'line': b'    main()\n'}
+[6.794577] (more_interfaces) StderrLine: {'line': b'  File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main\n'}
+[6.794693] (more_interfaces) StderrLine: {'line': b'    raise e\n'}
+[6.794807] (more_interfaces) StderrLine: {'line': b'  File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main\n'}
+[6.794922] (more_interfaces) StderrLine: {'line': b'    package = parse_package_string(\n'}
+[6.795034] (more_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 612, in parse_package_string\n'}
+[6.795145] (more_interfaces) StderrLine: {'line': b"    raise InvalidPackage('The manifest contains invalid XML:\\n%s' % ex, filename)\n"}
+[6.795261] (more_interfaces) StderrLine: {'line': b"catkin_pkg.package.InvalidPackage: Error(s) in package '/workspaces/isaac_ros-dev/src/more_interfaces/package.xml':\n"}
+[6.795379] (more_interfaces) StderrLine: {'line': b'The manifest contains invalid XML:\n'}
+[6.795624] (more_interfaces) StderrLine: {'line': b'mismatched tag: line 14, column 46\n'}
+[6.817173] (more_interfaces) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):\n'}
+[6.817739] (more_interfaces) StderrLine: {'line': b'  execute_process(/usr/bin/python3\n'}
+[6.818029] (more_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py\n'}
+[6.818454] (more_interfaces) StderrLine: {'line': b'  /workspaces/isaac_ros-dev/src/more_interfaces/package.xml\n'}
+[6.818683] (more_interfaces) StderrLine: {'line': b'  /workspaces/isaac_ros-dev/build/more_interfaces/ament_cmake_core/package.cmake)\n'}
+[6.818900] (more_interfaces) StderrLine: {'line': b'  returned error code 1\n'}
+[6.819115] (more_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[6.819328] (more_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[6.819543] (more_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)\n'}
+[6.819756] (more_interfaces) StderrLine: {'line': b'  CMakeLists.txt:19 (rosidl_generate_interfaces)\n'}
+[6.819963] (more_interfaces) StderrLine: {'line': b'\n'}
+[6.820171] (more_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[6.820423] (more_interfaces) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[6.820686] (more_interfaces) StdoutLine: {'line': b'See also "/workspaces/isaac_ros-dev/build/more_interfaces/CMakeFiles/CMakeOutput.log".\n'}
+[6.847062] (more_interfaces) CommandEnded: {'returncode': 1}
+[6.849810] (more_interfaces) JobEnded: {'identifier': 'more_interfaces', 'rc': 1}
+[6.851233] (-) TimerEvent: {}
+[6.861313] (-) EventReactorShutdown: {}

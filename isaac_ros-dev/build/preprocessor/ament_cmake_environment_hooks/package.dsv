@@ -1,0 +1,4 @@
+source;share/preprocessor/local_setup.bash
+source;share/preprocessor/local_setup.dsv
+source;share/preprocessor/local_setup.sh
+source;share/preprocessor/local_setup.zsh

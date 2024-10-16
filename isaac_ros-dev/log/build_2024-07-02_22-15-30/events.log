@@ -1,0 +1,130 @@
+[0.000000] (-) TimerEvent: {}
+[0.001014] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.001594] (-) JobUnselected: {'identifier': 'isaac_ros_apriltag_interfaces'}
+[0.001705] (-) JobUnselected: {'identifier': 'isaac_ros_bi3d_interfaces'}
+[0.001770] (-) JobUnselected: {'identifier': 'isaac_ros_common'}
+[0.001822] (-) JobUnselected: {'identifier': 'isaac_ros_launch_utils'}
+[0.001871] (-) JobUnselected: {'identifier': 'isaac_ros_nitros_bridge_interfaces'}
+[0.001917] (-) JobUnselected: {'identifier': 'isaac_ros_nova_interfaces'}
+[0.001963] (-) JobUnselected: {'identifier': 'isaac_ros_pointcloud_interfaces'}
+[0.002015] (-) JobUnselected: {'identifier': 'isaac_ros_tensor_list_interfaces'}
+[0.002066] (-) JobUnselected: {'identifier': 'isaac_ros_test'}
+[0.002117] (-) JobUnselected: {'identifier': 'my_package'}
+[0.002169] (-) JobUnselected: {'identifier': 'py_pubsub'}
+[0.002214] (-) JobUnselected: {'identifier': 'turtlesim'}
+[0.002269] (cpp_srvcli) JobQueued: {'identifier': 'cpp_srvcli', 'dependencies': OrderedDict()}
+[0.002329] (cpp_srvcli) JobStarted: {'identifier': 'cpp_srvcli'}
+[0.020527] (cpp_srvcli) JobProgress: {'identifier': 'cpp_srvcli', 'progress': 'cmake'}
+[0.022321] (cpp_srvcli) JobProgress: {'identifier': 'cpp_srvcli', 'progress': 'build'}
+[0.024024] (cpp_srvcli) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspaces/isaac_ros-dev/build/cpp_srvcli', '--', '-j6', '-l6'], 'cwd': '/workspaces/isaac_ros-dev/build/cpp_srvcli', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('PYTHONWARNINGS', 'ignore:::setuptools.command.install,ignore:::setuptools.command.easy_install,ignore:::pkg_resources,ignore:::setuptools.command.develop'), ('NV_LIBCUBLAS_VERSION', '12.2.5.6-1'), ('TMUX', '/tmp/tmux-1000/default,11049,0'), ('USER', 'vtcro'), ('HOSTNAME', 'carcass'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib'), ('HOME', '/home/admin'), ('OLDPWD', '/workspaces/isaac_ros-dev/src/cpp_srvcli'), ('TERM_PROGRAM_VERSION', '3.2a'), ('NV_LIBCUBLAS_DEV_VERSION', '12.2.5.6-1'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('USER_UID', '1000'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-2=12.2.1.4-1'), ('CUDA_VERSION', '12.2.12'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-2'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.2'), ('JETSON_MODULE', ''), ('JETSON_SERIAL_NUMBER', '1421223035915'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.1.2.141-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.2.12-1'), ('NV_NVML_DEV_VERSION', '12.2.140-1'), ('USERNAME', 'admin'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-2=12.2.1.4-1'), ('TERM', 'screen'), ('ISAAC_ROS_WS', '/workspaces/isaac_ros-dev'), ('NV_CUDA_CUDART_VERSION', '12.2.140-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/src/tensorrt/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/nvidia/tao'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/usr/local/share/middleware_profiles/rtps_udp_profile.xml'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-2'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-2=12.2.5.6-1'), ('NVARCH', 'arm64'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.1.2.141-1'), ('DISPLAY', ':1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('NV_CUDA_CUDART_DEV_VERSION', '12.2.140-1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('ROS_ROOT', '/opt/ros/humble'), ('TERM_PROGRAM', 'tmux'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('TRT_INCLUDE_PATH', '/usr/include/aarch64-linux-gnu'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-2=12.2.5.6-1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NVIDIA_REQUIRE_JETPACK_HOST_MOUNTS', 'base-only'), ('NV_NVTX_VERSION', '12.2.140-1'), ('NV_LIBNPP_VERSION', '12.2.1.4-1'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/workspaces/isaac_ros-dev/build/cpp_srvcli'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('USER_GID', '1000'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.2.1.4-1'), ('TMUX_PANE', '%0'), ('JETSON_JETPACK', '6.0'), ('TRT_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099114] (-) TimerEvent: {}
+[0.133324] (cpp_srvcli) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target server\x1b[0m\n'}
+[0.165874] (cpp_srvcli) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o\x1b[0m\n'}
+[0.175357] (cpp_srvcli) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o\x1b[0m\n'}
+[0.199422] (-) TimerEvent: {}
+[0.300329] (-) TimerEvent: {}
+[0.400979] (-) TimerEvent: {}
+[0.501624] (-) TimerEvent: {}
+[0.602279] (-) TimerEvent: {}
+[0.689620] (cpp_srvcli) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:2:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Krclcpp/rclcpp.example_interfaces/srv/add_two_ints.hpp: No such file or directory\n'}
+[0.690101] (cpp_srvcli) StderrLine: {'line': b'    2 | #include \x1b[01;31m\x1b[K"rclcpp/rclcpp.example_interfaces/srv/add_two_ints.hpp"\x1b[m\x1b[K\n'}
+[0.690266] (cpp_srvcli) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[0.690404] (cpp_srvcli) StderrLine: {'line': b'compilation terminated.\n'}
+[0.696073] (cpp_srvcli) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1\n'}
+[0.696883] (cpp_srvcli) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/client.dir/all] Error 2\n'}
+[0.697230] (cpp_srvcli) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[0.702369] (-) TimerEvent: {}
+[0.802971] (-) TimerEvent: {}
+[0.903751] (-) TimerEvent: {}
+[1.004570] (-) TimerEvent: {}
+[1.105367] (-) TimerEvent: {}
+[1.206181] (-) TimerEvent: {}
+[1.306982] (-) TimerEvent: {}
+[1.407834] (-) TimerEvent: {}
+[1.508684] (-) TimerEvent: {}
+[1.609476] (-) TimerEvent: {}
+[1.710252] (-) TimerEvent: {}
+[1.811037] (-) TimerEvent: {}
+[1.911822] (-) TimerEvent: {}
+[2.012682] (-) TimerEvent: {}
+[2.113489] (-) TimerEvent: {}
+[2.214294] (-) TimerEvent: {}
+[2.315101] (-) TimerEvent: {}
+[2.415898] (-) TimerEvent: {}
+[2.516728] (-) TimerEvent: {}
+[2.617539] (-) TimerEvent: {}
+[2.718344] (-) TimerEvent: {}
+[2.819144] (-) TimerEvent: {}
+[2.919948] (-) TimerEvent: {}
+[3.020828] (-) TimerEvent: {}
+[3.121633] (-) TimerEvent: {}
+[3.222443] (-) TimerEvent: {}
+[3.323270] (-) TimerEvent: {}
+[3.424092] (-) TimerEvent: {}
+[3.524939] (-) TimerEvent: {}
+[3.625735] (-) TimerEvent: {}
+[3.726544] (-) TimerEvent: {}
+[3.827355] (-) TimerEvent: {}
+[3.928143] (-) TimerEvent: {}
+[4.029028] (-) TimerEvent: {}
+[4.129808] (-) TimerEvent: {}
+[4.230603] (-) TimerEvent: {}
+[4.331410] (-) TimerEvent: {}
+[4.432253] (-) TimerEvent: {}
+[4.533046] (-) TimerEvent: {}
+[4.633829] (-) TimerEvent: {}
+[4.734632] (-) TimerEvent: {}
+[4.835412] (-) TimerEvent: {}
+[4.936228] (-) TimerEvent: {}
+[5.037032] (-) TimerEvent: {}
+[5.137805] (-) TimerEvent: {}
+[5.225448] (cpp_srvcli) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[5.226130] (cpp_srvcli) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[5.226421] (cpp_srvcli) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[5.226678] (cpp_srvcli) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[5.226911] (cpp_srvcli) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[5.227133] (cpp_srvcli) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[5.227352] (cpp_srvcli) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[5.227565] (cpp_srvcli) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[5.227777] (cpp_srvcli) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[5.227990] (cpp_srvcli) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[5.228269] (cpp_srvcli) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[5.228510] (cpp_srvcli) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:1\x1b[m\x1b[K:\n'}
+[5.228728] (cpp_srvcli) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid add(std::shared_ptr<example_interfaces::srv::AddTwoInts_Request_<std::allocator<void> > >, std::shared_ptr<example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.228957] (cpp_srvcli) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:15:93:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Ka\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.229187] (cpp_srvcli) StderrLine: {'line': b'   15 | INFO(rclcpp::get_logger("rclcpp"), "Incoming request\\na: %ld""b: %ld", response->\x1b[01;31m\x1b[Ka\x1b[m\x1b[K, response->b);\n'}
+[5.229457] (cpp_srvcli) StderrLine: {'line': b'      |                                                                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.229669] (cpp_srvcli) StderrLine: {'line': b'\n'}
+[5.229881] (cpp_srvcli) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:15:106:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kb\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.230102] (cpp_srvcli) StderrLine: {'line': b'   15 | rclcpp::get_logger("rclcpp"), "Incoming request\\na: %ld""b: %ld", response->a, response->\x1b[01;31m\x1b[Kb\x1b[m\x1b[K);\n'}
+[5.230313] (cpp_srvcli) StderrLine: {'line': b'      |                                                                                          \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.230520] (cpp_srvcli) StderrLine: {'line': b'\n'}
+[5.237898] (-) TimerEvent: {}
+[5.269516] (cpp_srvcli) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.270305] (cpp_srvcli) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:28:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KNode\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.270826] (cpp_srvcli) StderrLine: {'line': b'   28 |                 \x1b[01;31m\x1b[Knode\x1b[m\x1b[K->create_service<example_interfaces::srv::AddTwoInts>("add_two_ints", &add);\n'}
+[5.271198] (cpp_srvcli) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[5.271535] (cpp_srvcli) StderrLine: {'line': b'      |                 \x1b[32m\x1b[KNode\x1b[m\x1b[K\n'}
+[5.271842] (cpp_srvcli) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:28:73:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[5.272139] (cpp_srvcli) StderrLine: {'line': b'   28 |                 node->create_service<example_interfaces::srv::AddTwoInts\x1b[01;31m\x1b[K>\x1b[m\x1b[K("add_two_ints", &add);\n'}
+[5.272423] (cpp_srvcli) StderrLine: {'line': b'      |                                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.272694] (cpp_srvcli) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:28:75:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.272930] (cpp_srvcli) StderrLine: {'line': b'   28 |                 node->create_service<example_interfaces::srv::AddTwoInts>(\x1b[01;35m\x1b[K"add_two_ints"\x1b[m\x1b[K, &add);\n'}
+[5.273151] (cpp_srvcli) StderrLine: {'line': b'      |                                                                           \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.338116] (-) TimerEvent: {}
+[5.438891] (-) TimerEvent: {}
+[5.539694] (-) TimerEvent: {}
+[5.640523] (-) TimerEvent: {}
+[5.741321] (-) TimerEvent: {}
+[5.842149] (-) TimerEvent: {}
+[5.942963] (-) TimerEvent: {}
+[6.043781] (-) TimerEvent: {}
+[6.144618] (-) TimerEvent: {}
+[6.245427] (-) TimerEvent: {}
+[6.281372] (cpp_srvcli) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/server.dir/build.make:76: CMakeFiles/server.dir/src/server.cpp.o] Error 1\n'}
+[6.282142] (cpp_srvcli) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/server.dir/all] Error 2\n'}
+[6.282558] (cpp_srvcli) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[6.288568] (cpp_srvcli) CommandEnded: {'returncode': 2}
+[6.345621] (-) TimerEvent: {}
+[6.391019] (cpp_srvcli) JobEnded: {'identifier': 'cpp_srvcli', 'rc': 2}
+[6.402509] (-) EventReactorShutdown: {}

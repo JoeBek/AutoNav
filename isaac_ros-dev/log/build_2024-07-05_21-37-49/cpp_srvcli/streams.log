@@ -1,0 +1,75 @@
+[0.028s] Invoking command in '/workspaces/isaac_ros-dev/build/cpp_srvcli': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_srvcli -- -j6 -l6
+[0.108s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.490s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.609s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.620s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.645s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.687s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.739s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.905s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.911s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.364s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.709s] -- Found tutorial_interfaces: 0.0.0 (/workspaces/isaac_ros-dev/install/tutorial_interfaces/share/tutorial_interfaces/cmake)
+[1.947s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.135s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.136s] -- Configured cppcheck include dirs: 
+[2.136s] -- Configured cppcheck exclude dirs and/or files: 
+[2.139s] -- Added test 'lint_cmake' to check CMake code style
+[2.143s] -- Added test 'uncrustify' to check C / C++ code style
+[2.144s] -- Configured uncrustify additional arguments: 
+[2.145s] -- Added test 'xmllint' to check XML markup files
+[2.151s] -- Configuring done
+[2.216s] -- Generating done
+[2.221s] -- Build files have been written to: /workspaces/isaac_ros-dev/build/cpp_srvcli
+[2.302s] [35m[1mConsolidate compiler generated dependencies of target server[0m
+[2.303s] [35m[1mConsolidate compiler generated dependencies of target client[0m
+[2.351s] [ 25%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
+[2.355s] [ 50%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[2.897s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kexample_interfaces/srv/add_two_ints.hpp: No such file or directory
+[2.897s]     2 | #include [01;31m[K"example_interfaces/srv/add_two_ints.hpp"[m[K
+[2.897s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.897s] compilation terminated.
+[2.903s] gmake[2]: *** [CMakeFiles/server.dir/build.make:76: CMakeFiles/server.dir/src/server.cpp.o] Error 1
+[2.904s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/server.dir/all] Error 2
+[2.904s] gmake[1]: *** Waiting for unfinished jobs....
+[7.408s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[7.408s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:23:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kadd_three_ints[m[K’ is not a member of ‘[01m[Ktutorial_interfaces::srv[m[K’; did you mean ‘[01m[KAddThreeInts[m[K’?
+[7.408s]    23 |         rclcpp::Client<tutorial_interfaces::srv::[01;31m[Kadd_three_ints[m[K>::SharedPtr client =
+[7.409s]       |                                                  [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.409s]       |                                                  [32m[KAddThreeInts[m[K
+[7.409s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:23:64:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[7.409s]    23 |         rclcpp::Client<tutorial_interfaces::srv::add_three_ints[01;31m[K>[m[K::SharedPtr client =
+[7.409s]       |                                                                [01;31m[K^[m[K
+[7.410s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:23:77:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kclient[m[K’
+[7.410s]    23 |         rclcpp::Client<tutorial_interfaces::srv::add_three_ints>::SharedPtr [01;31m[Kclient[m[K =
+[7.410s]       |                                                                             [01;31m[K^~~~~~[m[K
+[7.410s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:25:67:[m[K [01;31m[Kerror: [m[K‘[01m[Kadd_three_ints[m[K’ is not a member of ‘[01m[Ktutorial_interfaces::srv[m[K’; did you mean ‘[01m[KAddThreeInts[m[K’?
+[7.411s]    25 |         auto request = std::make_shared<tutorial_interfaces::srv::[01;31m[Kadd_three_ints[m[K::Request>();
+[7.411s]       |                                                                   [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.411s]       |                                                                   [32m[KAddThreeInts[m[K
+[7.411s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:25:29:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[7.412s]    25 |         auto request = std::[01;31m[Kmake_shared<tutorial_interfaces::srv::add_three_ints::Request>[m[K();
+[7.412s]       |                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.412s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:25:91:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+[7.412s]    25 |         auto request = [01;31m[Kstd::make_shared<tutorial_interfaces::srv::add_three_ints::Request>()[m[K;
+[7.412s]       |                        [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[7.413s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[7.413s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[7.413s]                  from [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:1[m[K:
+[7.413s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+[7.413s]   875 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+[7.414s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[7.414s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[7.414s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:25:91:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[7.414s]    25 |         auto request = [01;31m[Kstd::make_shared<tutorial_interfaces::srv::add_three_ints::Request>()[m[K;
+[7.414s]       |                        [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[7.417s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:30:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[7.417s]    30 |         while (![01;31m[Kclient[m[K->wait_for_service(1s)) {
+[7.418s]       |                 [01;31m[K^~~~~~[m[K
+[7.428s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:39:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[7.428s]    39 |           auto result = [01;31m[Kclient[m[K->async_send_request(request);
+[7.428s]       |                         [01;31m[K^~~~~~[m[K
+[8.438s] gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+[8.438s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/client.dir/all] Error 2
+[8.438s] gmake: *** [Makefile:146: all] Error 2
+[8.444s] Invoked command in '/workspaces/isaac_ros-dev/build/cpp_srvcli' returned '2': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_srvcli -- -j6 -l6

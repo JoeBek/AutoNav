@@ -1,0 +1,28 @@
+[0.029s] Invoking command in '/workspaces/isaac_ros-dev/build/cpp_srvcli': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_srvcli -- -j6 -l6
+[0.135s] [35m[1mConsolidate compiler generated dependencies of target client[0m
+[0.167s] [ 25%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
+[0.182s] [ 75%] Built target client
+[7.439s] [100%] [32m[1mLinking CXX executable server[0m
+[7.769s] [100%] Built target server
+[7.801s] Invoked command in '/workspaces/isaac_ros-dev/build/cpp_srvcli' returned '0': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_srvcli -- -j6 -l6
+[7.902s] Invoking command in '/workspaces/isaac_ros-dev/build/cpp_srvcli': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/cpp_srvcli
+[7.922s] -- Install configuration: ""
+[7.922s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_srvcli/lib/cpp_srvcli/server
+[7.924s] -- Set runtime path of "/workspaces/isaac_ros-dev/install/cpp_srvcli/lib/cpp_srvcli/server" to ""
+[7.925s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/lib/cpp_srvcli/client
+[7.925s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/ament_index/resource_index/package_run_dependencies/cpp_srvcli
+[7.926s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/ament_index/resource_index/parent_prefix_path/cpp_srvcli
+[7.926s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/environment/ament_prefix_path.sh
+[7.926s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/environment/ament_prefix_path.dsv
+[7.927s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/environment/path.sh
+[7.927s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/environment/path.dsv
+[7.927s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/local_setup.bash
+[7.928s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/local_setup.sh
+[7.928s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/local_setup.zsh
+[7.928s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/local_setup.dsv
+[7.928s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/package.dsv
+[7.928s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/ament_index/resource_index/packages/cpp_srvcli
+[7.929s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/cmake/cpp_srvcliConfig.cmake
+[7.929s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/cmake/cpp_srvcliConfig-version.cmake
+[7.929s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/package.xml
+[7.932s] Invoked command in '/workspaces/isaac_ros-dev/build/cpp_srvcli' returned '0': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/cpp_srvcli

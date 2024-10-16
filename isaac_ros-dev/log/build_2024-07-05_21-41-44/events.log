@@ -1,0 +1,120 @@
+[0.000000] (-) TimerEvent: {}
+[0.000925] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.001273] (-) JobUnselected: {'identifier': 'isaac_ros_apriltag_interfaces'}
+[0.001574] (-) JobUnselected: {'identifier': 'isaac_ros_bi3d_interfaces'}
+[0.001671] (-) JobUnselected: {'identifier': 'isaac_ros_common'}
+[0.001746] (-) JobUnselected: {'identifier': 'isaac_ros_launch_utils'}
+[0.001817] (-) JobUnselected: {'identifier': 'isaac_ros_nitros_bridge_interfaces'}
+[0.001859] (-) JobUnselected: {'identifier': 'isaac_ros_nova_interfaces'}
+[0.001895] (-) JobUnselected: {'identifier': 'isaac_ros_pointcloud_interfaces'}
+[0.001929] (-) JobUnselected: {'identifier': 'isaac_ros_tensor_list_interfaces'}
+[0.001963] (-) JobUnselected: {'identifier': 'isaac_ros_test'}
+[0.001996] (-) JobUnselected: {'identifier': 'my_package'}
+[0.002028] (-) JobUnselected: {'identifier': 'py_pubsub'}
+[0.002114] (-) JobUnselected: {'identifier': 'py_srvcli'}
+[0.002186] (-) JobUnselected: {'identifier': 'turtlesim'}
+[0.002223] (-) JobUnselected: {'identifier': 'tutorial_interfaces'}
+[0.002307] (cpp_srvcli) JobQueued: {'identifier': 'cpp_srvcli', 'dependencies': OrderedDict([('tutorial_interfaces', '/workspaces/isaac_ros-dev/install/tutorial_interfaces')])}
+[0.002385] (cpp_srvcli) JobStarted: {'identifier': 'cpp_srvcli'}
+[0.022834] (cpp_srvcli) JobProgress: {'identifier': 'cpp_srvcli', 'progress': 'cmake'}
+[0.024249] (cpp_srvcli) JobProgress: {'identifier': 'cpp_srvcli', 'progress': 'build'}
+[0.025544] (cpp_srvcli) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspaces/isaac_ros-dev/build/cpp_srvcli', '--', '-j6', '-l6'], 'cwd': '/workspaces/isaac_ros-dev/build/cpp_srvcli', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('PYTHONWARNINGS', 'ignore:::setuptools.command.install,ignore:::setuptools.command.easy_install,ignore:::pkg_resources,ignore:::setuptools.command.develop'), ('NV_LIBCUBLAS_VERSION', '12.2.5.6-1'), ('TMUX', '/tmp/tmux-1000/default,5219,0'), ('USER', 'vtcro'), ('HOSTNAME', 'carcass'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib'), ('HOME', '/home/admin'), ('TERM_PROGRAM_VERSION', '3.2a'), ('NV_LIBCUBLAS_DEV_VERSION', '12.2.5.6-1'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('USER_UID', '1000'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-2=12.2.1.4-1'), ('CUDA_VERSION', '12.2.12'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-2'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.2'), ('JETSON_MODULE', ''), ('JETSON_SERIAL_NUMBER', '1421223035915'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.1.2.141-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.2.12-1'), ('NV_NVML_DEV_VERSION', '12.2.140-1'), ('USERNAME', 'admin'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-2=12.2.1.4-1'), ('TERM', 'screen'), ('ISAAC_ROS_WS', '/workspaces/isaac_ros-dev'), ('NV_CUDA_CUDART_VERSION', '12.2.140-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/src/tensorrt/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/nvidia/tao'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/usr/local/share/middleware_profiles/rtps_udp_profile.xml'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-2'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-2=12.2.5.6-1'), ('NVARCH', 'arm64'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.1.2.141-1'), ('DISPLAY', ':1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('NV_CUDA_CUDART_DEV_VERSION', '12.2.140-1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('ROS_ROOT', '/opt/ros/humble'), ('TERM_PROGRAM', 'tmux'), ('AMENT_PREFIX_PATH', '/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('TRT_INCLUDE_PATH', '/usr/include/aarch64-linux-gnu'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-2=12.2.5.6-1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NVIDIA_REQUIRE_JETPACK_HOST_MOUNTS', 'base-only'), ('NV_NVTX_VERSION', '12.2.140-1'), ('NV_LIBNPP_VERSION', '12.2.1.4-1'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/workspaces/isaac_ros-dev/build/cpp_srvcli'), ('PYTHONPATH', '/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('USER_GID', '1000'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.2.1.4-1'), ('TMUX_PANE', '%0'), ('JETSON_JETPACK', '6.0'), ('TRT_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('CMAKE_PREFIX_PATH', '/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.099318] (-) TimerEvent: {}
+[0.128052] (cpp_srvcli) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target client\x1b[0m\n'}
+[0.167589] (cpp_srvcli) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o\x1b[0m\n'}
+[0.168228] (cpp_srvcli) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o\x1b[0m\n'}
+[0.199412] (-) TimerEvent: {}
+[0.300009] (-) TimerEvent: {}
+[0.400709] (-) TimerEvent: {}
+[0.501344] (-) TimerEvent: {}
+[0.601994] (-) TimerEvent: {}
+[0.702630] (-) TimerEvent: {}
+[0.715197] (cpp_srvcli) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:2:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kexample_interfaces/srv/add_two_ints.hpp: No such file or directory\n'}
+[0.715782] (cpp_srvcli) StderrLine: {'line': b'    2 | #include \x1b[01;31m\x1b[K"example_interfaces/srv/add_two_ints.hpp"\x1b[m\x1b[K\n'}
+[0.715952] (cpp_srvcli) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[0.716083] (cpp_srvcli) StderrLine: {'line': b'compilation terminated.\n'}
+[0.723103] (cpp_srvcli) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/server.dir/build.make:76: CMakeFiles/server.dir/src/server.cpp.o] Error 1\n'}
+[0.724104] (cpp_srvcli) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/server.dir/all] Error 2\n'}
+[0.724506] (cpp_srvcli) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[0.802718] (-) TimerEvent: {}
+[0.903264] (-) TimerEvent: {}
+[1.003787] (-) TimerEvent: {}
+[1.104181] (-) TimerEvent: {}
+[1.204709] (-) TimerEvent: {}
+[1.305336] (-) TimerEvent: {}
+[1.405787] (-) TimerEvent: {}
+[1.506172] (-) TimerEvent: {}
+[1.606572] (-) TimerEvent: {}
+[1.706956] (-) TimerEvent: {}
+[1.807334] (-) TimerEvent: {}
+[1.907700] (-) TimerEvent: {}
+[2.008072] (-) TimerEvent: {}
+[2.108442] (-) TimerEvent: {}
+[2.208918] (-) TimerEvent: {}
+[2.309597] (-) TimerEvent: {}
+[2.410059] (-) TimerEvent: {}
+[2.510468] (-) TimerEvent: {}
+[2.610871] (-) TimerEvent: {}
+[2.711250] (-) TimerEvent: {}
+[2.811623] (-) TimerEvent: {}
+[2.911993] (-) TimerEvent: {}
+[3.012412] (-) TimerEvent: {}
+[3.112790] (-) TimerEvent: {}
+[3.213237] (-) TimerEvent: {}
+[3.313786] (-) TimerEvent: {}
+[3.414242] (-) TimerEvent: {}
+[3.514649] (-) TimerEvent: {}
+[3.615047] (-) TimerEvent: {}
+[3.715423] (-) TimerEvent: {}
+[3.815798] (-) TimerEvent: {}
+[3.916185] (-) TimerEvent: {}
+[4.016618] (-) TimerEvent: {}
+[4.117041] (-) TimerEvent: {}
+[4.217652] (-) TimerEvent: {}
+[4.318470] (-) TimerEvent: {}
+[4.419287] (-) TimerEvent: {}
+[4.520086] (-) TimerEvent: {}
+[4.620947] (-) TimerEvent: {}
+[4.721749] (-) TimerEvent: {}
+[4.822556] (-) TimerEvent: {}
+[4.923349] (-) TimerEvent: {}
+[5.024143] (-) TimerEvent: {}
+[5.124965] (-) TimerEvent: {}
+[5.225774] (-) TimerEvent: {}
+[5.326537] (-) TimerEvent: {}
+[5.427327] (-) TimerEvent: {}
+[5.528089] (-) TimerEvent: {}
+[5.628888] (-) TimerEvent: {}
+[5.729610] (-) TimerEvent: {}
+[5.830325] (-) TimerEvent: {}
+[5.931036] (-) TimerEvent: {}
+[6.031752] (-) TimerEvent: {}
+[6.132499] (-) TimerEvent: {}
+[6.233233] (-) TimerEvent: {}
+[6.333982] (-) TimerEvent: {}
+[6.434719] (-) TimerEvent: {}
+[6.535419] (-) TimerEvent: {}
+[6.636144] (-) TimerEvent: {}
+[6.736917] (-) TimerEvent: {}
+[6.837625] (-) TimerEvent: {}
+[6.938312] (-) TimerEvent: {}
+[7.039025] (-) TimerEvent: {}
+[7.139722] (-) TimerEvent: {}
+[7.240452] (-) TimerEvent: {}
+[7.341176] (-) TimerEvent: {}
+[7.441902] (-) TimerEvent: {}
+[7.542605] (-) TimerEvent: {}
+[7.643284] (-) TimerEvent: {}
+[7.744062] (-) TimerEvent: {}
+[7.845097] (-) TimerEvent: {}
+[7.945850] (-) TimerEvent: {}
+[7.971987] (cpp_srvcli) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable client\x1b[0m\n'}
+[8.045979] (-) TimerEvent: {}
+[8.146672] (-) TimerEvent: {}
+[8.247391] (-) TimerEvent: {}
+[8.314189] (cpp_srvcli) StdoutLine: {'line': b'[ 75%] Built target client\n'}
+[8.317948] (cpp_srvcli) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[8.324670] (cpp_srvcli) CommandEnded: {'returncode': 2}
+[8.347486] (-) TimerEvent: {}
+[8.435833] (cpp_srvcli) JobEnded: {'identifier': 'cpp_srvcli', 'rc': 2}
+[8.446966] (-) EventReactorShutdown: {}

@@ -1,0 +1,293 @@
+[0.000000] (-) TimerEvent: {}
+[0.001043] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.001170] (-) JobUnselected: {'identifier': 'cpp_srvcli'}
+[0.001249] (-) JobUnselected: {'identifier': 'isaac_ros_apriltag_interfaces'}
+[0.001567] (-) JobUnselected: {'identifier': 'isaac_ros_bi3d_interfaces'}
+[0.001635] (-) JobUnselected: {'identifier': 'isaac_ros_common'}
+[0.001695] (-) JobUnselected: {'identifier': 'isaac_ros_launch_utils'}
+[0.002012] (-) JobUnselected: {'identifier': 'isaac_ros_nitros_bridge_interfaces'}
+[0.002132] (-) JobUnselected: {'identifier': 'isaac_ros_nova_interfaces'}
+[0.002231] (-) JobUnselected: {'identifier': 'isaac_ros_pointcloud_interfaces'}
+[0.002325] (-) JobUnselected: {'identifier': 'isaac_ros_tensor_list_interfaces'}
+[0.002416] (-) JobUnselected: {'identifier': 'isaac_ros_test'}
+[0.002507] (-) JobUnselected: {'identifier': 'my_package'}
+[0.002597] (-) JobUnselected: {'identifier': 'py_pubsub'}
+[0.002677] (-) JobUnselected: {'identifier': 'py_srvcli'}
+[0.002788] (-) JobUnselected: {'identifier': 'turtlesim'}
+[0.002989] (-) JobUnselected: {'identifier': 'tutorial_interfaces'}
+[0.003057] (more_interfaces) JobQueued: {'identifier': 'more_interfaces', 'dependencies': OrderedDict()}
+[0.003130] (more_interfaces) JobStarted: {'identifier': 'more_interfaces'}
+[0.019748] (more_interfaces) JobProgress: {'identifier': 'more_interfaces', 'progress': 'cmake'}
+[0.021066] (more_interfaces) JobProgress: {'identifier': 'more_interfaces', 'progress': 'build'}
+[0.022505] (more_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspaces/isaac_ros-dev/build/more_interfaces', '--', '-j6', '-l6'], 'cwd': '/workspaces/isaac_ros-dev/build/more_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('PYTHONWARNINGS', 'ignore:::setuptools.command.install,ignore:::setuptools.command.easy_install,ignore:::pkg_resources,ignore:::setuptools.command.develop'), ('NV_LIBCUBLAS_VERSION', '12.2.5.6-1'), ('TMUX', '/tmp/tmux-1000/default,5943,0'), ('USER', 'vtcro'), ('HOSTNAME', 'carcass'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib'), ('HOME', '/home/admin'), ('OLDPWD', '/workspaces/isaac_ros-dev/src/more_interfaces'), ('TERM_PROGRAM_VERSION', '3.2a'), ('NV_LIBCUBLAS_DEV_VERSION', '12.2.5.6-1'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('USER_UID', '1000'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-2=12.2.1.4-1'), ('CUDA_VERSION', '12.2.12'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-2'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.2'), ('JETSON_MODULE', ''), ('JETSON_SERIAL_NUMBER', '1421223035915'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.1.2.141-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.2.12-1'), ('NV_NVML_DEV_VERSION', '12.2.140-1'), ('USERNAME', 'admin'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-2=12.2.1.4-1'), ('TERM', 'screen'), ('ISAAC_ROS_WS', '/workspaces/isaac_ros-dev'), ('NV_CUDA_CUDART_VERSION', '12.2.140-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/src/tensorrt/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/nvidia/tao'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/usr/local/share/middleware_profiles/rtps_udp_profile.xml'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-2'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-2=12.2.5.6-1'), ('NVARCH', 'arm64'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.1.2.141-1'), ('DISPLAY', ':1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('NV_CUDA_CUDART_DEV_VERSION', '12.2.140-1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('ROS_ROOT', '/opt/ros/humble'), ('TERM_PROGRAM', 'tmux'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('TRT_INCLUDE_PATH', '/usr/include/aarch64-linux-gnu'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-2=12.2.5.6-1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NVIDIA_REQUIRE_JETPACK_HOST_MOUNTS', 'base-only'), ('NV_NVTX_VERSION', '12.2.140-1'), ('NV_LIBNPP_VERSION', '12.2.1.4-1'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/workspaces/isaac_ros-dev/build/more_interfaces'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('USER_GID', '1000'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.2.1.4-1'), ('TMUX_PANE', '%0'), ('JETSON_JETPACK', '6.0'), ('TRT_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099163] (-) TimerEvent: {}
+[0.160879] (more_interfaces) StdoutLine: {'line': b'[  9%] Built target more_interfaces__rosidl_generator_c\n'}
+[0.161907] (more_interfaces) StdoutLine: {'line': b'[ 12%] Built target more_interfaces__cpp\n'}
+[0.188864] (more_interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_more_interfaces\n'}
+[0.199316] (-) TimerEvent: {}
+[0.218940] (more_interfaces) StdoutLine: {'line': b'[ 39%] Built target more_interfaces__rosidl_typesupport_cpp\n'}
+[0.219434] (more_interfaces) StdoutLine: {'line': b'[ 39%] Built target more_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.219607] (more_interfaces) StdoutLine: {'line': b'[ 39%] Built target more_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.221776] (more_interfaces) StdoutLine: {'line': b'[ 57%] Built target more_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.222183] (more_interfaces) StdoutLine: {'line': b'[ 57%] Built target more_interfaces__rosidl_typesupport_c\n'}
+[0.248597] (more_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target publish_address_book\x1b[0m\n'}
+[0.249312] (more_interfaces) StdoutLine: {'line': b'[ 66%] Built target more_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.288234] (more_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/publish_address_book.dir/src/publish_address_book.cpp.o\x1b[0m\n'}
+[0.294625] (more_interfaces) StdoutLine: {'line': b'[ 69%] Built target more_interfaces\n'}
+[0.299377] (-) TimerEvent: {}
+[0.342845] (more_interfaces) StdoutLine: {'line': b'[ 72%] Built target more_interfaces__py\n'}
+[0.390142] (more_interfaces) StdoutLine: {'line': b'[ 78%] Built target more_interfaces__rosidl_generator_py\n'}
+[0.399563] (-) TimerEvent: {}
+[0.440527] (more_interfaces) StdoutLine: {'line': b'[ 90%] Built target more_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.440979] (more_interfaces) StdoutLine: {'line': b'[ 90%] Built target more_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.441668] (more_interfaces) StdoutLine: {'line': b'[ 96%] Built target more_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.499709] (-) TimerEvent: {}
+[0.600309] (-) TimerEvent: {}
+[0.700929] (-) TimerEvent: {}
+[0.802131] (-) TimerEvent: {}
+[0.903149] (-) TimerEvent: {}
+[1.004418] (-) TimerEvent: {}
+[1.063617] (more_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[1.102839] (more_interfaces) StdoutLine: {'line': b'writing more_interfaces.egg-info/PKG-INFO\n'}
+[1.103559] (more_interfaces) StdoutLine: {'line': b'writing dependency_links to more_interfaces.egg-info/dependency_links.txt\n'}
+[1.104284] (more_interfaces) StdoutLine: {'line': b'writing top-level names to more_interfaces.egg-info/top_level.txt\n'}
+[1.104443] (-) TimerEvent: {}
+[1.204845] (-) TimerEvent: {}
+[1.305434] (-) TimerEvent: {}
+[1.323715] (more_interfaces) StderrLine: {'line': b"ERROR setuptools_scm._file_finders.git listing git files failed - pretending there aren't any\n"}
+[1.405588] (-) TimerEvent: {}
+[1.506181] (-) TimerEvent: {}
+[1.579058] (more_interfaces) StdoutLine: {'line': b"reading manifest file 'more_interfaces.egg-info/SOURCES.txt'\n"}
+[1.580798] (more_interfaces) StdoutLine: {'line': b"writing manifest file 'more_interfaces.egg-info/SOURCES.txt'\n"}
+[1.606318] (-) TimerEvent: {}
+[1.700265] (more_interfaces) StdoutLine: {'line': b'[ 96%] Built target ament_cmake_python_build_more_interfaces_egg\n'}
+[1.706408] (-) TimerEvent: {}
+[1.806881] (-) TimerEvent: {}
+[1.907273] (-) TimerEvent: {}
+[2.007650] (-) TimerEvent: {}
+[2.108121] (-) TimerEvent: {}
+[2.208800] (-) TimerEvent: {}
+[2.324100] (-) TimerEvent: {}
+[2.424789] (-) TimerEvent: {}
+[2.525462] (-) TimerEvent: {}
+[2.626105] (-) TimerEvent: {}
+[2.726736] (-) TimerEvent: {}
+[2.827439] (-) TimerEvent: {}
+[2.928203] (-) TimerEvent: {}
+[3.028891] (-) TimerEvent: {}
+[3.129558] (-) TimerEvent: {}
+[3.230470] (-) TimerEvent: {}
+[3.331425] (-) TimerEvent: {}
+[3.432109] (-) TimerEvent: {}
+[3.532793] (-) TimerEvent: {}
+[3.633442] (-) TimerEvent: {}
+[3.734349] (-) TimerEvent: {}
+[3.835304] (-) TimerEvent: {}
+[3.936246] (-) TimerEvent: {}
+[4.036948] (-) TimerEvent: {}
+[4.137869] (-) TimerEvent: {}
+[4.238826] (-) TimerEvent: {}
+[4.339774] (-) TimerEvent: {}
+[4.440500] (-) TimerEvent: {}
+[4.541431] (-) TimerEvent: {}
+[4.642378] (-) TimerEvent: {}
+[4.743104] (-) TimerEvent: {}
+[4.843816] (-) TimerEvent: {}
+[4.944518] (-) TimerEvent: {}
+[5.045470] (-) TimerEvent: {}
+[5.146199] (-) TimerEvent: {}
+[5.247161] (-) TimerEvent: {}
+[5.348111] (-) TimerEvent: {}
+[5.448784] (-) TimerEvent: {}
+[5.549723] (-) TimerEvent: {}
+[5.650661] (-) TimerEvent: {}
+[5.751623] (-) TimerEvent: {}
+[5.852597] (-) TimerEvent: {}
+[5.953541] (-) TimerEvent: {}
+[6.054494] (-) TimerEvent: {}
+[6.155188] (-) TimerEvent: {}
+[6.255890] (-) TimerEvent: {}
+[6.356837] (-) TimerEvent: {}
+[6.457508] (-) TimerEvent: {}
+[6.558456] (-) TimerEvent: {}
+[6.659402] (-) TimerEvent: {}
+[6.760124] (-) TimerEvent: {}
+[6.860811] (-) TimerEvent: {}
+[6.961482] (-) TimerEvent: {}
+[7.062153] (-) TimerEvent: {}
+[7.162823] (-) TimerEvent: {}
+[7.263513] (-) TimerEvent: {}
+[7.372887] (-) TimerEvent: {}
+[7.473689] (-) TimerEvent: {}
+[7.574540] (-) TimerEvent: {}
+[7.675397] (-) TimerEvent: {}
+[7.776182] (-) TimerEvent: {}
+[7.876959] (-) TimerEvent: {}
+[7.977753] (-) TimerEvent: {}
+[8.078534] (-) TimerEvent: {}
+[8.179334] (-) TimerEvent: {}
+[8.280113] (-) TimerEvent: {}
+[8.380918] (-) TimerEvent: {}
+[8.481681] (-) TimerEvent: {}
+[8.582469] (-) TimerEvent: {}
+[8.683251] (-) TimerEvent: {}
+[8.784063] (-) TimerEvent: {}
+[8.884837] (-) TimerEvent: {}
+[8.985637] (-) TimerEvent: {}
+[9.086459] (-) TimerEvent: {}
+[9.187162] (-) TimerEvent: {}
+[9.287814] (-) TimerEvent: {}
+[9.388495] (-) TimerEvent: {}
+[9.489162] (-) TimerEvent: {}
+[9.519747] (more_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable publish_address_book\x1b[0m\n'}
+[9.589427] (-) TimerEvent: {}
+[9.690354] (-) TimerEvent: {}
+[9.791309] (-) TimerEvent: {}
+[9.892392] (-) TimerEvent: {}
+[9.993079] (-) TimerEvent: {}
+[10.090643] (more_interfaces) StdoutLine: {'line': b'[100%] Built target publish_address_book\n'}
+[10.093230] (-) TimerEvent: {}
+[10.127814] (more_interfaces) CommandEnded: {'returncode': 0}
+[10.193443] (-) TimerEvent: {}
+[10.287919] (more_interfaces) JobProgress: {'identifier': 'more_interfaces', 'progress': 'install'}
+[10.293586] (-) TimerEvent: {}
+[10.316219] (more_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspaces/isaac_ros-dev/build/more_interfaces'], 'cwd': '/workspaces/isaac_ros-dev/build/more_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('PYTHONWARNINGS', 'ignore:::setuptools.command.install,ignore:::setuptools.command.easy_install,ignore:::pkg_resources,ignore:::setuptools.command.develop'), ('NV_LIBCUBLAS_VERSION', '12.2.5.6-1'), ('TMUX', '/tmp/tmux-1000/default,5943,0'), ('USER', 'vtcro'), ('HOSTNAME', 'carcass'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib'), ('HOME', '/home/admin'), ('OLDPWD', '/workspaces/isaac_ros-dev/src/more_interfaces'), ('TERM_PROGRAM_VERSION', '3.2a'), ('NV_LIBCUBLAS_DEV_VERSION', '12.2.5.6-1'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('USER_UID', '1000'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-2=12.2.1.4-1'), ('CUDA_VERSION', '12.2.12'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-2'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.2'), ('JETSON_MODULE', ''), ('JETSON_SERIAL_NUMBER', '1421223035915'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.1.2.141-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.2.12-1'), ('NV_NVML_DEV_VERSION', '12.2.140-1'), ('USERNAME', 'admin'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-2=12.2.1.4-1'), ('TERM', 'screen'), ('ISAAC_ROS_WS', '/workspaces/isaac_ros-dev'), ('NV_CUDA_CUDART_VERSION', '12.2.140-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/src/tensorrt/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/nvidia/tao'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/usr/local/share/middleware_profiles/rtps_udp_profile.xml'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-2'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-2=12.2.5.6-1'), ('NVARCH', 'arm64'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.1.2.141-1'), ('DISPLAY', ':1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('NV_CUDA_CUDART_DEV_VERSION', '12.2.140-1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('ROS_ROOT', '/opt/ros/humble'), ('TERM_PROGRAM', 'tmux'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('TRT_INCLUDE_PATH', '/usr/include/aarch64-linux-gnu'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-2=12.2.5.6-1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NVIDIA_REQUIRE_JETPACK_HOST_MOUNTS', 'base-only'), ('NV_NVTX_VERSION', '12.2.140-1'), ('NV_LIBNPP_VERSION', '12.2.1.4-1'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/workspaces/isaac_ros-dev/build/more_interfaces'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('USER_GID', '1000'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.2.1.4-1'), ('TMUX_PANE', '%0'), ('JETSON_JETPACK', '6.0'), ('TRT_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[10.342515] (more_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.343021] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/ament_index/resource_index/rosidl_interfaces/more_interfaces\n'}
+[10.343319] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces\n'}
+[10.343588] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg\n'}
+[10.343819] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/address_book.h\n'}
+[10.344082] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[10.344423] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail\n'}
+[10.344695] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__functions.h\n'}
+[10.344983] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__struct.h\n'}
+[10.345338] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__type_support.h\n'}
+[10.345548] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__functions.c\n'}
+[10.345874] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/environment/library_path.sh\n'}
+[10.346244] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/environment/library_path.dsv\n'}
+[10.346714] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_generator_c.so\n'}
+[10.347362] (more_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_generator_c.so" to ""\n'}
+[10.347550] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces\n'}
+[10.347747] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg\n'}
+[10.347885] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[10.348097] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail\n'}
+[10.348397] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__rosidl_typesupport_fastrtps_c.h\n'}
+[10.348748] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[10.349370] (more_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[10.349551] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces\n'}
+[10.349743] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg\n'}
+[10.349886] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[10.350051] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail\n'}
+[10.350224] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__type_support.c\n'}
+[10.350394] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__rosidl_typesupport_introspection_c.h\n'}
+[10.350662] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[10.351216] (more_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[10.351393] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_c.so\n'}
+[10.352381] (more_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[10.352656] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces\n'}
+[10.352828] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg\n'}
+[10.353013] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/address_book.hpp\n'}
+[10.353170] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail\n'}
+[10.353328] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__builder.hpp\n'}
+[10.353458] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__struct.hpp\n'}
+[10.353618] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__traits.hpp\n'}
+[10.353771] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces\n'}
+[10.353954] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg\n'}
+[10.354090] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[10.354280] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail\n'}
+[10.354412] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/dds_fastrtps\n'}
+[10.354571] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.354736] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[10.355361] (more_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[10.355557] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces\n'}
+[10.355756] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg\n'}
+[10.355885] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail\n'}
+[10.356061] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__type_support.cpp\n'}
+[10.356193] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/address_book__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.356358] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[10.356905] (more_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[10.357065] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_cpp.so\n'}
+[10.357554] (more_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[10.357716] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/environment/pythonpath.sh\n'}
+[10.358011] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/environment/pythonpath.dsv\n'}
+[10.358277] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces-0.0.0-py3.10.egg-info\n'}
+[10.358619] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[10.358855] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[10.359085] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[10.359298] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[10.359575] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces\n'}
+[10.359751] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/libmore_interfaces__rosidl_generator_py.so\n'}
+[10.360065] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/__init__.py\n'}
+[10.360256] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[10.360478] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[10.360710] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[10.360967] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[10.361236] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/msg\n'}
+[10.361404] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/msg/_address_book.py\n'}
+[10.361631] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/msg/__init__.py\n'}
+[10.361839] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/msg/_address_book_s.c\n'}
+[10.362058] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[10.362313] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[10.393679] (-) TimerEvent: {}
+[10.443918] (more_interfaces) StdoutLine: {'line': b"Listing '/workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces'...\n"}
+[10.444403] (more_interfaces) StdoutLine: {'line': b"Compiling '/workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/__init__.py'...\n"}
+[10.444589] (more_interfaces) StdoutLine: {'line': b"Listing '/workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/msg'...\n"}
+[10.444734] (more_interfaces) StdoutLine: {'line': b"Compiling '/workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/msg/__init__.py'...\n"}
+[10.444894] (more_interfaces) StdoutLine: {'line': b"Compiling '/workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/msg/_address_book.py'...\n"}
+[10.455954] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[10.456825] (more_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[10.457180] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[10.457730] (more_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[10.458081] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[10.458627] (more_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[10.458843] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_generator_py.so\n'}
+[10.459351] (more_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/more_interfaces/lib/libmore_interfaces__rosidl_generator_py.so" to ""\n'}
+[10.459591] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/msg/AddressBook.idl\n'}
+[10.459859] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/msg/AddressBook.msg\n'}
+[10.460349] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/lib/more_interfaces/publish_address_book\n'}
+[10.462694] (more_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/more_interfaces/lib/more_interfaces/publish_address_book" to ""\n'}
+[10.462971] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/ament_index/resource_index/package_run_dependencies/more_interfaces\n'}
+[10.463378] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/ament_index/resource_index/parent_prefix_path/more_interfaces\n'}
+[10.463791] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/environment/ament_prefix_path.sh\n'}
+[10.464154] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/environment/ament_prefix_path.dsv\n'}
+[10.464477] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/environment/path.sh\n'}
+[10.464766] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/environment/path.dsv\n'}
+[10.465046] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/local_setup.bash\n'}
+[10.465322] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/local_setup.sh\n'}
+[10.465612] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/local_setup.zsh\n'}
+[10.465888] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/local_setup.dsv\n'}
+[10.466146] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/package.dsv\n'}
+[10.466596] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/ament_index/resource_index/packages/more_interfaces\n'}
+[10.467002] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_cExport.cmake\n'}
+[10.467300] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[10.467625] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[10.467968] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[10.468286] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[10.468579] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[10.468880] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[10.469196] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[10.469499] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_cppExport.cmake\n'}
+[10.469812] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[10.470111] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[10.470418] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[10.470717] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[10.471057] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[10.471377] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[10.471685] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_pyExport.cmake\n'}
+[10.472013] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[10.472368] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[10.472653] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[10.472921] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[10.473217] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[10.473478] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[10.473747] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[10.474051] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[10.474337] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/more_interfacesConfig.cmake\n'}
+[10.474565] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/cmake/more_interfacesConfig-version.cmake\n'}
+[10.474832] (more_interfaces) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/more_interfaces/share/more_interfaces/package.xml\n'}
+[10.482389] (more_interfaces) CommandEnded: {'returncode': 0}
+[10.494274] (-) TimerEvent: {}
+[10.595542] (-) TimerEvent: {}
+[10.696686] (-) TimerEvent: {}
+[10.723965] (more_interfaces) JobEnded: {'identifier': 'more_interfaces', 'rc': 0}
+[10.727089] (-) EventReactorShutdown: {}

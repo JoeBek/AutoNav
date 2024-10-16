@@ -1,0 +1,32 @@
+[0.028s] Invoking command in '/workspaces/isaac_ros-dev/build/cpp_pubsub': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_pubsub -- -j6 -l6
+[0.139s] [35m[1mConsolidate compiler generated dependencies of target talker[0m
+[0.139s] [35m[1mConsolidate compiler generated dependencies of target listener[0m
+[0.183s] [ 50%] [32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o[0m
+[0.183s] [ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[10.083s] [ 75%] [32m[1mLinking CXX executable talker[0m
+[11.008s] [ 75%] Built target talker
+[17.872s] [100%] [32m[1mLinking CXX executable listener[0m
+[18.668s] [100%] Built target listener
+[18.704s] Invoked command in '/workspaces/isaac_ros-dev/build/cpp_pubsub' returned '0': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_pubsub -- -j6 -l6
+[18.801s] Invoking command in '/workspaces/isaac_ros-dev/build/cpp_pubsub': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/cpp_pubsub
+[18.826s] -- Install configuration: ""
+[18.829s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/lib/cpp_pubsub/talker
+[18.834s] -- Set runtime path of "/workspaces/isaac_ros-dev/install/cpp_pubsub/lib/cpp_pubsub/talker" to ""
+[18.837s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/lib/cpp_pubsub/listener
+[18.849s] -- Set runtime path of "/workspaces/isaac_ros-dev/install/cpp_pubsub/lib/cpp_pubsub/listener" to ""
+[18.849s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+[18.850s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+[18.852s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+[18.852s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+[18.853s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+[18.853s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+[18.854s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+[18.855s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+[18.855s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+[18.855s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+[18.856s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+[18.857s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+[18.857s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+[18.857s] -- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+[18.858s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/package.xml
+[18.865s] Invoked command in '/workspaces/isaac_ros-dev/build/cpp_pubsub' returned '0': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/cpp_pubsub

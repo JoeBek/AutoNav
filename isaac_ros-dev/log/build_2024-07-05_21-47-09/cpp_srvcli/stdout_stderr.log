@@ -1,0 +1,24 @@
+[35m[1mConsolidate compiler generated dependencies of target server[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[ 75%] Built target server
+[100%] [32m[1mLinking CXX executable client[0m
+[100%] Built target client
+-- Install configuration: ""
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/lib/cpp_srvcli/server
+-- Installing: /workspaces/isaac_ros-dev/install/cpp_srvcli/lib/cpp_srvcli/client
+-- Set runtime path of "/workspaces/isaac_ros-dev/install/cpp_srvcli/lib/cpp_srvcli/client" to ""
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/ament_index/resource_index/package_run_dependencies/cpp_srvcli
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/ament_index/resource_index/parent_prefix_path/cpp_srvcli
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/environment/ament_prefix_path.sh
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/environment/ament_prefix_path.dsv
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/environment/path.sh
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/environment/path.dsv
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/local_setup.bash
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/local_setup.sh
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/local_setup.zsh
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/local_setup.dsv
+-- Installing: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/package.dsv
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/ament_index/resource_index/packages/cpp_srvcli
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/cmake/cpp_srvcliConfig.cmake
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/cmake/cpp_srvcliConfig-version.cmake
+-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_srvcli/share/cpp_srvcli/package.xml

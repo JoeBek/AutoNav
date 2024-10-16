@@ -1,0 +1,15 @@
+[0.024s] Invoking command in '/workspaces/isaac_ros-dev/build/cpp_srvcli': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_srvcli -- -j6 -l6
+[0.119s] [35m[1mConsolidate compiler generated dependencies of target server[0m
+[0.148s] [ 25%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[0.156s] [ 50%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
+[0.688s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.example_interfaces/srv/add_two_ints.hpp: No such file or directory
+[0.688s]     2 | #include [01;31m[K"rclcpp/rclcpp.example_interfaces/srv/add_two_ints.hpp"[m[K
+[0.688s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.688s] compilation terminated.
+[0.694s] gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+[0.694s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/client.dir/all] Error 2
+[0.695s] gmake[1]: *** Waiting for unfinished jobs....
+[7.643s] [ 75%] [32m[1mLinking CXX executable server[0m
+[8.308s] [ 75%] Built target server
+[8.310s] gmake: *** [Makefile:146: all] Error 2
+[8.315s] Invoked command in '/workspaces/isaac_ros-dev/build/cpp_srvcli' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_srvcli -- -j6 -l6

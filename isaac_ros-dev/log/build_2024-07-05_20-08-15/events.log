@@ -1,0 +1,243 @@
+[0.000000] (-) TimerEvent: {}
+[0.000614] (-) JobUnselected: {'identifier': 'cpp_srvcli'}
+[0.001391] (-) JobUnselected: {'identifier': 'isaac_ros_apriltag_interfaces'}
+[0.001719] (-) JobUnselected: {'identifier': 'isaac_ros_bi3d_interfaces'}
+[0.001843] (-) JobUnselected: {'identifier': 'isaac_ros_common'}
+[0.001925] (-) JobUnselected: {'identifier': 'isaac_ros_launch_utils'}
+[0.001996] (-) JobUnselected: {'identifier': 'isaac_ros_nitros_bridge_interfaces'}
+[0.002063] (-) JobUnselected: {'identifier': 'isaac_ros_nova_interfaces'}
+[0.002170] (-) JobUnselected: {'identifier': 'isaac_ros_pointcloud_interfaces'}
+[0.002257] (-) JobUnselected: {'identifier': 'isaac_ros_tensor_list_interfaces'}
+[0.002325] (-) JobUnselected: {'identifier': 'isaac_ros_test'}
+[0.002392] (-) JobUnselected: {'identifier': 'my_package'}
+[0.002459] (-) JobUnselected: {'identifier': 'py_pubsub'}
+[0.002610] (-) JobUnselected: {'identifier': 'py_srvcli'}
+[0.002683] (-) JobUnselected: {'identifier': 'turtlesim'}
+[0.002724] (-) JobUnselected: {'identifier': 'tutorial_interfaces'}
+[0.002772] (cpp_pubsub) JobQueued: {'identifier': 'cpp_pubsub', 'dependencies': OrderedDict([('tutorial_interfaces', '/workspaces/isaac_ros-dev/install/tutorial_interfaces')])}
+[0.002849] (cpp_pubsub) JobStarted: {'identifier': 'cpp_pubsub'}
+[0.023100] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'cmake'}
+[0.024376] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'build'}
+[0.025746] (cpp_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspaces/isaac_ros-dev/build/cpp_pubsub', '--', '-j6', '-l6'], 'cwd': '/workspaces/isaac_ros-dev/build/cpp_pubsub', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('PYTHONWARNINGS', 'ignore:::setuptools.command.install,ignore:::setuptools.command.easy_install,ignore:::pkg_resources,ignore:::setuptools.command.develop'), ('NV_LIBCUBLAS_VERSION', '12.2.5.6-1'), ('TMUX', '/tmp/tmux-1000/default,5219,0'), ('USER', 'vtcro'), ('HOSTNAME', 'carcass'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib'), ('HOME', '/home/admin'), ('TERM_PROGRAM_VERSION', '3.2a'), ('NV_LIBCUBLAS_DEV_VERSION', '12.2.5.6-1'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('USER_UID', '1000'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-2=12.2.1.4-1'), ('CUDA_VERSION', '12.2.12'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-2'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.2'), ('JETSON_MODULE', ''), ('JETSON_SERIAL_NUMBER', '1421223035915'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.1.2.141-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.2.12-1'), ('NV_NVML_DEV_VERSION', '12.2.140-1'), ('USERNAME', 'admin'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-2=12.2.1.4-1'), ('TERM', 'screen'), ('ISAAC_ROS_WS', '/workspaces/isaac_ros-dev'), ('NV_CUDA_CUDART_VERSION', '12.2.140-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/src/tensorrt/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/nvidia/tao'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/usr/local/share/middleware_profiles/rtps_udp_profile.xml'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-2'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-2=12.2.5.6-1'), ('NVARCH', 'arm64'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.1.2.141-1'), ('DISPLAY', ':1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('NV_CUDA_CUDART_DEV_VERSION', '12.2.140-1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('ROS_ROOT', '/opt/ros/humble'), ('TERM_PROGRAM', 'tmux'), ('AMENT_PREFIX_PATH', '/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('TRT_INCLUDE_PATH', '/usr/include/aarch64-linux-gnu'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-2=12.2.5.6-1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NVIDIA_REQUIRE_JETPACK_HOST_MOUNTS', 'base-only'), ('NV_NVTX_VERSION', '12.2.140-1'), ('NV_LIBNPP_VERSION', '12.2.1.4-1'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/workspaces/isaac_ros-dev/build/cpp_pubsub'), ('PYTHONPATH', '/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('USER_GID', '1000'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.2.1.4-1'), ('TMUX_PANE', '%0'), ('JETSON_JETPACK', '6.0'), ('TRT_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('CMAKE_PREFIX_PATH', '/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.099587] (-) TimerEvent: {}
+[0.141144] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target talker\x1b[0m\n'}
+[0.141859] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target listener\x1b[0m\n'}
+[0.185667] (cpp_pubsub) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o\x1b[0m\n'}
+[0.186158] (cpp_pubsub) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o\x1b[0m\n'}
+[0.199614] (-) TimerEvent: {}
+[0.300268] (-) TimerEvent: {}
+[0.400973] (-) TimerEvent: {}
+[0.501676] (-) TimerEvent: {}
+[0.602411] (-) TimerEvent: {}
+[0.703193] (-) TimerEvent: {}
+[0.804021] (-) TimerEvent: {}
+[0.904807] (-) TimerEvent: {}
+[1.005581] (-) TimerEvent: {}
+[1.106880] (-) TimerEvent: {}
+[1.207654] (-) TimerEvent: {}
+[1.308639] (-) TimerEvent: {}
+[1.409362] (-) TimerEvent: {}
+[1.510103] (-) TimerEvent: {}
+[1.610833] (-) TimerEvent: {}
+[1.711599] (-) TimerEvent: {}
+[1.812334] (-) TimerEvent: {}
+[1.913312] (-) TimerEvent: {}
+[2.014025] (-) TimerEvent: {}
+[2.114980] (-) TimerEvent: {}
+[2.215940] (-) TimerEvent: {}
+[2.316901] (-) TimerEvent: {}
+[2.417854] (-) TimerEvent: {}
+[2.518822] (-) TimerEvent: {}
+[2.619772] (-) TimerEvent: {}
+[2.733859] (-) TimerEvent: {}
+[2.834573] (-) TimerEvent: {}
+[2.935632] (-) TimerEvent: {}
+[3.036345] (-) TimerEvent: {}
+[3.137314] (-) TimerEvent: {}
+[3.238273] (-) TimerEvent: {}
+[3.339015] (-) TimerEvent: {}
+[3.439712] (-) TimerEvent: {}
+[3.540448] (-) TimerEvent: {}
+[3.641184] (-) TimerEvent: {}
+[3.741916] (-) TimerEvent: {}
+[3.842885] (-) TimerEvent: {}
+[3.943840] (-) TimerEvent: {}
+[4.044802] (-) TimerEvent: {}
+[4.145775] (-) TimerEvent: {}
+[4.246733] (-) TimerEvent: {}
+[4.347488] (-) TimerEvent: {}
+[4.448279] (-) TimerEvent: {}
+[4.548994] (-) TimerEvent: {}
+[4.649679] (-) TimerEvent: {}
+[4.750397] (-) TimerEvent: {}
+[4.851125] (-) TimerEvent: {}
+[4.951846] (-) TimerEvent: {}
+[5.052544] (-) TimerEvent: {}
+[5.153353] (-) TimerEvent: {}
+[5.254050] (-) TimerEvent: {}
+[5.354743] (-) TimerEvent: {}
+[5.455450] (-) TimerEvent: {}
+[5.556189] (-) TimerEvent: {}
+[5.656891] (-) TimerEvent: {}
+[5.757581] (-) TimerEvent: {}
+[5.858270] (-) TimerEvent: {}
+[5.958982] (-) TimerEvent: {}
+[6.059719] (-) TimerEvent: {}
+[6.160447] (-) TimerEvent: {}
+[6.261177] (-) TimerEvent: {}
+[6.361882] (-) TimerEvent: {}
+[6.462588] (-) TimerEvent: {}
+[6.563254] (-) TimerEvent: {}
+[6.663929] (-) TimerEvent: {}
+[6.764574] (-) TimerEvent: {}
+[6.865264] (-) TimerEvent: {}
+[6.965956] (-) TimerEvent: {}
+[7.066652] (-) TimerEvent: {}
+[7.167331] (-) TimerEvent: {}
+[7.268041] (-) TimerEvent: {}
+[7.368731] (-) TimerEvent: {}
+[7.469454] (-) TimerEvent: {}
+[7.570165] (-) TimerEvent: {}
+[7.670854] (-) TimerEvent: {}
+[7.771562] (-) TimerEvent: {}
+[7.872235] (-) TimerEvent: {}
+[7.972897] (-) TimerEvent: {}
+[8.073543] (-) TimerEvent: {}
+[8.174202] (-) TimerEvent: {}
+[8.274880] (-) TimerEvent: {}
+[8.375566] (-) TimerEvent: {}
+[8.491821] (-) TimerEvent: {}
+[8.593442] (-) TimerEvent: {}
+[8.694367] (-) TimerEvent: {}
+[8.795042] (-) TimerEvent: {}
+[8.895702] (-) TimerEvent: {}
+[8.996609] (-) TimerEvent: {}
+[9.097527] (-) TimerEvent: {}
+[9.198461] (-) TimerEvent: {}
+[9.299142] (-) TimerEvent: {}
+[9.400168] (-) TimerEvent: {}
+[9.500955] (-) TimerEvent: {}
+[9.601845] (-) TimerEvent: {}
+[9.702527] (-) TimerEvent: {}
+[9.803237] (-) TimerEvent: {}
+[9.903980] (-) TimerEvent: {}
+[10.004681] (-) TimerEvent: {}
+[10.085509] (cpp_pubsub) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable talker\x1b[0m\n'}
+[10.104794] (-) TimerEvent: {}
+[10.205359] (-) TimerEvent: {}
+[10.305916] (-) TimerEvent: {}
+[10.406518] (-) TimerEvent: {}
+[10.507112] (-) TimerEvent: {}
+[10.607874] (-) TimerEvent: {}
+[10.708584] (-) TimerEvent: {}
+[10.809286] (-) TimerEvent: {}
+[10.909976] (-) TimerEvent: {}
+[11.010396] (cpp_pubsub) StdoutLine: {'line': b'[ 75%] Built target talker\n'}
+[11.010890] (-) TimerEvent: {}
+[11.111410] (-) TimerEvent: {}
+[11.212124] (-) TimerEvent: {}
+[11.312834] (-) TimerEvent: {}
+[11.413548] (-) TimerEvent: {}
+[11.514284] (-) TimerEvent: {}
+[11.614959] (-) TimerEvent: {}
+[11.715663] (-) TimerEvent: {}
+[11.816298] (-) TimerEvent: {}
+[11.916949] (-) TimerEvent: {}
+[12.017574] (-) TimerEvent: {}
+[12.118454] (-) TimerEvent: {}
+[12.219371] (-) TimerEvent: {}
+[12.320336] (-) TimerEvent: {}
+[12.421239] (-) TimerEvent: {}
+[12.522137] (-) TimerEvent: {}
+[12.623024] (-) TimerEvent: {}
+[12.730331] (-) TimerEvent: {}
+[12.831239] (-) TimerEvent: {}
+[12.931917] (-) TimerEvent: {}
+[13.032532] (-) TimerEvent: {}
+[13.133167] (-) TimerEvent: {}
+[13.233828] (-) TimerEvent: {}
+[13.334494] (-) TimerEvent: {}
+[13.435148] (-) TimerEvent: {}
+[13.535836] (-) TimerEvent: {}
+[13.636499] (-) TimerEvent: {}
+[13.737155] (-) TimerEvent: {}
+[13.837811] (-) TimerEvent: {}
+[13.938423] (-) TimerEvent: {}
+[14.039085] (-) TimerEvent: {}
+[14.139752] (-) TimerEvent: {}
+[14.240366] (-) TimerEvent: {}
+[14.340984] (-) TimerEvent: {}
+[14.441612] (-) TimerEvent: {}
+[14.542239] (-) TimerEvent: {}
+[14.642907] (-) TimerEvent: {}
+[14.743592] (-) TimerEvent: {}
+[14.844209] (-) TimerEvent: {}
+[14.944825] (-) TimerEvent: {}
+[15.045463] (-) TimerEvent: {}
+[15.146107] (-) TimerEvent: {}
+[15.246874] (-) TimerEvent: {}
+[15.347497] (-) TimerEvent: {}
+[15.448138] (-) TimerEvent: {}
+[15.548816] (-) TimerEvent: {}
+[15.649529] (-) TimerEvent: {}
+[15.750234] (-) TimerEvent: {}
+[15.851178] (-) TimerEvent: {}
+[15.951928] (-) TimerEvent: {}
+[16.052858] (-) TimerEvent: {}
+[16.153553] (-) TimerEvent: {}
+[16.254207] (-) TimerEvent: {}
+[16.354848] (-) TimerEvent: {}
+[16.455504] (-) TimerEvent: {}
+[16.556417] (-) TimerEvent: {}
+[16.657155] (-) TimerEvent: {}
+[16.758120] (-) TimerEvent: {}
+[16.858887] (-) TimerEvent: {}
+[16.959379] (-) TimerEvent: {}
+[17.059942] (-) TimerEvent: {}
+[17.160570] (-) TimerEvent: {}
+[17.261159] (-) TimerEvent: {}
+[17.361862] (-) TimerEvent: {}
+[17.462557] (-) TimerEvent: {}
+[17.562996] (-) TimerEvent: {}
+[17.663636] (-) TimerEvent: {}
+[17.764103] (-) TimerEvent: {}
+[17.864645] (-) TimerEvent: {}
+[17.874450] (cpp_pubsub) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable listener\x1b[0m\n'}
+[17.964727] (-) TimerEvent: {}
+[18.065239] (-) TimerEvent: {}
+[18.165921] (-) TimerEvent: {}
+[18.266450] (-) TimerEvent: {}
+[18.366910] (-) TimerEvent: {}
+[18.467434] (-) TimerEvent: {}
+[18.568154] (-) TimerEvent: {}
+[18.668836] (-) TimerEvent: {}
+[18.670685] (cpp_pubsub) StdoutLine: {'line': b'[100%] Built target listener\n'}
+[18.705505] (cpp_pubsub) CommandEnded: {'returncode': 0}
+[18.768998] (-) TimerEvent: {}
+[18.774183] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'install'}
+[18.800755] (cpp_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspaces/isaac_ros-dev/build/cpp_pubsub'], 'cwd': '/workspaces/isaac_ros-dev/build/cpp_pubsub', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('PYTHONWARNINGS', 'ignore:::setuptools.command.install,ignore:::setuptools.command.easy_install,ignore:::pkg_resources,ignore:::setuptools.command.develop'), ('NV_LIBCUBLAS_VERSION', '12.2.5.6-1'), ('TMUX', '/tmp/tmux-1000/default,5219,0'), ('USER', 'vtcro'), ('HOSTNAME', 'carcass'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib'), ('HOME', '/home/admin'), ('TERM_PROGRAM_VERSION', '3.2a'), ('NV_LIBCUBLAS_DEV_VERSION', '12.2.5.6-1'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('USER_UID', '1000'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-2=12.2.1.4-1'), ('CUDA_VERSION', '12.2.12'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-2'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.2'), ('JETSON_MODULE', ''), ('JETSON_SERIAL_NUMBER', '1421223035915'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.1.2.141-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.2.12-1'), ('NV_NVML_DEV_VERSION', '12.2.140-1'), ('USERNAME', 'admin'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-2=12.2.1.4-1'), ('TERM', 'screen'), ('ISAAC_ROS_WS', '/workspaces/isaac_ros-dev'), ('NV_CUDA_CUDART_VERSION', '12.2.140-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/src/tensorrt/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/nvidia/tao'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/usr/local/share/middleware_profiles/rtps_udp_profile.xml'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-2'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-2=12.2.5.6-1'), ('NVARCH', 'arm64'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.1.2.141-1'), ('DISPLAY', ':1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('NV_CUDA_CUDART_DEV_VERSION', '12.2.140-1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('ROS_ROOT', '/opt/ros/humble'), ('TERM_PROGRAM', 'tmux'), ('AMENT_PREFIX_PATH', '/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('TRT_INCLUDE_PATH', '/usr/include/aarch64-linux-gnu'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-2=12.2.5.6-1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NVIDIA_REQUIRE_JETPACK_HOST_MOUNTS', 'base-only'), ('NV_NVTX_VERSION', '12.2.140-1'), ('NV_LIBNPP_VERSION', '12.2.1.4-1'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/workspaces/isaac_ros-dev/build/cpp_pubsub'), ('PYTHONPATH', '/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('USER_GID', '1000'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.2.1.4-1'), ('TMUX_PANE', '%0'), ('JETSON_JETPACK', '6.0'), ('TRT_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('CMAKE_PREFIX_PATH', '/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble')]), 'shell': False}
+[18.828050] (cpp_pubsub) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.832072] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/lib/cpp_pubsub/talker\n'}
+[18.836484] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/cpp_pubsub/lib/cpp_pubsub/talker" to ""\n'}
+[18.840119] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/lib/cpp_pubsub/listener\n'}
+[18.851365] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/isaac_ros-dev/install/cpp_pubsub/lib/cpp_pubsub/listener" to ""\n'}
+[18.851774] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub\n'}
+[18.853054] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub\n'}
+[18.854646] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh\n'}
+[18.854994] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv\n'}
+[18.855791] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh\n'}
+[18.856135] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv\n'}
+[18.856927] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash\n'}
+[18.857320] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh\n'}
+[18.857632] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh\n'}
+[18.857866] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv\n'}
+[18.858285] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/package.dsv\n'}
+[18.859292] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub\n'}
+[18.859707] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake\n'}
+[18.860007] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake\n'}
+[18.860250] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/package.xml\n'}
+[18.866646] (cpp_pubsub) CommandEnded: {'returncode': 0}
+[18.869217] (-) TimerEvent: {}
+[18.970033] (-) TimerEvent: {}
+[18.998844] (cpp_pubsub) JobEnded: {'identifier': 'cpp_pubsub', 'rc': 0}
+[19.002829] (-) EventReactorShutdown: {}

@@ -1,0 +1,34 @@
+[35m[1mConsolidate compiler generated dependencies of target server[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.example_interfaces/srv/add_two_ints.hpp: No such file or directory
+    2 | #include [01;31m[K"rclcpp/rclcpp.example_interfaces/srv/add_two_ints.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/client.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:1[m[K:
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:[m[K In function ‘[01m[Kvoid add(std::shared_ptr<example_interfaces::srv::AddTwoInts_Request_<std::allocator<void> > >, std::shared_ptr<example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:15:93:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ka[m[K’
+   15 | INFO(rclcpp::get_logger("rclcpp"), "Incoming request\na: %ld""b: %ld", response->[01;31m[Ka[m[K, response->b);
+      |                                                                                  [01;31m[K^[m[K
+
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:15:106:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kb[m[K’
+   15 | rclcpp::get_logger("rclcpp"), "Incoming request\na: %ld""b: %ld", response->a, response->[01;31m[Kb[m[K);
+      |                                                                                          [01;31m[K^[m[K
+
+gmake[2]: *** [CMakeFiles/server.dir/build.make:76: CMakeFiles/server.dir/src/server.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/server.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

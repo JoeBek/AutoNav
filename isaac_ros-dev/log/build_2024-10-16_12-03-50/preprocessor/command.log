@@ -1,0 +1,4 @@
+Invoking command in '/workspaces/isaac_ros-dev/build/preprocessor': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/preprocessor -- -j6 -l6
+Invoked command in '/workspaces/isaac_ros-dev/build/preprocessor' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/preprocessor -- -j6 -l6
+Invoking command in '/workspaces/isaac_ros-dev/build/preprocessor': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/preprocessor
+Invoked command in '/workspaces/isaac_ros-dev/build/preprocessor' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/preprocessor

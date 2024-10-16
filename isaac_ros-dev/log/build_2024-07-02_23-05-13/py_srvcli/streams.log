@@ -1,0 +1,43 @@
+[3.127s] Invoking command in '/workspaces/isaac_ros-dev/src/py_srvcli': PYTHONPATH=/workspaces/isaac_ros-dev/build/py_srvcli/prefix_override:/workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /workspaces/isaac_ros-dev/build/py_srvcli/build install --record /workspaces/isaac_ros-dev/build/py_srvcli/install.log --single-version-externally-managed install_data
+[4.044s] running egg_info
+[4.046s] creating ../../build/py_srvcli/py_srvcli.egg-info
+[4.083s] writing ../../build/py_srvcli/py_srvcli.egg-info/PKG-INFO
+[4.083s] writing dependency_links to ../../build/py_srvcli/py_srvcli.egg-info/dependency_links.txt
+[4.084s] writing entry points to ../../build/py_srvcli/py_srvcli.egg-info/entry_points.txt
+[4.084s] writing requirements to ../../build/py_srvcli/py_srvcli.egg-info/requires.txt
+[4.084s] writing top-level names to ../../build/py_srvcli/py_srvcli.egg-info/top_level.txt
+[4.085s] writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[4.291s] ERROR setuptools_scm._file_finders.git listing git files failed - pretending there aren't any
+[4.818s] reading manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[4.818s] adding license file 'LICENSE'
+[4.819s] writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[4.820s] running build
+[4.820s] running build_py
+[4.821s] creating /workspaces/isaac_ros-dev/build/py_srvcli/build
+[4.822s] creating /workspaces/isaac_ros-dev/build/py_srvcli/build/lib
+[4.822s] creating /workspaces/isaac_ros-dev/build/py_srvcli/build/lib/py_srvcli
+[4.822s] copying py_srvcli/client_member_function.py -> /workspaces/isaac_ros-dev/build/py_srvcli/build/lib/py_srvcli
+[4.823s] copying py_srvcli/__init__.py -> /workspaces/isaac_ros-dev/build/py_srvcli/build/lib/py_srvcli
+[4.823s] copying py_srvcli/service_member_function.py -> /workspaces/isaac_ros-dev/build/py_srvcli/build/lib/py_srvcli
+[4.824s] running install
+[4.837s] running install_lib
+[4.890s] creating /workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[4.891s] copying /workspaces/isaac_ros-dev/build/py_srvcli/build/lib/py_srvcli/client_member_function.py -> /workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[4.891s] copying /workspaces/isaac_ros-dev/build/py_srvcli/build/lib/py_srvcli/__init__.py -> /workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[4.891s] copying /workspaces/isaac_ros-dev/build/py_srvcli/build/lib/py_srvcli/service_member_function.py -> /workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[4.892s] byte-compiling /workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/client_member_function.py to client_member_function.cpython-310.pyc
+[4.894s] byte-compiling /workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/__init__.py to __init__.cpython-310.pyc
+[4.894s] byte-compiling /workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/service_member_function.py to service_member_function.cpython-310.pyc
+[4.895s] running install_data
+[4.895s] creating /workspaces/isaac_ros-dev/install/py_srvcli/share/ament_index
+[4.896s] creating /workspaces/isaac_ros-dev/install/py_srvcli/share/ament_index/resource_index
+[4.896s] creating /workspaces/isaac_ros-dev/install/py_srvcli/share/ament_index/resource_index/packages
+[4.896s] copying resource/py_srvcli -> /workspaces/isaac_ros-dev/install/py_srvcli/share/ament_index/resource_index/packages
+[4.896s] copying package.xml -> /workspaces/isaac_ros-dev/install/py_srvcli/share/py_srvcli
+[4.896s] running install_egg_info
+[4.935s] Copying ../../build/py_srvcli/py_srvcli.egg-info to /workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info
+[4.937s] running install_scripts
+[5.090s] Installing client script to /workspaces/isaac_ros-dev/install/py_srvcli/lib/py_srvcli
+[5.091s] Installing service script to /workspaces/isaac_ros-dev/install/py_srvcli/lib/py_srvcli
+[5.091s] writing list of installed files to '/workspaces/isaac_ros-dev/build/py_srvcli/install.log'
+[5.207s] Invoked command in '/workspaces/isaac_ros-dev/src/py_srvcli' returned '0': PYTHONPATH=/workspaces/isaac_ros-dev/build/py_srvcli/prefix_override:/workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /workspaces/isaac_ros-dev/build/py_srvcli/build install --record /workspaces/isaac_ros-dev/build/py_srvcli/install.log --single-version-externally-managed install_data

@@ -1,0 +1,22 @@
+[0.015s] Invoking command in '/workspaces/isaac_ros-dev/build/cpp_srvcli': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_srvcli -- -j6 -l6
+[0.138s] [ 25%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[0.150s] [ 50%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
+[5.311s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[5.311s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:12:22:[m[K [01;31m[Kerror: [m[K‘[01m[Karc[m[K’ was not declared in this scope; did you mean ‘[01m[Kargc[m[K’?
+[5.311s]    12 |         rclcpp::init([01;31m[Karc[m[K, argv);
+[5.311s]       |                      [01;31m[K^~~[m[K
+[5.311s]       |                      [32m[Kargc[m[K
+[5.318s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:14:13:[m[K [01;31m[Kerror: [m[K‘[01m[Karg[m[K’ was not declared in this scope; did you mean ‘[01m[Kargc[m[K’?
+[5.318s]    14 |         if ([01;31m[Karg[m[K != 3){
+[5.318s]       |             [01;31m[K^~~[m[K
+[5.318s]       |             [32m[Kargc[m[K
+[5.446s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:10:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[5.447s]    10 | int main([01;35m[Kint argc[m[K, char ** argv){
+[5.447s]       |          [01;35m[K~~~~^~~~[m[K
+[6.859s] gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+[6.859s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/client.dir/all] Error 2
+[6.859s] gmake[1]: *** Waiting for unfinished jobs....
+[7.685s] [ 75%] [32m[1mLinking CXX executable server[0m
+[7.995s] [ 75%] Built target server
+[7.999s] gmake: *** [Makefile:146: all] Error 2
+[8.006s] Invoked command in '/workspaces/isaac_ros-dev/build/cpp_srvcli' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_srvcli -- -j6 -l6

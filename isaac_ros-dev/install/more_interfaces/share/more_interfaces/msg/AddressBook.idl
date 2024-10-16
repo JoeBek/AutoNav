@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from more_interfaces/msg/AddressBook.msg
+// generated code does not contain a copyright notice
+
+
+module more_interfaces {
+  module msg {
+    module AddressBook_Constants {
+      const uint8 PHONE_TYPE_HOME = 0;
+      const uint8 PHONE_TYPE_WORK = 1;
+      const uint8 PHONE_TYPE_MOBILE = 2;
+    };
+    struct AddressBook {
+      string first_name;
+
+      string last_name;
+
+      string phone_number;
+
+      uint8 phone_type;
+    };
+  };
+};
