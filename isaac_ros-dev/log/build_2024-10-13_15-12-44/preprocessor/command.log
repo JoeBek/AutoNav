@@ -1,0 +1,1 @@
+Invoking command in '/home/joe/vt/autonav/ros2_ws/build/preprocessor': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/preprocessor -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/preprocessor

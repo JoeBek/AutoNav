@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from autonav_interfaces/msg/Object.msg
+// generated code does not contain a copyright notice
+
+
+module autonav_interfaces {
+  module msg {
+    struct Object {
+      double x;
+
+      double z;
+    };
+  };
+};

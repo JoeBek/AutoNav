@@ -1,0 +1,25 @@
+[0.014s] Invoking command in '/home/joe/vt/autonav/ros2_ws/build/planner': /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/planner -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/planner
+[0.067s] -- The C compiler identification is GNU 11.4.0
+[0.119s] -- The CXX compiler identification is GNU 11.4.0
+[0.128s] -- Detecting C compiler ABI info
+[0.205s] -- Detecting C compiler ABI info - done
+[0.209s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.209s] -- Detecting C compile features
+[0.210s] -- Detecting C compile features - done
+[0.213s] -- Detecting CXX compiler ABI info
+[0.290s] -- Detecting CXX compiler ABI info - done
+[0.299s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.300s] -- Detecting CXX compile features
+[0.300s] -- Detecting CXX compile features - done
+[0.301s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.459s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.547s] -- Configuring incomplete, errors occurred!
+[0.547s] See also "/home/joe/vt/autonav/ros2_ws/build/planner/CMakeFiles/CMakeOutput.log".
+[0.550s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:77 (message):
+[0.550s]   ament_target_dependencies() the passed package name 'rclcpp' was not found
+[0.550s]   before
+[0.550s] Call Stack (most recent call first):
+[0.550s]   CMakeLists.txt:17 (ament_target_dependencies)
+[0.551s] 
+[0.551s] [0m
+[0.554s] Invoked command in '/home/joe/vt/autonav/ros2_ws/build/planner' returned '1': /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/planner -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/planner

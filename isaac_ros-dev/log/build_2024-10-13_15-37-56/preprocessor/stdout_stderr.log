@@ -1,0 +1,18 @@
+[100%] Built target preprocess
+-- Install configuration: ""
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/lib/preprocessor/preprocess
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/ament_index/resource_index/package_run_dependencies/preprocessor
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/ament_index/resource_index/parent_prefix_path/preprocessor
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/preprocessor/environment/ament_prefix_path.sh
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/preprocessor/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/preprocessor/environment/path.sh
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/preprocessor/environment/path.dsv
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/preprocessor/local_setup.bash
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/preprocessor/local_setup.sh
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/preprocessor/local_setup.zsh
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/preprocessor/local_setup.dsv
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/preprocessor/package.dsv
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/ament_index/resource_index/packages/preprocessor
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/preprocessor/cmake/preprocessorConfig.cmake
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/preprocessor/cmake/preprocessorConfig-version.cmake
+-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/preprocessor/share/preprocessor/package.xml

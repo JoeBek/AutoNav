@@ -1,0 +1,2 @@
+Invoking command in '/home/joe/vt/autonav/ros2_ws/build/planner': /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/planner -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/planner
+Invoked command in '/home/joe/vt/autonav/ros2_ws/build/planner' returned '1': /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/planner -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/planner

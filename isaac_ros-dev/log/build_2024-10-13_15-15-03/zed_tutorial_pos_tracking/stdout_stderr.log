@@ -1,0 +1,3 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/zed_tutorial_pos_tracking.dir/src/zed_tutorial_pos_tracking.cpp.o[0m
+[100%] [32m[1mLinking CXX executable zed_tutorial_pos_tracking[0m
+[100%] Built target zed_tutorial_pos_tracking

@@ -1,0 +1,282 @@
+[0.000000] (-) TimerEvent: {}
+[0.000449] (-) JobUnselected: {'identifier': 'detector'}
+[0.000474] (-) JobUnselected: {'identifier': 'planner'}
+[0.000486] (-) JobUnselected: {'identifier': 'preprocessor'}
+[0.000496] (-) JobUnselected: {'identifier': 'rviz_plugin_zed_od'}
+[0.000505] (-) JobUnselected: {'identifier': 'zed_components'}
+[0.000514] (-) JobUnselected: {'identifier': 'zed_depth_to_laserscan'}
+[0.000523] (-) JobUnselected: {'identifier': 'zed_display_rviz2'}
+[0.000531] (-) JobUnselected: {'identifier': 'zed_interfaces'}
+[0.000540] (-) JobUnselected: {'identifier': 'zed_multi_camera'}
+[0.000549] (-) JobUnselected: {'identifier': 'zed_rgb_convert'}
+[0.000557] (-) JobUnselected: {'identifier': 'zed_robot_integration'}
+[0.000566] (-) JobUnselected: {'identifier': 'zed_ros2'}
+[0.000574] (-) JobUnselected: {'identifier': 'zed_topic_benchmark'}
+[0.000583] (-) JobUnselected: {'identifier': 'zed_topic_benchmark_component'}
+[0.000592] (-) JobUnselected: {'identifier': 'zed_topic_benchmark_interfaces'}
+[0.000600] (-) JobUnselected: {'identifier': 'zed_tutorial_depth'}
+[0.000609] (-) JobUnselected: {'identifier': 'zed_tutorial_pos_tracking'}
+[0.000618] (-) JobUnselected: {'identifier': 'zed_tutorial_video'}
+[0.000626] (-) JobUnselected: {'identifier': 'zed_wrapper'}
+[0.000638] (autonav_interfaces) JobQueued: {'identifier': 'autonav_interfaces', 'dependencies': OrderedDict()}
+[0.000650] (autonav_interfaces) JobStarted: {'identifier': 'autonav_interfaces'}
+[0.005625] (autonav_interfaces) JobProgress: {'identifier': 'autonav_interfaces', 'progress': 'cmake'}
+[0.006051] (autonav_interfaces) JobProgress: {'identifier': 'autonav_interfaces', 'progress': 'build'}
+[0.006581] (autonav_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joe/vt/autonav/ros2_ws/build/autonav_interfaces', '--', '-j8', '-l8'], 'cwd': '/home/joe/vt/autonav/ros2_ws/build/autonav_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,79213,3'), ('USER', 'joe'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joe'), ('OLDPWD', '/home/joe/vt/autonav/ros2_ws/src'), ('TERM_PROGRAM_VERSION', '3.2a'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('OPENAI_API_KEY', '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'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1982'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LIBVIRT_DEFAULT_URI', 'qemu:///system'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'joe'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joe'), ('TERM', 'screen-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/joe/.local/bin:/home/joe/.cargo/bin:/home/joe/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joe/.local/bin:/home/joe/.local/bin'), ('SESSION_MANAGER', 'local/outlook-com:@/tmp/.ICE-unix/1801,unix/outlook-com:/tmp/.ICE-unix/1801'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6403c5a2_7d98_4d95_b9c0_7da347455d53'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.249'), ('TERM_PROGRAM', 'tmux'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joe/vt/autonav/ros2_ws/build/autonav_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/joe/.tmux/plugins/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('TMUX_PANE', '%7'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.023857] (autonav_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.024072] (autonav_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_core: 1.3.10 (/opt/ros/humble/share/ament_cmake_core/cmake)\n'}
+[0.099866] (-) TimerEvent: {}
+[0.100516] (autonav_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.102314] (autonav_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.125871] (autonav_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.199953] (-) TimerEvent: {}
+[0.298286] (autonav_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.300018] (-) TimerEvent: {}
+[0.400202] (-) TimerEvent: {}
+[0.412594] (autonav_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.500328] (-) TimerEvent: {}
+[0.564386] (autonav_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.578335] (autonav_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[0.592978] (autonav_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.593137] (autonav_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[0.593178] (autonav_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[0.598983] (autonav_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.600377] (-) TimerEvent: {}
+[0.604161] (autonav_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.604646] (autonav_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.605725] (autonav_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.621626] (autonav_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[0.623200] (autonav_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/joe/vt/autonav/ros2_ws/build/autonav_interfaces\n'}
+[0.639162] (autonav_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[0.645223] (autonav_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[0.650620] (autonav_interfaces) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_autonav_interfaces\n'}
+[0.700488] (-) TimerEvent: {}
+[0.800702] (-) TimerEvent: {}
+[0.830474] (autonav_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[0.831204] (autonav_interfaces) StdoutLine: {'line': b'writing autonav_interfaces.egg-info/PKG-INFO\n'}
+[0.831347] (autonav_interfaces) StdoutLine: {'line': b'writing dependency_links to autonav_interfaces.egg-info/dependency_links.txt\n'}
+[0.831454] (autonav_interfaces) StdoutLine: {'line': b'writing top-level names to autonav_interfaces.egg-info/top_level.txt\n'}
+[0.833404] (autonav_interfaces) StdoutLine: {'line': b"reading manifest file 'autonav_interfaces.egg-info/SOURCES.txt'\n"}
+[0.833772] (autonav_interfaces) StdoutLine: {'line': b"writing manifest file 'autonav_interfaces.egg-info/SOURCES.txt'\n"}
+[0.858314] (autonav_interfaces) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_autonav_interfaces_egg\n'}
+[0.861619] (autonav_interfaces) StdoutLine: {'line': b'[  5%] Built target autonav_interfaces__cpp\n'}
+[0.867932] (autonav_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[0.868116] (autonav_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[0.868178] (autonav_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[0.874162] (autonav_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/autonav_interfaces__rosidl_generator_c.dir/rosidl_generator_c/autonav_interfaces/msg/detail/object__functions.c.o\x1b[0m\n'}
+[0.875934] (autonav_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/autonav_interfaces__rosidl_generator_c.dir/rosidl_generator_c/autonav_interfaces/msg/detail/object_list__functions.c.o\x1b[0m\n'}
+[0.900812] (-) TimerEvent: {}
+[0.919642] (autonav_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libautonav_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[0.949482] (autonav_interfaces) StdoutLine: {'line': b'[ 20%] Built target autonav_interfaces__rosidl_generator_c\n'}
+[0.957955] (autonav_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[0.958648] (autonav_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[0.958760] (autonav_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.001054] (-) TimerEvent: {}
+[1.092449] (autonav_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/autonav_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/autonav_interfaces/msg/detail/dds_fastrtps/object__type_support.cpp.o\x1b[0m\n'}
+[1.092629] (autonav_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/autonav_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/autonav_interfaces/msg/detail/dds_fastrtps/object_list__type_support.cpp.o\x1b[0m\n'}
+[1.101907] (-) TimerEvent: {}
+[1.113514] (autonav_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/autonav_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/autonav_interfaces/msg/object__type_support.cpp.o\x1b[0m\n'}
+[1.114209] (autonav_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/autonav_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/autonav_interfaces/msg/object_list__type_support.cpp.o\x1b[0m\n'}
+[1.162936] (autonav_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/autonav_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/autonav_interfaces/msg/detail/object__type_support.cpp.o\x1b[0m\n'}
+[1.170885] (autonav_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/autonav_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/autonav_interfaces/msg/object__type_support.cpp.o\x1b[0m\n'}
+[1.202009] (-) TimerEvent: {}
+[1.202530] (autonav_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/autonav_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/autonav_interfaces/msg/object_list__type_support.cpp.o\x1b[0m\n'}
+[1.234499] (autonav_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libautonav_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.281247] (autonav_interfaces) StdoutLine: {'line': b'[ 48%] Built target autonav_interfaces__rosidl_typesupport_c\n'}
+[1.291415] (autonav_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/autonav_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/autonav_interfaces/msg/detail/object_list__type_support.cpp.o\x1b[0m\n'}
+[1.302125] (-) TimerEvent: {}
+[1.320070] (autonav_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/autonav_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/autonav_interfaces/msg/detail/object__type_support_c.cpp.o\x1b[0m\n'}
+[1.320871] (autonav_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/autonav_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/autonav_interfaces/msg/detail/object__type_support.c.o\x1b[0m\n'}
+[1.358307] (autonav_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/autonav_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/autonav_interfaces/msg/detail/object_list__type_support.c.o\x1b[0m\n'}
+[1.384670] (autonav_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/autonav_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/autonav_interfaces/msg/detail/object_list__type_support_c.cpp.o\x1b[0m\n'}
+[1.389958] (autonav_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libautonav_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[1.392262] (autonav_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking C shared library libautonav_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.402238] (-) TimerEvent: {}
+[1.424236] (autonav_interfaces) StdoutLine: {'line': b'[ 66%] Built target autonav_interfaces__rosidl_typesupport_introspection_c\n'}
+[1.427050] (autonav_interfaces) StdoutLine: {'line': b'[ 66%] Built target autonav_interfaces__rosidl_typesupport_cpp\n'}
+[1.502350] (-) TimerEvent: {}
+[1.523582] (autonav_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libautonav_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[1.576817] (autonav_interfaces) StdoutLine: {'line': b'[ 69%] Built target autonav_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[1.602460] (-) TimerEvent: {}
+[1.617527] (autonav_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libautonav_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[1.621029] (autonav_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libautonav_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[1.669735] (autonav_interfaces) StdoutLine: {'line': b'[ 74%] Built target autonav_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[1.672814] (autonav_interfaces) StdoutLine: {'line': b'[ 74%] Built target autonav_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[1.685077] (autonav_interfaces) StdoutLine: {'line': b'[ 74%] Built target autonav_interfaces\n'}
+[1.698188] (autonav_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[1.702558] (-) TimerEvent: {}
+[1.802863] (-) TimerEvent: {}
+[1.903206] (-) TimerEvent: {}
+[1.935531] (autonav_interfaces) StdoutLine: {'line': b'[ 76%] Built target autonav_interfaces__py\n'}
+[1.948473] (autonav_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/autonav_interfaces__rosidl_generator_py.dir/rosidl_generator_py/autonav_interfaces/msg/_object_list_s.c.o\x1b[0m\n'}
+[1.948610] (autonav_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/autonav_interfaces__rosidl_generator_py.dir/rosidl_generator_py/autonav_interfaces/msg/_object_s.c.o\x1b[0m\n'}
+[2.003385] (-) TimerEvent: {}
+[2.011118] (autonav_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/autonav_interfaces/libautonav_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[2.037438] (autonav_interfaces) StdoutLine: {'line': b'[ 84%] Built target autonav_interfaces__rosidl_generator_py\n'}
+[2.050617] (autonav_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/autonav_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/autonav_interfaces/_autonav_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[2.050803] (autonav_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/autonav_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/autonav_interfaces/_autonav_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[2.050876] (autonav_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/autonav_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/autonav_interfaces/_autonav_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[2.103498] (-) TimerEvent: {}
+[2.111360] (autonav_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/autonav_interfaces/autonav_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.111545] (autonav_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/autonav_interfaces/autonav_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.111608] (autonav_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/autonav_interfaces/autonav_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.133432] (autonav_interfaces) StdoutLine: {'line': b'[100%] Built target autonav_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.133622] (autonav_interfaces) StdoutLine: {'line': b'[100%] Built target autonav_interfaces__rosidl_typesupport_c__pyext\n'}
+[2.133684] (autonav_interfaces) StdoutLine: {'line': b'[100%] Built target autonav_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[2.141446] (autonav_interfaces) CommandEnded: {'returncode': 0}
+[2.184813] (autonav_interfaces) JobProgress: {'identifier': 'autonav_interfaces', 'progress': 'install'}
+[2.190738] (autonav_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joe/vt/autonav/ros2_ws/build/autonav_interfaces'], 'cwd': '/home/joe/vt/autonav/ros2_ws/build/autonav_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,79213,3'), ('USER', 'joe'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joe'), ('OLDPWD', '/home/joe/vt/autonav/ros2_ws/src'), ('TERM_PROGRAM_VERSION', '3.2a'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('OPENAI_API_KEY', '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'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1982'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LIBVIRT_DEFAULT_URI', 'qemu:///system'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'joe'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joe'), ('TERM', 'screen-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/joe/.local/bin:/home/joe/.cargo/bin:/home/joe/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joe/.local/bin:/home/joe/.local/bin'), ('SESSION_MANAGER', 'local/outlook-com:@/tmp/.ICE-unix/1801,unix/outlook-com:/tmp/.ICE-unix/1801'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6403c5a2_7d98_4d95_b9c0_7da347455d53'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.249'), ('TERM_PROGRAM', 'tmux'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joe/vt/autonav/ros2_ws/build/autonav_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/joe/.tmux/plugins/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('TMUX_PANE', '%7'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.196312] (autonav_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.196412] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/ament_index/resource_index/rosidl_interfaces/autonav_interfaces\n'}
+[2.196479] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces\n'}
+[2.196544] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg\n'}
+[2.196604] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/object_list.h\n'}
+[2.196669] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail\n'}
+[2.196735] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__functions.h\n'}
+[2.196782] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__functions.c\n'}
+[2.196854] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__functions.h\n'}
+[2.196905] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__type_support.h\n'}
+[2.196950] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__struct.h\n'}
+[2.197016] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__struct.h\n'}
+[2.197062] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__functions.c\n'}
+[2.197100] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__type_support.h\n'}
+[2.197154] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/object.h\n'}
+[2.197194] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.197247] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/environment/library_path.sh\n'}
+[2.197282] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/environment/library_path.dsv\n'}
+[2.197337] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_generator_c.so\n'}
+[2.197490] (autonav_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_generator_c.so" to ""\n'}
+[2.197543] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces\n'}
+[2.197593] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg\n'}
+[2.197631] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail\n'}
+[2.197692] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__rosidl_typesupport_fastrtps_c.h\n'}
+[2.197727] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__rosidl_typesupport_fastrtps_c.h\n'}
+[2.197769] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.197818] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[2.197908] (autonav_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[2.197968] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces\n'}
+[2.198008] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg\n'}
+[2.198066] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail\n'}
+[2.198115] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__type_support.c\n'}
+[2.198153] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__rosidl_typesupport_introspection_c.h\n'}
+[2.198189] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__type_support.c\n'}
+[2.198242] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h\n'}
+[2.198280] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.198327] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[2.198403] (autonav_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[2.198453] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_typesupport_c.so\n'}
+[2.198569] (autonav_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[2.198627] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces\n'}
+[2.198670] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg\n'}
+[2.198707] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail\n'}
+[2.198761] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__builder.hpp\n'}
+[2.198799] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__traits.hpp\n'}
+[2.198866] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__struct.hpp\n'}
+[2.198914] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__builder.hpp\n'}
+[2.198961] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__traits.hpp\n'}
+[2.198998] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__struct.hpp\n'}
+[2.199032] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/object.hpp\n'}
+[2.199091] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/object_list.hpp\n'}
+[2.199127] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces\n'}
+[2.199164] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg\n'}
+[2.199201] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.199250] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail\n'}
+[2.199306] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.199345] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/dds_fastrtps\n'}
+[2.199380] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.199428] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.199482] (autonav_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[2.199541] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces\n'}
+[2.199579] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg\n'}
+[2.199627] (autonav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail\n'}
+[2.199665] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__type_support.cpp\n'}
+[2.199727] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object_list__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.199763] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.199799] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/include/autonav_interfaces/autonav_interfaces/msg/detail/object__type_support.cpp\n'}
+[2.199853] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[2.199953] (autonav_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[2.200003] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_typesupport_cpp.so\n'}
+[2.200121] (autonav_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[2.200172] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/environment/pythonpath.sh\n'}
+[2.200215] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/environment/pythonpath.dsv\n'}
+[2.200270] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces-0.0.0-py3.10.egg-info\n'}
+[2.200348] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[2.200397] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[2.200443] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[2.200491] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[2.200554] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces\n'}
+[2.200603] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/autonav_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.200654] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/_autonav_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[2.200706] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/msg\n'}
+[2.200756] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/msg/_object_s.c\n'}
+[2.200807] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/msg/_object_list.py\n'}
+[2.200862] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/msg/__init__.py\n'}
+[2.200915] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/msg/_object_list_s.c\n'}
+[2.200965] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/msg/_object.py\n'}
+[2.201018] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/__init__.py\n'}
+[2.201086] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/autonav_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.201127] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/_autonav_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[2.201189] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/autonav_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.201239] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/_autonav_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[2.201288] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/libautonav_interfaces__rosidl_generator_py.so\n'}
+[2.203574] (-) TimerEvent: {}
+[2.224232] (autonav_interfaces) StdoutLine: {'line': b"Listing '/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces'...\n"}
+[2.224359] (autonav_interfaces) StdoutLine: {'line': b"Compiling '/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/__init__.py'...\n"}
+[2.224403] (autonav_interfaces) StdoutLine: {'line': b"Listing '/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/msg'...\n"}
+[2.224438] (autonav_interfaces) StdoutLine: {'line': b"Compiling '/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/msg/__init__.py'...\n"}
+[2.224471] (autonav_interfaces) StdoutLine: {'line': b"Compiling '/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/msg/_object.py'...\n"}
+[2.224503] (autonav_interfaces) StdoutLine: {'line': b"Compiling '/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/msg/_object_list.py'...\n"}
+[2.227319] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/autonav_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.227411] (autonav_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/autonav_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.227479] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/autonav_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.227638] (autonav_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/autonav_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.227729] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/autonav_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.227948] (autonav_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/local/lib/python3.10/dist-packages/autonav_interfaces/autonav_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.228054] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_generator_py.so\n'}
+[2.228112] (autonav_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/lib/libautonav_interfaces__rosidl_generator_py.so" to ""\n'}
+[2.228163] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/msg/Object.idl\n'}
+[2.228213] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/msg/ObjectList.idl\n'}
+[2.228261] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/msg/Object.msg\n'}
+[2.228314] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/msg/ObjectList.msg\n'}
+[2.228398] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/ament_index/resource_index/package_run_dependencies/autonav_interfaces\n'}
+[2.228483] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/ament_index/resource_index/parent_prefix_path/autonav_interfaces\n'}
+[2.228547] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/environment/ament_prefix_path.sh\n'}
+[2.228609] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/environment/ament_prefix_path.dsv\n'}
+[2.228672] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/environment/path.sh\n'}
+[2.228734] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/environment/path.dsv\n'}
+[2.228794] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/local_setup.bash\n'}
+[2.228860] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/local_setup.sh\n'}
+[2.228922] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/local_setup.zsh\n'}
+[2.228984] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/local_setup.dsv\n'}
+[2.229042] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/package.dsv\n'}
+[2.229144] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/ament_index/resource_index/packages/autonav_interfaces\n'}
+[2.229232] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/export_autonav_interfaces__rosidl_generator_cExport.cmake\n'}
+[2.229300] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/export_autonav_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.229369] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/export_autonav_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[2.229434] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/export_autonav_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[2.229503] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/autonav_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.229567] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/autonav_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.229659] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/autonav_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[2.229754] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/autonav_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.229872] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/export_autonav_interfaces__rosidl_generator_cppExport.cmake\n'}
+[2.229986] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/export_autonav_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[2.230084] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/export_autonav_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[2.230205] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/autonav_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.230319] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/autonav_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.230440] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/autonav_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[2.230549] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/autonav_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.230667] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/export_autonav_interfaces__rosidl_generator_pyExport.cmake\n'}
+[2.230778] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/export_autonav_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[2.230892] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[2.231000] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.231103] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.231257] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.231310] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.231425] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.231518] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.231595] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/autonav_interfacesConfig.cmake\n'}
+[2.231648] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/cmake/autonav_interfacesConfig-version.cmake\n'}
+[2.231713] (autonav_interfaces) StdoutLine: {'line': b'-- Installing: /home/joe/vt/autonav/ros2_ws/install/autonav_interfaces/share/autonav_interfaces/package.xml\n'}
+[2.233498] (autonav_interfaces) CommandEnded: {'returncode': 0}
+[2.290339] (autonav_interfaces) JobEnded: {'identifier': 'autonav_interfaces', 'rc': 0}
+[2.290742] (-) EventReactorShutdown: {}

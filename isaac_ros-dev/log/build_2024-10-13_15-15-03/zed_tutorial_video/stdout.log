@@ -1,0 +1,3 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/zed_tutorial_video.dir/src/zed_video_sub_tutorial.cpp.o[0m
+[100%] [32m[1mLinking CXX executable zed_tutorial_video[0m
+[100%] Built target zed_tutorial_video

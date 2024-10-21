@@ -1,0 +1,9 @@
+[0.022s] Invoking command in '/home/joe/vt/autonav/ros2_ws/build/detector': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joe/vt/autonav/ros2_ws/build/detector -- -j8 -l8
+[0.093s] [ 50%] [32mBuilding CXX object CMakeFiles/detector.dir/src/main.cpp.o[0m
+[2.118s] [01m[K/home/joe/vt/autonav/ros2_ws/src/detector/src/main.cpp:[m[K In constructor ‘[01m[KDetector::Detector()[m[K’:
+[2.119s] [01m[K/home/joe/vt/autonav/ros2_ws/src/detector/src/main.cpp:19:18:[m[K [01;31m[Kerror: [m[K‘[01m[KZedImageSubscriber[m[K’ has not been declared
+[2.119s]    19 |       std::bind(&[01;31m[KZedImageSubscriber[m[K::image_callback, this, std::placeholders::_1));
+[2.119s]       |                  [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.691s] gmake[2]: *** [CMakeFiles/detector.dir/build.make:76: CMakeFiles/detector.dir/src/main.cpp.o] Error 1
+[2.692s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/detector.dir/all] Error 2
+[2.692s] gmake: *** [Makefile:146: all] Error 2

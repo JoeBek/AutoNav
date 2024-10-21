@@ -1,0 +1,20 @@
+[35m[1mConsolidate compiler generated dependencies of target detector[0m
+[100%] Built target detector
+-- Install configuration: ""
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/lib/detector/detector
+-- Set runtime path of "/home/joe/vt/autonav/ros2_ws/install/detector/lib/detector/detector" to ""
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/ament_index/resource_index/package_run_dependencies/detector
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/ament_index/resource_index/parent_prefix_path/detector
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/detector/environment/ament_prefix_path.sh
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/detector/environment/ament_prefix_path.dsv
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/detector/environment/path.sh
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/detector/environment/path.dsv
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/detector/local_setup.bash
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/detector/local_setup.sh
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/detector/local_setup.zsh
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/detector/local_setup.dsv
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/detector/package.dsv
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/ament_index/resource_index/packages/detector
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/detector/cmake/detectorConfig.cmake
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/detector/cmake/detectorConfig-version.cmake
+-- Installing: /home/joe/vt/autonav/ros2_ws/install/detector/share/detector/package.xml

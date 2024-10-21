@@ -1,0 +1,49 @@
+[0.025s] Invoking command in '/home/joe/vt/autonav/ros2_ws/build/planner': /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/planner -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/planner
+[0.048s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.292s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.379s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.387s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.404s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.423s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.443s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.492s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.495s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.635s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.665s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.753s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.762s] -- Looking for pthread.h
+[0.913s] -- Looking for pthread.h - found
+[0.913s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.065s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.065s] -- Found Threads: TRUE  
+[1.200s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.287s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.432s] Error parsing '/home/joe/vt/autonav/ros2_ws/src/planner/package.xml':
+[1.550s] Traceback (most recent call last):
+[1.550s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[1.550s]     main()
+[1.550s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[1.550s]     raise e
+[1.550s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[1.550s]     package = parse_package_string(
+[1.550s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 788, in parse_package_string
+[1.558s]     pkg.validate(warnings=warnings)
+[1.558s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 330, in validate
+[1.558s]     raise InvalidPackage('\n'.join(errors), self.filename)
+[1.558s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/joe/vt/autonav/ros2_ws/src/planner/package.xml':
+[1.558s] Package description must not be empty
+[1.592s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[1.592s]   execute_process(/usr/bin/python3
+[1.592s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[1.592s]   /home/joe/vt/autonav/ros2_ws/src/planner/package.xml
+[1.592s]   /home/joe/vt/autonav/ros2_ws/build/planner/ament_cmake_core/package.cmake)
+[1.592s]   returned error code 1
+[1.593s] Call Stack (most recent call first):
+[1.593s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[1.593s]   /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[1.593s]   CMakeLists.txt:36 (ament_lint_auto_find_test_dependencies)
+[1.593s] 
+[1.593s] [0m
+[1.593s] -- Configuring incomplete, errors occurred!
+[1.593s] See also "/home/joe/vt/autonav/ros2_ws/build/planner/CMakeFiles/CMakeOutput.log".
+[1.613s] Invoked command in '/home/joe/vt/autonav/ros2_ws/build/planner' returned '1': /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/planner -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/planner

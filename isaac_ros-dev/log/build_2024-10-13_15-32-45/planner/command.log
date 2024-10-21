@@ -1,0 +1,3 @@
+Invoking command in '/home/joe/vt/autonav/ros2_ws/build/planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/planner -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/planner
+Invoked command in '/home/joe/vt/autonav/ros2_ws/build/planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/planner -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/planner
+Invoking command in '/home/joe/vt/autonav/ros2_ws/build/planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joe/vt/autonav/ros2_ws/build/planner -- -j8 -l8

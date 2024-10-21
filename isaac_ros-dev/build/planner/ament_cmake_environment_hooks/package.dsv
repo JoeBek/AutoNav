@@ -1,0 +1,4 @@
+source;share/planner/local_setup.bash
+source;share/planner/local_setup.dsv
+source;share/planner/local_setup.sh
+source;share/planner/local_setup.zsh
