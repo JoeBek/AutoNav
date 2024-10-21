@@ -1,0 +1,12 @@
+[  3%] Built target isaac_ros_bi3d_interfaces__cpp
+[  6%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 16%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 19%] Built target isaac_ros_bi3d_interfaces__rosidl_generator_c
+[35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_typesupport_cpp[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/isaac_ros_bi3d_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/isaac_ros_bi3d_interfaces/msg/bi3_d_inference_parameters_array__type_support.cpp.o[0m
+[35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/isaac_ros_bi3d_interfaces/msg/detail/dds_fastrtps/bi3_d_inference_parameters_array__type_support.cpp.o[0m
+[ 29%] [32m[1mLinking CXX shared library libisaac_ros_bi3d_interfaces__rosidl_typesupport_cpp.so[0m
+[ 29%] Built target isaac_ros_bi3d_interfaces__rosidl_typesupport_cpp
+[ 32%] [32m[1mLinking CXX shared library libisaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 32%] Built target isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_cpp

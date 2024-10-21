@@ -1,0 +1,180 @@
+[0.000000] (-) TimerEvent: {}
+[0.000658] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.001169] (-) JobUnselected: {'identifier': 'cpp_srvcli'}
+[0.001484] (-) JobUnselected: {'identifier': 'isaac_ros_apriltag_interfaces'}
+[0.001797] (-) JobUnselected: {'identifier': 'isaac_ros_bi3d_interfaces'}
+[0.001891] (-) JobUnselected: {'identifier': 'isaac_ros_common'}
+[0.001967] (-) JobUnselected: {'identifier': 'isaac_ros_launch_utils'}
+[0.002038] (-) JobUnselected: {'identifier': 'isaac_ros_nitros_bridge_interfaces'}
+[0.002104] (-) JobUnselected: {'identifier': 'isaac_ros_nova_interfaces'}
+[0.002169] (-) JobUnselected: {'identifier': 'isaac_ros_pointcloud_interfaces'}
+[0.002233] (-) JobUnselected: {'identifier': 'isaac_ros_tensor_list_interfaces'}
+[0.002289] (-) JobUnselected: {'identifier': 'isaac_ros_test'}
+[0.002350] (-) JobUnselected: {'identifier': 'my_package'}
+[0.002414] (-) JobUnselected: {'identifier': 'py_pubsub'}
+[0.002565] (-) JobUnselected: {'identifier': 'py_srvcli'}
+[0.002644] (-) JobUnselected: {'identifier': 'turtlesim'}
+[0.002689] (tutorial_interfaces) JobQueued: {'identifier': 'tutorial_interfaces', 'dependencies': OrderedDict()}
+[0.002740] (tutorial_interfaces) JobStarted: {'identifier': 'tutorial_interfaces'}
+[0.018174] (tutorial_interfaces) JobProgress: {'identifier': 'tutorial_interfaces', 'progress': 'cmake'}
+[0.019269] (tutorial_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/workspaces/isaac_ros-dev/src/tutorial_interfaces', '-DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/tutorial_interfaces'], 'cwd': '/workspaces/isaac_ros-dev/build/tutorial_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('PYTHONWARNINGS', 'ignore:::setuptools.command.install,ignore:::setuptools.command.easy_install,ignore:::pkg_resources,ignore:::setuptools.command.develop'), ('NV_LIBCUBLAS_VERSION', '12.2.5.6-1'), ('TMUX', '/tmp/tmux-1000/default,6414,0'), ('USER', 'vtcro'), ('HOSTNAME', 'carcass'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib'), ('HOME', '/home/admin'), ('OLDPWD', '/workspaces/isaac_ros-dev/src/tutorial_interfaces'), ('TERM_PROGRAM_VERSION', '3.2a'), ('NV_LIBCUBLAS_DEV_VERSION', '12.2.5.6-1'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('USER_UID', '1000'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-2=12.2.1.4-1'), ('CUDA_VERSION', '12.2.12'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-2'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.2'), ('JETSON_MODULE', ''), ('JETSON_SERIAL_NUMBER', '1421223035915'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.1.2.141-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.2.12-1'), ('NV_NVML_DEV_VERSION', '12.2.140-1'), ('USERNAME', 'admin'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-2=12.2.1.4-1'), ('TERM', 'screen'), ('ISAAC_ROS_WS', '/workspaces/isaac_ros-dev'), ('NV_CUDA_CUDART_VERSION', '12.2.140-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/src/tensorrt/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/nvidia/tao'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/usr/local/share/middleware_profiles/rtps_udp_profile.xml'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-2'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-2=12.2.5.6-1'), ('NVARCH', 'arm64'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.1.2.141-1'), ('DISPLAY', ':1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('NV_CUDA_CUDART_DEV_VERSION', '12.2.140-1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('ROS_ROOT', '/opt/ros/humble'), ('TERM_PROGRAM', 'tmux'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('TRT_INCLUDE_PATH', '/usr/include/aarch64-linux-gnu'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-2=12.2.5.6-1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NVIDIA_REQUIRE_JETPACK_HOST_MOUNTS', 'base-only'), ('NV_NVTX_VERSION', '12.2.140-1'), ('NV_LIBNPP_VERSION', '12.2.1.4-1'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/workspaces/isaac_ros-dev/build/tutorial_interfaces'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('USER_GID', '1000'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.2.1.4-1'), ('TMUX_PANE', '%0'), ('JETSON_JETPACK', '6.0'), ('TRT_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.053081] (tutorial_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099438] (-) TimerEvent: {}
+[0.200083] (-) TimerEvent: {}
+[0.301251] (-) TimerEvent: {}
+[0.350896] (tutorial_interfaces) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.401534] (-) TimerEvent: {}
+[0.422256] (tutorial_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.427068] (tutorial_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.443130] (tutorial_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.465043] (tutorial_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.494784] (tutorial_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.501558] (-) TimerEvent: {}
+[0.601965] (-) TimerEvent: {}
+[0.702503] (-) TimerEvent: {}
+[0.716226] (tutorial_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.802662] (-) TimerEvent: {}
+[0.903357] (-) TimerEvent: {}
+[1.004248] (-) TimerEvent: {}
+[1.104848] (-) TimerEvent: {}
+[1.205583] (-) TimerEvent: {}
+[1.306626] (-) TimerEvent: {}
+[1.407552] (-) TimerEvent: {}
+[1.421451] (tutorial_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.507727] (-) TimerEvent: {}
+[1.608509] (-) TimerEvent: {}
+[1.709257] (-) TimerEvent: {}
+[1.810151] (-) TimerEvent: {}
+[1.910868] (-) TimerEvent: {}
+[2.011918] (-) TimerEvent: {}
+[2.112768] (-) TimerEvent: {}
+[2.213445] (-) TimerEvent: {}
+[2.314401] (-) TimerEvent: {}
+[2.415406] (-) TimerEvent: {}
+[2.516384] (-) TimerEvent: {}
+[2.561994] (tutorial_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.616491] (-) TimerEvent: {}
+[2.717205] (-) TimerEvent: {}
+[2.817959] (-) TimerEvent: {}
+[2.919015] (-) TimerEvent: {}
+[3.011278] (tutorial_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.019103] (-) TimerEvent: {}
+[3.090894] (tutorial_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.098793] (tutorial_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[3.119279] (-) TimerEvent: {}
+[3.200709] (tutorial_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[3.201652] (tutorial_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.201951] (tutorial_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[3.202210] (tutorial_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[3.219452] (-) TimerEvent: {}
+[3.271357] (tutorial_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.319573] (-) TimerEvent: {}
+[3.420427] (-) TimerEvent: {}
+[3.463357] (tutorial_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.520493] (-) TimerEvent: {}
+[3.573042] (tutorial_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.577732] (tutorial_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.585214] (tutorial_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.620604] (-) TimerEvent: {}
+[3.671657] (tutorial_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[3.676569] (tutorial_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /workspaces/isaac_ros-dev/build/tutorial_interfaces\n'}
+[3.693503] (tutorial_interfaces) CommandEnded: {'returncode': 0}
+[3.695276] (tutorial_interfaces) JobProgress: {'identifier': 'tutorial_interfaces', 'progress': 'build'}
+[3.697594] (tutorial_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspaces/isaac_ros-dev/build/tutorial_interfaces', '--', '-j6', '-l6'], 'cwd': '/workspaces/isaac_ros-dev/build/tutorial_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('PYTHONWARNINGS', 'ignore:::setuptools.command.install,ignore:::setuptools.command.easy_install,ignore:::pkg_resources,ignore:::setuptools.command.develop'), ('NV_LIBCUBLAS_VERSION', '12.2.5.6-1'), ('TMUX', '/tmp/tmux-1000/default,6414,0'), ('USER', 'vtcro'), ('HOSTNAME', 'carcass'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib'), ('HOME', '/home/admin'), ('OLDPWD', '/workspaces/isaac_ros-dev/src/tutorial_interfaces'), ('TERM_PROGRAM_VERSION', '3.2a'), ('NV_LIBCUBLAS_DEV_VERSION', '12.2.5.6-1'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('USER_UID', '1000'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-2=12.2.1.4-1'), ('CUDA_VERSION', '12.2.12'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-2'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.2'), ('JETSON_MODULE', ''), ('JETSON_SERIAL_NUMBER', '1421223035915'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.1.2.141-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.2.12-1'), ('NV_NVML_DEV_VERSION', '12.2.140-1'), ('USERNAME', 'admin'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-2=12.2.1.4-1'), ('TERM', 'screen'), ('ISAAC_ROS_WS', '/workspaces/isaac_ros-dev'), ('NV_CUDA_CUDART_VERSION', '12.2.140-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/src/tensorrt/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/nvidia/tao'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/usr/local/share/middleware_profiles/rtps_udp_profile.xml'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-2'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-2=12.2.5.6-1'), ('NVARCH', 'arm64'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.1.2.141-1'), ('DISPLAY', ':1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('NV_CUDA_CUDART_DEV_VERSION', '12.2.140-1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('ROS_ROOT', '/opt/ros/humble'), ('TERM_PROGRAM', 'tmux'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('TRT_INCLUDE_PATH', '/usr/include/aarch64-linux-gnu'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-2=12.2.5.6-1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NVIDIA_REQUIRE_JETPACK_HOST_MOUNTS', 'base-only'), ('NV_NVTX_VERSION', '12.2.140-1'), ('NV_LIBNPP_VERSION', '12.2.1.4-1'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/workspaces/isaac_ros-dev/build/tutorial_interfaces'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('USER_GID', '1000'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.2.1.4-1'), ('TMUX_PANE', '%0'), ('JETSON_JETPACK', '6.0'), ('TRT_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[3.720852] (-) TimerEvent: {}
+[3.808877] (tutorial_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[3.821062] (-) TimerEvent: {}
+[3.837387] (tutorial_interfaces) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.863082] (tutorial_interfaces) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_copy_tutorial_interfaces\n'}
+[3.921211] (-) TimerEvent: {}
+[4.021793] (-) TimerEvent: {}
+[4.122397] (-) TimerEvent: {}
+[4.222986] (-) TimerEvent: {}
+[4.323574] (-) TimerEvent: {}
+[4.424143] (-) TimerEvent: {}
+[4.524729] (-) TimerEvent: {}
+[4.597233] (tutorial_interfaces) StdoutLine: {'line': b'[  4%] Built target tutorial_interfaces__cpp\n'}
+[4.624899] (-) TimerEvent: {}
+[4.630723] (tutorial_interfaces) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.641175] (tutorial_interfaces) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.656201] (tutorial_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[4.681673] (tutorial_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/tutorial_interfaces__rosidl_generator_c.dir/rosidl_generator_c/tutorial_interfaces/msg/detail/num__functions.c.o\x1b[0m\n'}
+[4.682161] (tutorial_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/tutorial_interfaces__rosidl_generator_c.dir/rosidl_generator_c/tutorial_interfaces/msg/detail/sphere__functions.c.o\x1b[0m\n'}
+[4.725055] (-) TimerEvent: {}
+[4.820148] (tutorial_interfaces) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/workspaces/isaac_ros-dev/build/tutorial_interfaces/rosidl_generator_c/tutorial_interfaces/msg/detail/sphere__functions.h:19\x1b[m\x1b[K,\n'}
+[4.821212] (tutorial_interfaces) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/workspaces/isaac_ros-dev/build/tutorial_interfaces/rosidl_generator_c/tutorial_interfaces/msg/detail/sphere__functions.c:4\x1b[m\x1b[K:\n'}
+[4.821441] (tutorial_interfaces) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/build/tutorial_interfaces/rosidl_generator_c/tutorial_interfaces/msg/detail/sphere__struct.h:22:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kgeometery_msgs/msg/detail/point__struct.h: No such file or directory\n'}
+[4.821610] (tutorial_interfaces) StderrLine: {'line': b'   22 | #include \x1b[01;31m\x1b[K"geometery_msgs/msg/detail/point__struct.h"\x1b[m\x1b[K\n'}
+[4.821738] (tutorial_interfaces) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.821856] (tutorial_interfaces) StderrLine: {'line': b'compilation terminated.\n'}
+[4.824861] (tutorial_interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/tutorial_interfaces__rosidl_generator_c.dir/build.make:211: CMakeFiles/tutorial_interfaces__rosidl_generator_c.dir/rosidl_generator_c/tutorial_interfaces/msg/detail/sphere__functions.c.o] Error 1\n'}
+[4.825165] (-) TimerEvent: {}
+[4.825412] (tutorial_interfaces) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[4.893237] (tutorial_interfaces) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/tutorial_interfaces__rosidl_generator_c.dir/all] Error 2\n'}
+[4.893751] (tutorial_interfaces) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[4.895924] (tutorial_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[4.898166] (tutorial_interfaces) StdoutLine: {'line': b'creating tutorial_interfaces.egg-info\n'}
+[4.925318] (-) TimerEvent: {}
+[4.938753] (tutorial_interfaces) StdoutLine: {'line': b'writing tutorial_interfaces.egg-info/PKG-INFO\n'}
+[4.939344] (tutorial_interfaces) StdoutLine: {'line': b'writing dependency_links to tutorial_interfaces.egg-info/dependency_links.txt\n'}
+[4.939949] (tutorial_interfaces) StdoutLine: {'line': b'writing top-level names to tutorial_interfaces.egg-info/top_level.txt\n'}
+[4.940432] (tutorial_interfaces) StdoutLine: {'line': b"writing manifest file 'tutorial_interfaces.egg-info/SOURCES.txt'\n"}
+[5.025469] (-) TimerEvent: {}
+[5.126550] (-) TimerEvent: {}
+[5.193019] (tutorial_interfaces) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/tutorial_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tutorial_interfaces/msg/sphere__type_support.cpp.o\x1b[0m\n'}
+[5.193514] (tutorial_interfaces) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/tutorial_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tutorial_interfaces/srv/add_three_ints__type_support.cpp.o\x1b[0m\n'}
+[5.195539] (tutorial_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/tutorial_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tutorial_interfaces/msg/num__type_support.cpp.o\x1b[0m\n'}
+[5.200259] (tutorial_interfaces) StderrLine: {'line': b"ERROR setuptools_scm._file_finders.git listing git files failed - pretending there aren't any\n"}
+[5.226727] (-) TimerEvent: {}
+[5.327597] (-) TimerEvent: {}
+[5.401223] (tutorial_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/tutorial_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tutorial_interfaces/msg/detail/num__type_support.cpp.o\x1b[0m\n'}
+[5.427915] (-) TimerEvent: {}
+[5.528846] (-) TimerEvent: {}
+[5.530086] (tutorial_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/tutorial_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tutorial_interfaces/msg/detail/dds_fastrtps/num__type_support.cpp.o\x1b[0m\n'}
+[5.629095] (-) TimerEvent: {}
+[5.661987] (tutorial_interfaces) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/workspaces/isaac_ros-dev/build/tutorial_interfaces/rosidl_typesupport_cpp/tutorial_interfaces/msg/sphere__type_support.cpp:7\x1b[m\x1b[K:\n'}
+[5.662438] (tutorial_interfaces) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/build/tutorial_interfaces/rosidl_generator_cpp/tutorial_interfaces/msg/detail/sphere__struct.hpp:20:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kgeometery_msgs/msg/detail/point__struct.hpp: No such file or directory\n'}
+[5.662788] (tutorial_interfaces) StderrLine: {'line': b'   20 | #include \x1b[01;31m\x1b[K"geometery_msgs/msg/detail/point__struct.hpp"\x1b[m\x1b[K\n'}
+[5.663544] (tutorial_interfaces) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.664517] (tutorial_interfaces) StderrLine: {'line': b'compilation terminated.\n'}
+[5.666794] (tutorial_interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/tutorial_interfaces__rosidl_typesupport_cpp.dir/build.make:168: CMakeFiles/tutorial_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tutorial_interfaces/msg/sphere__type_support.cpp.o] Error 1\n'}
+[5.667057] (tutorial_interfaces) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[5.687940] (tutorial_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/tutorial_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tutorial_interfaces/msg/detail/sphere__type_support.cpp.o\x1b[0m\n'}
+[5.729323] (-) TimerEvent: {}
+[5.830051] (-) TimerEvent: {}
+[5.832447] (tutorial_interfaces) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/workspaces/isaac_ros-dev/build/tutorial_interfaces/rosidl_typesupport_introspection_cpp/tutorial_interfaces/msg/detail/sphere__type_support.cpp:12\x1b[m\x1b[K:\n'}
+[5.833042] (tutorial_interfaces) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/build/tutorial_interfaces/rosidl_generator_cpp/tutorial_interfaces/msg/detail/sphere__struct.hpp:20:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kgeometery_msgs/msg/detail/point__struct.hpp: No such file or directory\n'}
+[5.833234] (tutorial_interfaces) StderrLine: {'line': b'   20 | #include \x1b[01;31m\x1b[K"geometery_msgs/msg/detail/point__struct.hpp"\x1b[m\x1b[K\n'}
+[5.833376] (tutorial_interfaces) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.833543] (tutorial_interfaces) StderrLine: {'line': b'compilation terminated.\n'}
+[5.837851] (tutorial_interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/tutorial_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make:179: CMakeFiles/tutorial_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tutorial_interfaces/msg/detail/sphere__type_support.cpp.o] Error 1\n'}
+[5.839001] (tutorial_interfaces) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[5.875023] (tutorial_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/tutorial_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tutorial_interfaces/msg/detail/dds_fastrtps/sphere__type_support.cpp.o\x1b[0m\n'}
+[5.883745] (tutorial_interfaces) StdoutLine: {'line': b"reading manifest file 'tutorial_interfaces.egg-info/SOURCES.txt'\n"}
+[5.886276] (tutorial_interfaces) StdoutLine: {'line': b"writing manifest file 'tutorial_interfaces.egg-info/SOURCES.txt'\n"}
+[5.930286] (-) TimerEvent: {}
+[6.013035] (tutorial_interfaces) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/workspaces/isaac_ros-dev/build/tutorial_interfaces/rosidl_typesupport_fastrtps_cpp/tutorial_interfaces/msg/detail/sphere__rosidl_typesupport_fastrtps_cpp.hpp:11\x1b[m\x1b[K,\n'}
+[6.013548] (tutorial_interfaces) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/workspaces/isaac_ros-dev/build/tutorial_interfaces/rosidl_typesupport_fastrtps_cpp/tutorial_interfaces/msg/detail/dds_fastrtps/sphere__type_support.cpp:4\x1b[m\x1b[K:\n'}
+[6.013718] (tutorial_interfaces) StderrLine: {'line': b'\x1b[01m\x1b[K/workspaces/isaac_ros-dev/build/tutorial_interfaces/rosidl_generator_cpp/tutorial_interfaces/msg/detail/sphere__struct.hpp:20:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kgeometery_msgs/msg/detail/point__struct.hpp: No such file or directory\n'}
+[6.013861] (tutorial_interfaces) StderrLine: {'line': b'   20 | #include \x1b[01;31m\x1b[K"geometery_msgs/msg/detail/point__struct.hpp"\x1b[m\x1b[K\n'}
+[6.013986] (tutorial_interfaces) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.014138] (tutorial_interfaces) StderrLine: {'line': b'compilation terminated.\n'}
+[6.018426] (tutorial_interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/tutorial_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make:179: CMakeFiles/tutorial_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tutorial_interfaces/msg/detail/dds_fastrtps/sphere__type_support.cpp.o] Error 1\n'}
+[6.019321] (tutorial_interfaces) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[6.030433] (-) TimerEvent: {}
+[6.066233] (tutorial_interfaces) StdoutLine: {'line': b'[ 29%] Built target ament_cmake_python_build_tutorial_interfaces_egg\n'}
+[6.130624] (-) TimerEvent: {}
+[6.175463] (tutorial_interfaces) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:395: CMakeFiles/tutorial_interfaces__rosidl_typesupport_cpp.dir/all] Error 2\n'}
+[6.230802] (-) TimerEvent: {}
+[6.331480] (-) TimerEvent: {}
+[6.413662] (tutorial_interfaces) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:369: CMakeFiles/tutorial_interfaces__rosidl_typesupport_introspection_cpp.dir/all] Error 2\n'}
+[6.431625] (-) TimerEvent: {}
+[6.522381] (tutorial_interfaces) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:291: CMakeFiles/tutorial_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2\n'}
+[6.523247] (tutorial_interfaces) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[6.530184] (tutorial_interfaces) CommandEnded: {'returncode': 2}
+[6.531727] (-) TimerEvent: {}
+[6.633228] (-) TimerEvent: {}
+[6.734141] (-) TimerEvent: {}
+[6.823487] (tutorial_interfaces) JobEnded: {'identifier': 'tutorial_interfaces', 'rc': 2}
+[6.834498] (-) TimerEvent: {}
+[6.835337] (-) EventReactorShutdown: {}

@@ -1,0 +1,21 @@
+[31mCMake Error at /workspaces/isaac_ros-dev/install/zed_components/share/zed_components/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):
+  By not providing "Findpoint_cloud_transport.cmake" in CMAKE_MODULE_PATH
+  this project has asked CMake to find a package configuration file provided
+  by "point_cloud_transport", but CMake did not find one.
+
+  Could not find a package configuration file provided by
+  "point_cloud_transport" with any of the following names:
+
+    point_cloud_transportConfig.cmake
+    point_cloud_transport-config.cmake
+
+  Add the installation prefix of "point_cloud_transport" to CMAKE_PREFIX_PATH
+  or set "point_cloud_transport_DIR" to a directory containing one of the
+  above files.  If "point_cloud_transport" provides a separate development
+  package or SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  /workspaces/isaac_ros-dev/install/zed_components/share/zed_components/cmake/zed_componentsConfig.cmake:41 (include)
+  /opt/ros/humble/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)
+  CMakeLists.txt:85 (ament_auto_find_build_dependencies)
+
+[0m

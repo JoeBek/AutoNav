@@ -1,0 +1,1 @@
+Invoking command in '/home/joe/vt/autonav/ros2_ws/build/zed_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/zed-ros2-wrapper/zed-ros2-interfaces -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/zed_interfaces

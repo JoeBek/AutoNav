@@ -1,6 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target zed_aruco_localization_component[0m
-[100%] Built target zed_aruco_localization_component
--- Install configuration: "Release"
--- Up-to-date: /home/vtcro/ros2_ws/install/zed_aruco_localization/lib/libzed_aruco_localization_component.so
--- Up-to-date: /home/vtcro/ros2_ws/install/zed_aruco_localization/include/zed_aruco_localization/
--- Up-to-date: /home/vtcro/ros2_ws/install/zed_aruco_localization/include/zed_aruco_localization//aruco_loc_visibility_control.hpp

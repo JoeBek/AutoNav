@@ -1,0 +1,89 @@
+[0.000000] (-) TimerEvent: {}
+[0.000624] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.001090] (-) JobUnselected: {'identifier': 'cpp_srvcli'}
+[0.001391] (-) JobUnselected: {'identifier': 'isaac_ros_apriltag_interfaces'}
+[0.001688] (-) JobUnselected: {'identifier': 'isaac_ros_bi3d_interfaces'}
+[0.001812] (-) JobUnselected: {'identifier': 'isaac_ros_common'}
+[0.001893] (-) JobUnselected: {'identifier': 'isaac_ros_launch_utils'}
+[0.001962] (-) JobUnselected: {'identifier': 'isaac_ros_nitros_bridge_interfaces'}
+[0.002029] (-) JobUnselected: {'identifier': 'isaac_ros_nova_interfaces'}
+[0.002093] (-) JobUnselected: {'identifier': 'isaac_ros_pointcloud_interfaces'}
+[0.002157] (-) JobUnselected: {'identifier': 'isaac_ros_tensor_list_interfaces'}
+[0.002212] (-) JobUnselected: {'identifier': 'isaac_ros_test'}
+[0.002447] (-) JobUnselected: {'identifier': 'my_package'}
+[0.002515] (-) JobUnselected: {'identifier': 'py_pubsub'}
+[0.002561] (-) JobUnselected: {'identifier': 'turtlesim'}
+[0.002648] (py_srvcli) JobQueued: {'identifier': 'py_srvcli', 'dependencies': OrderedDict()}
+[0.002698] (py_srvcli) JobStarted: {'identifier': 'py_srvcli'}
+[0.099448] (-) TimerEvent: {}
+[0.199996] (-) TimerEvent: {}
+[0.300555] (-) TimerEvent: {}
+[0.401100] (-) TimerEvent: {}
+[0.501647] (-) TimerEvent: {}
+[0.602189] (-) TimerEvent: {}
+[0.702754] (-) TimerEvent: {}
+[0.803342] (-) TimerEvent: {}
+[0.904069] (-) TimerEvent: {}
+[1.004789] (-) TimerEvent: {}
+[1.105342] (-) TimerEvent: {}
+[1.205908] (-) TimerEvent: {}
+[1.306474] (-) TimerEvent: {}
+[1.407031] (-) TimerEvent: {}
+[1.507577] (-) TimerEvent: {}
+[1.608168] (-) TimerEvent: {}
+[1.708793] (-) TimerEvent: {}
+[1.809553] (-) TimerEvent: {}
+[1.910305] (-) TimerEvent: {}
+[2.011038] (-) TimerEvent: {}
+[2.111758] (-) TimerEvent: {}
+[2.212501] (-) TimerEvent: {}
+[2.313196] (-) TimerEvent: {}
+[2.413897] (-) TimerEvent: {}
+[2.511726] (py_srvcli) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/py_srvcli', 'build', '--build-base', '/workspaces/isaac_ros-dev/build/py_srvcli/build', 'install', '--record', '/workspaces/isaac_ros-dev/build/py_srvcli/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspaces/isaac_ros-dev/src/py_srvcli', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LIBRARY_PATH': '/usr/local/cuda/lib64/stubs', 'PYTHONWARNINGS': 'ignore:::setuptools.command.install,ignore:::setuptools.command.easy_install,ignore:::pkg_resources,ignore:::setuptools.command.develop', 'NV_LIBCUBLAS_VERSION': '12.2.5.6-1', 'TMUX': '/tmp/tmux-1000/default,11049,0', 'USER': 'vtcro', 'HOSTNAME': 'carcass', 'SHLVL': '3', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib', 'HOME': '/home/admin', 'OLDPWD': '/workspaces/isaac_ros-dev/src/cpp_srvcli', 'TERM_PROGRAM_VERSION': '3.2a', 'NV_LIBCUBLAS_DEV_VERSION': '12.2.5.6-1', 'JETSON_L4T': '36.3.0', 'ROS_PYTHON_VERSION': '3', 'JETSON_MODEL': 'NVIDIA Jetson Orin Nano Developer Kit', 'USER_UID': '1000', 'NV_LIBNPP_PACKAGE': 'libnpp-12-2=12.2.1.4-1', 'CUDA_VERSION': '12.2.12', 'ROS_DISTRO': 'humble', 'NV_LIBCUBLAS_PACKAGE_NAME': 'libcublas-12-2', 'NVIDIA_REQUIRE_CUDA': 'cuda>=12.2', 'JETSON_MODULE': '', 'JETSON_SERIAL_NUMBER': '1421223035915', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NV_LIBCUSPARSE_VERSION': '12.1.2.141-1', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'NV_CUDA_LIB_VERSION': '12.2.12-1', 'NV_NVML_DEV_VERSION': '12.2.140-1', 'USERNAME': 'admin', 'NV_LIBNPP_DEV_PACKAGE': 'libnpp-dev-12-2=12.2.1.4-1', 'TERM': 'screen', 'ISAAC_ROS_WS': '/workspaces/isaac_ros-dev', 'NV_CUDA_CUDART_VERSION': '12.2.140-1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/src/tensorrt/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/nvidia/tao', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/usr/local/share/middleware_profiles/rtps_udp_profile.xml', 'NV_LIBCUBLAS_DEV_PACKAGE_NAME': 'libcublas-dev-12-2', 'NV_LIBCUBLAS_PACKAGE': 'libcublas-12-2=12.2.5.6-1', 'NVARCH': 'arm64', 'NV_LIBCUSPARSE_DEV_VERSION': '12.1.2.141-1', 'DISPLAY': ':1', 'NVIDIA_PRODUCT_NAME': 'CUDA', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'NV_CUDA_CUDART_DEV_VERSION': '12.2.140-1', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra234', 'ROS_ROOT': '/opt/ros/humble', 'TERM_PROGRAM': 'tmux', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'TRT_INCLUDE_PATH': '/usr/include/aarch64-linux-gnu', 'NV_LIBCUBLAS_DEV_PACKAGE': 'libcublas-dev-12-2=12.2.5.6-1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'NVIDIA_REQUIRE_JETPACK_HOST_MOUNTS': 'base-only', 'NV_NVTX_VERSION': '12.2.140-1', 'NV_LIBNPP_VERSION': '12.2.1.4-1', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/workspaces/isaac_ros-dev/build/py_srvcli', 'PYTHONPATH': '/workspaces/isaac_ros-dev/build/py_srvcli/prefix_override:/workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'USER_GID': '1000', 'COLCON': '1', 'NV_LIBNPP_DEV_VERSION': '12.2.1.4-1', 'TMUX_PANE': '%0', 'JETSON_JETPACK': '6.0', 'TRT_LIB_PATH': '/usr/lib/aarch64-linux-gnu'}, 'shell': False}
+[2.515643] (-) TimerEvent: {}
+[2.618646] (-) TimerEvent: {}
+[2.719404] (-) TimerEvent: {}
+[2.820131] (-) TimerEvent: {}
+[2.920880] (-) TimerEvent: {}
+[3.021564] (-) TimerEvent: {}
+[3.122263] (-) TimerEvent: {}
+[3.222968] (-) TimerEvent: {}
+[3.323670] (-) TimerEvent: {}
+[3.424388] (-) TimerEvent: {}
+[3.447416] (py_srvcli) StdoutLine: {'line': b'running egg_info\n'}
+[3.485458] (py_srvcli) StdoutLine: {'line': b'writing ../../build/py_srvcli/py_srvcli.egg-info/PKG-INFO\n'}
+[3.486168] (py_srvcli) StdoutLine: {'line': b'writing dependency_links to ../../build/py_srvcli/py_srvcli.egg-info/dependency_links.txt\n'}
+[3.486736] (py_srvcli) StdoutLine: {'line': b'writing entry points to ../../build/py_srvcli/py_srvcli.egg-info/entry_points.txt\n'}
+[3.487181] (py_srvcli) StdoutLine: {'line': b'writing requirements to ../../build/py_srvcli/py_srvcli.egg-info/requires.txt\n'}
+[3.487445] (py_srvcli) StdoutLine: {'line': b'writing top-level names to ../../build/py_srvcli/py_srvcli.egg-info/top_level.txt\n'}
+[3.524528] (-) TimerEvent: {}
+[3.625261] (-) TimerEvent: {}
+[3.669338] (py_srvcli) StderrLine: {'line': b"ERROR setuptools_scm._file_finders.git listing git files failed - pretending there aren't any\n"}
+[3.725376] (-) TimerEvent: {}
+[3.825929] (-) TimerEvent: {}
+[3.926550] (-) TimerEvent: {}
+[3.932997] (py_srvcli) StdoutLine: {'line': b"reading manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'\n"}
+[3.933662] (py_srvcli) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[3.935021] (py_srvcli) StdoutLine: {'line': b"writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'\n"}
+[3.935460] (py_srvcli) StdoutLine: {'line': b'running build\n'}
+[3.935794] (py_srvcli) StdoutLine: {'line': b'running build_py\n'}
+[3.936224] (py_srvcli) StdoutLine: {'line': b'copying py_srvcli/service_member_function.py -> /workspaces/isaac_ros-dev/build/py_srvcli/build/lib/py_srvcli\n'}
+[3.936946] (py_srvcli) StdoutLine: {'line': b'running install\n'}
+[3.948408] (py_srvcli) StdoutLine: {'line': b'running install_lib\n'}
+[3.987747] (py_srvcli) StdoutLine: {'line': b'copying /workspaces/isaac_ros-dev/build/py_srvcli/build/lib/py_srvcli/service_member_function.py -> /workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages/py_srvcli\n'}
+[3.989016] (py_srvcli) StdoutLine: {'line': b'byte-compiling /workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/service_member_function.py to service_member_function.cpython-310.pyc\n'}
+[3.990141] (py_srvcli) StdoutLine: {'line': b'running install_data\n'}
+[3.990481] (py_srvcli) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.026610] (-) TimerEvent: {}
+[4.028302] (py_srvcli) StdoutLine: {'line': b"removing '/workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[4.029047] (py_srvcli) StdoutLine: {'line': b'Copying ../../build/py_srvcli/py_srvcli.egg-info to /workspaces/isaac_ros-dev/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info\n'}
+[4.030975] (py_srvcli) StdoutLine: {'line': b'running install_scripts\n'}
+[4.126778] (-) TimerEvent: {}
+[4.175975] (py_srvcli) StdoutLine: {'line': b'Installing client script to /workspaces/isaac_ros-dev/install/py_srvcli/lib/py_srvcli\n'}
+[4.176887] (py_srvcli) StdoutLine: {'line': b'Installing service script to /workspaces/isaac_ros-dev/install/py_srvcli/lib/py_srvcli\n'}
+[4.177360] (py_srvcli) StdoutLine: {'line': b"writing list of installed files to '/workspaces/isaac_ros-dev/build/py_srvcli/install.log'\n"}
+[4.226891] (-) TimerEvent: {}
+[4.289190] (py_srvcli) CommandEnded: {'returncode': 0}
+[4.325655] (py_srvcli) JobEnded: {'identifier': 'py_srvcli', 'rc': 0}
+[4.329386] (-) TimerEvent: {}
+[4.329747] (-) EventReactorShutdown: {}

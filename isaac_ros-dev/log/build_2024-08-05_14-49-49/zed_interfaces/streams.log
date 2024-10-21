@@ -1,0 +1,224 @@
+[0.056s] Invoking command in '/workspaces/isaac_ros-dev/build/zed_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/zed_interfaces
+[0.086s] -- Found ament_cmake_auto: 1.3.9 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.390s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.620s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.625s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.638s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.660s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.692s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.001s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.790s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.801s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.355s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.460s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[3.561s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.561s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[3.561s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[3.733s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.739s] -- Added test 'lint_cmake' to check CMake code style
+[3.746s] -- Added test 'xmllint' to check XML markup files
+[3.757s] -- Configuring done
+[3.961s] -- Generating done
+[4.002s] -- Build files have been written to: /workspaces/isaac_ros-dev/build/zed_interfaces
+[4.049s] Invoked command in '/workspaces/isaac_ros-dev/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/zed_interfaces
+[4.050s] Invoking command in '/workspaces/isaac_ros-dev/build/zed_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/zed_interfaces -- -j6 -l6
+[6.234s] [  0%] [34m[1mGenerating C code for ROS interfaces[0m
+[6.243s] [  0%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[6.243s] [  0%] Built target ament_cmake_python_symlink_zed_interfaces
+[6.286s] running egg_info
+[6.288s] creating zed_interfaces.egg-info
+[6.363s] writing zed_interfaces.egg-info/PKG-INFO
+[6.364s] writing dependency_links to zed_interfaces.egg-info/dependency_links.txt
+[6.365s] writing top-level names to zed_interfaces.egg-info/top_level.txt
+[6.365s] writing manifest file 'zed_interfaces.egg-info/SOURCES.txt'
+[6.638s] ERROR setuptools_scm._file_finders.git listing git files failed - pretending there aren't any
+[6.931s] reading manifest file 'zed_interfaces.egg-info/SOURCES.txt'
+[6.932s] writing manifest file 'zed_interfaces.egg-info/SOURCES.txt'
+[7.059s] [  0%] Built target ament_cmake_python_build_zed_interfaces_egg
+[9.112s] [  0%] Built target zed_interfaces__cpp
+[9.139s] [  2%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[9.140s] [  2%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[9.164s] [  2%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[9.734s] [  3%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/object__functions.c.o[0m
+[9.734s] [  4%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/objects_stamped__functions.c.o[0m
+[9.734s] [  4%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/keypoint2_di__functions.c.o[0m
+[9.963s] [  5%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/keypoint2_df__functions.c.o[0m
+[9.972s] [  5%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/keypoint3_d__functions.c.o[0m
+[10.022s] [  6%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/bounding_box2_di__functions.c.o[0m
+[10.177s] [  6%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/bounding_box2_df__functions.c.o[0m
+[10.184s] [  7%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/bounding_box3_d__functions.c.o[0m
+[10.250s] [  7%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/skeleton2_d__functions.c.o[0m
+[10.405s] [  8%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/skeleton3_d__functions.c.o[0m
+[10.414s] [  9%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/depth_info_stamped__functions.c.o[0m
+[10.483s] [  9%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/plane_stamped__functions.c.o[0m
+[10.639s] [ 10%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/pos_track_status__functions.c.o[0m
+[10.640s] [ 10%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/gnss_fusion_status__functions.c.o[0m
+[10.734s] [ 11%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/heartbeat__functions.c.o[0m
+[10.858s] [ 11%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/mag_heading_status__functions.c.o[0m
+[10.860s] [ 12%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/srv/detail/set_pose__functions.c.o[0m
+[10.976s] [ 13%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/srv/detail/start_svo_rec__functions.c.o[0m
+[11.068s] [ 13%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/srv/detail/set_roi__functions.c.o[0m
+[11.391s] [ 14%] [32m[1mLinking C shared library libzed_interfaces__rosidl_generator_c.so[0m
+[11.478s] [ 14%] Built target zed_interfaces__rosidl_generator_c
+[11.505s] [ 17%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[11.506s] [ 17%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[11.506s] [ 17%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[12.515s] [ 17%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/object__type_support.cpp.o[0m
+[13.180s] [ 19%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/objects_stamped__type_support.cpp.o[0m
+[13.180s] [ 19%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/object__type_support.cpp.o[0m
+[13.514s] [ 20%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/object__type_support.cpp.o[0m
+[13.890s] [ 21%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/keypoint2_di__type_support.cpp.o[0m
+[14.405s] [ 21%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/objects_stamped__type_support.cpp.o[0m
+[14.560s] [ 21%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/keypoint2_df__type_support.cpp.o[0m
+[14.659s] [ 21%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/objects_stamped__type_support.cpp.o[0m
+[14.793s] [ 21%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/object__type_support.cpp.o[0m
+[14.889s] [ 22%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/objects_stamped__type_support.cpp.o[0m
+[14.975s] [ 22%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/keypoint2_di__type_support.cpp.o[0m
+[15.053s] [ 23%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/keypoint2_df__type_support.cpp.o[0m
+[15.129s] [ 24%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/keypoint3_d__type_support.cpp.o[0m
+[15.212s] [ 24%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/bounding_box2_di__type_support.cpp.o[0m
+[15.258s] [ 25%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/keypoint3_d__type_support.cpp.o[0m
+[15.290s] [ 26%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/bounding_box2_df__type_support.cpp.o[0m
+[15.374s] [ 26%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/bounding_box3_d__type_support.cpp.o[0m
+[15.454s] [ 27%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/skeleton2_d__type_support.cpp.o[0m
+[15.543s] [ 27%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/skeleton3_d__type_support.cpp.o[0m
+[15.645s] [ 28%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/depth_info_stamped__type_support.cpp.o[0m
+[15.729s] [ 29%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/plane_stamped__type_support.cpp.o[0m
+[15.818s] [ 29%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/pos_track_status__type_support.cpp.o[0m
+[15.854s] [ 30%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/object__type_support.c.o[0m
+[15.912s] [ 31%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/gnss_fusion_status__type_support.cpp.o[0m
+[15.919s] [ 32%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/keypoint2_di__type_support.cpp.o[0m
+[15.978s] [ 32%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/bounding_box2_di__type_support.cpp.o[0m
+[15.993s] [ 32%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/object__type_support_c.cpp.o[0m
+[15.997s] [ 32%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/heartbeat__type_support.cpp.o[0m
+[16.033s] [ 32%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/objects_stamped__type_support.c.o[0m
+[16.080s] [ 33%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/mag_heading_status__type_support.cpp.o[0m
+[16.121s] [ 34%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/keypoint2_di__type_support.cpp.o[0m
+[16.162s] [ 35%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/keypoint2_di__type_support.c.o[0m
+[16.166s] [ 35%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/srv/set_pose__type_support.cpp.o[0m
+[16.258s] [ 36%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/srv/start_svo_rec__type_support.cpp.o[0m
+[16.273s] [ 36%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/keypoint2_df__type_support.c.o[0m
+[16.349s] [ 37%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/srv/set_roi__type_support.cpp.o[0m
+[16.383s] [ 38%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/keypoint3_d__type_support.c.o[0m
+[16.437s] [ 38%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_c.so[0m
+[16.492s] [ 38%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/bounding_box2_di__type_support.c.o[0m
+[16.541s] [ 38%] Built target zed_interfaces__rosidl_typesupport_c
+[16.565s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/keypoint2_df__type_support.cpp.o[0m
+[16.604s] [ 39%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/bounding_box2_df__type_support.c.o[0m
+[16.679s] [ 40%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/bounding_box2_df__type_support.cpp.o[0m
+[16.712s] [ 41%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/bounding_box3_d__type_support.c.o[0m
+[16.824s] [ 41%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/skeleton2_d__type_support.c.o[0m
+[16.917s] [ 41%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/keypoint2_df__type_support.cpp.o[0m
+[16.942s] [ 42%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/skeleton3_d__type_support.c.o[0m
+[17.052s] [ 42%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/depth_info_stamped__type_support.c.o[0m
+[17.081s] [ 43%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/objects_stamped__type_support_c.cpp.o[0m
+[17.158s] [ 45%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/plane_stamped__type_support.c.o[0m
+[17.158s] [ 45%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/keypoint3_d__type_support.cpp.o[0m
+[17.297s] [ 45%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/pos_track_status__type_support.c.o[0m
+[17.363s] [ 45%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/bounding_box3_d__type_support.cpp.o[0m
+[17.397s] [ 46%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/gnss_fusion_status__type_support.c.o[0m
+[17.493s] [ 47%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/heartbeat__type_support.c.o[0m
+[17.590s] [ 48%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/keypoint3_d__type_support.cpp.o[0m
+[17.595s] [ 48%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/mag_heading_status__type_support.c.o[0m
+[17.692s] [ 49%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/srv/detail/set_pose__type_support.c.o[0m
+[17.841s] [ 49%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/srv/detail/start_svo_rec__type_support.c.o[0m
+[17.904s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/keypoint2_di__type_support_c.cpp.o[0m
+[17.962s] [ 51%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/srv/detail/set_roi__type_support.c.o[0m
+[18.013s] [ 51%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/keypoint2_df__type_support_c.cpp.o[0m
+[18.068s] [ 52%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/skeleton2_d__type_support.cpp.o[0m
+[18.078s] [ 52%] [32m[1mLinking C shared library libzed_interfaces__rosidl_typesupport_introspection_c.so[0m
+[18.161s] [ 53%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/bounding_box2_di__type_support.cpp.o[0m
+[18.183s] [ 53%] Built target zed_interfaces__rosidl_typesupport_introspection_c
+[18.206s] [ 53%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/bounding_box2_df__type_support.cpp.o[0m
+[18.599s] [ 53%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/bounding_box2_di__type_support.cpp.o[0m
+[18.758s] [ 54%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/skeleton3_d__type_support.cpp.o[0m
+[18.767s] [ 55%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/keypoint3_d__type_support_c.cpp.o[0m
+[18.899s] [ 55%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/depth_info_stamped__type_support.cpp.o[0m
+[19.139s] [ 56%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/plane_stamped__type_support.cpp.o[0m
+[19.238s] [ 57%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/bounding_box3_d__type_support.cpp.o[0m
+[19.468s] [ 57%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/pos_track_status__type_support.cpp.o[0m
+[19.686s] [ 58%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/bounding_box2_di__type_support_c.cpp.o[0m
+[19.687s] [ 58%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/gnss_fusion_status__type_support.cpp.o[0m
+[19.704s] [ 59%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/bounding_box2_df__type_support.cpp.o[0m
+[19.832s] [ 59%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/heartbeat__type_support.cpp.o[0m
+[20.159s] [ 60%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/mag_heading_status__type_support.cpp.o[0m
+[20.305s] [ 60%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/skeleton2_d__type_support.cpp.o[0m
+[20.383s] [ 61%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/srv/set_pose__type_support.cpp.o[0m
+[20.486s] [ 61%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/srv/start_svo_rec__type_support.cpp.o[0m
+[20.593s] [ 62%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/bounding_box2_df__type_support_c.cpp.o[0m
+[20.772s] [ 63%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/bounding_box3_d__type_support.cpp.o[0m
+[20.850s] [ 64%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/srv/set_roi__type_support.cpp.o[0m
+[21.086s] [ 64%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/skeleton2_d__type_support.cpp.o[0m
+[21.171s] [ 65%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/skeleton3_d__type_support.cpp.o[0m
+[21.347s] [ 66%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/skeleton3_d__type_support.cpp.o[0m
+[21.478s] [ 66%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/bounding_box3_d__type_support_c.cpp.o[0m
+[21.548s] [ 66%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_cpp.so[0m
+[21.651s] [ 66%] Built target zed_interfaces__rosidl_typesupport_cpp
+[21.675s] [ 67%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/skeleton2_d__type_support_c.cpp.o[0m
+[21.796s] [ 67%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/depth_info_stamped__type_support.cpp.o[0m
+[22.136s] [ 68%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/plane_stamped__type_support.cpp.o[0m
+[22.197s] [ 68%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/pos_track_status__type_support.cpp.o[0m
+[22.368s] [ 69%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/skeleton3_d__type_support_c.cpp.o[0m
+[22.456s] [ 69%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/depth_info_stamped__type_support.cpp.o[0m
+[22.572s] [ 69%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/depth_info_stamped__type_support_c.cpp.o[0m
+[22.816s] [ 70%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/gnss_fusion_status__type_support.cpp.o[0m
+[23.198s] [ 71%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/heartbeat__type_support.cpp.o[0m
+[23.246s] [ 71%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/mag_heading_status__type_support.cpp.o[0m
+[23.283s] [ 72%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/plane_stamped__type_support.cpp.o[0m
+[23.472s] [ 73%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/plane_stamped__type_support_c.cpp.o[0m
+[23.483s] [ 74%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/pos_track_status__type_support.cpp.o[0m
+[23.792s] [ 75%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/srv/detail/dds_fastrtps/set_pose__type_support.cpp.o[0m
+[24.262s] [ 75%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/srv/detail/dds_fastrtps/start_svo_rec__type_support.cpp.o[0m
+[24.327s] [ 76%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/srv/detail/dds_fastrtps/set_roi__type_support.cpp.o[0m
+[24.426s] [ 76%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/gnss_fusion_status__type_support.cpp.o[0m
+[24.427s] [ 76%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/pos_track_status__type_support_c.cpp.o[0m
+[24.472s] [ 77%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/heartbeat__type_support.cpp.o[0m
+[24.921s] [ 77%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/mag_heading_status__type_support.cpp.o[0m
+[25.347s] [ 78%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/gnss_fusion_status__type_support_c.cpp.o[0m
+[25.388s] [ 79%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/srv/detail/set_pose__type_support.cpp.o[0m
+[25.424s] [ 79%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/srv/detail/start_svo_rec__type_support.cpp.o[0m
+[25.470s] [ 80%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/srv/detail/set_roi__type_support.cpp.o[0m
+[25.481s] [ 80%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[25.667s] [ 80%] Built target zed_interfaces__rosidl_typesupport_fastrtps_cpp
+[25.689s] [ 80%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/heartbeat__type_support_c.cpp.o[0m
+[25.843s] [ 81%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/mag_heading_status__type_support_c.cpp.o[0m
+[26.267s] [ 82%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/srv/detail/set_pose__type_support_c.cpp.o[0m
+[26.450s] [ 82%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/srv/detail/start_svo_rec__type_support_c.cpp.o[0m
+[26.462s] [ 83%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/srv/detail/set_roi__type_support_c.cpp.o[0m
+[26.494s] [ 84%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[26.695s] [ 84%] Built target zed_interfaces__rosidl_typesupport_introspection_cpp
+[27.438s] [ 84%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[27.619s] [ 84%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c
+[27.683s] [ 84%] Built target zed_interfaces
+[27.749s] [ 85%] [34m[1mGenerating Python code for ROS interfaces[0m
+[34.732s] [ 85%] Built target zed_interfaces__py
+[34.803s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_objects_stamped_s.c.o[0m
+[34.804s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_object_s.c.o[0m
+[34.804s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_keypoint2_di_s.c.o[0m
+[34.804s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_keypoint3_d_s.c.o[0m
+[34.804s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_keypoint2_df_s.c.o[0m
+[34.809s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_bounding_box2_di_s.c.o[0m
+[35.108s] [ 90%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_bounding_box3_d_s.c.o[0m
+[35.108s] [ 90%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_bounding_box2_df_s.c.o[0m
+[35.109s] [ 90%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_skeleton2_d_s.c.o[0m
+[35.143s] [ 90%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_skeleton3_d_s.c.o[0m
+[35.170s] [ 91%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_depth_info_stamped_s.c.o[0m
+[35.280s] [ 92%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_plane_stamped_s.c.o[0m
+[35.413s] [ 93%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_pos_track_status_s.c.o[0m
+[35.413s] [ 93%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_gnss_fusion_status_s.c.o[0m
+[35.420s] [ 93%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_heartbeat_s.c.o[0m
+[35.442s] [ 94%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_mag_heading_status_s.c.o[0m
+[35.465s] [ 94%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/srv/_set_pose_s.c.o[0m
+[35.624s] [ 95%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/srv/_start_svo_rec_s.c.o[0m
+[35.696s] [ 96%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/srv/_set_roi_s.c.o[0m
+[36.016s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/zed_interfaces/libzed_interfaces__rosidl_generator_py.so[0m
+[36.139s] [ 96%] Built target zed_interfaces__rosidl_generator_py
+[36.193s] [ 99%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[36.193s] [ 99%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[36.193s] [ 99%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[37.057s] [100%] [32m[1mLinking C shared library rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so[0m
+[37.058s] [100%] [32m[1mLinking C shared library rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so[0m
+[37.058s] [100%] [32m[1mLinking C shared library rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so[0m
+[37.178s] [100%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[37.179s] [100%] Built target zed_interfaces__rosidl_typesupport_c__pyext
+[37.179s] [100%] Built target zed_interfaces__rosidl_typesupport_introspection_c__pyext

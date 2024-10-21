@@ -1,0 +1,15 @@
+[3.025s] Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_launch_utils': PYTHONPATH=/workspaces/isaac_ros-dev/build/isaac_ros_launch_utils/prefix_override:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /workspaces/isaac_ros-dev/build/isaac_ros_launch_utils/build --no-deps symlink_data
+[4.529s] running develop
+[5.517s] running egg_info
+[5.558s] writing isaac_ros_launch_utils.egg-info/PKG-INFO
+[5.560s] writing dependency_links to isaac_ros_launch_utils.egg-info/dependency_links.txt
+[5.561s] writing requirements to isaac_ros_launch_utils.egg-info/requires.txt
+[5.563s] writing top-level names to isaac_ros_launch_utils.egg-info/top_level.txt
+[5.759s] ERROR setuptools_scm._file_finders.git listing git files failed - pretending there aren't any
+[6.258s] reading manifest file 'isaac_ros_launch_utils.egg-info/SOURCES.txt'
+[6.260s] writing manifest file 'isaac_ros_launch_utils.egg-info/SOURCES.txt'
+[6.490s] running build_ext
+[6.490s] Creating /workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/lib/python3.10/site-packages/isaac-ros-launch-utils.egg-link (link to .)
+[6.492s] 
+[6.493s] Installed /workspaces/isaac_ros-dev/build/isaac_ros_launch_utils
+[6.493s] running symlink_data

@@ -1,0 +1,32 @@
+[0.009s] Invoking command in '/home/joe/vt/autonav/ros2_ws/build/zed_components': AMENT_PREFIX_PATH=/home/joe/vt/autonav/ros2_ws/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joe/vt/autonav/ros2_ws/install/zed_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/joe/vt/autonav/ros2_ws/install/zed_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joe/vt/autonav/ros2_ws/install/zed_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/zed-ros2-wrapper/zed_components -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/zed_components
+[0.054s] -- The C compiler identification is GNU 11.4.0
+[0.103s] -- The CXX compiler identification is GNU 11.4.0
+[0.110s] -- Detecting C compiler ABI info
+[0.172s] -- Detecting C compiler ABI info - done
+[0.181s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.182s] -- Detecting C compile features
+[0.182s] -- Detecting C compile features - done
+[0.185s] -- Detecting CXX compiler ABI info
+[0.253s] -- Detecting CXX compiler ABI info - done
+[0.258s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.258s] -- Detecting CXX compile features
+[0.259s] -- Detecting CXX compile features - done
+[0.267s] [31mCMake Error at CMakeLists.txt:81 (find_package):
+[0.267s]   By not providing "FindZED.cmake" in CMAKE_MODULE_PATH this project has
+[0.267s]   asked CMake to find a package configuration file provided by "ZED", but
+[0.267s]   CMake did not find one.
+[0.267s] 
+[0.267s]   Could not find a package configuration file provided by "ZED" with any of
+[0.267s]   the following names:
+[0.267s] 
+[0.267s]     ZEDConfig.cmake
+[0.267s]     zed-config.cmake
+[0.267s] 
+[0.267s]   Add the installation prefix of "ZED" to CMAKE_PREFIX_PATH or set "ZED_DIR"
+[0.268s]   to a directory containing one of the above files.  If "ZED" provides a
+[0.268s]   separate development package or SDK, be sure it has been installed.
+[0.268s] 
+[0.268s] [0m
+[0.268s] -- Configuring incomplete, errors occurred!
+[0.268s] See also "/home/joe/vt/autonav/ros2_ws/build/zed_components/CMakeFiles/CMakeOutput.log".
+[0.270s] Invoked command in '/home/joe/vt/autonav/ros2_ws/build/zed_components' returned '1': AMENT_PREFIX_PATH=/home/joe/vt/autonav/ros2_ws/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joe/vt/autonav/ros2_ws/install/zed_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/joe/vt/autonav/ros2_ws/install/zed_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joe/vt/autonav/ros2_ws/install/zed_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/zed-ros2-wrapper/zed_components -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/zed_components

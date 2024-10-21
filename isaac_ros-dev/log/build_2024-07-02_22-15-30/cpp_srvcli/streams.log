@@ -1,0 +1,47 @@
+[0.024s] Invoking command in '/workspaces/isaac_ros-dev/build/cpp_srvcli': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_srvcli -- -j6 -l6
+[0.131s] [35m[1mConsolidate compiler generated dependencies of target server[0m
+[0.164s] [ 25%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[0.173s] [ 50%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
+[0.688s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.example_interfaces/srv/add_two_ints.hpp: No such file or directory
+[0.688s]     2 | #include [01;31m[K"rclcpp/rclcpp.example_interfaces/srv/add_two_ints.hpp"[m[K
+[0.688s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.688s] compilation terminated.
+[0.694s] gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+[0.695s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/client.dir/all] Error 2
+[0.695s] gmake[1]: *** Waiting for unfinished jobs....
+[5.224s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[5.224s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[5.224s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[5.224s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[5.225s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[5.225s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[5.225s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[5.225s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[5.226s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[5.226s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[5.226s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[5.226s]                  from [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:1[m[K:
+[5.227s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:[m[K In function ‘[01m[Kvoid add(std::shared_ptr<example_interfaces::srv::AddTwoInts_Request_<std::allocator<void> > >, std::shared_ptr<example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> > >)[m[K’:
+[5.227s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:15:93:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ka[m[K’
+[5.227s]    15 | INFO(rclcpp::get_logger("rclcpp"), "Incoming request\na: %ld""b: %ld", response->[01;31m[Ka[m[K, response->b);
+[5.227s]       |                                                                                  [01;31m[K^[m[K
+[5.227s] 
+[5.228s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:15:106:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct example_interfaces::srv::AddTwoInts_Response_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kb[m[K’
+[5.228s]    15 | rclcpp::get_logger("rclcpp"), "Incoming request\na: %ld""b: %ld", response->a, response->[01;31m[Kb[m[K);
+[5.228s]       |                                                                                          [01;31m[K^[m[K
+[5.228s] 
+[5.268s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[5.268s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:28:17:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+[5.269s]    28 |                 [01;31m[Knode[m[K->create_service<example_interfaces::srv::AddTwoInts>("add_two_ints", &add);
+[5.269s]       |                 [01;31m[K^~~~[m[K
+[5.269s]       |                 [32m[KNode[m[K
+[5.270s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:28:73:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[5.270s]    28 |                 node->create_service<example_interfaces::srv::AddTwoInts[01;31m[K>[m[K("add_two_ints", &add);
+[5.270s]       |                                                                         [01;31m[K^[m[K
+[5.271s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:28:75:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[5.271s]    28 |                 node->create_service<example_interfaces::srv::AddTwoInts>([01;35m[K"add_two_ints"[m[K, &add);
+[5.271s]       |                                                                           [01;35m[K^~~~~~~~~~~~~~[m[K
+[6.280s] gmake[2]: *** [CMakeFiles/server.dir/build.make:76: CMakeFiles/server.dir/src/server.cpp.o] Error 1
+[6.280s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/server.dir/all] Error 2
+[6.280s] gmake: *** [Makefile:146: all] Error 2
+[6.287s] Invoked command in '/workspaces/isaac_ros-dev/build/cpp_srvcli' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_srvcli -- -j6 -l6

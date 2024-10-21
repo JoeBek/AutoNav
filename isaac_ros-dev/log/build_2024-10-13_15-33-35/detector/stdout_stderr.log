@@ -1,0 +1,9 @@
+[35m[1mConsolidate compiler generated dependencies of target detector[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/detector.dir/src/main.cpp.o[0m
+[01m[K/home/joe/vt/autonav/ros2_ws/src/detector/src/main.cpp:[m[K In constructor ‘[01m[KDetector::Detector()[m[K’:
+[01m[K/home/joe/vt/autonav/ros2_ws/src/detector/src/main.cpp:19:18:[m[K [01;31m[Kerror: [m[K‘[01m[KZedImageSubscriber[m[K’ has not been declared
+   19 |       std::bind(&[01;31m[KZedImageSubscriber[m[K::image_callback, this, std::placeholders::_1));
+      |                  [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/detector.dir/build.make:76: CMakeFiles/detector.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/detector.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

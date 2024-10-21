@@ -1,0 +1,972 @@
+[0.246s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'zed_components', 'zed_interfaces', 'zed_ros2', 'zed_wrapper', 'preprocessor']
+[0.247s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['zed_components', 'zed_interfaces', 'zed_ros2', 'zed_wrapper', 'preprocessor'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff7fc6eb30>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff7fc6e6e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff7fc6e6e0>>)
+[0.835s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.835s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.835s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.835s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.835s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.836s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.836s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspaces/isaac_ros-dev'
+[0.836s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.836s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.836s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.864s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.866s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.866s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.866s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['ignore', 'ignore_ament_install']
+[0.866s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'ignore'
+[0.866s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'ignore_ament_install'
+[0.866s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['colcon_pkg']
+[0.866s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'colcon_pkg'
+[0.867s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['colcon_meta']
+[0.867s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'colcon_meta'
+[0.867s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['ros']
+[0.867s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'ros'
+[0.867s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['cmake', 'python']
+[0.867s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'cmake'
+[0.867s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'python'
+[0.867s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['python_setup_py']
+[0.867s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'python_setup_py'
+[0.867s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extensions ['ignore', 'ignore_ament_install']
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extension 'ignore'
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extension 'ignore_ament_install'
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extensions ['colcon_pkg']
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extension 'colcon_pkg'
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extensions ['colcon_meta']
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extension 'colcon_meta'
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extensions ['ros']
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extension 'ros'
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extensions ['cmake', 'python']
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extension 'cmake'
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extension 'python'
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extensions ['python_setup_py']
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(config/zed_setup) by extension 'python_setup_py'
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonav_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonav_interfaces) by extension 'ignore'
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonav_interfaces) by extension 'ignore_ament_install'
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonav_interfaces) by extensions ['colcon_pkg']
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonav_interfaces) by extension 'colcon_pkg'
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonav_interfaces) by extensions ['colcon_meta']
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonav_interfaces) by extension 'colcon_meta'
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonav_interfaces) by extensions ['ros']
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonav_interfaces) by extension 'ros'
+[0.877s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autonav_interfaces' with type 'ros.ament_cmake' and name 'autonav_interfaces'
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(src/cpp_pubsub) by extensions ['ignore', 'ignore_ament_install']
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(src/cpp_pubsub) by extension 'ignore'
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(src/cpp_pubsub) by extension 'ignore_ament_install'
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(src/cpp_pubsub) by extensions ['colcon_pkg']
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(src/cpp_pubsub) by extension 'colcon_pkg'
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(src/cpp_pubsub) by extensions ['colcon_meta']
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(src/cpp_pubsub) by extension 'colcon_meta'
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(src/cpp_pubsub) by extensions ['ros']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/cpp_pubsub) by extension 'ros'
+[0.880s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cpp_pubsub' with type 'ros.ament_cmake' and name 'cpp_pubsub'
+[0.880s] Level 1:colcon.colcon_core.package_identification:_identify(src/detector) by extensions ['ignore', 'ignore_ament_install']
+[0.880s] Level 1:colcon.colcon_core.package_identification:_identify(src/detector) by extension 'ignore'
+[0.880s] Level 1:colcon.colcon_core.package_identification:_identify(src/detector) by extension 'ignore_ament_install'
+[0.881s] Level 1:colcon.colcon_core.package_identification:_identify(src/detector) by extensions ['colcon_pkg']
+[0.881s] Level 1:colcon.colcon_core.package_identification:_identify(src/detector) by extension 'colcon_pkg'
+[0.881s] Level 1:colcon.colcon_core.package_identification:_identify(src/detector) by extensions ['colcon_meta']
+[0.881s] Level 1:colcon.colcon_core.package_identification:_identify(src/detector) by extension 'colcon_meta'
+[0.881s] Level 1:colcon.colcon_core.package_identification:_identify(src/detector) by extensions ['ros']
+[0.881s] Level 1:colcon.colcon_core.package_identification:_identify(src/detector) by extension 'ros'
+[0.882s] DEBUG:colcon.colcon_core.package_identification:Package 'src/detector' with type 'ros.ament_cmake' and name 'detector'
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extensions ['ignore', 'ignore_ament_install']
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'ignore'
+[0.883s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'ignore_ament_install'
+[0.883s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extensions ['colcon_pkg']
+[0.883s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'colcon_pkg'
+[0.883s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extensions ['colcon_meta']
+[0.883s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'colcon_meta'
+[0.883s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extensions ['ros']
+[0.883s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'ros'
+[0.883s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extensions ['cmake', 'python']
+[0.883s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'cmake'
+[0.883s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'python'
+[0.883s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extensions ['python_setup_py']
+[0.884s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'python_setup_py'
+[0.884s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extensions ['ignore', 'ignore_ament_install']
+[0.884s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'ignore'
+[0.884s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'ignore_ament_install'
+[0.884s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extensions ['colcon_pkg']
+[0.884s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'colcon_pkg'
+[0.884s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extensions ['colcon_meta']
+[0.884s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'colcon_meta'
+[0.884s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extensions ['ros']
+[0.885s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'ros'
+[0.885s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extensions ['cmake', 'python']
+[0.885s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'cmake'
+[0.885s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'python'
+[0.885s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extensions ['python_setup_py']
+[0.885s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'python_setup_py'
+[0.885s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extensions ['ignore', 'ignore_ament_install']
+[0.885s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'ignore'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'ignore_ament_install'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extensions ['colcon_pkg']
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'colcon_pkg'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extensions ['colcon_meta']
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'colcon_meta'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extensions ['ros']
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'ros'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extensions ['cmake', 'python']
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'cmake'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'python'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extensions ['python_setup_py']
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'python_setup_py'
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extensions ['ignore', 'ignore_ament_install']
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'ignore'
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'ignore_ament_install'
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extensions ['colcon_pkg']
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'colcon_pkg'
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extensions ['colcon_meta']
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'colcon_meta'
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extensions ['ros']
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'ros'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extensions ['cmake', 'python']
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'cmake'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'python'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extensions ['python_setup_py']
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'python_setup_py'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extensions ['ignore', 'ignore_ament_install']
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'ignore'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'ignore_ament_install'
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extensions ['colcon_pkg']
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'colcon_pkg'
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extensions ['colcon_meta']
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'colcon_meta'
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extensions ['ros']
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'ros'
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extensions ['cmake', 'python']
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'cmake'
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'python'
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extensions ['python_setup_py']
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'python_setup_py'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'ignore'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'ignore_ament_install'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extensions ['colcon_pkg']
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'colcon_pkg'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extensions ['colcon_meta']
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'colcon_meta'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extensions ['ros']
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'ros'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extensions ['cmake', 'python']
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'cmake'
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'python'
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extensions ['python_setup_py']
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'python_setup_py'
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extensions ['ignore', 'ignore_ament_install']
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'ignore'
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'ignore_ament_install'
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extensions ['colcon_pkg']
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'colcon_pkg'
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extensions ['colcon_meta']
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'colcon_meta'
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extensions ['ros']
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'ros'
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extensions ['cmake', 'python']
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'cmake'
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'python'
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extensions ['python_setup_py']
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'python_setup_py'
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extension 'ignore'
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extension 'ignore_ament_install'
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extensions ['colcon_pkg']
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extension 'colcon_pkg'
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extensions ['colcon_meta']
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extension 'colcon_meta'
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extensions ['ros']
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extension 'ros'
+[0.895s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_apriltag_interfaces' with type 'ros.ament_cmake' and name 'isaac_ros_apriltag_interfaces'
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extension 'ignore'
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extension 'ignore_ament_install'
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extensions ['colcon_pkg']
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extension 'colcon_pkg'
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extensions ['colcon_meta']
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extension 'colcon_meta'
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extensions ['ros']
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extension 'ros'
+[0.897s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_bi3d_interfaces' with type 'ros.ament_cmake' and name 'isaac_ros_bi3d_interfaces'
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extensions ['ignore', 'ignore_ament_install']
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extension 'ignore'
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extension 'ignore_ament_install'
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extensions ['colcon_pkg']
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extension 'colcon_pkg'
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extensions ['colcon_meta']
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extension 'colcon_meta'
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extensions ['ros']
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extension 'ros'
+[0.899s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_common' with type 'ros.ament_cmake' and name 'isaac_ros_common'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extensions ['ignore', 'ignore_ament_install']
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extension 'ignore'
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extension 'ignore_ament_install'
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extensions ['colcon_pkg']
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extension 'colcon_pkg'
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extensions ['colcon_meta']
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extension 'colcon_meta'
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extensions ['ros']
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extension 'ros'
+[0.901s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_launch_utils' with type 'ros.ament_python' and name 'isaac_ros_launch_utils'
+[0.901s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.902s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extension 'ignore'
+[0.902s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extension 'ignore_ament_install'
+[0.902s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extensions ['colcon_pkg']
+[0.902s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extension 'colcon_pkg'
+[0.902s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extensions ['colcon_meta']
+[0.902s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extension 'colcon_meta'
+[0.902s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extensions ['ros']
+[0.902s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extension 'ros'
+[0.903s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces' with type 'ros.ament_cmake' and name 'isaac_ros_nitros_bridge_interfaces'
+[0.904s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.904s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extension 'ignore'
+[0.904s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extension 'ignore_ament_install'
+[0.904s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extensions ['colcon_pkg']
+[0.904s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extension 'colcon_pkg'
+[0.904s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extensions ['colcon_meta']
+[0.904s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extension 'colcon_meta'
+[0.904s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extensions ['ros']
+[0.904s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extension 'ros'
+[0.906s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_nova_interfaces' with type 'ros.ament_cmake' and name 'isaac_ros_nova_interfaces'
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extension 'ignore'
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extension 'ignore_ament_install'
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extensions ['colcon_pkg']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extension 'colcon_pkg'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extensions ['colcon_meta']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extension 'colcon_meta'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extensions ['ros']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extension 'ros'
+[0.910s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_pointcloud_interfaces' with type 'ros.ament_cmake' and name 'isaac_ros_pointcloud_interfaces'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extension 'ignore'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extension 'ignore_ament_install'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extensions ['colcon_pkg']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extension 'colcon_pkg'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extensions ['colcon_meta']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extension 'colcon_meta'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extensions ['ros']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extension 'ros'
+[0.913s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_tensor_list_interfaces' with type 'ros.ament_cmake' and name 'isaac_ros_tensor_list_interfaces'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extensions ['ignore', 'ignore_ament_install']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extension 'ignore'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extension 'ignore_ament_install'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extensions ['colcon_pkg']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extension 'colcon_pkg'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extensions ['colcon_meta']
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extension 'colcon_meta'
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extensions ['ros']
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extension 'ros'
+[0.915s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_test' with type 'ros.ament_python' and name 'isaac_ros_test'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'ignore'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'ignore_ament_install'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extensions ['colcon_pkg']
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'colcon_pkg'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extensions ['colcon_meta']
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'colcon_meta'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extensions ['ros']
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'ros'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extensions ['cmake', 'python']
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'cmake'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'python'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extensions ['python_setup_py']
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'python_setup_py'
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extensions ['ignore', 'ignore_ament_install']
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'ignore'
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'ignore_ament_install'
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extensions ['colcon_pkg']
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'colcon_pkg'
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extensions ['colcon_meta']
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'colcon_meta'
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extensions ['ros']
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'ros'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extensions ['cmake', 'python']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'cmake'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'python'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extensions ['python_setup_py']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'python_setup_py'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extensions ['ignore', 'ignore_ament_install']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'ignore'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'ignore_ament_install'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extensions ['colcon_pkg']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'colcon_pkg'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extensions ['colcon_meta']
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'colcon_meta'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extensions ['ros']
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'ros'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extensions ['cmake', 'python']
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'cmake'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'python'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extensions ['python_setup_py']
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'python_setup_py'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/planner) by extensions ['ignore', 'ignore_ament_install']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/planner) by extension 'ignore'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/planner) by extension 'ignore_ament_install'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/planner) by extensions ['colcon_pkg']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/planner) by extension 'colcon_pkg'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/planner) by extensions ['colcon_meta']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/planner) by extension 'colcon_meta'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/planner) by extensions ['ros']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/planner) by extension 'ros'
+[0.921s] DEBUG:colcon.colcon_core.package_identification:Package 'src/planner' with type 'ros.ament_cmake' and name 'planner'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/preprocessor) by extensions ['ignore', 'ignore_ament_install']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/preprocessor) by extension 'ignore'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/preprocessor) by extension 'ignore_ament_install'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/preprocessor) by extensions ['colcon_pkg']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/preprocessor) by extension 'colcon_pkg'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/preprocessor) by extensions ['colcon_meta']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/preprocessor) by extension 'colcon_meta'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/preprocessor) by extensions ['ros']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(src/preprocessor) by extension 'ros'
+[0.924s] DEBUG:colcon.colcon_core.package_identification:Package 'src/preprocessor' with type 'ros.ament_cmake' and name 'preprocessor'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extensions ['ignore', 'ignore_ament_install']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extension 'ignore'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extension 'ignore_ament_install'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extensions ['colcon_pkg']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extension 'colcon_pkg'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extensions ['colcon_meta']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extension 'colcon_meta'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extensions ['ros']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extension 'ros'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extensions ['cmake', 'python']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extension 'cmake'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extension 'python'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extensions ['python_setup_py']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples) by extension 'python_setup_py'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extensions ['ignore', 'ignore_ament_install']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extension 'ignore'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extension 'ignore_ament_install'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extensions ['colcon_pkg']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extension 'colcon_pkg'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extensions ['colcon_meta']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extension 'colcon_meta'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extensions ['ros']
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extension 'ros'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extensions ['cmake', 'python']
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extension 'cmake'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extension 'python'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extensions ['python_setup_py']
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples) by extension 'python_setup_py'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples/zed_depth_to_laserscan) by extensions ['ignore', 'ignore_ament_install']
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples/zed_depth_to_laserscan) by extension 'ignore'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples/zed_depth_to_laserscan) by extension 'ignore_ament_install'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples/zed_depth_to_laserscan) by extensions ['colcon_pkg']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples/zed_depth_to_laserscan) by extension 'colcon_pkg'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples/zed_depth_to_laserscan) by extensions ['colcon_meta']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples/zed_depth_to_laserscan) by extension 'colcon_meta'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples/zed_depth_to_laserscan) by extensions ['ros']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/examples/zed_depth_to_laserscan) by extension 'ros'
+[0.930s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-examples/examples/zed_depth_to_laserscan' with type 'ros.ament_cmake' and name 'zed_depth_to_laserscan'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extensions ['ignore', 'ignore_ament_install']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extension 'ignore'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extension 'ignore_ament_install'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extensions ['colcon_pkg']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extension 'colcon_pkg'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extensions ['colcon_meta']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extension 'colcon_meta'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extensions ['ros']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extension 'ros'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extensions ['cmake', 'python']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extension 'cmake'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extension 'python'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extensions ['python_setup_py']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/images) by extension 'python_setup_py'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/rviz-plugin-zed-od) by extensions ['ignore', 'ignore_ament_install']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/rviz-plugin-zed-od) by extension 'ignore'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/rviz-plugin-zed-od) by extension 'ignore_ament_install'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/rviz-plugin-zed-od) by extensions ['colcon_pkg']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/rviz-plugin-zed-od) by extension 'colcon_pkg'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/rviz-plugin-zed-od) by extensions ['colcon_meta']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/rviz-plugin-zed-od) by extension 'colcon_meta'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/rviz-plugin-zed-od) by extensions ['ros']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/rviz-plugin-zed-od) by extension 'ros'
+[0.934s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-examples/rviz-plugin-zed-od' with type 'ros.ament_cmake' and name 'rviz_plugin_zed_od'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extensions ['ignore', 'ignore_ament_install']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extension 'ignore'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extension 'ignore_ament_install'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extensions ['colcon_pkg']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extension 'colcon_pkg'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extensions ['colcon_meta']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extension 'colcon_meta'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extensions ['ros']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extension 'ros'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extensions ['cmake', 'python']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extension 'cmake'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extension 'python'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extensions ['python_setup_py']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools) by extension 'python_setup_py'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark) by extension 'ignore'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark) by extension 'ignore_ament_install'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark) by extensions ['colcon_pkg']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark) by extension 'colcon_pkg'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark) by extensions ['colcon_meta']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark) by extension 'colcon_meta'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark) by extensions ['ros']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark) by extension 'ros'
+[0.938s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-examples/tools/zed_benchmark' with type 'ros.ament_cmake' and name 'zed_topic_benchmark'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_component) by extensions ['ignore', 'ignore_ament_install']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_component) by extension 'ignore'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_component) by extension 'ignore_ament_install'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_component) by extensions ['colcon_pkg']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_component) by extension 'colcon_pkg'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_component) by extensions ['colcon_meta']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_component) by extension 'colcon_meta'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_component) by extensions ['ros']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_component) by extension 'ros'
+[0.940s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-examples/tools/zed_benchmark_component' with type 'ros.ament_cmake' and name 'zed_topic_benchmark_component'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_interfaces) by extension 'ignore'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_interfaces) by extension 'ignore_ament_install'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_interfaces) by extensions ['colcon_pkg']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_interfaces) by extension 'colcon_pkg'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_interfaces) by extensions ['colcon_meta']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_interfaces) by extension 'colcon_meta'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_interfaces) by extensions ['ros']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tools/zed_benchmark_interfaces) by extension 'ros'
+[0.942s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-examples/tools/zed_benchmark_interfaces' with type 'ros.ament_cmake' and name 'zed_topic_benchmark_interfaces'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extension 'ignore'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extension 'ignore_ament_install'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extensions ['colcon_pkg']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extension 'colcon_pkg'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extensions ['colcon_meta']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extension 'colcon_meta'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extensions ['ros']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extension 'ros'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extensions ['cmake', 'python']
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extension 'cmake'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extension 'python'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extensions ['python_setup_py']
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials) by extension 'python_setup_py'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_depth_tutorial) by extensions ['ignore', 'ignore_ament_install']
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_depth_tutorial) by extension 'ignore'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_depth_tutorial) by extension 'ignore_ament_install'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_depth_tutorial) by extensions ['colcon_pkg']
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_depth_tutorial) by extension 'colcon_pkg'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_depth_tutorial) by extensions ['colcon_meta']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_depth_tutorial) by extension 'colcon_meta'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_depth_tutorial) by extensions ['ros']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_depth_tutorial) by extension 'ros'
+[0.946s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-examples/tutorials/zed_depth_tutorial' with type 'ros.ament_cmake' and name 'zed_tutorial_depth'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_multi_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_multi_camera) by extension 'ignore'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_multi_camera) by extension 'ignore_ament_install'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_multi_camera) by extensions ['colcon_pkg']
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_multi_camera) by extension 'colcon_pkg'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_multi_camera) by extensions ['colcon_meta']
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_multi_camera) by extension 'colcon_meta'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_multi_camera) by extensions ['ros']
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_multi_camera) by extension 'ros'
+[0.948s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-examples/tutorials/zed_multi_camera' with type 'ros.ament_cmake' and name 'zed_multi_camera'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_pose_tutorial) by extensions ['ignore', 'ignore_ament_install']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_pose_tutorial) by extension 'ignore'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_pose_tutorial) by extension 'ignore_ament_install'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_pose_tutorial) by extensions ['colcon_pkg']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_pose_tutorial) by extension 'colcon_pkg'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_pose_tutorial) by extensions ['colcon_meta']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_pose_tutorial) by extension 'colcon_meta'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_pose_tutorial) by extensions ['ros']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_pose_tutorial) by extension 'ros'
+[0.951s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-examples/tutorials/zed_pose_tutorial' with type 'ros.ament_cmake' and name 'zed_tutorial_pos_tracking'
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_rgb_convert) by extensions ['ignore', 'ignore_ament_install']
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_rgb_convert) by extension 'ignore'
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_rgb_convert) by extension 'ignore_ament_install'
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_rgb_convert) by extensions ['colcon_pkg']
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_rgb_convert) by extension 'colcon_pkg'
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_rgb_convert) by extensions ['colcon_meta']
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_rgb_convert) by extension 'colcon_meta'
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_rgb_convert) by extensions ['ros']
+[0.952s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_rgb_convert) by extension 'ros'
+[0.954s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-examples/tutorials/zed_rgb_convert' with type 'ros.ament_cmake' and name 'zed_rgb_convert'
+[0.954s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_robot_integration) by extensions ['ignore', 'ignore_ament_install']
+[0.954s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_robot_integration) by extension 'ignore'
+[0.954s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_robot_integration) by extension 'ignore_ament_install'
+[0.954s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_robot_integration) by extensions ['colcon_pkg']
+[0.954s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_robot_integration) by extension 'colcon_pkg'
+[0.955s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_robot_integration) by extensions ['colcon_meta']
+[0.955s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_robot_integration) by extension 'colcon_meta'
+[0.955s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_robot_integration) by extensions ['ros']
+[0.955s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_robot_integration) by extension 'ros'
+[0.956s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-examples/tutorials/zed_robot_integration' with type 'ros.ament_cmake' and name 'zed_robot_integration'
+[0.956s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_video_tutorial) by extensions ['ignore', 'ignore_ament_install']
+[0.956s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_video_tutorial) by extension 'ignore'
+[0.956s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_video_tutorial) by extension 'ignore_ament_install'
+[0.957s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_video_tutorial) by extensions ['colcon_pkg']
+[0.957s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_video_tutorial) by extension 'colcon_pkg'
+[0.957s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_video_tutorial) by extensions ['colcon_meta']
+[0.957s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_video_tutorial) by extension 'colcon_meta'
+[0.957s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_video_tutorial) by extensions ['ros']
+[0.957s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/tutorials/zed_video_tutorial) by extension 'ros'
+[0.958s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-examples/tutorials/zed_video_tutorial' with type 'ros.ament_cmake' and name 'zed_tutorial_video'
+[0.958s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/zed_display_rviz2) by extensions ['ignore', 'ignore_ament_install']
+[0.959s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/zed_display_rviz2) by extension 'ignore'
+[0.959s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/zed_display_rviz2) by extension 'ignore_ament_install'
+[0.959s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/zed_display_rviz2) by extensions ['colcon_pkg']
+[0.959s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/zed_display_rviz2) by extension 'colcon_pkg'
+[0.959s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/zed_display_rviz2) by extensions ['colcon_meta']
+[0.959s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/zed_display_rviz2) by extension 'colcon_meta'
+[0.959s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/zed_display_rviz2) by extensions ['ros']
+[0.959s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-examples/zed_display_rviz2) by extension 'ros'
+[0.960s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-examples/zed_display_rviz2' with type 'ros.ament_cmake' and name 'zed_display_rviz2'
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extensions ['ignore', 'ignore_ament_install']
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extension 'ignore'
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extension 'ignore_ament_install'
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extensions ['colcon_pkg']
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extension 'colcon_pkg'
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extensions ['colcon_meta']
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extension 'colcon_meta'
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extensions ['ros']
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extension 'ros'
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extensions ['cmake', 'python']
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extension 'cmake'
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extension 'python'
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extensions ['python_setup_py']
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper) by extension 'python_setup_py'
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extensions ['ignore', 'ignore_ament_install']
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extension 'ignore'
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extension 'ignore_ament_install'
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extensions ['colcon_pkg']
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extension 'colcon_pkg'
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extensions ['colcon_meta']
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extension 'colcon_meta'
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extensions ['ros']
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extension 'ros'
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extensions ['cmake', 'python']
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extension 'cmake'
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extension 'python'
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extensions ['python_setup_py']
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/docker) by extension 'python_setup_py'
+[0.964s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extensions ['ignore', 'ignore_ament_install']
+[0.964s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extension 'ignore'
+[0.964s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extension 'ignore_ament_install'
+[0.964s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extensions ['colcon_pkg']
+[0.964s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extension 'colcon_pkg'
+[0.964s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extensions ['colcon_meta']
+[0.964s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extension 'colcon_meta'
+[0.964s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extensions ['ros']
+[0.964s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extension 'ros'
+[0.964s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extensions ['cmake', 'python']
+[0.965s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extension 'cmake'
+[0.965s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extension 'python'
+[0.965s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extensions ['python_setup_py']
+[0.965s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/images) by extension 'python_setup_py'
+[0.965s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed-ros2-interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.965s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed-ros2-interfaces) by extension 'ignore'
+[0.965s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed-ros2-interfaces) by extension 'ignore_ament_install'
+[0.965s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed-ros2-interfaces) by extensions ['colcon_pkg']
+[0.965s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed-ros2-interfaces) by extension 'colcon_pkg'
+[0.966s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed-ros2-interfaces) by extensions ['colcon_meta']
+[0.966s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed-ros2-interfaces) by extension 'colcon_meta'
+[0.966s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed-ros2-interfaces) by extensions ['ros']
+[0.966s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed-ros2-interfaces) by extension 'ros'
+[0.967s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-wrapper/zed-ros2-interfaces' with type 'ros.ament_cmake' and name 'zed_interfaces'
+[0.967s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_components) by extensions ['ignore', 'ignore_ament_install']
+[0.967s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_components) by extension 'ignore'
+[0.968s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_components) by extension 'ignore_ament_install'
+[0.968s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_components) by extensions ['colcon_pkg']
+[0.968s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_components) by extension 'colcon_pkg'
+[0.968s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_components) by extensions ['colcon_meta']
+[0.968s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_components) by extension 'colcon_meta'
+[0.968s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_components) by extensions ['ros']
+[0.968s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_components) by extension 'ros'
+[0.971s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-wrapper/zed_components' with type 'ros.ament_cmake' and name 'zed_components'
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_ros2) by extension 'ignore'
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_ros2) by extension 'ignore_ament_install'
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_ros2) by extensions ['colcon_pkg']
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_ros2) by extension 'colcon_pkg'
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_ros2) by extensions ['colcon_meta']
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_ros2) by extension 'colcon_meta'
+[0.972s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_ros2) by extensions ['ros']
+[0.972s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_ros2) by extension 'ros'
+[0.973s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-wrapper/zed_ros2' with type 'ros.ament_cmake' and name 'zed_ros2'
+[0.973s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_wrapper) by extensions ['ignore', 'ignore_ament_install']
+[0.973s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_wrapper) by extension 'ignore'
+[0.973s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_wrapper) by extension 'ignore_ament_install'
+[0.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_wrapper) by extensions ['colcon_pkg']
+[0.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_wrapper) by extension 'colcon_pkg'
+[0.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_wrapper) by extensions ['colcon_meta']
+[0.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_wrapper) by extension 'colcon_meta'
+[0.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_wrapper) by extensions ['ros']
+[0.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-wrapper/zed_wrapper) by extension 'ros'
+[0.976s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-wrapper/zed_wrapper' with type 'ros.ament_cmake' and name 'zed_wrapper'
+[0.976s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.976s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.976s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.976s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.976s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.032s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'autonav_interfaces' in 'src/autonav_interfaces'
+[1.032s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'cpp_pubsub' in 'src/cpp_pubsub'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'detector' in 'src/detector'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'isaac_ros_apriltag_interfaces' in 'src/isaac_ros_common/isaac_ros_apriltag_interfaces'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'isaac_ros_bi3d_interfaces' in 'src/isaac_ros_common/isaac_ros_bi3d_interfaces'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'isaac_ros_common' in 'src/isaac_ros_common/isaac_ros_common'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'isaac_ros_launch_utils' in 'src/isaac_ros_common/isaac_ros_launch_utils'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'isaac_ros_nitros_bridge_interfaces' in 'src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'isaac_ros_nova_interfaces' in 'src/isaac_ros_common/isaac_ros_nova_interfaces'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'isaac_ros_pointcloud_interfaces' in 'src/isaac_ros_common/isaac_ros_pointcloud_interfaces'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'isaac_ros_tensor_list_interfaces' in 'src/isaac_ros_common/isaac_ros_tensor_list_interfaces'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'isaac_ros_test' in 'src/isaac_ros_common/isaac_ros_test'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'planner' in 'src/planner'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'zed_topic_benchmark_interfaces' in 'src/zed-ros2-examples/tools/zed_benchmark_interfaces'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'zed_tutorial_depth' in 'src/zed-ros2-examples/tutorials/zed_depth_tutorial'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'zed_tutorial_pos_tracking' in 'src/zed-ros2-examples/tutorials/zed_pose_tutorial'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'zed_tutorial_video' in 'src/zed-ros2-examples/tutorials/zed_video_tutorial'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rviz_plugin_zed_od' in 'src/zed-ros2-examples/rviz-plugin-zed-od'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'zed_topic_benchmark_component' in 'src/zed-ros2-examples/tools/zed_benchmark_component'
+[1.033s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'zed_rgb_convert' in 'src/zed-ros2-examples/tutorials/zed_rgb_convert'
+[1.034s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'zed_topic_benchmark' in 'src/zed-ros2-examples/tools/zed_benchmark'
+[1.034s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'zed_depth_to_laserscan' in 'src/zed-ros2-examples/examples/zed_depth_to_laserscan'
+[1.034s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'zed_display_rviz2' in 'src/zed-ros2-examples/zed_display_rviz2'
+[1.034s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'zed_multi_camera' in 'src/zed-ros2-examples/tutorials/zed_multi_camera'
+[1.034s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'zed_robot_integration' in 'src/zed-ros2-examples/tutorials/zed_robot_integration'
+[1.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.042s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 22 installed packages in /workspaces/isaac_ros-dev/install
+[1.046s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 407 installed packages in /opt/ros/humble
+[1.049s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'preprocessor' build argument 'cmake_args' from command line to 'None'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'preprocessor' build argument 'cmake_target' from command line to 'None'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'preprocessor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'preprocessor' build argument 'cmake_clean_cache' from command line to 'False'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'preprocessor' build argument 'cmake_clean_first' from command line to 'False'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'preprocessor' build argument 'cmake_force_configure' from command line to 'False'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'preprocessor' build argument 'ament_cmake_args' from command line to 'None'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'preprocessor' build argument 'catkin_cmake_args' from command line to 'None'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'preprocessor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.150s] DEBUG:colcon.colcon_core.verb:Building package 'preprocessor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/preprocessor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/preprocessor', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/preprocessor', 'symlink_install': False, 'test_result_base': None}
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.151s] DEBUG:colcon.colcon_core.verb:Building package 'zed_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/zed_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/zed_interfaces', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'cmake_args' from command line to 'None'
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'cmake_target' from command line to 'None'
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'cmake_clean_cache' from command line to 'False'
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'cmake_clean_first' from command line to 'False'
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'cmake_force_configure' from command line to 'False'
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'ament_cmake_args' from command line to 'None'
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'catkin_cmake_args' from command line to 'None'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.153s] DEBUG:colcon.colcon_core.verb:Building package 'zed_components' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/zed_components', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/zed_components', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_components', 'symlink_install': False, 'test_result_base': None}
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'cmake_args' from command line to 'None'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'cmake_target' from command line to 'None'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'cmake_clean_cache' from command line to 'False'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'cmake_clean_first' from command line to 'False'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'cmake_force_configure' from command line to 'False'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'ament_cmake_args' from command line to 'None'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'catkin_cmake_args' from command line to 'None'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.154s] DEBUG:colcon.colcon_core.verb:Building package 'zed_wrapper' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/zed_wrapper', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/zed_wrapper', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_wrapper', 'symlink_install': False, 'test_result_base': None}
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'cmake_args' from command line to 'None'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'cmake_target' from command line to 'None'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[1.155s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[1.155s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[1.155s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[1.155s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[1.155s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.155s] DEBUG:colcon.colcon_core.verb:Building package 'zed_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/zed_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/zed_ros2', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_ros2', 'symlink_install': False, 'test_result_base': None}
+[1.155s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.157s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.158s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces' with build type 'ament_cmake'
+[1.158s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces'
+[1.164s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.165s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.165s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.176s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/preprocessor' with build type 'ament_cmake'
+[1.176s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/preprocessor'
+[1.177s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.177s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.195s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/zed_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/zed_interfaces -- -j6 -l6
+[1.209s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/preprocessor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/preprocessor -- -j6 -l6
+[1.382s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/preprocessor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/preprocessor -- -j6 -l6
+[1.507s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/preprocessor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/preprocessor
+[1.529s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(preprocessor)
+[1.531s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/preprocessor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/preprocessor
+[1.537s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor' for CMake module files
+[1.538s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor' for CMake config files
+[1.539s] Level 1:colcon.colcon_core.shell:create_environment_hook('preprocessor', 'cmake_prefix_path')
+[1.539s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/hook/cmake_prefix_path.ps1'
+[1.541s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/hook/cmake_prefix_path.dsv'
+[1.542s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/hook/cmake_prefix_path.sh'
+[1.545s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor/lib'
+[1.545s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor/bin'
+[1.545s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor/lib/pkgconfig/preprocessor.pc'
+[1.546s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor/lib/python3.10/site-packages'
+[1.546s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor/bin'
+[1.547s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/package.ps1'
+[1.549s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/package.dsv'
+[1.552s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/package.sh'
+[1.554s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/package.bash'
+[1.555s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/package.zsh'
+[1.557s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/preprocessor/share/colcon-core/packages/preprocessor)
+[1.631s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(preprocessor)
+[1.632s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor' for CMake module files
+[1.633s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor' for CMake config files
+[1.633s] Level 1:colcon.colcon_core.shell:create_environment_hook('preprocessor', 'cmake_prefix_path')
+[1.634s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/hook/cmake_prefix_path.ps1'
+[1.635s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/hook/cmake_prefix_path.dsv'
+[1.636s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/hook/cmake_prefix_path.sh'
+[1.637s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor/lib'
+[1.637s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor/bin'
+[1.637s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor/lib/pkgconfig/preprocessor.pc'
+[1.638s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor/lib/python3.10/site-packages'
+[1.638s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/preprocessor/bin'
+[1.639s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/package.ps1'
+[1.640s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/package.dsv'
+[1.641s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/package.sh'
+[1.642s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/package.bash'
+[1.643s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/preprocessor/share/preprocessor/package.zsh'
+[1.644s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/preprocessor/share/colcon-core/packages/preprocessor)
+[2.992s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/zed_interfaces -- -j6 -l6
+[4.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/zed_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/zed_interfaces
+[4.648s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_interfaces)
+[4.650s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces' for CMake module files
+[4.651s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/zed_interfaces
+[4.653s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces' for CMake config files
+[4.662s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_interfaces', 'cmake_prefix_path')
+[4.663s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/hook/cmake_prefix_path.ps1'
+[4.665s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/hook/cmake_prefix_path.dsv'
+[4.666s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/hook/cmake_prefix_path.sh'
+[4.668s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces/lib'
+[4.669s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_interfaces', 'ld_library_path_lib')
+[4.669s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/hook/ld_library_path_lib.ps1'
+[4.671s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/hook/ld_library_path_lib.dsv'
+[4.673s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/hook/ld_library_path_lib.sh'
+[4.674s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces/bin'
+[4.674s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces/lib/pkgconfig/zed_interfaces.pc'
+[4.675s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces/lib/python3.10/site-packages'
+[4.676s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces/bin'
+[4.677s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/package.ps1'
+[4.679s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/package.dsv'
+[4.681s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/package.sh'
+[4.682s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/package.bash'
+[4.684s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/package.zsh'
+[4.685s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/zed_interfaces/share/colcon-core/packages/zed_interfaces)
+[6.127s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_interfaces)
+[6.128s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces' for CMake module files
+[6.131s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces' for CMake config files
+[6.139s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_interfaces', 'cmake_prefix_path')
+[6.140s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/hook/cmake_prefix_path.ps1'
+[6.142s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/hook/cmake_prefix_path.dsv'
+[6.143s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/hook/cmake_prefix_path.sh'
+[6.145s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces/lib'
+[6.146s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_interfaces', 'ld_library_path_lib')
+[6.146s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/hook/ld_library_path_lib.ps1'
+[6.148s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/hook/ld_library_path_lib.dsv'
+[6.149s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/hook/ld_library_path_lib.sh'
+[6.151s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces/bin'
+[6.151s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces/lib/pkgconfig/zed_interfaces.pc'
+[6.152s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces/lib/python3.10/site-packages'
+[6.153s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_interfaces/bin'
+[6.154s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/package.ps1'
+[6.156s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/package.dsv'
+[6.158s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/package.sh'
+[6.159s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/package.bash'
+[6.161s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_interfaces/share/zed_interfaces/package.zsh'
+[6.162s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/zed_interfaces/share/colcon-core/packages/zed_interfaces)
+[6.164s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_components' with build type 'ament_cmake'
+[6.164s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_components'
+[6.165s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.166s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.207s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/zed_components': CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/zed_interfaces/lib:/workspaces/isaac_ros-dev/install/zed_components/lib:/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:/workspaces/isaac_ros-dev/install/turtlesim/lib:/workspaces/isaac_ros-dev/install/more_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_common/lib:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib /usr/bin/cmake /workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_components -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/zed_components
+[8.230s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/zed_components' returned '0': CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/zed_interfaces/lib:/workspaces/isaac_ros-dev/install/zed_components/lib:/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:/workspaces/isaac_ros-dev/install/turtlesim/lib:/workspaces/isaac_ros-dev/install/more_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_common/lib:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib /usr/bin/cmake /workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_components -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/zed_components
+[8.235s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/zed_components': CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/zed_interfaces/lib:/workspaces/isaac_ros-dev/install/zed_components/lib:/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:/workspaces/isaac_ros-dev/install/turtlesim/lib:/workspaces/isaac_ros-dev/install/more_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_common/lib:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/zed_components -- -j6 -l6
+[8.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/zed_components' returned '0': CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/zed_interfaces/lib:/workspaces/isaac_ros-dev/install/zed_components/lib:/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:/workspaces/isaac_ros-dev/install/turtlesim/lib:/workspaces/isaac_ros-dev/install/more_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_common/lib:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/zed_components -- -j6 -l6
+[8.557s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/zed_components': CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/zed_interfaces/lib:/workspaces/isaac_ros-dev/install/zed_components/lib:/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:/workspaces/isaac_ros-dev/install/turtlesim/lib:/workspaces/isaac_ros-dev/install/more_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_common/lib:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/zed_components
+[8.615s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_components)
+[8.616s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components' for CMake module files
+[8.617s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/zed_components' returned '0': CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/zed_interfaces/lib:/workspaces/isaac_ros-dev/install/zed_components/lib:/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:/workspaces/isaac_ros-dev/install/turtlesim/lib:/workspaces/isaac_ros-dev/install/more_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_common/lib:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/lib/aarch64-linux-gnu/tegra/weston:/usr/lib/aarch64-linux-gnu/tegra-egl:/usr/local/cuda-12.2/targets/aarch64-linux/lib:/usr/lib/aarch64-linux-gnu/tegra:/opt/nvidia/vpi3/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib:/usr/lib/aarch64-linux-gnu-host:/opt/tritonserver/lib /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/zed_components
+[8.619s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components' for CMake config files
+[8.620s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_components', 'cmake_prefix_path')
+[8.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/hook/cmake_prefix_path.ps1'
+[8.623s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/hook/cmake_prefix_path.dsv'
+[8.625s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/hook/cmake_prefix_path.sh'
+[8.626s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components/lib'
+[8.627s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_components', 'ld_library_path_lib')
+[8.627s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/hook/ld_library_path_lib.ps1'
+[8.629s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/hook/ld_library_path_lib.dsv'
+[8.630s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/hook/ld_library_path_lib.sh'
+[8.631s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components/bin'
+[8.631s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components/lib/pkgconfig/zed_components.pc'
+[8.631s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components/lib/python3.10/site-packages'
+[8.632s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components/bin'
+[8.633s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/package.ps1'
+[8.635s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/package.dsv'
+[8.637s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/package.sh'
+[8.638s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/package.bash'
+[8.640s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/package.zsh'
+[8.641s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/zed_components/share/colcon-core/packages/zed_components)
+[8.740s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_components)
+[8.741s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components' for CMake module files
+[8.742s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components' for CMake config files
+[8.744s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_components', 'cmake_prefix_path')
+[8.745s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/hook/cmake_prefix_path.ps1'
+[8.746s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/hook/cmake_prefix_path.dsv'
+[8.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/hook/cmake_prefix_path.sh'
+[8.749s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components/lib'
+[8.749s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_components', 'ld_library_path_lib')
+[8.750s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/hook/ld_library_path_lib.ps1'
+[8.751s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/hook/ld_library_path_lib.dsv'
+[8.753s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/hook/ld_library_path_lib.sh'
+[8.754s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components/bin'
+[8.754s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components/lib/pkgconfig/zed_components.pc'
+[8.755s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components/lib/python3.10/site-packages'
+[8.756s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_components/bin'
+[8.757s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/package.ps1'
+[8.759s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/package.dsv'
+[8.761s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/package.sh'
+[8.763s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/package.bash'
+[8.764s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_components/share/zed_components/package.zsh'
+[8.766s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/zed_components/share/colcon-core/packages/zed_components)
+[8.767s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_wrapper' with build type 'ament_cmake'
+[8.768s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_wrapper'
+[8.769s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.769s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.815s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/zed_wrapper': CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_wrapper -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/zed_wrapper
+[10.918s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/zed_wrapper' returned '0': CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_wrapper -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/zed_wrapper
+[10.923s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/zed_wrapper': CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/zed_wrapper -- -j6 -l6
+[11.140s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/zed_wrapper' returned '0': CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/zed_wrapper -- -j6 -l6
+[11.225s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/zed_wrapper': CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/zed_wrapper
+[11.287s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_wrapper)
+[11.288s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper' for CMake module files
+[11.290s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/zed_wrapper' returned '0': CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/zed_wrapper
+[11.291s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper' for CMake config files
+[11.293s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_wrapper', 'cmake_prefix_path')
+[11.294s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/hook/cmake_prefix_path.ps1'
+[11.296s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/hook/cmake_prefix_path.dsv'
+[11.298s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/hook/cmake_prefix_path.sh'
+[11.300s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper/lib'
+[11.300s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper/bin'
+[11.300s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper/lib/pkgconfig/zed_wrapper.pc'
+[11.301s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper/lib/python3.10/site-packages'
+[11.302s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper/bin'
+[11.303s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/package.ps1'
+[11.305s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/package.dsv'
+[11.306s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/package.sh'
+[11.308s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/package.bash'
+[11.309s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/package.zsh'
+[11.310s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/zed_wrapper/share/colcon-core/packages/zed_wrapper)
+[11.395s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_wrapper)
+[11.396s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper' for CMake module files
+[11.397s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper' for CMake config files
+[11.400s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_wrapper', 'cmake_prefix_path')
+[11.401s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/hook/cmake_prefix_path.ps1'
+[11.403s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/hook/cmake_prefix_path.dsv'
+[11.404s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/hook/cmake_prefix_path.sh'
+[11.406s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper/lib'
+[11.406s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper/bin'
+[11.407s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper/lib/pkgconfig/zed_wrapper.pc'
+[11.407s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper/lib/python3.10/site-packages'
+[11.408s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_wrapper/bin'
+[11.409s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/package.ps1'
+[11.411s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/package.dsv'
+[11.413s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/package.sh'
+[11.414s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/package.bash'
+[11.417s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_wrapper/share/zed_wrapper/package.zsh'
+[11.419s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/zed_wrapper/share/colcon-core/packages/zed_wrapper)
+[11.420s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_ros2' with build type 'ament_cmake'
+[11.420s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed_ros2'
+[11.421s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.422s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.467s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/zed_ros2': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_wrapper:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/zed_ros2 -- -j6 -l6
+[11.565s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/zed_ros2' returned '0': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_wrapper:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/zed_ros2 -- -j6 -l6
+[11.631s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/zed_ros2': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_wrapper:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/zed_ros2
+[11.663s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_ros2)
+[11.664s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_ros2' for CMake module files
+[11.665s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/zed_ros2' returned '0': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_wrapper:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/zed_wrapper:/workspaces/isaac_ros-dev/install/zed_components:/workspaces/isaac_ros-dev/install/zed_interfaces:/workspaces/isaac_ros-dev/install/zed_ros2:/workspaces/isaac_ros-dev/install/cpp_srvcli:/workspaces/isaac_ros-dev/install/cpp_pubsub:/workspaces/isaac_ros-dev/install/tutorial_interfaces:/workspaces/isaac_ros-dev/install/turtlesim:/workspaces/isaac_ros-dev/install/preprocessor:/workspaces/isaac_ros-dev/install/my_package:/workspaces/isaac_ros-dev/install/more_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_common:/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces:/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces:/workspaces/isaac_ros-dev/install/py_srvcli:/workspaces/isaac_ros-dev/install/py_pubsub:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/zed_ros2
+[11.667s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_ros2' for CMake config files
+[11.668s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_ros2', 'cmake_prefix_path')
+[11.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/hook/cmake_prefix_path.ps1'
+[11.670s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/hook/cmake_prefix_path.dsv'
+[11.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/hook/cmake_prefix_path.sh'
+[11.674s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_ros2/bin'
+[11.674s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_ros2/lib/pkgconfig/zed_ros2.pc'
+[11.675s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_ros2/lib/python3.10/site-packages'
+[11.676s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_ros2/bin'
+[11.677s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/package.ps1'
+[11.679s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/package.dsv'
+[11.680s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/package.sh'
+[11.682s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/package.bash'
+[11.683s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/package.zsh'
+[11.684s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/zed_ros2/share/colcon-core/packages/zed_ros2)
+[11.751s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_ros2)
+[11.752s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_ros2' for CMake module files
+[11.754s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_ros2' for CMake config files
+[11.755s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_ros2', 'cmake_prefix_path')
+[11.755s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/hook/cmake_prefix_path.ps1'
+[11.758s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/hook/cmake_prefix_path.dsv'
+[11.759s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/hook/cmake_prefix_path.sh'
+[11.761s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_ros2/bin'
+[11.761s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_ros2/lib/pkgconfig/zed_ros2.pc'
+[11.762s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_ros2/lib/python3.10/site-packages'
+[11.763s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/zed_ros2/bin'
+[11.764s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/package.ps1'
+[11.766s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/package.dsv'
+[11.768s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/package.sh'
+[11.770s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/package.bash'
+[11.771s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/zed_ros2/share/zed_ros2/package.zsh'
+[11.773s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/zed_ros2/share/colcon-core/packages/zed_ros2)
+[11.774s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[11.775s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[11.775s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[11.775s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[11.801s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[11.802s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[11.802s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[11.802s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[11.812s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[11.813s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[11.814s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/isaac_ros-dev/install/local_setup.ps1'
+[11.817s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/isaac_ros-dev/install/_local_setup_util_ps1.py'
+[11.822s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/isaac_ros-dev/install/setup.ps1'
+[11.829s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/isaac_ros-dev/install/local_setup.sh'
+[11.830s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/isaac_ros-dev/install/_local_setup_util_sh.py'
+[11.833s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/isaac_ros-dev/install/setup.sh'
+[11.840s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/isaac_ros-dev/install/local_setup.bash'
+[11.842s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/isaac_ros-dev/install/setup.bash'
+[11.847s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/isaac_ros-dev/install/local_setup.zsh'
+[11.849s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/isaac_ros-dev/install/setup.zsh'

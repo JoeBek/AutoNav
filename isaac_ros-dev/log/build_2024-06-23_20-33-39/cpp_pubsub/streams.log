@@ -1,0 +1,73 @@
+[0.035s] Invoking command in '/workspaces/isaac_ros-dev/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/cpp_pubsub
+[2.206s] -- The C compiler identification is GNU 11.4.0
+[3.420s] -- The CXX compiler identification is GNU 11.4.0
+[3.459s] -- Detecting C compiler ABI info
+[3.683s] -- Detecting C compiler ABI info - done
+[3.709s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.713s] -- Detecting C compile features
+[3.715s] -- Detecting C compile features - done
+[3.730s] -- Detecting CXX compiler ABI info
+[3.948s] -- Detecting CXX compiler ABI info - done
+[3.968s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.968s] -- Detecting CXX compile features
+[3.969s] -- Detecting CXX compile features - done
+[3.996s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[5.783s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[6.200s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[6.401s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[6.422s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[6.461s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[6.514s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.578s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.797s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[6.812s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[7.188s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[7.273s] -- Found FastRTPS: /opt/ros/humble/include  
+[7.401s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[7.452s] -- Looking for pthread.h
+[7.709s] -- Looking for pthread.h - found
+[7.710s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[7.908s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[7.912s] -- Found Threads: TRUE  
+[8.338s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[8.605s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[8.605s] -- Configured cppcheck include dirs: 
+[8.605s] -- Configured cppcheck exclude dirs and/or files: 
+[8.609s] -- Added test 'lint_cmake' to check CMake code style
+[8.612s] -- Added test 'uncrustify' to check C / C++ code style
+[8.613s] -- Configured uncrustify additional arguments: 
+[8.614s] -- Added test 'xmllint' to check XML markup files
+[8.621s] -- Configuring done
+[8.653s] -- Generating done
+[8.657s] -- Build files have been written to: /workspaces/isaac_ros-dev/build/cpp_pubsub
+[8.686s] Invoked command in '/workspaces/isaac_ros-dev/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/cpp_pubsub
+[8.693s] Invoking command in '/workspaces/isaac_ros-dev/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_pubsub -- -j6 -l6
+[8.842s] [ 25%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[8.860s] [ 50%] [32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o[0m
+[19.608s] [ 75%] [32m[1mLinking CXX executable talker[0m
+[20.051s] [ 75%] Built target talker
+[27.620s] [100%] [32m[1mLinking CXX executable listener[0m
+[28.394s] [100%] Built target listener
+[28.436s] Invoked command in '/workspaces/isaac_ros-dev/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_pubsub -- -j6 -l6
+[28.555s] Invoking command in '/workspaces/isaac_ros-dev/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/cpp_pubsub
+[28.582s] -- Install configuration: ""
+[28.582s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/lib/cpp_pubsub/talker
+[28.585s] -- Set runtime path of "/workspaces/isaac_ros-dev/install/cpp_pubsub/lib/cpp_pubsub/talker" to ""
+[28.586s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/lib/cpp_pubsub/listener
+[28.595s] -- Set runtime path of "/workspaces/isaac_ros-dev/install/cpp_pubsub/lib/cpp_pubsub/listener" to ""
+[28.596s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+[28.596s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+[28.596s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+[28.597s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+[28.597s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+[28.598s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+[28.599s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+[28.599s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+[28.599s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+[28.600s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+[28.600s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+[28.600s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+[28.600s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+[28.600s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+[28.600s] -- Installing: /workspaces/isaac_ros-dev/install/cpp_pubsub/share/cpp_pubsub/package.xml
+[28.607s] Invoked command in '/workspaces/isaac_ros-dev/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/cpp_pubsub

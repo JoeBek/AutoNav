@@ -1,0 +1,95 @@
+[0.024s] Invoking command in '/workspaces/isaac_ros-dev/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/more_interfaces -- -j6 -l6
+[0.133s] [35m[1mConsolidate compiler generated dependencies of target more_interfaces__rosidl_generator_c[0m
+[0.158s] [  6%] Built target more_interfaces__cpp
+[0.159s] [ 12%] Built target more_interfaces__rosidl_generator_c
+[0.183s] [ 12%] Built target ament_cmake_python_copy_more_interfaces
+[0.184s] [35m[1mConsolidate compiler generated dependencies of target more_interfaces__rosidl_typesupport_fastrtps_c[0m
+[0.186s] [35m[1mConsolidate compiler generated dependencies of target more_interfaces__rosidl_typesupport_introspection_c[0m
+[0.187s] [35m[1mConsolidate compiler generated dependencies of target more_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[0.188s] [35m[1mConsolidate compiler generated dependencies of target more_interfaces__rosidl_typesupport_introspection_cpp[0m
+[0.191s] [35m[1mConsolidate compiler generated dependencies of target more_interfaces__rosidl_typesupport_c[0m
+[0.213s] [35m[1mConsolidate compiler generated dependencies of target more_interfaces__rosidl_typesupport_cpp[0m
+[0.217s] [ 21%] Built target more_interfaces__rosidl_typesupport_introspection_c
+[0.220s] [ 30%] Built target more_interfaces__rosidl_typesupport_introspection_cpp
+[0.221s] [ 39%] Built target more_interfaces__rosidl_typesupport_c
+[0.221s] [ 48%] Built target more_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.226s] [ 57%] Built target more_interfaces__rosidl_typesupport_fastrtps_c
+[0.244s] [ 66%] Built target more_interfaces__rosidl_typesupport_cpp
+[0.270s] [35m[1mConsolidate compiler generated dependencies of target publish_address_book[0m
+[0.296s] [ 66%] Built target more_interfaces
+[0.318s] [ 69%] [32mBuilding CXX object CMakeFiles/publish_address_book.dir/src/publish_address_book.cpp.o[0m
+[0.348s] [ 72%] Built target more_interfaces__py
+[0.372s] [35m[1mConsolidate compiler generated dependencies of target more_interfaces__rosidl_generator_py[0m
+[0.403s] [ 78%] Built target more_interfaces__rosidl_generator_py
+[0.428s] [35m[1mConsolidate compiler generated dependencies of target more_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[0.428s] [35m[1mConsolidate compiler generated dependencies of target more_interfaces__rosidl_typesupport_c__pyext[0m
+[0.431s] [35m[1mConsolidate compiler generated dependencies of target more_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[0.460s] [ 84%] Built target more_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.463s] [ 90%] Built target more_interfaces__rosidl_typesupport_c__pyext
+[0.467s] [ 96%] Built target more_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.070s] running egg_info
+[1.110s] writing more_interfaces.egg-info/PKG-INFO
+[1.110s] writing dependency_links to more_interfaces.egg-info/dependency_links.txt
+[1.111s] writing top-level names to more_interfaces.egg-info/top_level.txt
+[1.334s] ERROR setuptools_scm._file_finders.git listing git files failed - pretending there aren't any
+[1.596s] reading manifest file 'more_interfaces.egg-info/SOURCES.txt'
+[1.598s] writing manifest file 'more_interfaces.egg-info/SOURCES.txt'
+[1.738s] [ 96%] Built target ament_cmake_python_build_more_interfaces_egg
+[5.337s] [01m[K/workspaces/isaac_ros-dev/src/more_interfaces/src/publish_address_book.cpp:11:9:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[KAddressBookPublusher[m[K’ with no type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[5.337s]    11 |         [01;31m[KAddressBookPublusher[m[K() : Node("address_book_publisher_")
+[5.337s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[5.345s] [01m[K/workspaces/isaac_ros-dev/src/more_interfaces/src/publish_address_book.cpp:[m[K In member function ‘[01m[Kint AddressBookPublisher::AddressBookPublusher()[m[K’:
+[5.346s] [01m[K/workspaces/isaac_ros-dev/src/more_interfaces/src/publish_address_book.cpp:11:34:[m[K [01;31m[Kerror: [m[Konly constructors take member initializers
+[5.346s]    11 |         AddressBookPublusher() : [01;31m[KNode[m[K("address_book_publisher_")
+[5.346s]       |                                  [01;31m[K^~~~[m[K
+[5.365s] [01m[K/workspaces/isaac_ros-dev/src/more_interfaces/src/publish_address_book.cpp:34:9:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[5.366s]    34 |         [01;35m[K}[m[K
+[5.366s]       |         [01;35m[K^[m[K
+[5.366s] [01m[K/workspaces/isaac_ros-dev/src/more_interfaces/src/publish_address_book.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[5.366s] [01m[K/workspaces/isaac_ros-dev/src/more_interfaces/src/publish_address_book.cpp:46:60:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[KAddressBookPublisher::AddressBookPublisher()[m[K’
+[5.367s]    46 |         rclcpp::spin(std::make_shared<AddressBookPublisher([01;31m[K)[m[K);
+[5.367s]       |                                                            [01;31m[K^[m[K
+[5.367s] [01m[K/workspaces/isaac_ros-dev/src/more_interfaces/src/publish_address_book.cpp:9:7:[m[K [01;36m[Knote: [m[K‘[01m[KAddressBookPublisher::AddressBookPublisher()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+[5.367s]     9 | class [01;36m[KAddressBookPublisher[m[K : public rclcpp::Node {
+[5.368s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[5.368s] [01m[K/workspaces/isaac_ros-dev/src/more_interfaces/src/publish_address_book.cpp:9:7:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::Node()[m[K’
+[5.369s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[5.369s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[5.369s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[5.369s]                  from [01m[K/workspaces/isaac_ros-dev/src/more_interfaces/src/publish_address_book.cpp:4[m[K:
+[5.370s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1294:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const rclcpp::Node&, const string&)[m[K’
+[5.370s]  1294 |   [01;36m[KNode[m[K(
+[5.370s]       |   [01;36m[K^~~~[m[K
+[5.370s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1294:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[5.370s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:101:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const string&, const string&, const rclcpp::NodeOptions&)[m[K’
+[5.371s]   101 |   explicit [01;36m[KNode[m[K(
+[5.371s]       |            [01;36m[K^~~~[m[K
+[5.372s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:101:12:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[5.373s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:89:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const string&, const rclcpp::NodeOptions&)[m[K’
+[5.373s]    89 |   explicit [01;36m[KNode[m[K(
+[5.373s]       |            [01;36m[K^~~~[m[K
+[5.373s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:89:12:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[5.374s] [01m[K/workspaces/isaac_ros-dev/src/more_interfaces/src/publish_address_book.cpp:46:27:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[5.374s]    46 |         rclcpp::spin(std::[01;31m[Kmake_shared<AddressBookPublisher()[m[K);
+[5.374s]       |                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.374s] [01m[K/workspaces/isaac_ros-dev/src/more_interfaces/src/publish_address_book.cpp:46:21:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin(<unresolved overloaded function type>)[m[K’
+[5.374s]    46 |         [01;31m[Krclcpp::spin(std::make_shared<AddressBookPublisher())[m[K;
+[5.375s]       |         [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.375s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[5.375s]                  from [01m[K/workspaces/isaac_ros-dev/src/more_interfaces/src/publish_address_book.cpp:4[m[K:
+[5.375s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:45:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::spin(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)[m[K’
+[5.376s]    45 | [01;36m[Kspin[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+[5.376s]       | [01;36m[K^~~~[m[K
+[5.376s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:45:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>[m[K’}
+[5.377s]    45 | spin([01;36m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr[m[K);
+[5.377s]       |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[5.377s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:49:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::spin(rclcpp::Node::SharedPtr)[m[K’
+[5.377s]    49 | [01;36m[Kspin[m[K(rclcpp::Node::SharedPtr node_ptr);
+[5.377s]       | [01;36m[K^~~~[m[K
+[5.378s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:49:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Krclcpp::Node::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::Node>[m[K’}
+[5.378s]    49 | spin([01;36m[Krclcpp::Node::SharedPtr node_ptr[m[K);
+[5.378s]       |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[7.034s] gmake[2]: *** [CMakeFiles/publish_address_book.dir/build.make:76: CMakeFiles/publish_address_book.dir/src/publish_address_book.cpp.o] Error 1
+[7.034s] gmake[1]: *** [CMakeFiles/Makefile2:593: CMakeFiles/publish_address_book.dir/all] Error 2
+[7.035s] gmake: *** [Makefile:146: all] Error 2
+[7.041s] Invoked command in '/workspaces/isaac_ros-dev/build/more_interfaces' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/more_interfaces -- -j6 -l6

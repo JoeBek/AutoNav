@@ -1,0 +1,4 @@
+Invoking command in '/workspaces/isaac_ros-dev/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_pubsub -- -j6 -l6
+Invoked command in '/workspaces/isaac_ros-dev/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_pubsub -- -j6 -l6
+Invoking command in '/workspaces/isaac_ros-dev/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/cpp_pubsub
+Invoked command in '/workspaces/isaac_ros-dev/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/cpp_pubsub

@@ -1,0 +1,20 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:12:22:[m[K [01;31m[Kerror: [m[K‘[01m[Karc[m[K’ was not declared in this scope; did you mean ‘[01m[Kargc[m[K’?
+   12 |         rclcpp::init([01;31m[Karc[m[K, argv);
+      |                      [01;31m[K^~~[m[K
+      |                      [32m[Kargc[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:14:13:[m[K [01;31m[Kerror: [m[K‘[01m[Karg[m[K’ was not declared in this scope; did you mean ‘[01m[Kargc[m[K’?
+   14 |         if ([01;31m[Karg[m[K != 3){
+      |             [01;31m[K^~~[m[K
+      |             [32m[Kargc[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:10:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   10 | int main([01;35m[Kint argc[m[K, char ** argv){
+      |          [01;35m[K~~~~^~~~[m[K
+gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/client.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 75%] [32m[1mLinking CXX executable server[0m
+[ 75%] Built target server
+gmake: *** [Makefile:146: all] Error 2

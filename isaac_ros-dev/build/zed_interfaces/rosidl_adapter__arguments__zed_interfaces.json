@@ -1,0 +1,24 @@
+{
+  "package_name": "zed_interfaces",
+  "non_idl_tuples": [
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/Object.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/ObjectsStamped.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/Keypoint2Di.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/Keypoint2Df.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/Keypoint3D.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/BoundingBox2Di.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/BoundingBox2Df.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/BoundingBox3D.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/Skeleton2D.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/Skeleton3D.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/DepthInfoStamped.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/PlaneStamped.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/PosTrackStatus.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/GnssFusionStatus.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/Heartbeat.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:msg/MagHeadingStatus.msg",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:srv/SetPose.srv",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:srv/StartSvoRec.srv",
+    "/workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces:srv/SetROI.srv"
+  ]
+}

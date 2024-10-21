@@ -1,0 +1,47 @@
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kexample_interfaces/srv/add_two_ints.hpp: No such file or directory
+    2 | #include [01;31m[K"example_interfaces/srv/add_two_ints.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/server.dir/build.make:76: CMakeFiles/server.dir/src/server.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/server.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:23:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kadd_three_ints[m[K’ is not a member of ‘[01m[Ktutorial_interfaces::srv[m[K’; did you mean ‘[01m[KAddThreeInts[m[K’?
+   23 |         rclcpp::Client<tutorial_interfaces::srv::[01;31m[Kadd_three_ints[m[K>::SharedPtr client =
+      |                                                  [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                                  [32m[KAddThreeInts[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:23:64:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   23 |         rclcpp::Client<tutorial_interfaces::srv::add_three_ints[01;31m[K>[m[K::SharedPtr client =
+      |                                                                [01;31m[K^[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:23:77:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kclient[m[K’
+   23 |         rclcpp::Client<tutorial_interfaces::srv::add_three_ints>::SharedPtr [01;31m[Kclient[m[K =
+      |                                                                             [01;31m[K^~~~~~[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:25:67:[m[K [01;31m[Kerror: [m[K‘[01m[Kadd_three_ints[m[K’ is not a member of ‘[01m[Ktutorial_interfaces::srv[m[K’; did you mean ‘[01m[KAddThreeInts[m[K’?
+   25 |         auto request = std::make_shared<tutorial_interfaces::srv::[01;31m[Kadd_three_ints[m[K::Request>();
+      |                                                                   [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                                                   [32m[KAddThreeInts[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:25:29:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+   25 |         auto request = std::[01;31m[Kmake_shared<tutorial_interfaces::srv::add_three_ints::Request>[m[K();
+      |                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:25:91:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+   25 |         auto request = [01;31m[Kstd::make_shared<tutorial_interfaces::srv::add_three_ints::Request>()[m[K;
+      |                        [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+  875 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:25:91:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   25 |         auto request = [01;31m[Kstd::make_shared<tutorial_interfaces::srv::add_three_ints::Request>()[m[K;
+      |                        [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:30:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+   30 |         while (![01;31m[Kclient[m[K->wait_for_service(1s)) {
+      |                 [01;31m[K^~~~~~[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/client.cpp:39:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+   39 |           auto result = [01;31m[Kclient[m[K->async_send_request(request);
+      |                         [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/client.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

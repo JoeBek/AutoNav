@@ -1,0 +1,56 @@
+[0.024s] Invoking command in '/home/joe/vt/autonav/ros2_ws/build/zed_topic_benchmark_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joe/vt/autonav/ros2_ws/build/zed_topic_benchmark_interfaces -- -j8 -l8
+[0.074s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.094s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.124s] [  6%] Built target ament_cmake_python_copy_zed_topic_benchmark_interfaces
+[0.456s] running egg_info
+[0.458s] creating zed_topic_benchmark_interfaces.egg-info
+[0.458s] writing zed_topic_benchmark_interfaces.egg-info/PKG-INFO
+[0.458s] writing dependency_links to zed_topic_benchmark_interfaces.egg-info/dependency_links.txt
+[0.458s] writing top-level names to zed_topic_benchmark_interfaces.egg-info/top_level.txt
+[0.459s] writing manifest file 'zed_topic_benchmark_interfaces.egg-info/SOURCES.txt'
+[0.466s] reading manifest file 'zed_topic_benchmark_interfaces.egg-info/SOURCES.txt'
+[0.473s] writing manifest file 'zed_topic_benchmark_interfaces.egg-info/SOURCES.txt'
+[0.532s] [  6%] Built target ament_cmake_python_build_zed_topic_benchmark_interfaces_egg
+[0.548s] [  6%] Built target zed_topic_benchmark_interfaces__cpp
+[0.560s] [  9%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[0.564s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[0.565s] [ 16%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[0.766s] [ 19%] [32mBuilding C object CMakeFiles/zed_topic_benchmark_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__functions.c.o[0m
+[0.885s] [ 22%] [32m[1mLinking C shared library libzed_topic_benchmark_interfaces__rosidl_generator_c.so[0m
+[0.972s] [ 22%] Built target zed_topic_benchmark_interfaces__rosidl_generator_c
+[0.997s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[0.997s] [ 29%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.004s] [ 32%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.165s] [ 35%] [32mBuilding CXX object CMakeFiles/zed_topic_benchmark_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_topic_benchmark_interfaces/msg/benchmark_stats_stamped__type_support.cpp.o[0m
+[1.324s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__type_support.cpp.o[0m
+[1.405s] [ 41%] [32mBuilding CXX object CMakeFiles/zed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_topic_benchmark_interfaces/msg/detail/dds_fastrtps/benchmark_stats_stamped__type_support.cpp.o[0m
+[1.453s] [ 45%] [32mBuilding CXX object CMakeFiles/zed_topic_benchmark_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_topic_benchmark_interfaces/msg/benchmark_stats_stamped__type_support.cpp.o[0m
+[1.537s] [ 48%] [32m[1mLinking CXX shared library libzed_topic_benchmark_interfaces__rosidl_typesupport_c.so[0m
+[1.631s] [ 48%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_c
+[1.775s] [ 51%] [32mBuilding CXX object CMakeFiles/zed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__type_support_c.cpp.o[0m
+[1.812s] [ 54%] [32m[1mLinking CXX shared library libzed_topic_benchmark_interfaces__rosidl_typesupport_cpp.so[0m
+[1.897s] [ 58%] [32mBuilding C object CMakeFiles/zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__type_support.c.o[0m
+[1.921s] [ 58%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_cpp
+[1.932s] [ 61%] [32m[1mLinking CXX shared library libzed_topic_benchmark_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[1.969s] [ 64%] [32m[1mLinking C shared library libzed_topic_benchmark_interfaces__rosidl_typesupport_introspection_c.so[0m
+[2.048s] [ 64%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_c
+[2.091s] [ 64%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_cpp
+[2.120s] [ 67%] [32m[1mLinking CXX shared library libzed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.210s] [ 67%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.222s] [ 70%] [32m[1mLinking CXX shared library libzed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[2.322s] [ 70%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_c
+[2.343s] [ 70%] Built target zed_topic_benchmark_interfaces
+[2.367s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[2.902s] [ 74%] Built target zed_topic_benchmark_interfaces__py
+[2.938s] [ 77%] [32mBuilding C object CMakeFiles/zed_topic_benchmark_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_topic_benchmark_interfaces/msg/_benchmark_stats_stamped_s.c.o[0m
+[3.079s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/zed_topic_benchmark_interfaces/libzed_topic_benchmark_interfaces__rosidl_generator_py.so[0m
+[3.193s] [ 80%] Built target zed_topic_benchmark_interfaces__rosidl_generator_py
+[3.238s] [ 83%] [32mBuilding C object CMakeFiles/zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/zed_topic_benchmark_interfaces/_zed_topic_benchmark_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.239s] [ 87%] [32mBuilding C object CMakeFiles/zed_topic_benchmark_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/zed_topic_benchmark_interfaces/_zed_topic_benchmark_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[3.267s] [ 90%] [32mBuilding C object CMakeFiles/zed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/zed_topic_benchmark_interfaces/_zed_topic_benchmark_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.467s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/zed_topic_benchmark_interfaces/zed_topic_benchmark_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.497s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/zed_topic_benchmark_interfaces/zed_topic_benchmark_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.516s] [100%] [32m[1mLinking C shared library rosidl_generator_py/zed_topic_benchmark_interfaces/zed_topic_benchmark_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.580s] [100%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[3.596s] [100%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_c__pyext
+[3.599s] [100%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_c__pyext

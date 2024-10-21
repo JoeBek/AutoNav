@@ -1,0 +1,1041 @@
+[0.246s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.246s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffbbd54be0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffbbd546a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffbbd546a0>>)
+[0.853s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.853s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.853s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.853s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.853s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.853s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.853s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspaces/isaac_ros-dev'
+[0.854s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.854s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.854s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.854s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.854s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.854s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.854s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.855s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.855s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.885s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.885s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.887s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extensions ['ignore', 'ignore_ament_install']
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'ignore'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'ignore_ament_install'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extensions ['colcon_pkg']
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'colcon_pkg'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extensions ['colcon_meta']
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'colcon_meta'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extensions ['ros']
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'ros'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extensions ['cmake', 'python']
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'cmake'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'python'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extensions ['python_setup_py']
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common) by extension 'python_setup_py'
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extensions ['ignore', 'ignore_ament_install']
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'ignore'
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'ignore_ament_install'
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extensions ['colcon_pkg']
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'colcon_pkg'
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extensions ['colcon_meta']
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'colcon_meta'
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extensions ['ros']
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'ros'
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extensions ['cmake', 'python']
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'cmake'
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'python'
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extensions ['python_setup_py']
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker) by extension 'python_setup_py'
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extensions ['ignore', 'ignore_ament_install']
+[0.892s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'ignore'
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'ignore_ament_install'
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extensions ['colcon_pkg']
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'colcon_pkg'
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extensions ['colcon_meta']
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'colcon_meta'
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extensions ['ros']
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'ros'
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extensions ['cmake', 'python']
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'cmake'
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'python'
+[0.894s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extensions ['python_setup_py']
+[0.894s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/middleware_profiles) by extension 'python_setup_py'
+[0.894s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extensions ['ignore', 'ignore_ament_install']
+[0.894s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'ignore'
+[0.894s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'ignore_ament_install'
+[0.894s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extensions ['colcon_pkg']
+[0.894s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'colcon_pkg'
+[0.894s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extensions ['colcon_meta']
+[0.894s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'colcon_meta'
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extensions ['ros']
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'ros'
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extensions ['cmake', 'python']
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'cmake'
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'python'
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extensions ['python_setup_py']
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/patches) by extension 'python_setup_py'
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extensions ['ignore', 'ignore_ament_install']
+[0.895s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'ignore'
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'ignore_ament_install'
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extensions ['colcon_pkg']
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'colcon_pkg'
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extensions ['colcon_meta']
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'colcon_meta'
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extensions ['ros']
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'ros'
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extensions ['cmake', 'python']
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'cmake'
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'python'
+[0.896s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extensions ['python_setup_py']
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/rosdep) by extension 'python_setup_py'
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'ignore'
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'ignore_ament_install'
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extensions ['colcon_pkg']
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'colcon_pkg'
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extensions ['colcon_meta']
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'colcon_meta'
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extensions ['ros']
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'ros'
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extensions ['cmake', 'python']
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'cmake'
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'python'
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extensions ['python_setup_py']
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/scripts) by extension 'python_setup_py'
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extensions ['ignore', 'ignore_ament_install']
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'ignore'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'ignore_ament_install'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extensions ['colcon_pkg']
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'colcon_pkg'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extensions ['colcon_meta']
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'colcon_meta'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extensions ['ros']
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'ros'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extensions ['cmake', 'python']
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'cmake'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'python'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extensions ['python_setup_py']
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/docker/udev_rules) by extension 'python_setup_py'
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extension 'ignore'
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extension 'ignore_ament_install'
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extensions ['colcon_pkg']
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extension 'colcon_pkg'
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extensions ['colcon_meta']
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extension 'colcon_meta'
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extensions ['ros']
+[0.900s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_apriltag_interfaces) by extension 'ros'
+[0.906s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_apriltag_interfaces' with type 'ros.ament_cmake' and name 'isaac_ros_apriltag_interfaces'
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extension 'ignore'
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extension 'ignore_ament_install'
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extensions ['colcon_pkg']
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extension 'colcon_pkg'
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extensions ['colcon_meta']
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extension 'colcon_meta'
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extensions ['ros']
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_bi3d_interfaces) by extension 'ros'
+[0.908s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_bi3d_interfaces' with type 'ros.ament_cmake' and name 'isaac_ros_bi3d_interfaces'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extensions ['ignore', 'ignore_ament_install']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extension 'ignore'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extension 'ignore_ament_install'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extensions ['colcon_pkg']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extension 'colcon_pkg'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extensions ['colcon_meta']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extension 'colcon_meta'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extensions ['ros']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_common) by extension 'ros'
+[0.910s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_common' with type 'ros.ament_cmake' and name 'isaac_ros_common'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extensions ['ignore', 'ignore_ament_install']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extension 'ignore'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extension 'ignore_ament_install'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extensions ['colcon_pkg']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extension 'colcon_pkg'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extensions ['colcon_meta']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extension 'colcon_meta'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extensions ['ros']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_launch_utils) by extension 'ros'
+[0.912s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_launch_utils' with type 'ros.ament_python' and name 'isaac_ros_launch_utils'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extension 'ignore'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extension 'ignore_ament_install'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extensions ['colcon_pkg']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extension 'colcon_pkg'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extensions ['colcon_meta']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extension 'colcon_meta'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extensions ['ros']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces) by extension 'ros'
+[0.914s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces' with type 'ros.ament_cmake' and name 'isaac_ros_nitros_bridge_interfaces'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extension 'ignore'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extension 'ignore_ament_install'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extensions ['colcon_pkg']
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extension 'colcon_pkg'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extensions ['colcon_meta']
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extension 'colcon_meta'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extensions ['ros']
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_nova_interfaces) by extension 'ros'
+[0.916s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_nova_interfaces' with type 'ros.ament_cmake' and name 'isaac_ros_nova_interfaces'
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extension 'ignore'
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extension 'ignore_ament_install'
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extensions ['colcon_pkg']
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extension 'colcon_pkg'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extensions ['colcon_meta']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extension 'colcon_meta'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extensions ['ros']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_pointcloud_interfaces) by extension 'ros'
+[0.919s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_pointcloud_interfaces' with type 'ros.ament_cmake' and name 'isaac_ros_pointcloud_interfaces'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extension 'ignore'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extension 'ignore_ament_install'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extensions ['colcon_pkg']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extension 'colcon_pkg'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extensions ['colcon_meta']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extension 'colcon_meta'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extensions ['ros']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_tensor_list_interfaces) by extension 'ros'
+[0.921s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_tensor_list_interfaces' with type 'ros.ament_cmake' and name 'isaac_ros_tensor_list_interfaces'
+[0.921s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extensions ['ignore', 'ignore_ament_install']
+[0.921s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extension 'ignore'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extension 'ignore_ament_install'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extensions ['colcon_pkg']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extension 'colcon_pkg'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extensions ['colcon_meta']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extension 'colcon_meta'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extensions ['ros']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/isaac_ros_test) by extension 'ros'
+[0.923s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isaac_ros_common/isaac_ros_test' with type 'ros.ament_python' and name 'isaac_ros_test'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'ignore'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'ignore_ament_install'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extensions ['colcon_pkg']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'colcon_pkg'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extensions ['colcon_meta']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'colcon_meta'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extensions ['ros']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'ros'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extensions ['cmake', 'python']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'cmake'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'python'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extensions ['python_setup_py']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts) by extension 'python_setup_py'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extensions ['ignore', 'ignore_ament_install']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'ignore'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'ignore_ament_install'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extensions ['colcon_pkg']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'colcon_pkg'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extensions ['colcon_meta']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'colcon_meta'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extensions ['ros']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'ros'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extensions ['cmake', 'python']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'cmake'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'python'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extensions ['python_setup_py']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/deploy) by extension 'python_setup_py'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extensions ['ignore', 'ignore_ament_install']
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extension 'ignore'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extension 'ignore_ament_install'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extensions ['colcon_pkg']
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extension 'colcon_pkg'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extensions ['colcon_meta']
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extension 'colcon_meta'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extensions ['ros']
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extension 'ros'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extensions ['cmake', 'python']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extension 'cmake'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extension 'python'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extensions ['python_setup_py']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc) by extension 'python_setup_py'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extensions ['ignore', 'ignore_ament_install']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extension 'ignore'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extension 'ignore_ament_install'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extensions ['colcon_pkg']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extension 'colcon_pkg'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extensions ['colcon_meta']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extension 'colcon_meta'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extensions ['ros']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extension 'ros'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extensions ['cmake', 'python']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extension 'cmake'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extension 'python'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extensions ['python_setup_py']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt) by extension 'python_setup_py'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extensions ['ignore', 'ignore_ament_install']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extension 'ignore'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extension 'ignore_ament_install'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extensions ['colcon_pkg']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extension 'colcon_pkg'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extensions ['colcon_meta']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extension 'colcon_meta'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extensions ['ros']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extension 'ros'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extensions ['cmake', 'python']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extension 'cmake'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extension 'python'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extensions ['python_setup_py']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/etc/apt/keyrings) by extension 'python_setup_py'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extensions ['ignore', 'ignore_ament_install']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'ignore'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'ignore_ament_install'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extensions ['colcon_pkg']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'colcon_pkg'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extensions ['colcon_meta']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'colcon_meta'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extensions ['ros']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'ros'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extensions ['cmake', 'python']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'cmake'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'python'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extensions ['python_setup_py']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/scripts/utils) by extension 'python_setup_py'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extensions ['ignore', 'ignore_ament_install']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extension 'ignore'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extension 'ignore_ament_install'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extensions ['colcon_pkg']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extension 'colcon_pkg'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extensions ['colcon_meta']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extension 'colcon_meta'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extensions ['ros']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extension 'ros'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extensions ['cmake', 'python']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extension 'cmake'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extension 'python'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extensions ['python_setup_py']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/isaac_ros_common/subset) by extension 'python_setup_py'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'ignore'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'ignore_ament_install'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['colcon_pkg']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'colcon_pkg'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['colcon_meta']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'colcon_meta'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['ros']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'ros'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['cmake', 'python']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'cmake'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'python'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['python_setup_py']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'python_setup_py'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/ros_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/ros_tutorials) by extension 'ignore'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/ros_tutorials) ignored
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/roscpp_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/roscpp_tutorials) by extension 'ignore'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/roscpp_tutorials) ignored
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/rospy_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/rospy_tutorials) by extension 'ignore'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/rospy_tutorials) ignored
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extensions ['ignore', 'ignore_ament_install']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'ignore'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'ignore_ament_install'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extensions ['colcon_pkg']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'colcon_pkg'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extensions ['colcon_meta']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'colcon_meta'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extensions ['ros']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'ros'
+[0.939s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_tutorials/turtlesim' with type 'ros.ament_cmake' and name 'turtlesim'
+[0.940s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.940s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.940s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.940s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.940s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.983s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.983s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.985s] WARNING:colcon.colcon_core.prefix_path.colcon:The path '/workspaces/isaac_ros-dev/src/install' in the environment variable COLCON_PREFIX_PATH doesn't exist
+[0.986s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/launch_testing_examples' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.986s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_test' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.987s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_tensor_list_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.987s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_pointcloud_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.987s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_nova_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.987s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_nitros_bridge_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.987s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.987s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_common' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.987s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_bi3d_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.987s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_apriltag_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.987s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.987s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.987s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.987s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.988s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.988s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.988s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.988s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.988s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.988s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_wait_set' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.988s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_multithreaded_executor' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.988s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_timer' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.988s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_subscriber' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.988s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_service' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.988s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_publisher' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.988s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_composition' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.989s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_client' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.989s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_action_server' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.989s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_action_client' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.989s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_cbg_executor' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.989s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_async_client' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.989s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_tensor_list_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.989s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_pointcloud_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.990s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_nova_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.990s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_nitros_bridge_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.990s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_common' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.990s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_bi3d_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.990s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/isaac_ros_apriltag_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.990s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_wait_set' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.990s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_multithreaded_executor' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.990s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_timer' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.990s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_subscriber' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.990s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_service' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.990s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_publisher' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.991s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_composition' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.991s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_client' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.991s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_action_server' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.991s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_minimal_action_client' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.991s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_cbg_executor' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.991s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/isaac_ros-dev/src/install/examples_rclcpp_async_client' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.993s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 10 installed packages in /workspaces/isaac_ros-dev/install
+[0.997s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 412 installed packages in /opt/ros/humble
+[1.003s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.117s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_apriltag_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.117s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_apriltag_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.117s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_apriltag_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.117s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_apriltag_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.117s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_apriltag_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_apriltag_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_apriltag_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_apriltag_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_apriltag_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.118s] DEBUG:colcon.colcon_core.verb:Building package 'isaac_ros_apriltag_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/isaac_ros_apriltag_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_apriltag_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.119s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_bi3d_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.119s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_bi3d_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.119s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_bi3d_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.119s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_bi3d_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.119s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_bi3d_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.119s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_bi3d_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.119s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_bi3d_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.119s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_bi3d_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.119s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_bi3d_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.119s] DEBUG:colcon.colcon_core.verb:Building package 'isaac_ros_bi3d_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_bi3d_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.120s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_common' build argument 'cmake_args' from command line to 'None'
+[1.120s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_common' build argument 'cmake_target' from command line to 'None'
+[1.120s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_common' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.120s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_common' build argument 'cmake_clean_cache' from command line to 'False'
+[1.120s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_common' build argument 'cmake_clean_first' from command line to 'False'
+[1.120s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_common' build argument 'cmake_force_configure' from command line to 'False'
+[1.120s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_common' build argument 'ament_cmake_args' from command line to 'None'
+[1.120s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_common' build argument 'catkin_cmake_args' from command line to 'None'
+[1.120s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_common' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.120s] DEBUG:colcon.colcon_core.verb:Building package 'isaac_ros_common' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/isaac_ros_common', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/isaac_ros_common', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_common', 'symlink_install': False, 'test_result_base': None}
+[1.121s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_launch_utils' build argument 'cmake_args' from command line to 'None'
+[1.121s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_launch_utils' build argument 'cmake_target' from command line to 'None'
+[1.121s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_launch_utils' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.121s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_launch_utils' build argument 'cmake_clean_cache' from command line to 'False'
+[1.121s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_launch_utils' build argument 'cmake_clean_first' from command line to 'False'
+[1.121s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_launch_utils' build argument 'cmake_force_configure' from command line to 'False'
+[1.121s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_launch_utils' build argument 'ament_cmake_args' from command line to 'None'
+[1.121s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_launch_utils' build argument 'catkin_cmake_args' from command line to 'None'
+[1.121s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_launch_utils' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.121s] DEBUG:colcon.colcon_core.verb:Building package 'isaac_ros_launch_utils' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/isaac_ros_launch_utils', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_launch_utils', 'symlink_install': False, 'test_result_base': None}
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nitros_bridge_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nitros_bridge_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nitros_bridge_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nitros_bridge_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nitros_bridge_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nitros_bridge_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nitros_bridge_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nitros_bridge_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nitros_bridge_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.122s] DEBUG:colcon.colcon_core.verb:Building package 'isaac_ros_nitros_bridge_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/isaac_ros_nitros_bridge_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.123s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nova_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.123s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nova_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.123s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nova_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.123s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nova_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.123s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nova_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.123s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nova_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.123s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nova_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.123s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nova_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.123s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_nova_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.123s] DEBUG:colcon.colcon_core.verb:Building package 'isaac_ros_nova_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/isaac_ros_nova_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_nova_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_pointcloud_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_pointcloud_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_pointcloud_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_pointcloud_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_pointcloud_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_pointcloud_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_pointcloud_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_pointcloud_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_pointcloud_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.125s] DEBUG:colcon.colcon_core.verb:Building package 'isaac_ros_pointcloud_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/isaac_ros_pointcloud_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_pointcloud_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_tensor_list_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_tensor_list_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_tensor_list_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_tensor_list_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_tensor_list_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_tensor_list_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.126s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_tensor_list_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.126s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_tensor_list_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.126s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_tensor_list_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.126s] DEBUG:colcon.colcon_core.verb:Building package 'isaac_ros_tensor_list_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/isaac_ros_tensor_list_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_tensor_list_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.126s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_test' build argument 'cmake_args' from command line to 'None'
+[1.126s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_test' build argument 'cmake_target' from command line to 'None'
+[1.126s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.126s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_test' build argument 'cmake_clean_cache' from command line to 'False'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_test' build argument 'cmake_clean_first' from command line to 'False'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_test' build argument 'cmake_force_configure' from command line to 'False'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_test' build argument 'ament_cmake_args' from command line to 'None'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_test' build argument 'catkin_cmake_args' from command line to 'None'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'isaac_ros_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.127s] DEBUG:colcon.colcon_core.verb:Building package 'isaac_ros_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/isaac_ros_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/isaac_ros_test', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_test', 'symlink_install': False, 'test_result_base': None}
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'cmake_args' from command line to 'None'
+[1.127s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'cmake_target' from command line to 'None'
+[1.128s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.128s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'cmake_clean_cache' from command line to 'False'
+[1.128s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'cmake_clean_first' from command line to 'False'
+[1.128s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'cmake_force_configure' from command line to 'False'
+[1.128s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'ament_cmake_args' from command line to 'None'
+[1.128s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'catkin_cmake_args' from command line to 'None'
+[1.128s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.128s] DEBUG:colcon.colcon_core.verb:Building package 'turtlesim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/isaac_ros-dev/build/turtlesim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/isaac_ros-dev/install/turtlesim', 'merge_install': False, 'path': '/workspaces/isaac_ros-dev/src/ros_tutorials/turtlesim', 'symlink_install': False, 'test_result_base': None}
+[1.128s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.130s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.131s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_apriltag_interfaces' with build type 'ament_cmake'
+[1.132s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_apriltag_interfaces'
+[1.138s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.138s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.138s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.148s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_bi3d_interfaces' with build type 'ament_cmake'
+[1.148s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_bi3d_interfaces'
+[1.149s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.149s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.158s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_common' with build type 'ament_cmake'
+[1.159s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_common'
+[1.159s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.159s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.169s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_launch_utils' with build type 'ament_python'
+[1.169s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_launch_utils', 'ament_prefix_path')
+[1.170s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/share/isaac_ros_launch_utils/hook/ament_prefix_path.ps1'
+[1.171s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/share/isaac_ros_launch_utils/hook/ament_prefix_path.dsv'
+[1.172s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/share/isaac_ros_launch_utils/hook/ament_prefix_path.sh'
+[1.174s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.174s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.182s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces' with build type 'ament_cmake'
+[1.183s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_nitros_bridge_interfaces'
+[1.183s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.184s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.192s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_nova_interfaces' with build type 'ament_cmake'
+[1.193s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_nova_interfaces'
+[1.193s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.193s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.212s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_apriltag_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_apriltag_interfaces -- -j6 -l6
+[1.221s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces -- -j6 -l6
+[1.231s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_common -- -j6 -l6
+[2.327s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_launch_utils'
+[2.328s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.328s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.344s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_nitros_bridge_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_nitros_bridge_interfaces -- -j6 -l6
+[2.370s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_nova_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_nova_interfaces -- -j6 -l6
+[2.371s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_common -- -j6 -l6
+[2.623s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_common
+[2.685s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_common)
+[2.687s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_common
+[2.695s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common' for CMake module files
+[2.696s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common' for CMake config files
+[2.697s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_common', 'cmake_prefix_path')
+[2.697s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/cmake_prefix_path.ps1'
+[2.700s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/cmake_prefix_path.dsv'
+[2.701s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/cmake_prefix_path.sh'
+[2.702s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common/lib'
+[2.708s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_common', 'ld_library_path_lib')
+[2.709s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/ld_library_path_lib.ps1'
+[2.712s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/ld_library_path_lib.dsv'
+[2.713s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/ld_library_path_lib.sh'
+[2.714s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common/bin'
+[2.714s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_common', 'path')
+[2.715s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/path.ps1'
+[2.716s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/path.dsv'
+[2.717s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/path.sh'
+[2.718s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common/lib/pkgconfig/isaac_ros_common.pc'
+[2.719s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common/lib/python3.10/site-packages'
+[2.724s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common/bin'
+[2.724s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_common', 'pythonscriptspath')
+[2.725s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/pythonscriptspath.ps1'
+[2.735s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/pythonscriptspath.dsv'
+[2.746s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/pythonscriptspath.sh'
+[2.749s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/package.ps1'
+[2.756s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/package.dsv'
+[2.758s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/package.sh'
+[2.760s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/package.bash'
+[2.761s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/package.zsh'
+[2.763s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_common/share/colcon-core/packages/isaac_ros_common)
+[2.983s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_common)
+[2.984s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common' for CMake module files
+[2.985s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common' for CMake config files
+[2.985s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_common', 'cmake_prefix_path')
+[2.986s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/cmake_prefix_path.ps1'
+[2.988s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/cmake_prefix_path.dsv'
+[2.989s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/cmake_prefix_path.sh'
+[2.990s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common/lib'
+[2.990s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_common', 'ld_library_path_lib')
+[2.991s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/ld_library_path_lib.ps1'
+[2.992s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/ld_library_path_lib.dsv'
+[2.998s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/ld_library_path_lib.sh'
+[2.999s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common/bin'
+[2.999s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_common', 'path')
+[3.000s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/path.ps1'
+[3.001s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/path.dsv'
+[3.002s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/path.sh'
+[3.003s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common/lib/pkgconfig/isaac_ros_common.pc'
+[3.004s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common/lib/python3.10/site-packages'
+[3.004s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_common/bin'
+[3.004s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_common', 'pythonscriptspath')
+[3.005s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/pythonscriptspath.ps1'
+[3.018s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/pythonscriptspath.dsv'
+[3.019s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/hook/pythonscriptspath.sh'
+[3.022s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/package.ps1'
+[3.023s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/package.dsv'
+[3.024s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/package.sh'
+[3.025s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/package.bash'
+[3.026s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/package.zsh'
+[3.027s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_common/share/colcon-core/packages/isaac_ros_common)
+[3.028s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_pointcloud_interfaces' with build type 'ament_cmake'
+[3.031s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_pointcloud_interfaces'
+[3.034s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.034s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.087s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_pointcloud_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_pointcloud_interfaces -- -j6 -l6
+[3.661s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces -- -j6 -l6
+[3.895s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_apriltag_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_apriltag_interfaces -- -j6 -l6
+[4.131s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces
+[4.307s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_bi3d_interfaces)
+[4.308s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces' for CMake module files
+[4.309s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces' for CMake config files
+[4.311s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces
+[4.311s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_bi3d_interfaces', 'cmake_prefix_path')
+[4.312s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/hook/cmake_prefix_path.ps1'
+[4.313s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/hook/cmake_prefix_path.dsv'
+[4.314s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/hook/cmake_prefix_path.sh'
+[4.316s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib'
+[4.316s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_bi3d_interfaces', 'ld_library_path_lib')
+[4.317s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/hook/ld_library_path_lib.ps1'
+[4.318s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/hook/ld_library_path_lib.dsv'
+[4.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/hook/ld_library_path_lib.sh'
+[4.320s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/bin'
+[4.320s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib/pkgconfig/isaac_ros_bi3d_interfaces.pc'
+[4.320s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib/python3.10/site-packages'
+[4.321s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/bin'
+[4.322s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/package.ps1'
+[4.323s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/package.dsv'
+[4.324s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/package.sh'
+[4.325s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/package.bash'
+[4.325s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/package.zsh'
+[4.327s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/colcon-core/packages/isaac_ros_bi3d_interfaces)
+[4.357s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_apriltag_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_apriltag_interfaces
+[4.566s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_apriltag_interfaces)
+[4.567s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces' for CMake module files
+[4.569s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces' for CMake config files
+[4.569s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_apriltag_interfaces', 'cmake_prefix_path')
+[4.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/hook/cmake_prefix_path.ps1'
+[4.571s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_apriltag_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_apriltag_interfaces
+[4.572s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/hook/cmake_prefix_path.dsv'
+[4.573s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/hook/cmake_prefix_path.sh'
+[4.574s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/lib'
+[4.574s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_apriltag_interfaces', 'ld_library_path_lib')
+[4.575s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/hook/ld_library_path_lib.ps1'
+[4.576s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/hook/ld_library_path_lib.dsv'
+[4.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/hook/ld_library_path_lib.sh'
+[4.578s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/bin'
+[4.578s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/lib/pkgconfig/isaac_ros_apriltag_interfaces.pc'
+[4.578s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/lib/python3.10/site-packages'
+[4.579s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/bin'
+[4.580s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/package.ps1'
+[4.581s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/package.dsv'
+[4.582s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/package.sh'
+[4.583s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/package.bash'
+[4.584s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/package.zsh'
+[4.585s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/colcon-core/packages/isaac_ros_apriltag_interfaces)
+[4.617s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_bi3d_interfaces)
+[4.617s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces' for CMake module files
+[4.619s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces' for CMake config files
+[4.619s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_bi3d_interfaces', 'cmake_prefix_path')
+[4.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/hook/cmake_prefix_path.ps1'
+[4.621s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/hook/cmake_prefix_path.dsv'
+[4.622s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/hook/cmake_prefix_path.sh'
+[4.623s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib'
+[4.623s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_bi3d_interfaces', 'ld_library_path_lib')
+[4.624s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/hook/ld_library_path_lib.ps1'
+[4.625s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/hook/ld_library_path_lib.dsv'
+[4.626s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/hook/ld_library_path_lib.sh'
+[4.627s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/bin'
+[4.627s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib/pkgconfig/isaac_ros_bi3d_interfaces.pc'
+[4.627s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib/python3.10/site-packages'
+[4.628s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/bin'
+[4.629s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/package.ps1'
+[4.630s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/package.dsv'
+[4.631s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/package.sh'
+[4.632s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/package.bash'
+[4.633s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/package.zsh'
+[4.634s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/colcon-core/packages/isaac_ros_bi3d_interfaces)
+[4.635s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_tensor_list_interfaces' with build type 'ament_cmake'
+[4.636s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_tensor_list_interfaces'
+[4.636s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.637s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.667s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_tensor_list_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_tensor_list_interfaces -- -j6 -l6
+[4.708s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_launch_utils': PYTHONPATH=/workspaces/isaac_ros-dev/build/isaac_ros_launch_utils/prefix_override:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/isaac_ros_launch_utils build --build-base /workspaces/isaac_ros-dev/build/isaac_ros_launch_utils/build install --record /workspaces/isaac_ros-dev/build/isaac_ros_launch_utils/install.log --single-version-externally-managed install_data
+[4.988s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_nova_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_nova_interfaces -- -j6 -l6
+[5.043s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_nitros_bridge_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_nitros_bridge_interfaces -- -j6 -l6
+[5.102s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_apriltag_interfaces)
+[5.103s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces' for CMake module files
+[5.104s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces' for CMake config files
+[5.104s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_apriltag_interfaces', 'cmake_prefix_path')
+[5.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/hook/cmake_prefix_path.ps1'
+[5.107s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/hook/cmake_prefix_path.dsv'
+[5.108s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/hook/cmake_prefix_path.sh'
+[5.109s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/lib'
+[5.109s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_apriltag_interfaces', 'ld_library_path_lib')
+[5.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/hook/ld_library_path_lib.ps1'
+[5.111s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/hook/ld_library_path_lib.dsv'
+[5.112s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/hook/ld_library_path_lib.sh'
+[5.112s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/bin'
+[5.113s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/lib/pkgconfig/isaac_ros_apriltag_interfaces.pc'
+[5.113s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/lib/python3.10/site-packages'
+[5.114s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/bin'
+[5.114s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/package.ps1'
+[5.116s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/package.dsv'
+[5.117s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/package.sh'
+[5.118s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/package.bash'
+[5.120s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/isaac_ros_apriltag_interfaces/package.zsh'
+[5.121s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_apriltag_interfaces/share/colcon-core/packages/isaac_ros_apriltag_interfaces)
+[5.126s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_test' with build type 'ament_python'
+[5.127s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_test', 'ament_prefix_path')
+[5.128s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_test/share/isaac_ros_test/hook/ament_prefix_path.ps1'
+[5.129s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_test/share/isaac_ros_test/hook/ament_prefix_path.dsv'
+[5.130s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_test/share/isaac_ros_test/hook/ament_prefix_path.sh'
+[5.132s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.132s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.168s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_test'
+[6.168s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.169s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.191s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_nitros_bridge_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_nitros_bridge_interfaces
+[6.198s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_nova_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_nova_interfaces
+[6.202s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_pointcloud_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_pointcloud_interfaces -- -j6 -l6
+[6.344s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_nitros_bridge_interfaces)
+[6.345s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces' for CMake module files
+[6.347s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces' for CMake config files
+[6.347s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_nitros_bridge_interfaces', 'cmake_prefix_path')
+[6.347s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/hook/cmake_prefix_path.ps1'
+[6.349s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/hook/cmake_prefix_path.dsv'
+[6.350s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/hook/cmake_prefix_path.sh'
+[6.351s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/lib'
+[6.352s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_nitros_bridge_interfaces', 'ld_library_path_lib')
+[6.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/hook/ld_library_path_lib.ps1'
+[6.359s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_nitros_bridge_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_nitros_bridge_interfaces
+[6.360s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/hook/ld_library_path_lib.dsv'
+[6.361s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/hook/ld_library_path_lib.sh'
+[6.362s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/bin'
+[6.362s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/lib/pkgconfig/isaac_ros_nitros_bridge_interfaces.pc'
+[6.363s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/lib/python3.10/site-packages'
+[6.363s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/bin'
+[6.364s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/package.ps1'
+[6.365s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/package.dsv'
+[6.366s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/package.sh'
+[6.367s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/package.bash'
+[6.368s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/package.zsh'
+[6.369s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/colcon-core/packages/isaac_ros_nitros_bridge_interfaces)
+[6.374s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_nova_interfaces)
+[6.375s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces' for CMake module files
+[6.376s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces' for CMake config files
+[6.377s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_nova_interfaces', 'cmake_prefix_path')
+[6.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/hook/cmake_prefix_path.ps1'
+[6.379s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_nova_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_nova_interfaces
+[6.379s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/hook/cmake_prefix_path.dsv'
+[6.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/hook/cmake_prefix_path.sh'
+[6.381s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/lib'
+[6.382s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_nova_interfaces', 'ld_library_path_lib')
+[6.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/hook/ld_library_path_lib.ps1'
+[6.383s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/hook/ld_library_path_lib.dsv'
+[6.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/hook/ld_library_path_lib.sh'
+[6.385s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/bin'
+[6.385s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/lib/pkgconfig/isaac_ros_nova_interfaces.pc'
+[6.385s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/lib/python3.10/site-packages'
+[6.386s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/bin'
+[6.387s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/package.ps1'
+[6.388s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/package.dsv'
+[6.389s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/package.sh'
+[6.390s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/package.bash'
+[6.390s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/package.zsh'
+[6.391s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/colcon-core/packages/isaac_ros_nova_interfaces)
+[6.488s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_pointcloud_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_pointcloud_interfaces
+[6.640s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_nitros_bridge_interfaces)
+[6.640s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces' for CMake module files
+[6.642s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces' for CMake config files
+[6.642s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_nitros_bridge_interfaces', 'cmake_prefix_path')
+[6.643s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/hook/cmake_prefix_path.ps1'
+[6.654s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/hook/cmake_prefix_path.dsv'
+[6.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/hook/cmake_prefix_path.sh'
+[6.657s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/lib'
+[6.657s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_nitros_bridge_interfaces', 'ld_library_path_lib')
+[6.658s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/hook/ld_library_path_lib.ps1'
+[6.659s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/hook/ld_library_path_lib.dsv'
+[6.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/hook/ld_library_path_lib.sh'
+[6.660s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/bin'
+[6.660s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/lib/pkgconfig/isaac_ros_nitros_bridge_interfaces.pc'
+[6.661s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/lib/python3.10/site-packages'
+[6.661s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/bin'
+[6.663s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/package.ps1'
+[6.664s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/package.dsv'
+[6.665s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/package.sh'
+[6.666s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/package.bash'
+[6.667s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/isaac_ros_nitros_bridge_interfaces/package.zsh'
+[6.668s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_nitros_bridge_interfaces/share/colcon-core/packages/isaac_ros_nitros_bridge_interfaces)
+[6.670s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/isaac_ros-dev/src/ros_tutorials/turtlesim' with build type 'ament_cmake'
+[6.670s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/isaac_ros-dev/src/ros_tutorials/turtlesim'
+[6.671s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.671s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.687s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_pointcloud_interfaces)
+[6.688s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces' for CMake module files
+[6.690s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces' for CMake config files
+[6.690s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_pointcloud_interfaces', 'cmake_prefix_path')
+[6.691s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/hook/cmake_prefix_path.ps1'
+[6.693s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_pointcloud_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_pointcloud_interfaces
+[6.693s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/hook/cmake_prefix_path.dsv'
+[6.694s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/hook/cmake_prefix_path.sh'
+[6.695s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/lib'
+[6.696s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_pointcloud_interfaces', 'ld_library_path_lib')
+[6.696s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/hook/ld_library_path_lib.ps1'
+[6.697s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/hook/ld_library_path_lib.dsv'
+[6.699s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/hook/ld_library_path_lib.sh'
+[6.700s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/bin'
+[6.700s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/lib/pkgconfig/isaac_ros_pointcloud_interfaces.pc'
+[6.701s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/lib/python3.10/site-packages'
+[6.701s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/bin'
+[6.702s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/package.ps1'
+[6.703s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/package.dsv'
+[6.704s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/package.sh'
+[6.705s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/package.bash'
+[6.706s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/package.zsh'
+[6.707s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/colcon-core/packages/isaac_ros_pointcloud_interfaces)
+[6.716s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/turtlesim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/turtlesim -- -j6 -l6
+[6.728s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils' for CMake module files
+[6.729s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils' for CMake config files
+[6.731s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/lib'
+[6.731s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/bin'
+[6.731s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/lib/pkgconfig/isaac_ros_launch_utils.pc'
+[6.732s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/lib/python3.10/site-packages'
+[6.732s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_launch_utils', 'pythonpath')
+[6.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/share/isaac_ros_launch_utils/hook/pythonpath.ps1'
+[6.734s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_launch_utils' returned '0': PYTHONPATH=/workspaces/isaac_ros-dev/build/isaac_ros_launch_utils/prefix_override:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/isaac_ros_launch_utils build --build-base /workspaces/isaac_ros-dev/build/isaac_ros_launch_utils/build install --record /workspaces/isaac_ros-dev/build/isaac_ros_launch_utils/install.log --single-version-externally-managed install_data
+[6.734s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/share/isaac_ros_launch_utils/hook/pythonpath.dsv'
+[6.735s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/share/isaac_ros_launch_utils/hook/pythonpath.sh'
+[6.737s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/bin'
+[6.737s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_launch_utils)
+[6.738s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/share/isaac_ros_launch_utils/package.ps1'
+[6.739s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/share/isaac_ros_launch_utils/package.dsv'
+[6.740s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/share/isaac_ros_launch_utils/package.sh'
+[6.741s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/share/isaac_ros_launch_utils/package.bash'
+[6.741s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/share/isaac_ros_launch_utils/package.zsh'
+[6.743s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/share/colcon-core/packages/isaac_ros_launch_utils)
+[6.746s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_nova_interfaces)
+[6.746s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces' for CMake module files
+[6.748s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces' for CMake config files
+[6.748s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_nova_interfaces', 'cmake_prefix_path')
+[6.749s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/hook/cmake_prefix_path.ps1'
+[6.750s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/hook/cmake_prefix_path.dsv'
+[6.751s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/hook/cmake_prefix_path.sh'
+[6.752s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/lib'
+[6.752s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_nova_interfaces', 'ld_library_path_lib')
+[6.753s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/hook/ld_library_path_lib.ps1'
+[6.754s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/hook/ld_library_path_lib.dsv'
+[6.754s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/hook/ld_library_path_lib.sh'
+[6.755s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/bin'
+[6.755s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/lib/pkgconfig/isaac_ros_nova_interfaces.pc'
+[6.756s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/lib/python3.10/site-packages'
+[6.756s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/bin'
+[6.757s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/package.ps1'
+[6.760s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/package.dsv'
+[6.761s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/package.sh'
+[6.762s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/package.bash'
+[6.763s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/isaac_ros_nova_interfaces/package.zsh'
+[6.764s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_nova_interfaces/share/colcon-core/packages/isaac_ros_nova_interfaces)
+[7.005s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_pointcloud_interfaces)
+[7.005s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces' for CMake module files
+[7.007s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces' for CMake config files
+[7.007s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_pointcloud_interfaces', 'cmake_prefix_path')
+[7.008s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/hook/cmake_prefix_path.ps1'
+[7.009s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/hook/cmake_prefix_path.dsv'
+[7.010s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/hook/cmake_prefix_path.sh'
+[7.012s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/lib'
+[7.012s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_pointcloud_interfaces', 'ld_library_path_lib')
+[7.013s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/hook/ld_library_path_lib.ps1'
+[7.013s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/hook/ld_library_path_lib.dsv'
+[7.014s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/hook/ld_library_path_lib.sh'
+[7.016s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/bin'
+[7.017s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/lib/pkgconfig/isaac_ros_pointcloud_interfaces.pc'
+[7.017s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/lib/python3.10/site-packages'
+[7.018s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/bin'
+[7.018s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/package.ps1'
+[7.020s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/package.dsv'
+[7.021s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/package.sh'
+[7.023s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/package.bash'
+[7.025s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/isaac_ros_pointcloud_interfaces/package.zsh'
+[7.027s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_pointcloud_interfaces/share/colcon-core/packages/isaac_ros_pointcloud_interfaces)
+[7.042s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_tensor_list_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_tensor_list_interfaces -- -j6 -l6
+[7.480s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_tensor_list_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_tensor_list_interfaces
+[7.628s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_tensor_list_interfaces)
+[7.628s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces' for CMake module files
+[7.629s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_tensor_list_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_tensor_list_interfaces
+[7.630s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces' for CMake config files
+[7.631s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_tensor_list_interfaces', 'cmake_prefix_path')
+[7.631s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/hook/cmake_prefix_path.ps1'
+[7.632s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/hook/cmake_prefix_path.dsv'
+[7.633s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/hook/cmake_prefix_path.sh'
+[7.634s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/lib'
+[7.635s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_tensor_list_interfaces', 'ld_library_path_lib')
+[7.635s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/hook/ld_library_path_lib.ps1'
+[7.636s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/hook/ld_library_path_lib.dsv'
+[7.637s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/hook/ld_library_path_lib.sh'
+[7.637s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/bin'
+[7.638s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/lib/pkgconfig/isaac_ros_tensor_list_interfaces.pc'
+[7.638s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/lib/python3.10/site-packages'
+[7.639s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/bin'
+[7.639s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/package.ps1'
+[7.640s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/package.dsv'
+[7.641s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/package.sh'
+[7.642s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/package.bash'
+[7.643s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/package.zsh'
+[7.644s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/colcon-core/packages/isaac_ros_tensor_list_interfaces)
+[7.947s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_tensor_list_interfaces)
+[7.947s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces' for CMake module files
+[7.949s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces' for CMake config files
+[7.949s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_tensor_list_interfaces', 'cmake_prefix_path')
+[7.950s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/hook/cmake_prefix_path.ps1'
+[7.951s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/hook/cmake_prefix_path.dsv'
+[7.951s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/hook/cmake_prefix_path.sh'
+[7.953s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/lib'
+[7.953s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_tensor_list_interfaces', 'ld_library_path_lib')
+[7.953s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/hook/ld_library_path_lib.ps1'
+[7.954s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/hook/ld_library_path_lib.dsv'
+[7.955s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/hook/ld_library_path_lib.sh'
+[7.956s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/bin'
+[7.956s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/lib/pkgconfig/isaac_ros_tensor_list_interfaces.pc'
+[7.957s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/lib/python3.10/site-packages'
+[7.957s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/bin'
+[7.958s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/package.ps1'
+[7.959s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/package.dsv'
+[7.960s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/package.sh'
+[7.961s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/package.bash'
+[7.962s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/isaac_ros_tensor_list_interfaces/package.zsh'
+[7.963s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_tensor_list_interfaces/share/colcon-core/packages/isaac_ros_tensor_list_interfaces)
+[8.186s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_test': PYTHONPATH=/workspaces/isaac_ros-dev/build/isaac_ros_test/prefix_override:/workspaces/isaac_ros-dev/install/isaac_ros_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/isaac_ros_test build --build-base /workspaces/isaac_ros-dev/build/isaac_ros_test/build install --record /workspaces/isaac_ros-dev/build/isaac_ros_test/install.log --single-version-externally-managed install_data
+[9.990s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_test' for CMake module files
+[9.991s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_test' returned '0': PYTHONPATH=/workspaces/isaac_ros-dev/build/isaac_ros_test/prefix_override:/workspaces/isaac_ros-dev/install/isaac_ros_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/isaac_ros_test build --build-base /workspaces/isaac_ros-dev/build/isaac_ros_test/build install --record /workspaces/isaac_ros-dev/build/isaac_ros_test/install.log --single-version-externally-managed install_data
+[9.992s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_test' for CMake config files
+[9.993s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_test/lib'
+[9.993s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_test/bin'
+[9.993s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_test/lib/pkgconfig/isaac_ros_test.pc'
+[9.994s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_test/lib/python3.10/site-packages'
+[9.994s] Level 1:colcon.colcon_core.shell:create_environment_hook('isaac_ros_test', 'pythonpath')
+[9.994s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_test/share/isaac_ros_test/hook/pythonpath.ps1'
+[9.996s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_test/share/isaac_ros_test/hook/pythonpath.dsv'
+[9.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/isaac_ros_test/share/isaac_ros_test/hook/pythonpath.sh'
+[9.998s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/isaac_ros_test/bin'
+[9.998s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isaac_ros_test)
+[9.999s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_test/share/isaac_ros_test/package.ps1'
+[10.000s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/isaac_ros_test/share/isaac_ros_test/package.dsv'
+[10.001s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_test/share/isaac_ros_test/package.sh'
+[10.002s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_test/share/isaac_ros_test/package.bash'
+[10.003s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/isaac_ros_test/share/isaac_ros_test/package.zsh'
+[10.004s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/isaac_ros_test/share/colcon-core/packages/isaac_ros_test)
+[37.443s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/turtlesim -- -j6 -l6
+[38.257s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/isaac_ros-dev/build/turtlesim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/turtlesim
+[38.453s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlesim)
+[38.455s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim' for CMake module files
+[38.457s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/isaac_ros-dev/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/turtlesim
+[38.459s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim' for CMake config files
+[38.460s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlesim', 'cmake_prefix_path')
+[38.461s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/hook/cmake_prefix_path.ps1'
+[38.463s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/hook/cmake_prefix_path.dsv'
+[38.464s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/hook/cmake_prefix_path.sh'
+[38.466s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim/lib'
+[38.467s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlesim', 'ld_library_path_lib')
+[38.468s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/hook/ld_library_path_lib.ps1'
+[38.469s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/hook/ld_library_path_lib.dsv'
+[38.470s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/hook/ld_library_path_lib.sh'
+[38.472s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim/bin'
+[38.472s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim/lib/pkgconfig/turtlesim.pc'
+[38.473s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim/lib/python3.10/site-packages'
+[38.474s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim/bin'
+[38.475s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/package.ps1'
+[38.477s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/package.dsv'
+[38.478s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/package.sh'
+[38.480s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/package.bash'
+[38.481s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/package.zsh'
+[38.483s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/turtlesim/share/colcon-core/packages/turtlesim)
+[39.325s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlesim)
+[39.326s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim' for CMake module files
+[39.329s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim' for CMake config files
+[39.330s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlesim', 'cmake_prefix_path')
+[39.331s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/hook/cmake_prefix_path.ps1'
+[39.333s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/hook/cmake_prefix_path.dsv'
+[39.335s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/hook/cmake_prefix_path.sh'
+[39.337s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim/lib'
+[39.338s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlesim', 'ld_library_path_lib')
+[39.339s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/hook/ld_library_path_lib.ps1'
+[39.340s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/hook/ld_library_path_lib.dsv'
+[39.341s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/hook/ld_library_path_lib.sh'
+[39.343s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim/bin'
+[39.343s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim/lib/pkgconfig/turtlesim.pc'
+[39.344s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim/lib/python3.10/site-packages'
+[39.345s] Level 1:colcon.colcon_core.environment:checking '/workspaces/isaac_ros-dev/install/turtlesim/bin'
+[39.346s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/package.ps1'
+[39.348s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/package.dsv'
+[39.350s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/package.sh'
+[39.351s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/package.bash'
+[39.353s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/isaac_ros-dev/install/turtlesim/share/turtlesim/package.zsh'
+[39.354s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/isaac_ros-dev/install/turtlesim/share/colcon-core/packages/turtlesim)
+[39.356s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[39.357s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[39.358s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[39.358s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[39.380s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[39.381s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[39.381s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[39.381s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[39.397s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[39.398s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[39.400s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/isaac_ros-dev/install/local_setup.ps1'
+[39.404s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/isaac_ros-dev/install/_local_setup_util_ps1.py'
+[39.409s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/isaac_ros-dev/install/setup.ps1'
+[39.415s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/isaac_ros-dev/install/local_setup.sh'
+[39.417s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/isaac_ros-dev/install/_local_setup_util_sh.py'
+[39.419s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/isaac_ros-dev/install/setup.sh'
+[39.425s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/isaac_ros-dev/install/local_setup.bash'
+[39.427s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/isaac_ros-dev/install/setup.bash'
+[39.434s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/isaac_ros-dev/install/local_setup.zsh'
+[39.436s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/isaac_ros-dev/install/setup.zsh'

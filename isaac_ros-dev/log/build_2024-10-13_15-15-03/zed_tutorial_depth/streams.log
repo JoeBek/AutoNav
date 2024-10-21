@@ -1,0 +1,4 @@
+[0.023s] Invoking command in '/home/joe/vt/autonav/ros2_ws/build/zed_tutorial_depth': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joe/vt/autonav/ros2_ws/build/zed_tutorial_depth -- -j8 -l8
+[0.092s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_tutorial_depth.dir/src/zed_depth_sub_tutorial.cpp.o[0m
+[15.114s] [100%] [32m[1mLinking CXX executable zed_tutorial_depth[0m
+[15.291s] [100%] Built target zed_tutorial_depth

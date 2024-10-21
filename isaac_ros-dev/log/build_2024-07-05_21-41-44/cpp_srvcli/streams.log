@@ -1,0 +1,15 @@
+[0.025s] Invoking command in '/workspaces/isaac_ros-dev/build/cpp_srvcli': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_srvcli -- -j6 -l6
+[0.126s] [35m[1mConsolidate compiler generated dependencies of target client[0m
+[0.166s] [ 50%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[0.166s] [ 50%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
+[0.713s] [01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kexample_interfaces/srv/add_two_ints.hpp: No such file or directory
+[0.713s]     2 | #include [01;31m[K"example_interfaces/srv/add_two_ints.hpp"[m[K
+[0.714s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.714s] compilation terminated.
+[0.721s] gmake[2]: *** [CMakeFiles/server.dir/build.make:76: CMakeFiles/server.dir/src/server.cpp.o] Error 1
+[0.722s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/server.dir/all] Error 2
+[0.722s] gmake[1]: *** Waiting for unfinished jobs....
+[7.970s] [ 75%] [32m[1mLinking CXX executable client[0m
+[8.312s] [ 75%] Built target client
+[8.316s] gmake: *** [Makefile:146: all] Error 2
+[8.323s] Invoked command in '/workspaces/isaac_ros-dev/build/cpp_srvcli' returned '2': AMENT_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/isaac_ros-dev/install/tutorial_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/cpp_srvcli -- -j6 -l6

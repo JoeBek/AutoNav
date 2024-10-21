@@ -1,0 +1,4 @@
+source;share/detector/local_setup.bash
+source;share/detector/local_setup.dsv
+source;share/detector/local_setup.sh
+source;share/detector/local_setup.zsh

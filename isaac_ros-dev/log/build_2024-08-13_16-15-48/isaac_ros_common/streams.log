@@ -1,0 +1,67 @@
+[0.046s] Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_common': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_common -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/isaac_ros_common
+[0.071s] -- Found ament_cmake_auto: 1.3.9 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.365s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.609s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.615s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.627s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.649s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.681s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.794s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.797s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.099s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.407s] -- Loading isaac_ros_common extras
+[1.407s] -- CMAKE_BUILD_TYPE: Release
+[1.432s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.457s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.458s] -- Configured cppcheck include dirs: /workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_common/include
+[1.458s] -- Configured cppcheck exclude dirs and/or files: 
+[1.460s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.460s] -- Configured cpplint exclude dirs and/or files: 
+[1.462s] -- Added test 'lint_cmake' to check CMake code style
+[1.464s] -- Added test 'uncrustify' to check C / C++ code style
+[1.465s] -- Configured uncrustify additional arguments: 
+[1.465s] -- Added test 'xmllint' to check XML markup files
+[1.472s] -- Configuring done
+[1.504s] -- Generating done
+[1.504s] -- Build files have been written to: /workspaces/isaac_ros-dev/build/isaac_ros_common
+[1.519s] Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_common' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/isaac_ros_common/isaac_ros_common -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/isaac_ros_common
+[1.523s] Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_common': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_common -- -j6 -l6
+[1.631s] [35m[1mConsolidate compiler generated dependencies of target isaac_ros_common[0m
+[1.681s] [100%] Built target isaac_ros_common
+[1.709s] Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_common' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_common -- -j6 -l6
+[1.821s] Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_common': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_common
+[1.841s] -- Install configuration: "Release"
+[1.841s] -- Execute custom install script
+[1.841s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/ament_index/resource_index/isaac_ros_common_cmake_path/isaac_ros_common
+[1.842s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/bin/isaac_ros_asset_eula.sh
+[1.842s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/include/isaac_ros_common/qos.hpp
+[1.842s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/include/isaac_ros_common/vpi_utilities.hpp
+[1.842s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/environment/library_path.sh
+[1.842s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/environment/library_path.dsv
+[1.842s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/lib/libisaac_ros_common.so
+[1.843s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/cmake/isaac_ros_common-extras-assets.cmake
+[1.843s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/cmake/isaac_ros_common-extras-modules.cmake
+[1.844s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/cmake/isaac_ros_common-extras.cmake
+[1.844s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/cmake/modules/FindTENSORRT.cmake
+[1.845s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/ament_index/resource_index/package_run_dependencies/isaac_ros_common
+[1.845s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/ament_index/resource_index/parent_prefix_path/isaac_ros_common
+[1.846s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/environment/ament_prefix_path.sh
+[1.846s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/environment/ament_prefix_path.dsv
+[1.846s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/environment/path.sh
+[1.847s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/environment/path.dsv
+[1.847s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/local_setup.bash
+[1.848s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/local_setup.sh
+[1.848s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/local_setup.zsh
+[1.848s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/local_setup.dsv
+[1.849s] -- Symlinking: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/package.dsv
+[1.871s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/ament_index/resource_index/packages/isaac_ros_common
+[1.871s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/cmake/isaac_ros_common-extras.cmake
+[1.872s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/cmake/isaac_ros_common-extras-modules.cmake
+[1.873s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/cmake/isaac_ros_common-extras-assets.cmake
+[1.873s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.874s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.874s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/cmake/ament_cmake_export_libraries-extras.cmake
+[1.874s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/cmake/isaac_ros_commonConfig.cmake
+[1.874s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/cmake/isaac_ros_commonConfig-version.cmake
+[1.875s] -- Up-to-date symlink: /workspaces/isaac_ros-dev/install/isaac_ros_common/share/isaac_ros_common/package.xml
+[1.893s] Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_common' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_common

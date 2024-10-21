@@ -1,0 +1,154 @@
+[0.072s] Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces -- -j6 -l6
+[1.210s] [35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_generator_c[0m
+[1.211s] [  3%] Built target isaac_ros_bi3d_interfaces__cpp
+[1.211s] [ 12%] Built target isaac_ros_bi3d_interfaces__rosidl_generator_c
+[1.211s] [ 12%] Built target ament_cmake_python_copy_isaac_ros_bi3d_interfaces
+[1.212s] [35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_typesupport_cpp[0m
+[1.212s] [35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_c[0m
+[1.212s] [35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_typesupport_introspection_cpp[0m
+[1.213s] [ 22%] Built target isaac_ros_bi3d_interfaces__rosidl_typesupport_cpp
+[1.213s] [35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[1.214s] [35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_typesupport_introspection_c[0m
+[1.214s] [ 32%] Built target isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_c
+[1.214s] [ 41%] Built target isaac_ros_bi3d_interfaces__rosidl_typesupport_introspection_cpp
+[1.215s] [ 51%] Built target isaac_ros_bi3d_interfaces__rosidl_typesupport_introspection_c
+[1.215s] [35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_typesupport_c[0m
+[1.215s] [ 61%] Built target isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_cpp
+[1.216s] [ 70%] Built target isaac_ros_bi3d_interfaces__rosidl_typesupport_c
+[1.218s] [ 70%] Built target isaac_ros_bi3d_interfaces
+[1.218s] [ 74%] Built target isaac_ros_bi3d_interfaces__py
+[1.218s] [35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_generator_py[0m
+[1.218s] [ 80%] Built target isaac_ros_bi3d_interfaces__rosidl_generator_py
+[1.219s] [35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[1.219s] [35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[1.219s] [35m[1mConsolidate compiler generated dependencies of target isaac_ros_bi3d_interfaces__rosidl_typesupport_c__pyext[0m
+[1.219s] [ 87%] Built target isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.219s] [ 93%] Built target isaac_ros_bi3d_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.219s] [100%] Built target isaac_ros_bi3d_interfaces__rosidl_typesupport_c__pyext
+[1.344s] running egg_info
+[1.396s] writing isaac_ros_bi3d_interfaces.egg-info/PKG-INFO
+[1.399s] writing dependency_links to isaac_ros_bi3d_interfaces.egg-info/dependency_links.txt
+[1.402s] writing top-level names to isaac_ros_bi3d_interfaces.egg-info/top_level.txt
+[1.754s] ERROR setuptools_scm._file_finders.git listing git files failed - pretending there aren't any
+[2.110s] reading manifest file 'isaac_ros_bi3d_interfaces.egg-info/SOURCES.txt'
+[2.112s] writing manifest file 'isaac_ros_bi3d_interfaces.egg-info/SOURCES.txt'
+[2.456s] [100%] Built target ament_cmake_python_build_isaac_ros_bi3d_interfaces_egg
+[2.512s] Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces -- -j6 -l6
+[2.982s] Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces
+[3.007s] -- Install configuration: ""
+[3.008s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/ament_index/resource_index/rosidl_interfaces/isaac_ros_bi3d_interfaces
+[3.008s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces
+[3.008s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg
+[3.008s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/rosidl_generator_c__visibility_control.h
+[3.009s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/bi3_d_inference_parameters_array.h
+[3.009s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail
+[3.009s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__type_support.h
+[3.009s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__functions.h
+[3.010s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__struct.h
+[3.010s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__functions.c
+[3.010s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/environment/library_path.sh
+[3.010s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/environment/library_path.dsv
+[3.010s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib/libisaac_ros_bi3d_interfaces__rosidl_generator_c.so
+[3.010s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces
+[3.010s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg
+[3.011s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.011s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail
+[3.011s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__rosidl_typesupport_fastrtps_c.h
+[3.011s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib/libisaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_c.so
+[3.012s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces
+[3.012s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg
+[3.012s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.012s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail
+[3.012s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__type_support.c
+[3.013s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__rosidl_typesupport_introspection_c.h
+[3.013s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib/libisaac_ros_bi3d_interfaces__rosidl_typesupport_introspection_c.so
+[3.013s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib/libisaac_ros_bi3d_interfaces__rosidl_typesupport_c.so
+[3.013s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces
+[3.014s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg
+[3.014s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/bi3_d_inference_parameters_array.hpp
+[3.014s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail
+[3.014s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__struct.hpp
+[3.015s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__traits.hpp
+[3.015s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__builder.hpp
+[3.015s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces
+[3.015s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg
+[3.015s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.015s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail
+[3.015s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/dds_fastrtps
+[3.016s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__rosidl_typesupport_fastrtps_cpp.hpp
+[3.016s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib/libisaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[3.016s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces
+[3.016s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg
+[3.016s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail
+[3.017s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__type_support.cpp
+[3.017s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/include/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces/msg/detail/bi3_d_inference_parameters_array__rosidl_typesupport_introspection_cpp.hpp
+[3.017s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib/libisaac_ros_bi3d_interfaces__rosidl_typesupport_introspection_cpp.so
+[3.017s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib/libisaac_ros_bi3d_interfaces__rosidl_typesupport_cpp.so
+[3.017s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/environment/pythonpath.sh
+[3.017s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/environment/pythonpath.dsv
+[3.018s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces-3.0.1-py3.10.egg-info
+[3.018s] -- Installing: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces-3.0.1-py3.10.egg-info/PKG-INFO
+[3.018s] -- Installing: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces-3.0.1-py3.10.egg-info/top_level.txt
+[3.018s] -- Installing: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces-3.0.1-py3.10.egg-info/SOURCES.txt
+[3.018s] -- Installing: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces-3.0.1-py3.10.egg-info/dependency_links.txt
+[3.018s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces
+[3.018s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/libisaac_ros_bi3d_interfaces__rosidl_generator_py.so
+[3.018s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/_isaac_ros_bi3d_interfaces_s.ep.rosidl_typesupport_c.c
+[3.019s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/__init__.py
+[3.019s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[3.019s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/msg
+[3.019s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/msg/__init__.py
+[3.019s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/msg/_bi3_d_inference_parameters_array.py
+[3.019s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/msg/_bi3_d_inference_parameters_array_s.c
+[3.019s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[3.019s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[3.019s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/_isaac_ros_bi3d_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[3.020s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/_isaac_ros_bi3d_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.121s] Listing '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces'...
+[3.122s] Listing '/workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/msg'...
+[3.145s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[3.146s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[3.147s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/local/lib/python3.10/dist-packages/isaac_ros_bi3d_interfaces/isaac_ros_bi3d_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[3.147s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/lib/libisaac_ros_bi3d_interfaces__rosidl_generator_py.so
+[3.147s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/msg/Bi3DInferenceParametersArray.idl
+[3.148s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/msg/Bi3DInferenceParametersArray.msg
+[3.148s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/ament_index/resource_index/package_run_dependencies/isaac_ros_bi3d_interfaces
+[3.148s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/ament_index/resource_index/parent_prefix_path/isaac_ros_bi3d_interfaces
+[3.148s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/environment/ament_prefix_path.sh
+[3.148s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/environment/ament_prefix_path.dsv
+[3.149s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/environment/path.sh
+[3.149s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/environment/path.dsv
+[3.149s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/local_setup.bash
+[3.149s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/local_setup.sh
+[3.149s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/local_setup.zsh
+[3.150s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/local_setup.dsv
+[3.150s] -- Installing: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/package.dsv
+[3.150s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/ament_index/resource_index/packages/isaac_ros_bi3d_interfaces
+[3.150s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/export_isaac_ros_bi3d_interfaces__rosidl_generator_cExport.cmake
+[3.150s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/export_isaac_ros_bi3d_interfaces__rosidl_generator_cExport-noconfig.cmake
+[3.150s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/export_isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[3.151s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/export_isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.151s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/isaac_ros_bi3d_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[3.151s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/isaac_ros_bi3d_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.151s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/isaac_ros_bi3d_interfaces__rosidl_typesupport_cExport.cmake
+[3.151s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/isaac_ros_bi3d_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[3.152s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/export_isaac_ros_bi3d_interfaces__rosidl_generator_cppExport.cmake
+[3.152s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/export_isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.152s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/export_isaac_ros_bi3d_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.152s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/isaac_ros_bi3d_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[3.153s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/isaac_ros_bi3d_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.153s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/isaac_ros_bi3d_interfaces__rosidl_typesupport_cppExport.cmake
+[3.153s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/isaac_ros_bi3d_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[3.153s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/export_isaac_ros_bi3d_interfaces__rosidl_generator_pyExport.cmake
+[3.153s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/export_isaac_ros_bi3d_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[3.153s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/rosidl_cmake-extras.cmake
+[3.153s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.153s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.154s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[3.154s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[3.154s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.154s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.154s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/isaac_ros_bi3d_interfacesConfig.cmake
+[3.154s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/cmake/isaac_ros_bi3d_interfacesConfig-version.cmake
+[3.154s] -- Up-to-date: /workspaces/isaac_ros-dev/install/isaac_ros_bi3d_interfaces/share/isaac_ros_bi3d_interfaces/package.xml
+[3.162s] Invoked command in '/workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/isaac_ros-dev/install/isaac_ros_test:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/launch_testing_examples:/workspaces/isaac_ros-dev/src/install/isaac_ros_test:/workspaces/isaac_ros-dev/src/install/isaac_ros_launch_utils:/workspaces/isaac_ros-dev/src/install/examples_rclpy_pointcloud_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_subscriber:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_service:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_publisher:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_server:/workspaces/isaac_ros-dev/src/install/examples_rclpy_minimal_action_client:/workspaces/isaac_ros-dev/src/install/examples_rclpy_guard_conditions:/workspaces/isaac_ros-dev/src/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --install /workspaces/isaac_ros-dev/build/isaac_ros_bi3d_interfaces

@@ -1,0 +1,3 @@
+[3.016s] Invoking command in '/workspaces/isaac_ros-dev/build/isaac_ros_launch_utils': PYTHONPATH=/workspaces/isaac_ros-dev/build/isaac_ros_launch_utils/prefix_override:/workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /workspaces/isaac_ros-dev/build/isaac_ros_launch_utils/build
+[4.137s] running develop
+[4.786s] Removing /workspaces/isaac_ros-dev/install/isaac_ros_launch_utils/lib/python3.10/site-packages/isaac-ros-launch-utils.egg-link (link to .)

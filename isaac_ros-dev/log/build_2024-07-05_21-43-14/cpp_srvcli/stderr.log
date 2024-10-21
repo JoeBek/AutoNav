@@ -1,0 +1,56 @@
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:10:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kadd_three_ints[m[K’ is not a member of ‘[01m[Ktutorial_interfaces::srv[m[K’; did you mean ‘[01m[KAddThreeInts[m[K’?
+   10 | void add(const std::shared_ptr<tutorial_interfaces::srv::[01;31m[Kadd_three_ints[m[K::Request> request,
+      |                                                          [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                                          [32m[KAddThreeInts[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:10:81:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   10 | void add(const std::shared_ptr<tutorial_interfaces::srv::add_three_ints::Request[01;31m[K>[m[K request,
+      |                                                                                 [01;31m[K^[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:10:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kadd_three_ints[m[K’ is not a member of ‘[01m[Ktutorial_interfaces::srv[m[K’; did you mean ‘[01m[KAddThreeInts[m[K’?
+   10 | void add(const std::shared_ptr<tutorial_interfaces::srv::[01;31m[Kadd_three_ints[m[K::Request> request,
+      |                                                          [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                                          [32m[KAddThreeInts[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:10:81:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   10 | void add(const std::shared_ptr<tutorial_interfaces::srv::add_three_ints::Request[01;31m[K>[m[K request,
+      |                                                                                 [01;31m[K^[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:10:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kadd_three_ints[m[K’ is not a member of ‘[01m[Ktutorial_interfaces::srv[m[K’; did you mean ‘[01m[KAddThreeInts[m[K’?
+   10 | void add(const std::shared_ptr<tutorial_interfaces::srv::[01;31m[Kadd_three_ints[m[K::Request> request,
+      |                                                          [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                                          [32m[KAddThreeInts[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:10:81:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   10 | void add(const std::shared_ptr<tutorial_interfaces::srv::add_three_ints::Request[01;31m[K>[m[K request,
+      |                                                                                 [01;31m[K^[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:10:16:[m[K [01;31m[Kerror: [m[Kinvalid template-id
+   10 | void add(const [01;31m[Kstd[m[K::shared_ptr<tutorial_interfaces::srv::add_three_ints::Request> request,
+      |                [01;31m[K^~~[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:10:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kadd_three_ints[m[K’ is not a member of ‘[01m[Ktutorial_interfaces::srv[m[K’; did you mean ‘[01m[KAddThreeInts[m[K’?
+   10 | void add(const std::shared_ptr<tutorial_interfaces::srv::[01;31m[Kadd_three_ints[m[K::Request> request,
+      |                                                          [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                                          [32m[KAddThreeInts[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:10:6:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kadd[m[K’ declared void
+   10 | void [01;31m[Kadd[m[K(const std::shared_ptr<tutorial_interfaces::srv::add_three_ints::Request> request,
+      |      [01;31m[K^~~[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:10:10:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kconst[m[K’
+   10 | void add([01;31m[Kconst[m[K std::shared_ptr<tutorial_interfaces::srv::add_three_ints::Request> request,
+      |          [01;31m[K^~~~~[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:11:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kadd_three_ints[m[K’ is not a member of ‘[01m[Ktutorial_interfaces::srv[m[K’; did you mean ‘[01m[KAddThreeInts[m[K’?
+   11 |                 std::shared_ptr<tutorial_interfaces::srv::[01;31m[Kadd_three_ints[m[K::Response>response)
+      |                                                           [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                                           [32m[KAddThreeInts[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:11:83:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   11 |                 std::shared_ptr<tutorial_interfaces::srv::add_three_ints::Response[01;31m[K>[m[Kresponse)
+      |                                                                                   [01;31m[K^[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:27:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kadd_three_ints[m[K’ is not a member of ‘[01m[Ktutorial_interfaces::srv[m[K’; did you mean ‘[01m[KAddThreeInts[m[K’?
+   27 |         rclcpp::Service<tutorial_interfaces::srv::[01;31m[Kadd_three_ints[m[K>::SharedPtr service =
+      |                                                   [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                                   [32m[KAddThreeInts[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:27:65:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   27 |         rclcpp::Service<tutorial_interfaces::srv::add_three_ints[01;31m[K>[m[K::SharedPtr service =
+      |                                                                 [01;31m[K^[m[K
+[01m[K/workspaces/isaac_ros-dev/src/cpp_srvcli/src/server.cpp:27:78:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kservice[m[K’
+   27 |         rclcpp::Service<tutorial_interfaces::srv::add_three_ints>::SharedPtr [01;31m[Kservice[m[K =
+      |                                                                              [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/server.dir/build.make:76: CMakeFiles/server.dir/src/server.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/server.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

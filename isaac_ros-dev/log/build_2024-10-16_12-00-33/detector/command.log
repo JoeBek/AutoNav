@@ -1,0 +1,1 @@
+Invoking command in '/workspaces/isaac_ros-dev/build/detector': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/detector -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/detector
