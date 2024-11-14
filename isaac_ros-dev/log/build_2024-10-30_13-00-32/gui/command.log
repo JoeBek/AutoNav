@@ -1,0 +1,2 @@
+Invoking command in '/home/joe/vt/autonav/isaac_ros-dev/build/gui': /usr/bin/cmake /home/joe/vt/autonav/isaac_ros-dev/src/gui -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/isaac_ros-dev/install/gui
+Invoked command in '/home/joe/vt/autonav/isaac_ros-dev/build/gui' returned '1': /usr/bin/cmake /home/joe/vt/autonav/isaac_ros-dev/src/gui -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/isaac_ros-dev/install/gui

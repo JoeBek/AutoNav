@@ -1,0 +1,20 @@
+[0.009s] Invoking command in '/home/joe/vt/autonav/isaac_ros-dev/build/gui': /usr/bin/cmake /home/joe/vt/autonav/isaac_ros-dev/src/gui -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/isaac_ros-dev/install/gui
+[0.071s] -- The C compiler identification is GNU 11.4.0
+[0.139s] -- The CXX compiler identification is GNU 11.4.0
+[0.147s] -- Detecting C compiler ABI info
+[0.220s] -- Detecting C compiler ABI info - done
+[0.228s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.229s] -- Detecting C compile features
+[0.230s] -- Detecting C compile features - done
+[0.234s] -- Detecting CXX compiler ABI info
+[0.313s] -- Detecting CXX compiler ABI info - done
+[0.320s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.320s] -- Detecting CXX compile features
+[0.321s] -- Detecting CXX compile features - done
+[0.345s] -- Configuring incomplete, errors occurred!
+[0.346s] See also "/home/joe/vt/autonav/isaac_ros-dev/build/gui/CMakeFiles/CMakeOutput.log".
+[0.346s] [31mCMake Error at CMakeLists.txt:19 (ament_target_dependencies):
+[0.346s]   Unknown CMake command "ament_target_dependencies".
+[0.346s] 
+[0.346s] [0m
+[0.350s] Invoked command in '/home/joe/vt/autonav/isaac_ros-dev/build/gui' returned '1': /usr/bin/cmake /home/joe/vt/autonav/isaac_ros-dev/src/gui -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/isaac_ros-dev/install/gui
