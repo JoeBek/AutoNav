@@ -1,0 +1,156 @@
+[0.000000] (-) TimerEvent: {}
+[0.000497] (-) JobUnselected: {'identifier': 'autonav_interfaces'}
+[0.000627] (-) JobUnselected: {'identifier': 'autonav_sim'}
+[0.000647] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.000662] (-) JobUnselected: {'identifier': 'detector'}
+[0.000676] (-) JobUnselected: {'identifier': 'planner'}
+[0.000691] (-) JobUnselected: {'identifier': 'preprocessor'}
+[0.000705] (-) JobUnselected: {'identifier': 'rviz_plugin_zed_od'}
+[0.000719] (-) JobUnselected: {'identifier': 'zed_components'}
+[0.000732] (-) JobUnselected: {'identifier': 'zed_depth_to_laserscan'}
+[0.000746] (-) JobUnselected: {'identifier': 'zed_display_rviz2'}
+[0.000760] (-) JobUnselected: {'identifier': 'zed_interfaces'}
+[0.000774] (-) JobUnselected: {'identifier': 'zed_multi_camera'}
+[0.000788] (-) JobUnselected: {'identifier': 'zed_rgb_convert'}
+[0.000802] (-) JobUnselected: {'identifier': 'zed_robot_integration'}
+[0.000816] (-) JobUnselected: {'identifier': 'zed_ros2'}
+[0.000830] (-) JobUnselected: {'identifier': 'zed_topic_benchmark'}
+[0.000843] (-) JobUnselected: {'identifier': 'zed_topic_benchmark_component'}
+[0.000860] (-) JobUnselected: {'identifier': 'zed_topic_benchmark_interfaces'}
+[0.000875] (-) JobUnselected: {'identifier': 'zed_tutorial_depth'}
+[0.000891] (-) JobUnselected: {'identifier': 'zed_tutorial_pos_tracking'}
+[0.000906] (-) JobUnselected: {'identifier': 'zed_tutorial_video'}
+[0.000921] (-) JobUnselected: {'identifier': 'zed_wrapper'}
+[0.000939] (gui) JobQueued: {'identifier': 'gui', 'dependencies': OrderedDict()}
+[0.000959] (gui) JobStarted: {'identifier': 'gui'}
+[0.008323] (gui) JobProgress: {'identifier': 'gui', 'progress': 'cmake'}
+[0.008811] (gui) Command: {'cmd': ['/usr/bin/cmake', '/home/joe/vt/autonav/isaac_ros-dev/src/gui', '-DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/isaac_ros-dev/install/gui'], 'cwd': '/home/joe/vt/autonav/isaac_ros-dev/build/gui', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,23428,1'), ('USER', 'joe'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joe'), ('OLDPWD', '/home/joe/vt/autonav/isaac_ros-dev/src/gui'), ('TERM_PROGRAM_VERSION', '3.2a'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('OPENAI_API_KEY', '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'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1892'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LIBVIRT_DEFAULT_URI', 'qemu:///system'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'joe'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joe'), ('TERM', 'screen-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/joe/.local/bin:/opt/ros/humble/bin:/home/joe/.cargo/bin:/home/joe/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joe/.local/bin:/home/joe/.local/bin'), ('SESSION_MANAGER', 'local/outlook-com:@/tmp/.ICE-unix/1869,unix/outlook-com:/tmp/.ICE-unix/1869'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/dd2f15cf_78d2_4f88_8b9b_cd1442487282'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.148'), ('TERM_PROGRAM', 'tmux'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joe/vt/autonav/isaac_ros-dev/build/gui'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/joe/.tmux/plugins/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('TMUX_PANE', '%5'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.037826] (gui) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099411] (-) TimerEvent: {}
+[0.188323] (gui) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.199516] (-) TimerEvent: {}
+[0.263727] (gui) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.290100] (gui) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.293777] (gui) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.299586] (gui) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.299846] (-) TimerEvent: {}
+[0.308614] (gui) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.320740] (gui) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.356683] (gui) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.358551] (gui) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.400099] (-) TimerEvent: {}
+[0.435693] (gui) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.460629] (gui) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.494281] (gui) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.500181] (-) TimerEvent: {}
+[0.500854] (gui) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.570640] (gui) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.570928] (gui) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.600332] (-) TimerEvent: {}
+[0.644370] (gui) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.645579] (gui) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.699486] (gui) StdoutLine: {'line': b'-- Found rviz_common: 11.2.13 (/opt/ros/humble/share/rviz_common/cmake)\n'}
+[0.700437] (-) TimerEvent: {}
+[0.706292] (gui) StdoutLine: {'line': b"-- Setting assimp_DIR to: '/opt/ros/humble/share/rviz_assimp_vendor/cmake/../../../opt/rviz_assimp_vendor/lib/cmake/assimp-4.1'\n"}
+[0.714006] (gui) StdoutLine: {'line': b"-- Setting OGRE_DIR to: '/opt/ros/humble/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'\n"}
+[0.716618] (gui) StdoutLine: {'line': b'-- Found OGRE\n'}
+[0.716754] (gui) StdoutLine: {'line': b'--   static     : OFF\n'}
+[0.716824] (gui) StdoutLine: {'line': b'--   components : HLMS;MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume\n'}
+[0.716888] (gui) StdoutLine: {'line': b'--   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI\n'}
+[0.716951] (gui) StdoutLine: {'line': b'--   media      : /opt/ros/humble/opt/rviz_ogre_vendor/share/OGRE/Media\n'}
+[0.717011] (gui) StdoutLine: {'line': b'-- OGRE_LIBRARIES: OgreHLMS;OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain\n'}
+[0.717071] (gui) StdoutLine: {'line': b'-- OGRE_LIBRARY_DIRS: /opt/ros/humble/opt/rviz_ogre_vendor/lib\n'}
+[0.717130] (gui) StdoutLine: {'line': b'-- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI\n'}
+[0.717190] (gui) StdoutLine: {'line': b'-- OGRE_PLUGIN_DIR: /opt/ros/humble/opt/rviz_ogre_vendor/lib/OGRE\n'}
+[0.717301] (gui) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so\n'}
+[0.717366] (gui) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so\n'}
+[0.717466] (gui) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so\n'}
+[0.717531] (gui) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so\n'}
+[0.738916] (gui) StdoutLine: {'line': b'-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") \n'}
+[0.742845] (gui) StdoutLine: {'line': b'-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   \n'}
+[0.800585] (-) TimerEvent: {}
+[0.831987] (gui) StdoutLine: {'line': b'-- Found X11: /usr/include   \n'}
+[0.833065] (gui) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so\n'}
+[0.900723] (-) TimerEvent: {}
+[0.908680] (gui) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found\n'}
+[0.908885] (gui) StdoutLine: {'line': b'-- Looking for gethostbyname\n'}
+[0.981737] (gui) StdoutLine: {'line': b'-- Looking for gethostbyname - found\n'}
+[0.981985] (gui) StdoutLine: {'line': b'-- Looking for connect\n'}
+[1.000858] (-) TimerEvent: {}
+[1.065330] (gui) StdoutLine: {'line': b'-- Looking for connect - found\n'}
+[1.065624] (gui) StdoutLine: {'line': b'-- Looking for remove\n'}
+[1.101012] (-) TimerEvent: {}
+[1.137495] (gui) StdoutLine: {'line': b'-- Looking for remove - found\n'}
+[1.137741] (gui) StdoutLine: {'line': b'-- Looking for shmat\n'}
+[1.201139] (-) TimerEvent: {}
+[1.207507] (gui) StdoutLine: {'line': b'-- Looking for shmat - found\n'}
+[1.207718] (gui) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE\n'}
+[1.280944] (gui) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE - found\n'}
+[1.301260] (-) TimerEvent: {}
+[1.372827] (gui) StdoutLine: {'line': b'-- library: /usr/lib/x86_64-linux-gnu/libcurl.so\n'}
+[1.401390] (-) TimerEvent: {}
+[1.442106] (gui) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.442344] (gui) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.501547] (-) TimerEvent: {}
+[1.541358] (gui) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.601675] (-) TimerEvent: {}
+[1.603429] (gui) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.603634] (gui) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.603724] (gui) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.604012] (gui) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.604633] (gui) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.604710] (gui) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.605047] (gui) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.606185] (gui) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.672667] (gui) StdoutLine: {'line': b'-- Generating done\n'}
+[1.674479] (gui) StdoutLine: {'line': b'-- Build files have been written to: /home/joe/vt/autonav/isaac_ros-dev/build/gui\n'}
+[1.683391] (gui) CommandEnded: {'returncode': 0}
+[1.684325] (gui) JobProgress: {'identifier': 'gui', 'progress': 'build'}
+[1.685198] (gui) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joe/vt/autonav/isaac_ros-dev/build/gui', '--', '-j8', '-l8'], 'cwd': '/home/joe/vt/autonav/isaac_ros-dev/build/gui', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,23428,1'), ('USER', 'joe'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joe'), ('OLDPWD', '/home/joe/vt/autonav/isaac_ros-dev/src/gui'), ('TERM_PROGRAM_VERSION', '3.2a'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('OPENAI_API_KEY', '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'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1892'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LIBVIRT_DEFAULT_URI', 'qemu:///system'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'joe'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joe'), ('TERM', 'screen-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/joe/.local/bin:/opt/ros/humble/bin:/home/joe/.cargo/bin:/home/joe/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joe/.local/bin:/home/joe/.local/bin'), ('SESSION_MANAGER', 'local/outlook-com:@/tmp/.ICE-unix/1869,unix/outlook-com:/tmp/.ICE-unix/1869'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/dd2f15cf_78d2_4f88_8b9b_cd1442487282'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.148'), ('TERM_PROGRAM', 'tmux'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joe/vt/autonav/isaac_ros-dev/build/gui'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/joe/.tmux/plugins/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('TMUX_PANE', '%5'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.701776] (-) TimerEvent: {}
+[1.751094] (gui) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/gui.dir/src/main.cpp.o\x1b[0m\n'}
+[1.801896] (-) TimerEvent: {}
+[1.902254] (-) TimerEvent: {}
+[2.002647] (-) TimerEvent: {}
+[2.103029] (-) TimerEvent: {}
+[2.203446] (-) TimerEvent: {}
+[2.303759] (-) TimerEvent: {}
+[2.404093] (-) TimerEvent: {}
+[2.504445] (-) TimerEvent: {}
+[2.604753] (-) TimerEvent: {}
+[2.705079] (-) TimerEvent: {}
+[2.805416] (-) TimerEvent: {}
+[2.905901] (-) TimerEvent: {}
+[3.006419] (-) TimerEvent: {}
+[3.107075] (-) TimerEvent: {}
+[3.207582] (-) TimerEvent: {}
+[3.308075] (-) TimerEvent: {}
+[3.408837] (-) TimerEvent: {}
+[3.509386] (-) TimerEvent: {}
+[3.609877] (-) TimerEvent: {}
+[3.710561] (-) TimerEvent: {}
+[3.811195] (-) TimerEvent: {}
+[3.911935] (-) TimerEvent: {}
+[4.012469] (-) TimerEvent: {}
+[4.112960] (-) TimerEvent: {}
+[4.213366] (-) TimerEvent: {}
+[4.285602] (gui) StderrLine: {'line': b'\x1b[01m\x1b[K/home/joe/vt/autonav/isaac_ros-dev/src/gui/src/main.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kviz::GUI::GUI(QWidget*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.285843] (gui) StderrLine: {'line': b'\x1b[01m\x1b[K/home/joe/vt/autonav/isaac_ros-dev/src/gui/src/main.cpp:13:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KQVBoxLayout\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[KQLayout\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.285935] (gui) StderrLine: {'line': b'   13 |     auto layout = new \x1b[01;31m\x1b[KQVBoxLayout\x1b[m\x1b[K;\n'}
+[4.286009] (gui) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.286076] (gui) StderrLine: {'line': b'      |                       \x1b[32m\x1b[KQLayout\x1b[m\x1b[K\n'}
+[4.286142] (gui) StderrLine: {'line': b'\x1b[01m\x1b[K/home/joe/vt/autonav/isaac_ros-dev/src/gui/src/main.cpp:14:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected type-specifier before \xe2\x80\x98\x1b[01m\x1b[KQPushButton\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.286232] (gui) StderrLine: {'line': b'   14 |     auto button = new \x1b[01;31m\x1b[KQPushButton\x1b[m\x1b[K("Click me!");\n'}
+[4.286329] (gui) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.313587] (-) TimerEvent: {}
+[4.413939] (-) TimerEvent: {}
+[4.514321] (-) TimerEvent: {}
+[4.614797] (-) TimerEvent: {}
+[4.715331] (-) TimerEvent: {}
+[4.815895] (-) TimerEvent: {}
+[4.829344] (gui) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/gui.dir/build.make:76: CMakeFiles/gui.dir/src/main.cpp.o] Error 1\n'}
+[4.829584] (gui) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/gui.dir/all] Error 2\n'}
+[4.829972] (gui) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[4.832214] (gui) CommandEnded: {'returncode': 2}
+[4.870032] (gui) JobEnded: {'identifier': 'gui', 'rc': 2}
+[4.880563] (-) EventReactorShutdown: {}

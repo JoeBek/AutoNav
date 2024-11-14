@@ -1,0 +1,6 @@
+Invoking command in '/home/joe/vt/autonav/isaac_ros-dev/build/actuator': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joe/vt/autonav/isaac_ros-dev/src/actuator -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/isaac_ros-dev/install/actuator
+Invoked command in '/home/joe/vt/autonav/isaac_ros-dev/build/actuator' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joe/vt/autonav/isaac_ros-dev/src/actuator -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/isaac_ros-dev/install/actuator
+Invoking command in '/home/joe/vt/autonav/isaac_ros-dev/build/actuator': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joe/vt/autonav/isaac_ros-dev/build/actuator -- -j8 -l8
+Invoked command in '/home/joe/vt/autonav/isaac_ros-dev/build/actuator' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joe/vt/autonav/isaac_ros-dev/build/actuator -- -j8 -l8
+Invoking command in '/home/joe/vt/autonav/isaac_ros-dev/build/actuator': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/joe/vt/autonav/isaac_ros-dev/build/actuator
+Invoked command in '/home/joe/vt/autonav/isaac_ros-dev/build/actuator' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/joe/vt/autonav/isaac_ros-dev/build/actuator

@@ -1,0 +1,4 @@
+source;share/actuator/local_setup.bash
+source;share/actuator/local_setup.dsv
+source;share/actuator/local_setup.sh
+source;share/actuator/local_setup.zsh

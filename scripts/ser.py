@@ -6,15 +6,17 @@ from serial import Serial
 
 
 # serial parameters
-cereal = Serial('/dev/ttyACM0', 115200, timeout=1)
+baudrate = 9600
+cereal = Serial('/dev/ttyACM0', baudrate, timeout=1)
 cereal.stopbits = 1
 cereal.parity = 'N'
 cereal.bytesize = 8
 
-encoding = 'utf-8'
+encoding = 'ascii'
 
 def send_message(cereal, message:str):
-    cereal.write(message.encode(encoding) + b'\r')
+    message += '\n'
+    cereal.write(message.encode(encoding))
     print(f"sending: {message}")
 
     
@@ -32,10 +34,14 @@ try:
         time.sleep(.4)
         # recieve messages
         
-        if cereal.in_waiting > 0:
-            print("receiving something ... \n")
-            line = cereal.readline().decode(encoding)
-            print(line)
+        while cereal.in_waiting <= 0:
+            pass
+
+
+        print("receiving something ... \n")
+        line = cereal.readline().decode(encoding)
+        print(line)
+        
     
 except KeyboardInterrupt:
     pass
