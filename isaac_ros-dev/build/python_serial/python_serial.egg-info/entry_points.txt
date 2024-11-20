@@ -1,0 +1,3 @@
+[console_scripts]
+reader = python_serial.reader:main
+
