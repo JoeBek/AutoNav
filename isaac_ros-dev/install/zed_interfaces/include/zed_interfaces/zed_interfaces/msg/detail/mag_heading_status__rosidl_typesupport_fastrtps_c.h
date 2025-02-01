@@ -1,1 +1,0 @@
-/workspaces/isaac_ros-dev/build/zed_interfaces/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/mag_heading_status__rosidl_typesupport_fastrtps_c.h

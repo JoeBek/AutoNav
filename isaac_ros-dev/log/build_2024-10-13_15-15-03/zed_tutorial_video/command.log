@@ -1,1 +1,0 @@
-Invoking command in '/home/joe/vt/autonav/ros2_ws/build/zed_tutorial_video': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joe/vt/autonav/ros2_ws/build/zed_tutorial_video -- -j8 -l8

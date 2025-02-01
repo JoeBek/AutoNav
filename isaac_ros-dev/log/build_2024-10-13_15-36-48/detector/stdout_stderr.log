@@ -1,8 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target detector[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/detector.dir/src/main.cpp.o[0m
-[01m[K/home/joe/vt/autonav/ros2_ws/src/detector/src/main.cpp:[m[K In member function ‘[01m[Kvoid Detector::callback(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr) const[m[K’:
-[01m[K/home/joe/vt/autonav/ros2_ws/src/detector/src/main.cpp:25:58:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
-   25 |   void callback([01;35m[Kconst sensor_msgs::msg::Image::SharedPtr msg[m[K) const
-      |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
-[100%] [32m[1mLinking CXX executable detector[0m
-[100%] Built target detector

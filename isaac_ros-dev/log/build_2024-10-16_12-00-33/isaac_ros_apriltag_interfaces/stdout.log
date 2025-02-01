@@ -1,8 +1,0 @@
-[  2%] Built target isaac_ros_apriltag_interfaces__cpp
-[ 12%] Built target isaac_ros_apriltag_interfaces__rosidl_generator_c
-[ 15%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
-[35m[1mConsolidate compiler generated dependencies of target isaac_ros_apriltag_interfaces__rosidl_typesupport_cpp[0m
-[ 20%] [32mBuilding CXX object CMakeFiles/isaac_ros_apriltag_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/isaac_ros_apriltag_interfaces/msg/april_tag_detection_array__type_support.cpp.o[0m
-[ 20%] [32mBuilding CXX object CMakeFiles/isaac_ros_apriltag_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/isaac_ros_apriltag_interfaces/msg/april_tag_detection__type_support.cpp.o[0m
-[ 23%] [32m[1mLinking CXX shared library libisaac_ros_apriltag_interfaces__rosidl_typesupport_cpp.so[0m
-[ 23%] Built target isaac_ros_apriltag_interfaces__rosidl_typesupport_cpp

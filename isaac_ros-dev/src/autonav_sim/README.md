@@ -35,6 +35,26 @@ Within the custom_models directory you will find a series of folders consisting 
 6. Run the following command to launch the simulation with the robot spawned in the IGVC course world: <br />
     "ros2 launch autonav_sim launch_sim.launch.py world:=./src/autonav_sim/worlds/autonav_igvc_course.world"
 
+### Troubleshooting
+
+- if the node does not launch due to "x package not found", but all the Dependencies in this file are installed, try sourcing only the local setup for this package instead of all packages in the repo. This can be done as following:
+```bash
+# if you were doing this:
+source install/setup.bash
+# or something similar,
+# try this:
+source install/autonav_sim/share/local_setup.bash
+# there is probably a cleaner solution... if one is discovered feel free to remove this point
+```
+- if the simulation does not render any world info at all, please ensure you are in the correct directory when running the launch file. If your launch file begins with "./src", you need to be in the "isaac_ros-dev" directory when launching.
+- if the simulation fails to load some models in the world, ensure that all the required custom models are present in your .gazebo file. On a unix system (including WSL), this can be done by running the following from the "isaac_ros-dev" directory:
+```bash
+cd src/autonav_sim/custom_models \
+cp * ~/.gazebo/models/ -r 
+```
+the models should now properly load.
+
+
 ### Helpful Command and Tools:
 - "ros2 run teleop_twist_keyboard teleop_twist_keyboard" <br />
     While you have the Gazebo simulation running open another terminal and move into your ROS2 workspace directory. Once this is done if you run this command you can move the robot in the simulation by using the controls provided by the teleop_twist_keyboard pluggin.
