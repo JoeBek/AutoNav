@@ -1,5 +1,8 @@
 This file is a guide for how to set up, run, and use the manual control system.
 
+!!! WARNING see usage before running. This script has some speed differences from the motor controller. 
+Use care when running and always have someone manning the physical e-stop.
+
 # Install instructions
 
 the requirements for running this are:
@@ -54,6 +57,20 @@ then run `python3 drivebowser.py PORT`
 where PORT should be substituted for the name of the serial port you are connected to the motor controller with.
 
 This will launch the application. There is a guide within the application that appears in the terminal where you launched it from that explains application usage.
+
+## speed information (important)
+
+There is a 'step size' parameter that controls the resolution for robot speed. This parameter is set by default to 10, but may in the future be changed in the program through the menu options (not adding this until asked to). The step size will act a divider for the default motor speed resolution, which is 1000. 
+
+This means that the 
+MAX SPEED FOR THE ROBOT IS 100 FOR THIS PROGRAM OUT OF THE BOX.
+when using the speed up and speed down commands, the speed is shown in relative terms to the step size.
+
+The reason this is done is to save some life on your poor 'e' and 'q' keys, and to somewhat simply the choice for wheel speeds. If finer resolution is necessary, please annoy a software person about it or lock in and figure out how to change it in the code.
+
+
+
+
 
 
 
