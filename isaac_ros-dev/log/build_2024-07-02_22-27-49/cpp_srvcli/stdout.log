@@ -1,4 +1,0 @@
-[ 25%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
-[ 75%] [32m[1mLinking CXX executable server[0m
-[ 75%] Built target server

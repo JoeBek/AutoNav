@@ -1,4 +1,0 @@
-[31mCMake Error at CMakeLists.txt:35 (rosidl_get_typesupport):
-  Unknown CMake command "rosidl_get_typesupport".
-
-[0m

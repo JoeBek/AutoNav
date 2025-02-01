@@ -1,8 +1,0 @@
-setup.py
-isaac_ros_pointcloud_interfaces/__init__.py
-isaac_ros_pointcloud_interfaces.egg-info/PKG-INFO
-isaac_ros_pointcloud_interfaces.egg-info/SOURCES.txt
-isaac_ros_pointcloud_interfaces.egg-info/dependency_links.txt
-isaac_ros_pointcloud_interfaces.egg-info/top_level.txt
-isaac_ros_pointcloud_interfaces/msg/__init__.py
-isaac_ros_pointcloud_interfaces/msg/_flat_scan.py

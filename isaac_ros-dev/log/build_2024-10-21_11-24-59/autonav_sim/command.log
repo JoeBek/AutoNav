@@ -1,6 +1,0 @@
-Invoking command in '/home/joe/vt/autonav/isaac_ros-dev/build/autonav_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joe/vt/autonav/isaac_ros-dev/src/autonav_sim -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/isaac_ros-dev/install/autonav_sim
-Invoked command in '/home/joe/vt/autonav/isaac_ros-dev/build/autonav_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joe/vt/autonav/isaac_ros-dev/src/autonav_sim -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/isaac_ros-dev/install/autonav_sim
-Invoking command in '/home/joe/vt/autonav/isaac_ros-dev/build/autonav_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joe/vt/autonav/isaac_ros-dev/build/autonav_sim -- -j8 -l8
-Invoked command in '/home/joe/vt/autonav/isaac_ros-dev/build/autonav_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joe/vt/autonav/isaac_ros-dev/build/autonav_sim -- -j8 -l8
-Invoking command in '/home/joe/vt/autonav/isaac_ros-dev/build/autonav_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/joe/vt/autonav/isaac_ros-dev/build/autonav_sim
-Invoked command in '/home/joe/vt/autonav/isaac_ros-dev/build/autonav_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/joe/vt/autonav/isaac_ros-dev/build/autonav_sim

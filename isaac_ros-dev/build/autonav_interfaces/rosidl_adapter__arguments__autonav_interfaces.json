@@ -1,7 +1,0 @@
-{
-  "package_name": "autonav_interfaces",
-  "non_idl_tuples": [
-    "/workspaces/isaac_ros-dev/src/autonav_interfaces:msg/Object.msg",
-    "/workspaces/isaac_ros-dev/src/autonav_interfaces:msg/ObjectList.msg"
-  ]
-}

@@ -1,2 +1,0 @@
-Invoking command in '/home/joe/vt/autonav/ros2_ws/build/autonav_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/autonav_interfaces -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces
-Invoked command in '/home/joe/vt/autonav/ros2_ws/build/autonav_interfaces' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/autonav_interfaces -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/autonav_interfaces

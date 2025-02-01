@@ -1,6 +1,0 @@
-[31mCMake Error at CMakeLists.txt:19 (ament_target_dependencies):
-  Unknown CMake command "ament_target_dependencies".
-
-[0m
--- Configuring incomplete, errors occurred!
-See also "/home/joe/vt/autonav/isaac_ros-dev/build/gui/CMakeFiles/CMakeOutput.log".
