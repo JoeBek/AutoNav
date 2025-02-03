@@ -51,11 +51,10 @@ class MotorController:
             ):
             exit()
 
-        print("forward")
         
         motorCommandString1 = "!G 1 "
         motorCommandString2 = "!G 2 "
-        motorSpeedValue1 = int(self.stepsize * self.speed) # Left motor
+        motorSpeedValue1 = -1 * int(self.stepsize * self.speed) # Left motor
         motorSpeedValue2 = int(self.stepsize * self.speed)  # Right motor
         motorCommandString1 += str(motorSpeedValue1) + "\r"
         motorCommandString2 += str(motorSpeedValue2) + "\r"
@@ -70,8 +69,8 @@ class MotorController:
         
         motorCommandString1 = "!G 1 "
         motorCommandString2 = "!G 2 "
-        motorSpeedValue1 = int(-self.stepsize*self.speed)
-        motorSpeedValue2 = int(-self.stepsize*self.speed)
+        motorSpeedValue1 = int(self.stepsize*self.speed)
+        motorSpeedValue2 = -1 * int(self.stepsize*self.speed)
         motorCommandString1 += str(motorSpeedValue1) + "\r"
         motorCommandString2 += str(motorSpeedValue2) + "\r"
         self.MotorSerialObj.write(bytes(motorCommandString1, 'utf-8'))

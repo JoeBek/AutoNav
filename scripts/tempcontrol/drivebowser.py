@@ -104,7 +104,7 @@ async def loop_co(motors:MotorController, remote:Remote, mode:Mode):
         elif mode == Mode.REPL:
             remote.listening = False
             print()
-            code = await repl()
+            code = await repl(motors)
             # 0, return to control; 1, exit program
             if code == 0:
                 mode = Mode.CONTROL
