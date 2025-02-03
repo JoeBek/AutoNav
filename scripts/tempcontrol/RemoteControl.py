@@ -4,6 +4,7 @@ import asyncio
 from pynput import keyboard
 from pynput.keyboard import Key
 from enum import Enum
+import serial
 
 class Command(Enum):
 
@@ -23,9 +24,11 @@ class Command(Enum):
 
 class Remote():
 
-    def __init__(self):
+    def __init__(self, ser=None):
         self.listening = False
         self.inputs = asyncio.Queue()
+        self.inputs2 = []
+        self.ser = ser
 
     def on_key_release(self,key):
         command = Command.NONE
@@ -75,6 +78,34 @@ class Remote():
         loop.call_soon_threadsafe(asyncio.create_task,self.inputs.put(command))
         
 
+    def on_press_serial(self,key):
+        if not self.listening:
+            return
+        command = Command.NONE
+        if key == Key.right or key.char == "d":
+            command = Command.RIGHT
+        elif key == Key.left or key.char == "a":
+            command = Command.LEFT
+        elif key == Key.up or key.char == "w":
+            command = Command.FORWARD
+        elif key == Key.down or key.char == "s":
+            command = Command.BACKWARD
+        elif key.char == "q":
+            command = Command.SPEED_DOWN
+        elif key.char == "e":
+            command = Command.SPEED_UP
+        elif key == Key.space:
+            command = Command.STOP
+        elif key.char == 'r':
+            command = Command.CHANGE_MODE
+
+        self.ser.write(command.name.encode('utf-8'))
+ 
+    def start_serial(self):
+        listener = keyboard.Listener(
+            on_press=self.on_press_serial
+        )
+        listener.start()
 
     # placeholder, dont use with async
     def is_listening(self):
