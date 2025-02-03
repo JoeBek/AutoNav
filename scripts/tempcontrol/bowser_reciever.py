@@ -184,3 +184,6 @@ async def repl(motors:MotorController):
 
 
     
+if __name__ == "__main__":
+    main()
+    

@@ -3,7 +3,9 @@ This file is a guide for how to set up, run, and use the manual control system.
 !!! WARNING see usage before running. This script has some speed differences from the motor controller. 
 Use care when running and always have someone manning the physical e-stop.
 
-# Install instructions
+The install instructions for chorded and 
+
+# Install instructions (do only first time)
 
 the requirements for running this are:
 python 3.10+ (Earlier versions might work)
@@ -12,7 +14,7 @@ You can check your python version by opening the command prompt and typing `pyth
 go look up a tutorial on how to upgrade or install python for at least 3.10 if things don't work.
 
 
-# setup instructions
+# setup instructions (do only first time)
 
 once you have a working version of python, open a command prompt and navigate to the `tempcontrol` directory.
 (Look in the `Scripts` directory from the top level of the repository)
@@ -50,13 +52,40 @@ This should install all the dependencies into the virtual environment.
 
 # how to run / usage
 
-to run the script, first activate the environment (see above) (not nessecary if it is already active)
+to run the script, first activate the environment (if not activated already, there will be a '.venv' next to your command prompt):
 
-then run `python3 drivebowser.py PORT`
+`source .venv/bin/activate` or `.venv\Scripts\activate`
+
+
+## wired connection
+
+then for wired (one computer) run `python3 drivebowser.py PORT`
 
 where PORT should be substituted for the name of the serial port you are connected to the motor controller with.
 
 This will launch the application. There is a guide within the application that appears in the terminal where you launched it from that explains application usage.
+
+## bluetooth connection
+
+for bluetooth connection, you will need two computers that have gone thru the setup process described above
+
+the computer controlling the robot remotely will run:
+
+`python3 bowser_remote.py PORT`
+
+where PORT is the serial port connected to the bluetooth line. This will launch the remote
+
+the computer that sits on the robot and talks to the motor should run:
+
+`python3 bowser_receiver.py BLUETOOTH_PORT MOTOR_PORT`
+
+with the ports of the bluetooth serial port and motor serial port (in that order)
+This will launch the reciever. 
+
+
+
+
+
 
 ## speed information (important)
 
