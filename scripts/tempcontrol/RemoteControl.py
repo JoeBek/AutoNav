@@ -38,6 +38,7 @@ class Remote():
             command = Command.LEFT
         elif key == Key.up or key.char == "w":
             command = Command.FORWARD
+            print("forward")
         elif key == Key.down or key.char == "s":
             command = Command.BACKWARD
         elif key.char == "q":
@@ -79,8 +80,6 @@ class Remote():
         
 
     def on_press_serial(self,key):
-        if not self.listening:
-            return
         command = Command.NONE
         if key == Key.right or key.char == "d":
             command = Command.RIGHT
@@ -88,6 +87,7 @@ class Remote():
             command = Command.LEFT
         elif key == Key.up or key.char == "w":
             command = Command.FORWARD
+            print("forward")
         elif key == Key.down or key.char == "s":
             command = Command.BACKWARD
         elif key.char == "q":
@@ -100,6 +100,7 @@ class Remote():
             command = Command.CHANGE_MODE
 
         self.ser.write(command.name.encode('utf-8'))
+        print(f"sending: {command.name}")
  
     def start_serial(self):
         listener = keyboard.Listener(

@@ -2,7 +2,7 @@
 from RemoteControl import Remote
 import serial
 import sys
-
+from pynput import keyboard
 
 def main():
     # get sys args
@@ -22,7 +22,11 @@ def main():
 
     
     remote = Remote(ser=ser)
-    remote.start_serial()
+
+    listener = keyboard.Listener(
+        on_press=remote.on_press_serial
+        )
+    listener.start()
 
 
     try:

@@ -75,7 +75,7 @@ def loop_co(motors:MotorController, receiver, mode:Mode):
             # if not remote.inputs.emtpy():
 
             # block until a command is read
-            while receiver.inWaiting < 0:
+            while receiver.inWaiting() <= 0:
                 time.sleep(.1)
                 
 
@@ -133,7 +133,7 @@ def loop_co(motors:MotorController, receiver, mode:Mode):
 
     
 
-async def repl(motors:MotorController):
+def repl(motors:MotorController):
     '''
     param: motors:Motorcontroller
     '''
@@ -186,4 +186,3 @@ async def repl(motors:MotorController):
     
 if __name__ == "__main__":
     main()
-    
