@@ -2,13 +2,14 @@
 
 #include <rclcpp/rclcpp.hpp>
 #include "serial.hpp"
+#include "xbox.cpp"
 #include "sensor_msgs/msg/joy.hpp"
 
 class ControlNode : public rclcpp::Node {
 
     public:
 
-    ControlNode() : Node("control_node"), serial("/dev/pts/15", 115200){
+    ControlNode() : Node("control_node"), serial("/dev/pts/15", 115200), xbox(){
 
 
         motor_timer_ = this->create_wall_timer(
@@ -20,7 +21,6 @@ class ControlNode : public rclcpp::Node {
             "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
         
         
-
     }
 
 
@@ -33,6 +33,8 @@ class ControlNode : public rclcpp::Node {
 
     // subscription for joystick
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr subscription_;
+
+    Xbox::Xbox xbox;
 
     void motor_callback(){
 
@@ -50,10 +52,21 @@ class ControlNode : public rclcpp::Node {
 
     void joystick_callback(const sensor_msgs::msg::Joy::SharedPtr joy_msg) {
 
+        bool b_button = joy_msg->buttons[1];    
+        bool x_button = joy_msg->buttons[2];    
+        bool y_button = joy_msg->buttons[3];  
+        float left_stick_x = joy_msg->axes[0];    
+        float left_stick_y = joy_msg->axes[1];    
+        float right_stick_x = joy_msg->axes[2];    
+        float right_stick_y = joy_msg->axes[3];    
+        float left_trigger = joy_msg->axes[4];    
+        float right_trigger = joy_msg->axes[5];
+
+        // TODO add logic for sending to motors
+
+        
         
     }
-
-
 
 
 
@@ -66,4 +79,5 @@ int main(int argc, char** argv) {
     rclcpp::spin(std::make_shared<ControlNode>());
     rclcpp::shutdown();
     return 0;
+
 }

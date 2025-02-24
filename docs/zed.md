@@ -9,7 +9,7 @@ this document is intended as a knowledge base for anything ZED related for AutoN
 # Fast Use Guide
 
 To launch the zed node, you can run `zedup` from the ros2_ws directory. This command is an alias for the zed node launch file,
-`ros2 launch zed_wrapper zed_camera camera_model:='zed2i'`. Remember to source the ROS setup script in each terminal you open.
+`ros2 launch zed_wrapper zed_camera.launch.py camera_model:='zed2i'`. Remember to source the ROS setup script in each terminal you open.
 
 This node publishes rolling camera data to a variety of topics. The list can be found at:
 

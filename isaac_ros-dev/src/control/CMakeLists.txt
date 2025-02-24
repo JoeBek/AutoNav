@@ -13,8 +13,9 @@ find_package(ament_cmake REQUIRED)
 
 find_package(rclcpp REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system)
+find_package(sensor_msgs REQUIRED)
 
-add_executable(control src/control.cpp src/serial.cpp)
+add_executable(control src/control.cpp src/serial.cpp src/xbox.cpp)
 ament_target_dependencies(control rclcpp)
 target_link_libraries(control ${Boost_LIBRARIES})
 target_include_directories(control PRIVATE src)
