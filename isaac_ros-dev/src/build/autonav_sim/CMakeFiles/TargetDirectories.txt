@@ -1,0 +1,10 @@
+/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim/CMakeFiles/uninstall.dir
+/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim/CMakeFiles/autonav_sim_uninstall.dir
+/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim/CMakeFiles/opencv_node.dir
+/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim/CMakeFiles/test.dir
+/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim/CMakeFiles/edit_cache.dir
+/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim/CMakeFiles/rebuild_cache.dir
+/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim/CMakeFiles/list_install_components.dir
+/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim/CMakeFiles/install.dir
+/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim/CMakeFiles/install/local.dir
+/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim/CMakeFiles/install/strip.dir

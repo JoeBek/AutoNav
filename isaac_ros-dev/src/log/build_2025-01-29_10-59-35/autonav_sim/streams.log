@@ -1,0 +1,98 @@
+[0.040s] Invoking command in '/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/john/AutoNav/isaac_ros-dev/src/autonav_sim -DCMAKE_INSTALL_PREFIX=/home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim
+[0.961s] -- The C compiler identification is GNU 11.4.0
+[4.725s] -- The CXX compiler identification is GNU 11.4.0
+[7.208s] -- Detecting C compiler ABI info
+[7.768s] -- Detecting C compiler ABI info - done
+[7.775s] -- Check for working C compiler: /usr/bin/cc - skipped
+[7.786s] -- Detecting C compile features
+[7.788s] -- Detecting C compile features - done
+[7.796s] -- Detecting CXX compiler ABI info
+[8.541s] -- Detecting CXX compiler ABI info - done
+[8.555s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[8.556s] -- Detecting CXX compile features
+[8.556s] -- Detecting CXX compile features - done
+[8.606s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[8.877s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[9.130s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[10.482s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[10.493s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[10.514s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[10.553s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[10.602s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[10.740s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[10.751s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[20.696s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[31.348s] -- Found FastRTPS: /opt/ros/humble/include  
+[50.813s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[50.865s] -- Looking for pthread.h
+[51.973s] -- Looking for pthread.h - found
+[51.975s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[52.884s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[52.885s] -- Found Threads: TRUE  
+[53.023s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[53.092s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[53.116s] -- Found OpenCV: /usr (found version "4.5.4") 
+[53.121s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[53.378s] -- Added test 'copyright' to check source files copyright and LICENSE
+[53.411s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[53.412s] -- Configured cppcheck include dirs: 
+[53.412s] -- Configured cppcheck exclude dirs and/or files: 
+[53.416s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[53.416s] -- Configured cpplint exclude dirs and/or files: 
+[53.418s] -- Added test 'flake8' to check Python code syntax and style conventions
+[53.421s] -- Added test 'lint_cmake' to check CMake code style
+[53.424s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[53.429s] -- Added test 'uncrustify' to check C / C++ code style
+[53.429s] -- Configured uncrustify additional arguments: 
+[53.431s] -- Added test 'xmllint' to check XML markup files
+[53.440s] -- Configuring done
+[53.465s] -- Generating done
+[53.471s] -- Build files have been written to: /home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim
+[53.488s] Invoked command in '/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/john/AutoNav/isaac_ros-dev/src/autonav_sim -DCMAKE_INSTALL_PREFIX=/home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim
+[53.490s] Invoking command in '/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim -- -j16 -l16
+[53.547s] [ 50%] [32mBuilding CXX object CMakeFiles/opencv_node.dir/launch/opencv_node.cpp.o[0m
+[66.835s] [100%] [32m[1mLinking CXX executable opencv_node[0m
+[69.211s] [100%] Built target opencv_node
+[69.225s] Invoked command in '/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim -- -j16 -l16
+[69.235s] Invoking command in '/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim
+[69.240s] -- Install configuration: ""
+[69.242s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/lib/autonav_sim/opencv_node
+[69.245s] -- Set runtime path of "/home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/lib/autonav_sim/opencv_node" to ""
+[69.245s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/config
+[69.246s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/config/view_bot.rviz
+[69.247s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description
+[69.247s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/custom_robot
+[69.247s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/custom_robot/robot_core.xacro
+[69.248s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/custom_robot/inertial_macros.xacro
+[69.249s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/custom_robot/camera.xacro
+[69.249s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/custom_robot/robot.urdf.xacro
+[69.250s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/custom_robot/gazebo_control.xacro
+[69.250s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/tester_robot
+[69.251s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/tester_robot/robot_core.xacro
+[69.252s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/tester_robot/inertial_macros.xacro
+[69.252s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/tester_robot/camera.xacro
+[69.253s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/tester_robot/robot.urdf.xacro
+[69.254s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/tester_robot/gazebo_control.xacro
+[69.254s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/launch
+[69.254s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/launch/launch_sim.launch.py
+[69.255s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/launch/rsp.launch.py
+[69.255s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/launch/opencv_node.cpp
+[69.256s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/worlds
+[69.256s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/worlds/empty.world
+[69.256s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/worlds/autonav_igvc_course.world
+[69.259s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/ament_index/resource_index/package_run_dependencies/autonav_sim
+[69.259s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/ament_index/resource_index/parent_prefix_path/autonav_sim
+[69.259s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/environment/ament_prefix_path.sh
+[69.260s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/environment/ament_prefix_path.dsv
+[69.260s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/environment/path.sh
+[69.260s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/environment/path.dsv
+[69.260s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/local_setup.bash
+[69.260s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/local_setup.sh
+[69.261s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/local_setup.zsh
+[69.261s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/local_setup.dsv
+[69.261s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/package.dsv
+[69.261s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/ament_index/resource_index/packages/autonav_sim
+[69.263s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/cmake/autonav_simConfig.cmake
+[69.264s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/cmake/autonav_simConfig-version.cmake
+[69.264s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/package.xml
+[69.266s] Invoked command in '/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim
