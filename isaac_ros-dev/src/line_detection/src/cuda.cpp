@@ -4,6 +4,7 @@
  */
 
 #include <cuda_runtime.h>
+#include <npp.h>
 
 // the window has to be odd
 #define HALF_WINDOW_SIZE 7 // this produces a 15 x 15 window
@@ -17,18 +18,16 @@
 // dim3 grid(COLS, ROWS)
 __global__ void cerias_kernel (
         float *gray_img,
-        Npp32u *integral,
-        uint32_t *integral_sq,
+        Npp32f *integral,
+        Npp64f *integral_sq,
         uint8_t *brightness_mask,
         int2 *output,
-        int *counter
+        int *counter,
+        int width, int height
     ) 
 {
     int x = blockIdx.x * blockDim.x + threadIdx.x;
     int y = blockIdx.y * blockDim.y + threadIdx.y;
-
-    int width = gridDim.x;
-    int height = gridDim.y;
 
 
     // coordinates not in brightness mask, pixel not in line
@@ -46,11 +45,11 @@ __global__ void cerias_kernel (
     // get integral image areas from window
 
     // y * width + x unwraps rows into 1d and adds remaining cols
-    int sum_intensity = integral[y2*width+ x2] - integral[y1*width + x2]
-                        - integral[y2*width + x1] + integral[y1*width + x1];
+    float sum_intensity = static_cast<float>(integral[y2*width+ x2] - integral[y1*width + x2]
+                        - integral[y2*width + x1] + integral[y1*width + x1]);
 
-    int sum_intensity_sq = integral_sq[y2*width+ x2] - integral_sq[y1*width + x2]
-                        - integral_sq[y2*width + x1] + integral_sq[y1*width + x1];
+    float sum_intensity_sq = static_cast<float>(integral_sq[y2*width+ x2] - integral_sq[y1*width + x2]
+                        - integral_sq[y2*width + x1] + integral_sq[y1*width + x1]);
 
 
 
