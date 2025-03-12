@@ -27,6 +27,34 @@ feature exploration with the zed is ongoing.
 
 Useful features will be documented here, along with links to further documentation
 
+## ROS parameters
+
+The zed camera has a suite of configuration parameters available for the ROS2 wrapper.
+
+The link can be found [here](https://www.stereolabs.com/docs/ros2/020_zed-node)
+
+```
+gpu_id - gpu id for computation
+
+camera_flip [bool] - if mounted upside down
+
+pub_resolution ['NATIVE' | 'CUSTOM' | 'OPTIMIZED'] - custom for saving bandwidth. set general.pub_downscale_factor to reduce bandwidth.
+
+pub_frame_rate [int] - set publishing frequency. 
+
+```
+
+Other Parameter topics:
+- streaming
+- camera image 
+- ROI 
+- depth 
+- odometry and localization
+- global localization 
+- mapping
+- object detection
+
+
 
 ---
 
