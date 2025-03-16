@@ -24,7 +24,7 @@ async def main():
 
     command = Command.STOP # only ever one command
     remote = Remote()
-    # motors = MotorController(port)
+    motors = MotorController(port)
     mode = Mode.REPL
 
 
@@ -35,10 +35,10 @@ async def main():
     listener = keyboard.Listener(on_press=lambda key: loop.call_soon_threadsafe(remote.on_press, key))
     listener.start()
     # Run the processing concurrently
-    await loop_co(remote, mode)
+    await loop_co(motors, remote, mode)
 
 
-async def loop_co(remote:Remote, mode:Mode):
+async def loop_co(motors:MotorController, remote:Remote, mode:Mode):
 
     
     while(True):
@@ -55,13 +55,15 @@ async def loop_co(remote:Remote, mode:Mode):
         e - speed up
         q - speed down
         r - go into options mode
+        space - stop
         --------------------------"""
             
             print(control_info)
             
             remote.listening = True
-            if not remote.inputs.emtpy():
-                command = await remote.inputs.get()
+            # following line is future work for allowing single movement presses to act as toggles
+            # if not remote.inputs.emtpy():
+            command = await remote.inputs.get()
             
             # switch command TODO
             #TODO TODO 
@@ -69,21 +71,30 @@ async def loop_co(remote:Remote, mode:Mode):
             if command == Command.FORWARD:
                 #motors.forward()
                 print(": forward")
+                motors.forward()
             elif command == Command.LEFT:
                 #motors.turnLeft()
                 print(": left")
+                motors.turnLeft()
             elif command == Command.RIGHT:
                 print(": right")
+                motors.turnRight()
             elif command == Command.BACKWARD:
                 print(": backward")
+                motors.backward()
             elif command == Command.SPEED_DOWN:
-                print(": speed down")
+                motors.speed -= 1
+                print(f": speed down | new speed: {motors.speed}")
+                command = Command.NONE # avoid no-input speed up/down loop
             elif command == Command.SPEED_UP:
-                print(": speed up")
+                motors.speed += 1
+                print(f": speed up | new speed: {motors.speed}")
+                command = Command.NONE
             elif command == Command.NONE:
                 print(": none")
             elif command == Command.STOP:
                 print(": stop")
+                motors.stop()
             elif command == Command.CHANGE_MODE:
                 print(": change mode")
                 mode = Mode.REPL
@@ -93,16 +104,17 @@ async def loop_co(remote:Remote, mode:Mode):
         elif mode == Mode.REPL:
             remote.listening = False
             print()
-            code = await repl()
+            code = await repl(motors)
             # 0, return to control; 1, exit program
             if code == 0:
                 mode = Mode.CONTROL
             elif code == 1:
+                motors.shutDown()
                 sys.exit("shuttin er down")
 
     
 
-async def repl():
+async def repl(motors:MotorController):
     '''
     param: motors:Motorcontroller
     '''
@@ -113,6 +125,7 @@ async def repl():
     [0] return to control mode
     [1] set left turn speeds
     [2] set right turn speeds
+    [3] set speed (1-100)
     
     """
     while(True):
@@ -124,9 +137,29 @@ async def repl():
         elif response == '0':
             return 0
         elif response == '1':
-            left_str = await aioconsole.ainput("input left wheel speed (-100,100): \n")
-            right_str = await aioconsole.ainput("input right wheel speed (-100,100): \n")
+            left_str = await aioconsole.ainput("input left wheel speed for left turn (-100,100): \n")
+            right_str = await aioconsole.ainput("input right wheel speed for right turn (-100,100): \n")
+
+            # assume clean input
+            
+            motors.left_turn_speeds = (int(left_str), int(right_str))
             print(f"new wheel speeds for left turn: ({left_str},{right_str})")
+        elif response == '2':
+            left_str = await aioconsole.ainput("input left wheel speed for right turn (-100,100): \n")
+            right_str = await aioconsole.ainput("input right wheel speed for right turn (-100,100): \n")
+
+            # assume clean input
+            
+            motors.right_turn_speeds = (int(left_str), int(right_str))
+            print(f"new wheel speeds for left turn: ({left_str},{right_str})")
+
+        elif response == '3':
+
+            speedstr = await aioconsole.ainput("set new speed (1-100)")
+
+            # if you are reading this please observe my funny and creative variable name
+            motors.speed = int(speedstr)
+            print(f"new motor speed set to: {motors.speed}")
 
 
 
