@@ -1,55 +1,68 @@
-
 #include <serial.hpp>
 
+Serial::Serial(const std::string &port, int32_t baudrate) : serial_port(io_service), port(port), baudrate(baudrate){
+    
+}
+
+Serial::~Serial(){
+    close();
+}
+
+void Serial::open()
+{
+    try{
+        serial_port.open(port);
+        serial_port.set_option(boost::asio::serial_port_base::baud_rate(baudrate));
+    }
+    catch (const boost::system::system_error &e){
+        std::cerr << "Error opening serial port: " << e.what() << std::endl;
+    }
+}
+
+void Serial::close()
+{
+    if (serial_port.is_open())
+    {
+        serial_port.close();
+    }
+}
+
+bool Serial::isOpen(){
+    return serial_port.is_open();
+}
 
 
 /**
  * sends a string over serial to the connected port. 
  * 
  */
-void Serial::send(const std::string &message) {
+bool Serial::write(const std::string &message) {
 
-    boost::asio::write(serial_, boost::asio::buffer(message));
-
-
-}
-
-char Serial::read_byte() {
-
-    char c;
-    boost::system::error_code ec;
-    boost::asio::read(serial_, boost::asio::buffer(&c, 1), ec);
-
-    if (ec) {
-        return '\0'; 
+    if(isOpen()){
+        boost::asio::write(serial_port, boost::asio::buffer(message));
+        return true;
     }
 
-    return c;
+    return false;
 
 }
 
-void Serial::read_string(std::string &buffer){
+void Serial::read(std::string &buffer){
 
-    boost::asio::streambuf buf;
-    boost::system::error_code ec;
-
-    std::bind(readHandler, std::placeholders::_1, std::placeholders::_2, std::ref(serial_), std::ref(buffer));
-
-    boost::asio::async_read_until(serial_, boost::asio::dynamic_buffer(buffer), '\n',std::move(Serial::readHandler)); 
-
-
+    last_string = "";
+    boost::asio::async_read_until(serial_port, boost::asio::dynamic_buffer(last_string), '\n', 
+    boost::bind(&Serial::read_handler, this, boost::placeholders::_1, boost::placeholders::_2));
 }
 
-void Serial::readHandler(
-    const boost::system::error_code& error,
-    std::size_t bytes_transferred,
-    boost::asio::serial_port& serial,
-    std::string& buffer
-) {
+void Serial::read_handler(const boost::system::error_code &error, std::size_t bytes_transferred) {
     if (!error) {
-        std::cout << "Received: " << buffer.substr(0, bytes_transferred) << std::endl;
-        buffer.clear();
+        std::cout << "Received: " << last_string << std::endl;
     } else {
-        std::cerr << "Error: " << error.message() << std::endl;
+        std::cerr << "Error during read: " << error.message() << std::endl;
     }
+}
+
+// This will block and process async reads/writes
+void Serial::run() {
+    io_service.run();
 }

@@ -11,40 +11,35 @@ class Serial {
 
     public: 
     
-    Serial(const std::string &port, int32_t baudrate) : baudrate_(baudrate) {
+    // constructor and desctructor
+    Serial(const std::string &port, int32_t baudrate);
+    ~Serial();
 
-        serial_.open(port);
-        serial_.set_option(boost::asio::serial_port_base::baud_rate(baudrate_));
-        
-        io_.run();
+    // send/receive motor commands
+    bool write(const std::string &message);
+    void read(std::string &buffer);
+    void run();
 
-
-    }
-
-    void send(const std::string &message);
-
-    char read_byte();
-
-    void read_string(std::string &buffer);
-
+    // check connection
+    void close();
+    bool isOpen();
+    void open();
 
     private:
 
+    // connection details
+    int32_t baudrate;
+    std::string port;
 
-    boost::asio::io_service io_;
-    boost::asio::serial_port serial_{io_};
+    // idk what this is
+    boost::asio::io_service io_service;
+    boost::asio::serial_port serial_port;
 
-    int32_t baudrate_;
-    
-        
-    void readHandler(
-        const boost::system::error_code& error,
-        std::size_t bytes_transferred,
-        boost::asio::serial_port& serial,
-        std::string& buffer
-    );
+    //last read string
+    std::string last_string;
 
 
+    void read_handler(const boost::system::error_code &error, std::size_t bytes_transferred); 
 };
 
 

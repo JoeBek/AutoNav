@@ -1,11 +1,11 @@
 #include "motor_controller.hpp"
 
-// contstructor
-MotorController::MotorController(std::string comPort, int stepsize = 10){
+// constructor
+MotorController::MotorController(std::string comPort, int ss = 10){
   motorSerial = new motorSerial(comPort, 115200);
-  stepSize = stepSize; 
+  stepSize = ss; 
 
-  if (!motorSerial.isConnected()) {
+  if (!motorSerial.isOpen()) {
       std::cerr << "Failed to connect to motor controller on " << comPort << std::endl;
   }
   else{
