@@ -19,7 +19,9 @@ static void HandleError( cudaError_t err,
 
 #define HANDLE_ERROR( err ) (HandleError( err, __FILE__, __LINE__ ))
 
+namespace lines {
 std::pair<int2*, int*> detect_line_pixels(const cv::Mat&);
+}
 std::pair<Npp32f *, Npp64f *> __get_integral_image(const cv::Mat &gray_img);
 
 

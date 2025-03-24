@@ -15,7 +15,7 @@
  * Thus, we are happy to map these pixels as obstacles on the map, since the robot will avoid them anyways. 
  * 
  */
-std::pair<int2*, int*> detect_line_pixels(const cv::Mat &image) {
+std::pair<int2*, int*> lines::detect_line_pixels(const cv::Mat &image) {
 
     // convert to grayscale
     cv::Mat gray_img;
@@ -100,10 +100,17 @@ std::pair<int2*, int*> detect_line_pixels(const cv::Mat &image) {
 
 
     //return output;
+    int2 *output_return;
+    int *counter_return;
+
+
+
+    HANDLE_ERROR( cudaMemcpy(output_return, output, total * sizeof(int2), cudaMemcpyDeviceToHost) );
+    HANDLE_ERROR( cudaMemcpy(counter_return, output, sizeof(int), cudaMemcpyDeviceToHost) );
 
     cudaDeviceSynchronize();
 
-    return std::make_pair(output, counter);
+    return std::make_pair(output_return, counter_return);
 
     
 

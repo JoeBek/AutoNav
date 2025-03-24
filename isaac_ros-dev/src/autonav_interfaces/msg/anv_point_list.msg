@@ -1,1 +1,1 @@
-int2_point[] points
+anv_int2_point[] points
