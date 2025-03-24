@@ -1,23 +1,12 @@
 
-#include "cuda.cpp"
-#include <opencv2/opencv.hpp>
-
-
+#include "detection.hpp"
 
 // Error function and macro borrowed from 
 // https://github.com/jiekebo/CUDA-By-Example/blob/master/common/book.h
 
 // thank you 
-static void HandleError( cudaError_t err,
-                         const char *file,
-                         int line ) {
-    if (err != cudaSuccess) {
-        printf( "%s in %s at line %d\n", cudaGetErrorString( err ),
-                file, line );
-        exit( EXIT_FAILURE );
-    }
-}
-#define HANDLE_ERROR( err ) (HandleError( err, __FILE__, __LINE__ ))
+
+
 
 
 /**
@@ -26,23 +15,29 @@ static void HandleError( cudaError_t err,
  * Thus, we are happy to map these pixels as obstacles on the map, since the robot will avoid them anyways. 
  * 
  */
-int2 * detect_line_pixels(const cv2::Mat &image) {
+std::pair<int2*, int*> lines::detect_line_pixels(const cv::Mat &image) {
 
     // convert to grayscale
-    cv::Mat gray_img = image.channels() == 3 ? cv::cvtColor(image, cv::COLORBGR2GRAY) : image;
-
-    int width = gray_img.cols;
+    cv::Mat gray_img;
+    if (image.channels() == 3) {
+        cv::cvtColor(image, gray_img, cv::COLOR_BGR2GRAY);
+    }
+    else {
+        gray_img = image;
+    }
     int height = gray_img.rows;
+    int width = gray_img.cols;
 
 
     // get mask
     cv::Mat mask;
-    double threshold = 200;
+    double threshold = 180;
     cv::threshold(gray_img, mask, threshold, 255, cv::THRESH_BINARY);
 
     
 
     // Npp32u is typedef unsigned int. which is pretty much uint32_t. So I'm not casting it.
+
     std::pair<Npp32f *, Npp64f *> integrals = __get_integral_image(gray_img);
 
     Npp32f * integral;
@@ -58,10 +53,10 @@ int2 * detect_line_pixels(const cv2::Mat &image) {
     gray_img.convertTo(gray_float, CV_32F);
 
     float * input_image_device;
-    size_t total = width * height
+    size_t total = width * height;
     
     HANDLE_ERROR( cudaMalloc((void**) &input_image_device, total * sizeof(float)) );
-    HANDLE_ERROR( cudaMemcpy(input_image_device, gray_img_float.ptr<float>(),total * sizeof(float), cudaMemcpyHostToDevice ));
+    HANDLE_ERROR( cudaMemcpy(input_image_device, gray_float.ptr<float>(),total * sizeof(float), cudaMemcpyHostToDevice ));
 
     // integral and integral sq are already on device
 
@@ -83,24 +78,39 @@ int2 * detect_line_pixels(const cv2::Mat &image) {
 
     // finally...
 
-    dim3 block(16, 16);
-    dim3 grid(
-        (gray_img.cols + block.x - 1) / block.x,
-        (gray_img.rows + block.y - 1) / block.y
-    );
-
-    cerias_kernel<<<grid, block>>>(
+    cerias_kernel(
         input_image_device,
         integral, integral_sq,
         device_mask,
         output, counter,
         width, height
-
     );
+
+
 
     // going to try the direct ros topic mapping. If not, I'll be back to memcopy output and counter
 
-    return output;
+    // clean up and return
+    cudaFree(input_image_device);
+    cudaFree(integral);
+    cudaFree(integral_sq);
+    cudaFree(device_mask);
+    //cudaFree(counter);
+
+
+
+    //return output;
+    int2 *output_return;
+    int *counter_return;
+
+
+
+    HANDLE_ERROR( cudaMemcpy(output_return, output, total * sizeof(int2), cudaMemcpyDeviceToHost) );
+    HANDLE_ERROR( cudaMemcpy(counter_return, output, sizeof(int), cudaMemcpyDeviceToHost) );
+
+    cudaDeviceSynchronize();
+
+    return std::make_pair(output_return, counter_return);
 
     
 
@@ -114,7 +124,7 @@ int2 * detect_line_pixels(const cv2::Mat &image) {
  * do NOT call this function and then dereference anything without memcpy-ing back to host.
  * 
  */
-std::pair<Npp32f *, Npp64f *> __get_integral_image(const cv2::Mat &gray_img) {
+std::pair<Npp32f *, Npp64f *> __get_integral_image(const cv::Mat &gray_img) {
 
     int width = gray_img.cols;
     int height = gray_img.rows;
@@ -124,7 +134,7 @@ std::pair<Npp32f *, Npp64f *> __get_integral_image(const cv2::Mat &gray_img) {
     Npp8u *device_input_img;
 
     size_t image_size = gray_img.rows * gray_img.cols * sizeof(Npp8u);
-    HANDLE_ERROR( cudaMalloc((void**)&device_input_img, image_size) );
+    HANDLE_ERROR( cudaMalloc(&device_input_img, image_size) ) ;
     // CAREFUL, WE ARE CASTING TO 8 BIT PIXELS HERE, MAKE SURE INPUT IS 8 BIT
     HANDLE_ERROR( cudaMemcpy(device_input_img, gray_img.ptr<Npp8u>(), image_size, cudaMemcpyHostToDevice) );
 
@@ -132,11 +142,11 @@ std::pair<Npp32f *, Npp64f *> __get_integral_image(const cv2::Mat &gray_img) {
     Npp64f *result_sq;
     
     size_t result_size = (height + 1) * (width + 1) * sizeof(Npp32f);
-    HANDLE_ERROR( cudaMalloc((void**)&result, result_size) );
+    HANDLE_ERROR( cudaMalloc(&result, result_size) );
     HANDLE_ERROR( cudaMemset(result, 0, result_size) );
 
     size_t result_sq_size = (height + 1) * (width + 1) * sizeof(Npp64f);
-    HANDLE_ERROR( cudaMalloc((void**)&result_sq, result_sq_size) );
+    HANDLE_ERROR( cudaMalloc(&result_sq, result_sq_size) );
     HANDLE_ERROR( cudaMemset(result_sq, 0, result_sq_size) );
 
     // set nsrcstep, ndststep, and roi
@@ -149,7 +159,7 @@ std::pair<Npp32f *, Npp64f *> __get_integral_image(const cv2::Mat &gray_img) {
     // take npp integral
 
     NppStatus status;
-    status = nppiSqrIntegral_8u32s_C1R(
+    status = nppiSqrIntegral_8u32f64f_C1R(
         device_input_img, // input pointer (device)
         nsrcstep, // row length input
         result,  // result pointer (device)
@@ -165,14 +175,14 @@ std::pair<Npp32f *, Npp64f *> __get_integral_image(const cv2::Mat &gray_img) {
         std::cerr << "integral did not work. Your error code is: " << status << std::endl;
         exit( EXIT_FAILURE );
     }
+    cudaFree(device_input_img);
 
-    cudaFree((void**)& device_input_img);
-    
+    return std::make_pair(result, result_sq);
 
-    return std::make_pair<Npp32f *, Npp64f *>(result, result_sq);
 
 
 }
+
 
 
 
