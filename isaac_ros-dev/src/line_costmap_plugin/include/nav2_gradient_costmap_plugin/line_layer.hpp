@@ -46,6 +46,8 @@
 #include "rclcpp/rclcpp.hpp"
 #include "nav2_costmap_2d/layer.hpp"
 #include "nav2_costmap_2d/layered_costmap.hpp"
+#include "autonav_interfaces/srv/anv_lines.hpp"
+#include "geometry_msgs/msg/Vector3.hpp"
 
 namespace lines_plugin
 {
