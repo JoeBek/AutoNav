@@ -1,5 +1,5 @@
 
-#include "detection.hpp"
+#include "line_detection/detection.hpp"
 
 // Error function and macro borrowed from 
 // https://github.com/jiekebo/CUDA-By-Example/blob/master/common/book.h
