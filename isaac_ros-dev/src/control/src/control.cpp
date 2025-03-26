@@ -1,13 +1,19 @@
 #include <rclcpp/rclcpp.hpp>
 #include "serial.hpp"
 #include "xbox.hpp"
+#include "motor_controller.hpp"
 #include "sensor_msgs/msg/joy.hpp"
 
 class ControlNode : public rclcpp::Node {
 
     public:
 
-    ControlNode() : Node("control_node"), motorSerial("/dev/pts/15", 115200), arduinoSerial("idk yet,", 9600), xbox(), MotorController("idk yet"){
+    ControlNode() 
+      : Node("control_node"), 
+        arduinoSerial("idk yet,", 9600), 
+        gpsSerial("idk yet,", 9600),
+        MotorController("idk yet"),
+        xbox(){
 
 
         /*motor_timer_ = this->create_wall_timer(
@@ -17,10 +23,23 @@ class ControlNode : public rclcpp::Node {
 
         initialize_serial_connections();
 
-        game_pass_ = this->create_subscription<sensor_msgs::msg::Joy>(
+        //XBOX SUB
+        controllerSub = this->create_subscription<sensor_msgs::msg::Joy>(
             "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
         
+        //PATH PLANNING SUB
+        pathPlanningSub = this->create_subscription<sensor_msgs::msg::Joy>(
+            "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
         
+        //NAVIGATION ENCODER PUB
+        navigationEncoderPub = this->create_subscription<autonav_interfaces::msg::Joy>(
+            "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
+
+        //GPS PUB
+        gpsPub = this->create_subscription<sensor_msgs::msg::Joy>(
+            "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
+
+        arduinoSerial.write("MANUAL MODE");
     }
 
 
@@ -28,6 +47,7 @@ class ControlNode : public rclcpp::Node {
 
     Serial motorSerial;
     Serial arduinoSerial;
+    Serial gpsSerial;
     Xbox controller;
     MotorController motors;
 
@@ -46,7 +66,7 @@ class ControlNode : public rclcpp::Node {
 
         std::string message = "hello from autonav\n";
 
-        serial.send(message);
+        serial.write(message);
 
         std::string buffer;
 
@@ -87,6 +107,7 @@ class ControlNode : public rclcpp::Node {
             }
             else if (command.cmd == Xbox::CHANGE_MODE){
                 autonomousMode = true;
+                arduinoSerial.write("AUTONOMOUS MODE");
             }
         }
     }

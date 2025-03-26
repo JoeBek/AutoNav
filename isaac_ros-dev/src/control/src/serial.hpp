@@ -42,13 +42,4 @@ class Serial {
     void read_handler(const boost::system::error_code &error, std::size_t bytes_transferred); 
 };
 
-
-
-
-
-
-
-
-
-
 #endif // SERIAL_HPP
