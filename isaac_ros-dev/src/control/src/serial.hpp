@@ -12,7 +12,7 @@ class Serial {
     public: 
     
     // constructor and desctructor
-    Serial(const std::string &port, int32_t baudrate);
+    Serial();
     ~Serial();
 
     // send/receive motor commands
@@ -25,6 +25,9 @@ class Serial {
     bool isOpen();
     void open();
 
+    //last read string
+    std::string last_string;
+
     private:
 
     // connection details
@@ -34,9 +37,6 @@ class Serial {
     // idk what this is
     boost::asio::io_service io_service;
     boost::asio::serial_port serial_port;
-
-    //last read string
-    std::string last_string;
 
 
     void read_handler(const boost::system::error_code &error, std::size_t bytes_transferred); 

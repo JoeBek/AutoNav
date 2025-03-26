@@ -3,22 +3,21 @@
 #include "xbox.hpp"
 #include "motor_controller.hpp"
 #include "sensor_msgs/msg/joy.hpp"
+#include "geometry_msgs/msg/twist.hpp" 
+//#include "autonav_interfaces/msg/Encoders.msg"
 
 class ControlNode : public rclcpp::Node {
 
     public:
 
     ControlNode() 
-      : Node("control_node"), 
-        arduinoSerial("idk yet,", 9600), 
-        gpsSerial("idk yet,", 9600),
-        MotorController("idk yet"),
-        xbox(){
+      : Node("control_node")
+       {
+        
 
-
-        /*motor_timer_ = this->create_wall_timer(
+        /*encoder_timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100),
-            std::bind(&ControlNode::callback, this)
+            std::bind(&ControlNode::publish_encoder_data, this)
         );*/
 
         initialize_serial_connections();
@@ -28,24 +27,24 @@ class ControlNode : public rclcpp::Node {
             "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
         
         //PATH PLANNING SUB
-        pathPlanningSub = this->create_subscription<sensor_msgs::msg::Joy>(
-            "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
+        /*pathPlanningSub = this->create_subscription<geometry_msgs::msg::Twist>(
+            "cmd_vel", 10, std::bind(&ControlNode::path_planning_callback, this, std::placeholders::_1));
+        
         
         //NAVIGATION ENCODER PUB
-        navigationEncoderPub = this->create_subscription<autonav_interfaces::msg::Joy>(
-            "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
+        //navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_data", 10);
+
 
         //GPS PUB
         gpsPub = this->create_subscription<sensor_msgs::msg::Joy>(
             "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
 
-        arduinoSerial.write("MANUAL MODE");
+        arduinoSerial.write("0");*/
     }
 
 
     private:
 
-    Serial motorSerial;
     Serial arduinoSerial;
     Serial gpsSerial;
     Xbox controller;
@@ -53,28 +52,14 @@ class ControlNode : public rclcpp::Node {
 
     bool autonomousMode = false;
 
-    // motor controller subscription
-    rclcpp::TimerBase::SharedPtr motor_timer_;
+    //rclcpp::TimerBase::SharedPtr encoder_timer_;
 
     // subscription for joystick
-    rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr subscription_;
+    rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr controllerSub;
 
-    Xbox::Xbox xbox;
+    //rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr pathPlanningSub;
 
-    //read test
-    void motor_callback(){
-
-        std::string message = "hello from autonav\n";
-
-        serial.write(message);
-
-        std::string buffer;
-
-        serial.read_string(buffer);
-
-        RCLCPP_INFO(this->get_logger(), "received string %s", buffer.c_str());
-
-    }
+    
 
     void joystick_callback(const sensor_msgs::msg::Joy::SharedPtr joy_msg) {
 
@@ -91,7 +76,7 @@ class ControlNode : public rclcpp::Node {
             controller.set_right_stick_x(joy_msg->axes[2]);
             controller.set_right_stick_y(joy_msg->axes[3]);
 
-            CommandData command = controller.calculateCommand();
+            Xbox::CommandData command = controller.calculateCommand();
 
             if(command.cmd == Xbox::MOVE){
                 motors.move(command.right_motor_speed * motors.getSpeed(), command.left_motor_speed * motors.getSpeed());
@@ -103,19 +88,35 @@ class ControlNode : public rclcpp::Node {
                 motors.setSpeed(motors.getSpeed() + 10);
             }
             else if(command.cmd == Xbox::STOP){
-                motors.shutDown();
+                motors.shutdown();
             }
             else if (command.cmd == Xbox::CHANGE_MODE){
-                autonomousMode = true;
-                arduinoSerial.write("AUTONOMOUS MODE");
+                autonomousMode = 1;
+                arduinoSerial.write("1");
             }
         }
     }
 
+    /*void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
+        if (autonomousMode) {
+            double linear_speed = msg->linear.x;
+            double angular_speed = msg->angular.z; 
+        }
+    }*/
+
+    /*void publish_encoder_data() {
+        autonav_interfaces::msg::Encoders encoder_msg;
+        encoder_msg.leftMotorRPM = motors.getLeftMotorRPM();
+        encoder_msg.rightMotorRPM = motors.getRightMotorRPM();
+        navigationEncoderPub->publish(encoder_msg);
+
+        arduinoSerial.write("L" + std::to_string(encoder_msg.leftMotorRPM) + " R" + std::to_string(encoder_msg.rightMotorRPM));
+    }*/
+
     void initialize_serial_connections() {
         // Open all serial connections on startup
-        motorSerial.open();
-        arduinoSerial.open();            
+        arduinoSerial.open();
+        gpsSerial.open();                        
     }
 
 };

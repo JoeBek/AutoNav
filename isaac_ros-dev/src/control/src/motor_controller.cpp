@@ -1,9 +1,8 @@
 #include "motor_controller.hpp"
 
 // constructor
-MotorController::MotorController(std::string comPort, int ss = 10){
-  motorSerial = new motorSerial(comPort, 115200);
-  stepSize = ss; 
+MotorController::MotorController(){
+  motorSerial = new motorSerial();
 
   if (!motorSerial.isOpen()) {
       std::cerr << "Failed to connect to motor controller on " << comPort << std::endl;
@@ -125,4 +124,16 @@ void MotorController::setSpeed(int s){
 // gets the speed
 void MotorController::getSpeed(){
   return speed;
+}
+
+int MotorController::getLeftMotorRPM(){
+  motorSerial.write("?S 1\r");
+  motorSerial.read("buffer");
+  return motorSerial.last_string;
+}
+
+int MotorController::getRightMotorRPM(){
+  motorSerial.write("?S 2\r");
+  motorSerial.read("buffer");
+  return motorSerial.last_string;
 }

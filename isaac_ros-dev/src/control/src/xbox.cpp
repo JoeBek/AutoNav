@@ -44,7 +44,7 @@ void Xbox::set_right_stick_y(float pos) {
   right_stick_y_pos = pos;
 }
 
-void adjust_joysticks(){
+void Xbox::adjust_joysticks(){
   if(left_stick_y_pos < 0.1 && left_stick_y_pos > -0.1){
     left_stick_y_pos = 0;
   }
@@ -62,37 +62,37 @@ void adjust_joysticks(){
   }
 }
 
-CommandData calculateCommand(){
+Xbox::CommandData Xbox::calculateCommand(){
   CommandData cmd;
   if(b_button_state){
-    cmd.command = STOP;
+    cmd.cmd = STOP;
     cmd.left_motor_speed = 0.0f;
     cmd.right_motor_speed = 0.0f;
     return cmd;
   }
   else if(x_button_state){
-    cmd.command = CHANGE_MODE;
+    cmd.cmd = CHANGE_MODE;
     cmd.left_motor_speed = 0.0f;
     cmd.right_motor_speed = 0.0f;
     return cmd;
   }
   else if(left_bumper_state){
-    cmd.command = SPEED_UP;
-    cmd.left_motor_speed = 0.0f
-    cmd.right_motor_speed = 0.0f
+    cmd.cmd = SPEED_UP;
+    cmd.left_motor_speed = 0.0f;
+    cmd.right_motor_speed = 0.0f;
     return cmd;
   }
   else if(right_bumper_state){
-    cmd.command = SPEED_DOWN;
-    cmd.left_motor_speed = 0.0f
-    cmd.right_motor_speed = 0.0f
+    cmd.cmd = SPEED_DOWN;
+    cmd.left_motor_speed = 0.0f;
+    cmd.right_motor_speed = 0.0f;
     return cmd;
   }
 
   adjust_joysticks();
 
   if(TANKDRIVE){
-    cmd.command = MOVE;
+    cmd.cmd = MOVE;
     cmd.left_motor_speed = left_stick_y_pos;
     cmd.right_motor_speed = right_stick_y_pos;
     return cmd;
@@ -105,7 +105,7 @@ CommandData calculateCommand(){
     // calculate the direction (angle in radians) of the joystick input
     float angle = atan2(left_stick_y_pos, left_stick_x_pos); 
 
-    cmd.command = MOVE;
+    cmd.cmd = MOVE;
 
     // cosine and sine of the angle to split the movement into two components:
     cmd.left_motor_speed = magnitude * sin(angle + M_PI / 4);  // Adjust for robot orientation

@@ -1,6 +1,6 @@
-#include <serial.hpp>
+#include "serial.hpp"
 
-Serial::Serial(const std::string &port, int32_t baudrate) : serial_port(io_service), port(port), baudrate(baudrate){
+Serial::Serial(){
     
 }
 

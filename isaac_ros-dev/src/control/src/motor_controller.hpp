@@ -14,7 +14,7 @@ private:
 
 public:
     // Constructor
-    MotorController(std::string comPort, int stepSize = 10);
+    MotorController();
 
     // Moveeeeeee
     void forward();
@@ -30,4 +30,6 @@ public:
     int getStepSize();
     void setSpeed(int s);
     int getSpeed();
+    int getLeftMotorRPM();
+    int getRightMotorRPM();
 };

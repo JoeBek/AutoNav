@@ -18,7 +18,7 @@ public:
   };
 
     struct CommandData {
-      Command command;
+      Command cmd;
       float left_motor_speed;
       float right_motor_speed;
   };
@@ -48,7 +48,7 @@ private:
     float left_stick_x_pos;
     float left_stick_y_pos;
     float right_stick_x_pos;
-    float left_stick_y_pos;
+    float right_stick_y_pos;
 
 
     bool TANKDRIVE = true;
