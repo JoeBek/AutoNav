@@ -17,7 +17,7 @@ class Serial {
 
     // send/receive motor commands
     bool write(const std::string &message);
-    void read(std::string &buffer);
+    void read(const std::string &buffer);
     void run();
 
     // check connection

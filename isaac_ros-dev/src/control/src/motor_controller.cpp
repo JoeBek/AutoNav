@@ -2,7 +2,6 @@
 
 // constructor
 MotorController::MotorController(){
-  motorSerial = new motorSerial();
 
   if (!motorSerial.isOpen()) {
       std::cerr << "Failed to connect to motor controller on " << comPort << std::endl;
@@ -21,8 +20,8 @@ void MotorController::forward(){
     int leftMotorSpeed = -1 * (int)(stepSize * speed);
     int rightMotorSpeed = (int)(stepSize * speed);
 
-    std::string leftMotorCommand = "!G 1" + leftMotorSpeed + "\r";
-    std::string rightMotorCommand = "!G 2" + rightMotorSpeed + "\r";
+    std::string leftMotorCommand = "!G 1" + std::to_string(leftMotorSpeed) + "\r";
+    std::string rightMotorCommand = "!G 2" + std::to_string(rightMotorSpeed) + "\r";
 
     motorSerial.write(leftMotorCommand);
     motorSerial.write(rightMotorCommand);
@@ -38,8 +37,8 @@ void MotorController::backward(){
     int leftMotorSpeed = (int)(stepSize * speed);
     int rightMotorSpeed = -1 * (int)(stepSize * speed);
 
-    std::string leftMotorCommand = "!G 1" + leftMotorSpeed + "\r";
-    std::string rightMotorCommand = "!G 2" + rightMotorSpeed + "\r";
+    std::string leftMotorCommand = "!G 1" + std::to_string(leftMotorSpeed) + "\r";
+    std::string rightMotorCommand = "!G 2" + std::to_string(rightMotorSpeed) + "\r";
 
     motorSerial.write(leftMotorCommand);
     motorSerial.write(rightMotorCommand);
@@ -55,8 +54,8 @@ void MotorController::turnLeft(){
     int leftMotorSpeed = (int)(stepSize * left_turn_speeds.first);
     int rightMotorSpeed = (int)(stepSize * left_turn_speeds.second);
 
-    std::string leftMotorCommand = "!G 1" + leftMotorSpeed + "\r";
-    std::string rightMotorCommand = "!G 2" + rightMotorSpeed + "\r";
+    std::string leftMotorCommand = "!G 1" + std::to_string(leftMotorSpeed) + "\r";
+    std::string rightMotorCommand = "!G 2" + std::to_string(rightMotorSpeed) + "\r";
 
     motorSerial.write(leftMotorCommand);
     motorSerial.write(rightMotorCommand);
@@ -72,8 +71,8 @@ void MotorController::turnRight(){
     int leftMotorSpeed = (int)(stepSize * right_turn_speeds.first);
     int rightMotorSpeed = (int)(stepSize * right_turn_speeds.second);
 
-    std::string leftMotorCommand = "!G 1" + leftMotorSpeed + "\r";
-    std::string rightMotorCommand = "!G 2" + rightMotorSpeed + "\r";
+    std::string leftMotorCommand = "!G 1" + std::to_string(leftMotorSpeed) + "\r";
+    std::string rightMotorCommand = "!G 2" + std::to_string(rightMotorSpeed) + "\r";
 
     motorSerial.write(leftMotorCommand);
     motorSerial.write(rightMotorCommand);
@@ -86,8 +85,8 @@ void MotorController::move(float right_speed, float left_speed){
     int leftMotorSpeed = (int)(stepSize * left_speed);
     int rightMotorSpeed = (int)(stepSize * right_speed);
 
-    std::string leftMotorCommand = "!G 1" + leftMotorSpeed + "\r";
-    std::string rightMotorCommand = "!G 2" + rightMotorSpeed + "\r";
+    std::string leftMotorCommand = "!G 1" + std::to_string(leftMotorSpeed) + "\r";
+    std::string rightMotorCommand = "!G 2" + std::to_string(rightMotorSpeed) + "\r";
 
     motorSerial.write(leftMotorCommand);
     motorSerial.write(rightMotorCommand);
@@ -112,7 +111,7 @@ void MotorController::setStepSize(int size){
 }
 
 // gets the step size
-void MotorController::getStepSize(){
+int MotorController::getStepSize(){
   return stepSize;
 }
 
@@ -122,18 +121,20 @@ void MotorController::setSpeed(int s){
 }
 
 // gets the speed
-void MotorController::getSpeed(){
+int MotorController::getSpeed(){
   return speed;
 }
 
 int MotorController::getLeftMotorRPM(){
   motorSerial.write("?S 1\r");
-  motorSerial.read("buffer");
-  return motorSerial.last_string;
+  std::string buffer;
+  motorSerial.read(buffer);
+  return std::stoi(motorSerial.last_string);
 }
 
 int MotorController::getRightMotorRPM(){
   motorSerial.write("?S 2\r");
-  motorSerial.read("buffer");
-  return motorSerial.last_string;
+  std::string buffer;
+  motorSerial.read(buffer);
+  return std::stoi(motorSerial.last_string);
 }

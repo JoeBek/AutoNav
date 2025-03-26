@@ -6,11 +6,12 @@
 
 class MotorController {
 private:
-    Serial* motorSerial;
+    Serial motorSerial;
     int stepSize;
     std::pair<int, int> right_turn_speeds = {-10, -10};
     std::pair<int, int> left_turn_speeds = {10, 10};
     int speed = 10;
+    std::string comPort;
 
 public:
     // Constructor

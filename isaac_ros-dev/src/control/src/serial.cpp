@@ -1,6 +1,6 @@
 #include "serial.hpp"
 
-Serial::Serial(){
+Serial::Serial() : serial_port(io_service){
     
 }
 
@@ -47,11 +47,11 @@ bool Serial::write(const std::string &message) {
 
 }
 
-void Serial::read(std::string &buffer){
+void Serial::read(const std::string &buffer){
 
     last_string = "";
     boost::asio::async_read_until(serial_port, boost::asio::dynamic_buffer(last_string), '\n', 
-    boost::bind(&Serial::read_handler, this, boost::placeholders::_1, boost::placeholders::_2));
+    std::bind(&Serial::read_handler, this, std::placeholders::_1, std::placeholders::_2));
 }
 
 void Serial::read_handler(const boost::system::error_code &error, std::size_t bytes_transferred) {
