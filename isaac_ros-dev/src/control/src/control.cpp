@@ -4,6 +4,7 @@
 #include "motor_controller.hpp"
 #include "sensor_msgs/msg/joy.hpp"
 #include "geometry_msgs/msg/twist.hpp" 
+#include <queue>
 //#include "autonav_interfaces/msg/Encoders.msg"
 
 class ControlNode : public rclcpp::Node {
@@ -97,12 +98,32 @@ class ControlNode : public rclcpp::Node {
         }
     }
 
-    /*void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
-        if (autonomousMode) {
-            double linear_speed = msg->linear.x;
-            double angular_speed = msg->angular.z; 
+
+
+    void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
+        struct AutonomousCmd{
+            double linearX;
+            double linearY;
+            double angularZ;
         }
-    }*/
+        std::queue<AutonomousCmd> pathCommands;
+
+        if (autonomousMode) {
+            for(int i = 0; i < msg.size(); i++){
+                AutonomousCmd cmd;
+                cmd.linearX = msg[i].linearX;
+                cmd.linearY = msg[i].linearY;
+                cmd.angularZ = msg[i].angularZ;
+                pathCommands.push(cmd);
+            }
+
+            while(!queue.empty()){
+                    
+
+                queue.pop();
+            }
+        }
+    }
 
     /*void publish_encoder_data() {
         autonav_interfaces::msg::Encoders encoder_msg;
