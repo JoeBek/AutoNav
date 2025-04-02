@@ -13,9 +13,9 @@ def generate_launch_description():
 
     package_name='control'
 
-    control = Node (
-        package='control'
+    control_node = Node (
+        package='control',
         executable='control'
     )
 
-    return LaunchDescription([])
+    return LaunchDescription([control_node])
