@@ -6,7 +6,7 @@
 #include <utility>
 #include <opencv2/opencv.hpp>
 
-static void HandleError( cudaError_t err,
+[[maybe_unused]] static void HandleError( cudaError_t err,
                          const char *file,
                          int line ) {
     if (err != cudaSuccess) {

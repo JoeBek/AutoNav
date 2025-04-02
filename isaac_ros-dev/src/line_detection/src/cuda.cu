@@ -2,7 +2,7 @@
  * Cuda kernels for fast Line detection processing
  * 
  */
-#include "cuda.cuh"
+#include "line_detection/cuda.cuh"
 
 // the window has to be odd
 #define HALF_WINDOW_SIZE 3 // this produces a window of n * 2 + 1 size

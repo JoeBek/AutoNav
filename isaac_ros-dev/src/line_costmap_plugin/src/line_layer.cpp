@@ -50,6 +50,14 @@ using nav2_costmap_2d::LETHAL_OBSTACLE;
 using nav2_costmap_2d::INSCRIBED_INFLATED_OBSTACLE;
 using nav2_costmap_2d::NO_INFORMATION;
 
+// helper methods outside namespace
+
+template <typename T>
+bool within_bounds(T value, T min, T max) {
+
+  return (value >= min) && (value <= max);
+}
+
 namespace nav2_gradient_costmap_plugin
 {
 
@@ -165,22 +173,43 @@ LineLayer::updateCosts(
   max_i = std::min(static_cast<int>(size_x), max_i);
   max_j = std::min(static_cast<int>(size_y), max_j);
 
-  int gradient_index;
-  for (int j = min_j; j < max_j; j++) {
-    gradient_index = 0;
-    for (int i = min_i; i < max_i; i++) {
-      int index = master_grid.getIndex(i, j);
-      // setting the gradient cost
-      unsigned char cost = (LETHAL_OBSTACLE - gradient_index*GRADIENT_FACTOR)%255;
-      if (gradient_index <= GRADIENT_SIZE) {
-        gradient_index++;
-      } else {
-        gradient_index = 0;
-      }
-      master_array[index] = cost;
-    }
+  // joe was here
+
+  // create service client
+  auto node = node_.lock();
+  auto client = node->create_client<autonav_interfaces::srv::anv_lines>("line_service");
+
+  if (!client->wait_for_service(std::chrono::seconds(1))) {
+    RCLCPP_ERROR(node->get_logger(), "Service not available");
+    return;
   }
-}
+
+  // create request
+  auto request = std::make_shared<autonav_interfaces::srv::anv_lines::Request>();
+  // call service
+  geometry_msgs::msg::Vector3 result = client->async_send_request(request);
+
+  // await result
+  if (rclcpp::spin_until_future_complete(node, result) != rclcpp::FutureReturnCode::SUCCESS) {
+    RCLCPP_ERROR(node->get_logger(), "service call failed: line detection");
+  }
+
+  // add points to costmap, include bounds checking
+  for (auto &point : result) {
+
+    int x = static_cast<int>(point.x);
+    int y = static_cast<int>(point.y);
+    if (!within_bounds(x, min_i, max_i) || !within_bounds(y, min_j, max_j)) {
+
+      continue;
+    }
+    int index_costmap = master_grid.getIndex(x, y);
+
+    unsigned char cost = LETHAL_OBSTACLE; // maybe more dynamic down the line
+    master_array[index] = cost; // overwrites cost map
+
+  }
+
 
 }  // namespace nav2_gradient_costmap_plugin
 

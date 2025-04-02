@@ -10,11 +10,15 @@ endif()
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 find_package(ament_cmake REQUIRED)
+find_package(geometry_msgs REQUIRED)
+
+
+
 
 find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/anv_int2_point.msg"
-  "msg/anv_point_list.msg"
+	srv/AnvLines.srv
+	DEPENDENCIES geometry_msgs
 )
 
 
