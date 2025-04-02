@@ -100,30 +100,30 @@ class ControlNode : public rclcpp::Node {
 
 
 
-    void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
-        struct AutonomousCmd{
-            double linearX;
-            double linearY;
-            double angularZ;
-        }
-        std::queue<AutonomousCmd> pathCommands;
+    // void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
+    //     struct AutonomousCmd{
+    //         double linearX;
+    //         double linearY;
+    //         double angularZ;
+    //     }
+    //     std::queue<AutonomousCmd> pathCommands;
 
-        if (autonomousMode) {
-            for(int i = 0; i < msg.size(); i++){
-                AutonomousCmd cmd;
-                cmd.linearX = msg[i].linearX;
-                cmd.linearY = msg[i].linearY;
-                cmd.angularZ = msg[i].angularZ;
-                pathCommands.push(cmd);
-            }
+    //     if (autonomousMode) {
+    //         for(int i = 0; i < msg.size(); i++){
+    //             AutonomousCmd cmd;
+    //             cmd.linearX = msg[i].linearX;
+    //             cmd.linearY = msg[i].linearY;
+    //             cmd.angularZ = msg[i].angularZ;
+    //             pathCommands.push(cmd);
+    //         }
 
-            while(!queue.empty()){
+    //         while(!queue.empty()){
                     
 
-                queue.pop();
-            }
-        }
-    }
+    //             queue.pop();
+    //         }
+    //     }
+    // }
 
     /*void publish_encoder_data() {
         autonav_interfaces::msg::Encoders encoder_msg;
