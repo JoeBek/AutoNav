@@ -19,6 +19,10 @@
         <color rgba="0 0 0 1"/>
     </material>
 
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+
     <!--START OF BASE LINK-->
     <link name="base_link">
 
@@ -54,6 +58,11 @@
         <xacro:inertial_box mass="0.5" x="0.8636" y="0.4572" z="0.41021">
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_box>
+        <inertial>
+            <mass value="5.0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+        </inertial>
     </link>
 
     <gazebo reference="chassis">
@@ -62,7 +71,7 @@
     <!--END OF CHASSIS MODEL-->
     <!--END OF CHASSIS LINK-->
 
-    <!--START OF LEFT WHEEL LINK-->
+    <!--START OF LEFT Wros2 lauros2 launch autonav_sim launch_sim.launch.py world:=./src/autonav_sim/worlds/autonav_igvc_course.worldnch autonav_sim launch_sim.launch.py world:=./src/autonav_sim/worlds/autonav_igvc_course.worldHEEL LINK-->
     <joint name="left_wheel_joint" type="continuous">
         <parent link="base_link"/>
         <child link="left_wheel"/>

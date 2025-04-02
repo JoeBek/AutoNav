@@ -46,7 +46,7 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  DIRECTORY config description launch worlds
+  DIRECTORY config description launch worlds custom_models
   DESTINATION share/${PROJECT_NAME}
 )
 
