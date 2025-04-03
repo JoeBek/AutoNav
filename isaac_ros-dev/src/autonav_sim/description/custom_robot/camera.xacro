@@ -34,7 +34,7 @@
         <material>Gazebo/Red</material>
         
         <sensor name="camera" type="camera">
-            <pose> 0 0 0 0 0 0 </pose>
+            <pose> 0 0 0 0 -1.5 0 </pose>
             <visualize>true</visualize>
             <update_rate>10</update_rate>
             <camera>
