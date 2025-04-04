@@ -1,10 +1,12 @@
 #include <rclcpp/rclcpp.hpp>
-#include "serial.hpp"
+#include "serialib.hpp"
 #include "xbox.hpp"
 #include "motor_controller.hpp"
 #include "sensor_msgs/msg/joy.hpp"
 #include "geometry_msgs/msg/twist.hpp" 
 #include <queue>
+#include <iostream>
+
 //#include "autonav_interfaces/msg/Encoders.msg"
 
 class ControlNode : public rclcpp::Node {
@@ -15,7 +17,6 @@ class ControlNode : public rclcpp::Node {
       : Node("control_node")
        {
         
-
         /*encoder_timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100),
             std::bind(&ControlNode::publish_encoder_data, this)
@@ -46,8 +47,8 @@ class ControlNode : public rclcpp::Node {
 
     private:
 
-    Serial arduinoSerial;
-    Serial gpsSerial;
+    serialib arduinoSerial;
+    serialib gpsSerial;
     Xbox controller;
     MotorController motors;
 
@@ -63,7 +64,7 @@ class ControlNode : public rclcpp::Node {
     
 
     void joystick_callback(const sensor_msgs::msg::Joy::SharedPtr joy_msg) {
-
+        std::cout << "Test";
         if(!autonomousMode){
             controller.set_b(joy_msg->buttons[1]);
             controller.set_x(joy_msg->buttons[2]);
@@ -93,7 +94,8 @@ class ControlNode : public rclcpp::Node {
             }
             else if (command.cmd == Xbox::CHANGE_MODE){
                 autonomousMode = 1;
-                arduinoSerial.write("1");
+                char buffer[3] = "1\n";
+                arduinoSerial.writeString(buffer);
             }
         }
     }
@@ -136,8 +138,8 @@ class ControlNode : public rclcpp::Node {
 
     void initialize_serial_connections() {
         // Open all serial connections on startup
-        arduinoSerial.open();
-        gpsSerial.open();                        
+        //arduinoSerial.openDevice("/dev/ttyACM#", 115200);
+        //gpsSerial.openDevice("/dev/ttyACM#", 115200);                        
     }
 
 };

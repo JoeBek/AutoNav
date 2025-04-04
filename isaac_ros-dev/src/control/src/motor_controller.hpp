@@ -2,11 +2,11 @@
 #include <string>
 #include <thread>
 #include <chrono>
-#include "serial.hpp"
+#include "serialib.hpp"
 
 class MotorController {
 private:
-    Serial motorSerial;
+    serialib motorSerial;
     int stepSize;
     std::pair<int, int> right_turn_speeds = {-10, -10};
     std::pair<int, int> left_turn_speeds = {10, 10};
