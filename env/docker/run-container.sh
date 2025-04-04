@@ -7,7 +7,9 @@ set -e # makes script exit on command failure
 IMAGE_TAG="autonav:koopa-kingdom"
 CONTAINER_NAME="koopa-kingdom"
 WORKDIR="$HOME/AutoNav/isaac_ros-dev/"
-ENTRYPOINT="$HOME/AutoNav/env/docker/entrypoint.sh"
+ENTRYPOINT="/usr/local/bin/scripts/entrypoint.sh"
+SCRIPT_DIR="$(dirname ${BASH_SOURCE[0]})"
+
 
 
 DOCKER_ARGS=()
@@ -15,6 +17,13 @@ DOCKER_ARGS=()
 # networking
 DOCKER_ARGS+=("--network host") # host network stack
 DOCKER_ARGS+=("--ipc=host") # shares IPC namespace
+DOCKER_ARGS+=("-e ROS_DOMAIN_ID")
+DOCKER_ARGS+=("-e USER")
+DOCKER_ARGS+=("-e HOST_USER_UID=`id -u`")
+DOCKER_ARGS+=("-e HOST_USER_GID=`id -g`")
+DOCKER_ARGS+=("-e WORKDIR=$WORKDIR")
+
+
 
 # GPU
 DOCKER_ARGS+=("-e NVIDIA_VISIBLE_DEVICES=all")
@@ -39,8 +48,21 @@ fi
 DOCKER_ARGS+=("-v $WORKDIR:/workspace/isaac_ros-dev") # mount workspace 
 DOCKER_ARGS+=("-v /etc/localtime:/etc/localtime:ro") # sync time or something
 DOCKER_ARGS+=("--workdir /workspace/isaac_ros-dev") # mount workspace 
-DOCKER_ARGS+=("PS1=\"bowser@koopa-kingdom:\w # \"") # set cool prompt
-#DOCKER_ARGS+=("--entrypoint $ENTRYPOINT")
+DOCKER_ARGS+=("-v $SCRIPT_DIR/entrypoints:/usr/local/bin/scripts/entrypoint_additions") # mount entrypoint scripts
+DOCKER_ARGS+=("-v $SCRIPT_DIR/entrypoint.sh:/usr/local/bin/scripts/entrypoint.sh") # mount entrypoint
+#DOCKER_ARGS+=("-e PS1='bowser@koopa-kingdom:\\w # '") # set cool prompt
+DOCKER_ARGS+=("--entrypoint $ENTRYPOINT")
+
+
+# Re-use existing container.
+if [ "$(docker ps -a --quiet --filter status=running --filter name=$CONTAINER_NAME)" ]; then
+    print_info "Attaching to running container: $CONTAINER_NAME"
+    C_WORKDIR=$(docker exec $CONTAINER_NAME printenv WORKDIR)
+    print_info "Docker workspace: $C_WORKDIR"
+    docker exec -i -t -u admin --workdir $C_WORKDIR $CONTAINER_NAME /bin/bash $@
+    exit 0
+fi
+
 
 
 docker run -it --rm \

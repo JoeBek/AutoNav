@@ -47,7 +47,7 @@ shopt -s nullglob
 for addition in /usr/local/bin/scripts/entrypoint_additions/*.sh; do
   if [[ "${addition}" =~ ".user." ]]; then
     echo "Running entryrypoint extension: ${addition} as user ${USERNAME}"
-    gosu ${USERNAME} ${addition}
+    #gosu ${USERNAME} ${addition}
   else
     echo "Sourcing entryrypoint extension: ${addition}"
     source ${addition}
