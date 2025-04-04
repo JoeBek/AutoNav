@@ -4,7 +4,7 @@ set -e # makes script exit on command failure
 
 # set params
 
-IMAGE_TAG="autonav:koopa-kingdom"
+IMAGE_TAG="dev:koopa-kingdom"
 CONTAINER_NAME="koopa-kingdom"
 WORKDIR="$HOME/AutoNav/isaac_ros-dev/"
 ENTRYPOINT="/usr/local/bin/scripts/entrypoint.sh"
@@ -48,7 +48,7 @@ fi
 DOCKER_ARGS+=("-v $WORKDIR:/workspace/isaac_ros-dev") # mount workspace 
 DOCKER_ARGS+=("-v /etc/localtime:/etc/localtime:ro") # sync time or something
 DOCKER_ARGS+=("--workdir /workspace/isaac_ros-dev") # mount workspace 
-DOCKER_ARGS+=("-v $SCRIPT_DIR/entrypoints:/usr/local/bin/scripts/entrypoint_additions") # mount entrypoint scripts
+DOCKER_ARGS+=("-v $SCRIPT_DIR/entrypoint_additions:/usr/local/bin/scripts/entrypoint_additions") # mount entrypoint scripts
 DOCKER_ARGS+=("-v $SCRIPT_DIR/entrypoint.sh:/usr/local/bin/scripts/entrypoint.sh") # mount entrypoint
 #DOCKER_ARGS+=("-e PS1='bowser@koopa-kingdom:\\w # '") # set cool prompt
 DOCKER_ARGS+=("--entrypoint $ENTRYPOINT")

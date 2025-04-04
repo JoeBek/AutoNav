@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # configure networking for LiDAR
-ifconfig eth0 up
-ifconfig eth0 192.168.0.2 netmask 255.255.255.0
-tput 5
+ifconfig set eth0 up
+ip addr add 192.168.0.2/24 dev eth0
+tput setaf 5
 echo "LiDAR configured... go get em tiger"
 tput sgr0
