@@ -4,7 +4,7 @@ set -e # makes script exit on command failure
 
 # set params
 
-IMAGE_ID="autonav:koopa-kingdom"
+IMAGE_TAG="autonav:koopa-kingdom"
 CONTAINER_NAME="koopa-kingdom"
 WORKDIR="$HOME/AutoNav/isaac_ros-dev/"
 ENTRYPOINT="$HOME/AutoNav/env/docker/entrypoint.sh"
@@ -32,11 +32,14 @@ if [[ $PLATFORM == "aarch64" ]]; then
 	DOCKER_ARGS+=("-v /usr/bin/tegrastats:/usr/bin/tegrastats") # mount tegra stats
 	DOCKER_ARGS+=("-v /usr/lib/aarch64-linux-gnu/tegra:/usr/lib/aarch64-linux-gnu/tegra") # mount tegra stats
 	DOCKER_ARGS+=("--pid-host")
+fi
+
 
 # mount dev fs, entrypoint, set working directory
 DOCKER_ARGS+=("-v $WORKDIR:/workspace/isaac_ros-dev") # mount workspace 
 DOCKER_ARGS+=("-v /etc/localtime:/etc/localtime:ro") # sync time or something
 DOCKER_ARGS+=("--workdir /workspace/isaac_ros-dev") # mount workspace 
+DOCKER_ARGS+=("PS1=\"bowser@koopa-kingdom:\w # \"") # set cool prompt
 #DOCKER_ARGS+=("--entrypoint $ENTRYPOINT")
 
 
@@ -47,9 +50,4 @@ docker run -it --rm \
 	--runtime nvidia \
 	$IMAGE_TAG \
 	/bin/bash
-
-
-
-
-
 
