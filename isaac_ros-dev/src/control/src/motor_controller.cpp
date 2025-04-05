@@ -12,6 +12,8 @@ MotorController::MotorController(){
   else{
     printf ("Successful connection to %s\n",SERIAL_PORT);
   }
+  printf ("Return Code: %c\n", errorOpening);
+
 }
 
 // moves the robot forward
