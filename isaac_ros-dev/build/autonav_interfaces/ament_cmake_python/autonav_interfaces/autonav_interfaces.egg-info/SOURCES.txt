@@ -1,6 +1,0 @@
-setup.py
-autonav_interfaces/__init__.py
-autonav_interfaces.egg-info/PKG-INFO
-autonav_interfaces.egg-info/SOURCES.txt
-autonav_interfaces.egg-info/dependency_links.txt
-autonav_interfaces.egg-info/top_level.txt

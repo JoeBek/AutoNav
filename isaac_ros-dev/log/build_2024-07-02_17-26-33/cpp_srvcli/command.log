@@ -1,2 +1,0 @@
-Invoking command in '/workspaces/isaac_ros-dev/build/cpp_srvcli': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/cpp_srvcli -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/cpp_srvcli
-Invoked command in '/workspaces/isaac_ros-dev/build/cpp_srvcli' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/cpp_srvcli -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/cpp_srvcli

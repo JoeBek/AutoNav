@@ -1,1 +1,0 @@
-Invoking command in '/home/joe/vt/autonav/ros2_ws/build/zed_topic_benchmark_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joe/vt/autonav/ros2_ws/src/zed-ros2-examples/tools/zed_benchmark_interfaces -DCMAKE_INSTALL_PREFIX=/home/joe/vt/autonav/ros2_ws/install/zed_topic_benchmark_interfaces

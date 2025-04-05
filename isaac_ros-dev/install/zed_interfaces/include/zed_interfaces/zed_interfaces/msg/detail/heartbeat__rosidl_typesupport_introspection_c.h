@@ -1,1 +1,0 @@
-/workspaces/isaac_ros-dev/build/zed_interfaces/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_introspection_c.h

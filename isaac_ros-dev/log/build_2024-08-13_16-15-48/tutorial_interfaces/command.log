@@ -1,4 +1,0 @@
-Invoking command in '/workspaces/isaac_ros-dev/build/tutorial_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/tutorial_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/tutorial_interfaces
-Invoked command in '/workspaces/isaac_ros-dev/build/tutorial_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/tutorial_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/tutorial_interfaces
-Invoking command in '/workspaces/isaac_ros-dev/build/tutorial_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/tutorial_interfaces -- -j6 -l6
-Invoked command in '/workspaces/isaac_ros-dev/build/tutorial_interfaces' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/isaac_ros-dev/build/tutorial_interfaces -- -j6 -l6

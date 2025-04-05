@@ -1,6 +1,0 @@
-{
-  "package_name": "more_interfaces",
-  "non_idl_tuples": [
-    "/workspaces/isaac_ros-dev/src/more_interfaces:msg/AddressBook.msg"
-  ]
-}

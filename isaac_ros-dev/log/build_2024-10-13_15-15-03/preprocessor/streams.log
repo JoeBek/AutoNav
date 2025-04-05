@@ -1,4 +1,0 @@
-[0.023s] Invoking command in '/home/joe/vt/autonav/ros2_ws/build/preprocessor': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joe/vt/autonav/ros2_ws/build/preprocessor -- -j8 -l8
-[0.087s] [ 50%] [32mBuilding CXX object CMakeFiles/preprocess.dir/src/preprocess.cpp.o[0m
-[14.488s] [100%] [32m[1mLinking CXX executable preprocess[0m
-[15.443s] [100%] Built target preprocess

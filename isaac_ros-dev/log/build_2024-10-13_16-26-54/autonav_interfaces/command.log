@@ -1,2 +1,0 @@
-Invoking command in '/home/joe/vt/autonav/ros2_ws/build/autonav_interfaces': /usr/bin/cmake --build /home/joe/vt/autonav/ros2_ws/build/autonav_interfaces -- -j8 -l8
-Invoked command in '/home/joe/vt/autonav/ros2_ws/build/autonav_interfaces' returned '2': /usr/bin/cmake --build /home/joe/vt/autonav/ros2_ws/build/autonav_interfaces -- -j8 -l8

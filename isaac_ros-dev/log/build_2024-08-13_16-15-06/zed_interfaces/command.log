@@ -1,1 +1,0 @@
-Invoking command in '/workspaces/isaac_ros-dev/build/zed_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/isaac_ros-dev/src/zed-ros2-wrapper/zed-ros2-interfaces -DCMAKE_INSTALL_PREFIX=/workspaces/isaac_ros-dev/install/zed_interfaces
