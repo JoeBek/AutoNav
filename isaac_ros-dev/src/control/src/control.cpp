@@ -1,3 +1,4 @@
+
 #include <rclcpp/rclcpp.hpp>
 #include "serialib.hpp"
 #include "xbox.hpp"
@@ -9,9 +10,11 @@
 
 //#include "autonav_interfaces/msg/Encoders.msg"
 
+
 class ControlNode : public rclcpp::Node {
 
     public:
+
 
     ControlNode() 
       : Node("control_node")
@@ -141,6 +144,7 @@ class ControlNode : public rclcpp::Node {
         //arduinoSerial.openDevice("/dev/ttyACM#", 115200);
         //gpsSerial.openDevice("/dev/ttyACM#", 115200);                        
     }
+
 
 };
 

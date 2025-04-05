@@ -1,3 +1,4 @@
+
 #include "xbox.hpp"
 
 Xbox::Xbox() 
@@ -113,3 +114,4 @@ Xbox::CommandData Xbox::calculateCommand(){
     return cmd;
   }
 }
+

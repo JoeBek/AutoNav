@@ -14,24 +14,27 @@
             </geometry>
             <material name="red"/>
         </visual>
+        <inertial>
+            <mass value="0.1"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001"/>
+        </inertial>
     </link>
 
 
     <joint name="camera_optical_joint" type="fixed">
         <parent link="camera_link"/>
         <child link="camera_link_optical"/>
-        <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+        <origin xyz="0 0 0" rpy="${-pi/2} ${-pi/4} ${-pi/2}"/>
     </joint>
 
     <link name="camera_link_optical"></link>
-
-
 
     <gazebo reference="camera_link">
         <material>Gazebo/Red</material>
         
         <sensor name="camera" type="camera">
-            <pose> 0 0 0 0 0 0 </pose>
+            <pose> 0 0 0 0 -1.5 0 </pose>
             <visualize>true</visualize>
             <update_rate>10</update_rate>
             <camera>

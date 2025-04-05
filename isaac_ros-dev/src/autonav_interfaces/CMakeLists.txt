@@ -9,12 +9,21 @@ endif()
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
+find_package(ament_cmake REQUIRED)
+find_package(geometry_msgs REQUIRED)
+
+
+
 
 find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Object.msg"
-  "msg/ObjectList.msg"
-  "msg/Encoders.msg"
+
+  msg/Object.msg
+  msg/ObjectList.msg
+  msg/Encoders.msg
+	srv/AnvLines.srv
+	DEPENDENCIES geometry_msgs
+
 )
 
 

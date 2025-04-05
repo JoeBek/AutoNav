@@ -1,0 +1,10 @@
+slam_toolbox:
+  ros__parameters:
+    # Frames
+    map_frame: map
+    base_frame: base_link
+    odom_frame: odom
+    
+    # Important SLAM parameters
+    use_sim_time: true  # Set to true if you're using Gazebo
+    mode: mapping  # or localization if you're using a pre-built map
