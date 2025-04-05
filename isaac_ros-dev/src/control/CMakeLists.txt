@@ -5,24 +5,23 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# find dependencies
+
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
-
-find_package(rclcpp REQUIRED)
-find_package(Boost REQUIRED COMPONENTS system)
 find_package(sensor_msgs REQUIRED)
+find_package(rclcpp REQUIRED)
 
-add_executable(control src/control.cpp src/serial.cpp src/xbox.cpp)
-ament_target_dependencies(control rclcpp)
-target_link_libraries(control ${Boost_LIBRARIES})
-target_include_directories(control PRIVATE src)
+add_executable(control src/control.cpp
+  src/control.cpp 
+  src/xbox.cpp 
+  src/motor_controller.cpp 
+  src/serialib.cpp
+)
+ament_target_dependencies(control rclcpp sensor_msgs)
 
-install(TARGETS
+install(TARGETS 
   control
-  DESTINATION lib/${PROJECT_NAME})
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 
 if(BUILD_TESTING)
@@ -36,5 +35,12 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+
+install (
+  DIRECTORY src
+  DESTINATION share/$(PROJECT_NAME)
+)
+
 
 ament_package()

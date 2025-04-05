@@ -1,4 +1,4 @@
-*:Zone.Identifier
 
-
-
+build/
+log/
+install/

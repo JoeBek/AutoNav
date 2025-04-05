@@ -1,0 +1,45 @@
+[0.027s] Invoking command in '/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim -- -j16 -l16
+[0.114s] [35m[1mConsolidate compiler generated dependencies of target opencv_node[0m
+[0.140s] [100%] Built target opencv_node
+[0.152s] Invoked command in '/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim -- -j16 -l16
+[0.163s] Invoking command in '/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim
+[0.172s] -- Install configuration: ""
+[0.175s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/lib/autonav_sim/opencv_node
+[0.176s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/config
+[0.176s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/config/view_bot.rviz
+[0.176s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description
+[0.176s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/custom_robot
+[0.176s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/custom_robot/robot_core.xacro
+[0.177s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/custom_robot/inertial_macros.xacro
+[0.177s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/custom_robot/camera.xacro
+[0.177s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/custom_robot/robot.urdf.xacro
+[0.177s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/custom_robot/gazebo_control.xacro
+[0.177s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/tester_robot
+[0.177s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/tester_robot/robot_core.xacro
+[0.178s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/tester_robot/inertial_macros.xacro
+[0.178s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/tester_robot/camera.xacro
+[0.178s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/tester_robot/robot.urdf.xacro
+[0.178s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/description/tester_robot/gazebo_control.xacro
+[0.178s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/launch
+[0.178s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/launch/launch_sim.launch.py
+[0.178s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/launch/rsp.launch.py
+[0.178s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/launch/opencv_node.cpp
+[0.178s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/worlds
+[0.179s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/worlds/empty.world
+[0.179s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/worlds/autonav_igvc_course.world
+[0.179s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/ament_index/resource_index/package_run_dependencies/autonav_sim
+[0.179s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/ament_index/resource_index/parent_prefix_path/autonav_sim
+[0.180s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/environment/ament_prefix_path.sh
+[0.180s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/environment/ament_prefix_path.dsv
+[0.181s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/environment/path.sh
+[0.181s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/environment/path.dsv
+[0.181s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/local_setup.bash
+[0.181s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/local_setup.sh
+[0.182s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/local_setup.zsh
+[0.182s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/local_setup.dsv
+[0.183s] -- Installing: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/package.dsv
+[0.183s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/ament_index/resource_index/packages/autonav_sim
+[0.183s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/cmake/autonav_simConfig.cmake
+[0.183s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/cmake/autonav_simConfig-version.cmake
+[0.183s] -- Up-to-date: /home/john/AutoNav/isaac_ros-dev/src/install/autonav_sim/share/autonav_sim/package.xml
+[0.183s] Invoked command in '/home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/john/AutoNav/isaac_ros-dev/src/build/autonav_sim
