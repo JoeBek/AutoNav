@@ -1,6 +1,6 @@
 #include "motor_controller.hpp"
 
-#define SERIAL_PORT "/dev/ttyACM0"
+#define SERIAL_PORT "/dev/ttyACM12"
 
 // constructor
 MotorController::MotorController(){
@@ -12,6 +12,18 @@ MotorController::MotorController(){
   else{
     printf ("Successful connection to %s\n",SERIAL_PORT);
   }
+
+  std::string leftMotorCommand = "!C 1 0\r";
+  std::string rightMotorCommand = "!C 2 0 \r";
+  motorSerial.writeString(leftMotorCommand.c_str());
+  motorSerial.writeString(rightMotorCommand.c_str());
+  //getLeftMotorRPM();
+  //std::cout << getLeftMotorRPM();
+
+  /*while(getLeftMotorRPM() < 80000){
+    move(-10,10);
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+  }*/
 }
 
 // moves the robot forward
@@ -23,8 +35,8 @@ void MotorController::forward(){
     int leftMotorSpeed = -1 * (int)(stepSize * speed);
     int rightMotorSpeed = (int)(stepSize * speed);
 
-    std::string leftMotorCommand = "!G 1" + std::to_string(leftMotorSpeed) + "\r";
-    std::string rightMotorCommand = "!G 2" + std::to_string(rightMotorSpeed) + "\r";
+    std::string leftMotorCommand = "!G 1 " + std::to_string(leftMotorSpeed) + "\r";
+    std::string rightMotorCommand = "!G 2 " + std::to_string(rightMotorSpeed) + "\r";
 
     motorSerial.writeString(leftMotorCommand.c_str());
     motorSerial.writeString(rightMotorCommand.c_str());
@@ -40,8 +52,8 @@ void MotorController::backward(){
     int leftMotorSpeed = (int)(stepSize * speed);
     int rightMotorSpeed = -1 * (int)(stepSize * speed);
 
-    std::string leftMotorCommand = "!G 1" + std::to_string(leftMotorSpeed) + "\r";
-    std::string rightMotorCommand = "!G 2" + std::to_string(rightMotorSpeed) + "\r";
+    std::string leftMotorCommand = "!G 1 " + std::to_string(leftMotorSpeed) + "\r";
+    std::string rightMotorCommand = "!G 2 " + std::to_string(rightMotorSpeed) + "\r";
 
     motorSerial.writeString(leftMotorCommand.c_str());
     motorSerial.writeString(rightMotorCommand.c_str());
@@ -57,8 +69,8 @@ void MotorController::turnLeft(){
     int leftMotorSpeed = (int)(stepSize * left_turn_speeds.first);
     int rightMotorSpeed = (int)(stepSize * left_turn_speeds.second);
 
-    std::string leftMotorCommand = "!G 1" + std::to_string(leftMotorSpeed) + "\r";
-    std::string rightMotorCommand = "!G 2" + std::to_string(rightMotorSpeed) + "\r";
+    std::string leftMotorCommand = "!G 1 " + std::to_string(leftMotorSpeed) + "\r";
+    std::string rightMotorCommand = "!G 2 " + std::to_string(rightMotorSpeed) + "\r";
 
     motorSerial.writeString(leftMotorCommand.c_str());
     motorSerial.writeString(rightMotorCommand.c_str());
@@ -74,8 +86,8 @@ void MotorController::turnRight(){
     int leftMotorSpeed = (int)(stepSize * right_turn_speeds.first);
     int rightMotorSpeed = (int)(stepSize * right_turn_speeds.second);
 
-    std::string leftMotorCommand = "!G 1" + std::to_string(leftMotorSpeed) + "\r";
-    std::string rightMotorCommand = "!G 2" + std::to_string(rightMotorSpeed) + "\r";
+    std::string leftMotorCommand = "!G 1 " + std::to_string(leftMotorSpeed) + "\r";
+    std::string rightMotorCommand = "!G 2 " + std::to_string(rightMotorSpeed) + "\r";
 
     motorSerial.writeString(leftMotorCommand.c_str());
     motorSerial.writeString(rightMotorCommand.c_str());
@@ -88,8 +100,8 @@ void MotorController::move(float right_speed, float left_speed){
     int leftMotorSpeed = (int)(stepSize * left_speed);
     int rightMotorSpeed = (int)(stepSize * right_speed);
 
-    std::string leftMotorCommand = "!G 1" + std::to_string(leftMotorSpeed) + "\r";
-    std::string rightMotorCommand = "!G 2" + std::to_string(rightMotorSpeed) + "\r";
+    std::string leftMotorCommand = "!G 1 " + std::to_string(leftMotorSpeed) + "\r";
+    std::string rightMotorCommand = "!G 2 " + std::to_string(rightMotorSpeed) + "\r";
 
     motorSerial.writeString(leftMotorCommand.c_str());
     motorSerial.writeString(rightMotorCommand.c_str());
@@ -133,13 +145,13 @@ int MotorController::getSpeed(){
 
 int MotorController::getLeftMotorRPM(){
   std::string command = "?C 1\r";
-  char readBuffer[15] = {};
+  char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
-  motorSerial.readString(readBuffer, '\n', 20, 1000);
-
+  motorSerial.readString(readBuffer, '\n', 40, 100);
+  std::cout << readBuffer << std::endl;
   std::string encoderCount = "";
     bool equalSign = false;
-    for (int i = 0; i < 15; i++) {
+    for (int i = 0; i < 40; i++) {
         std::cout << readBuffer[i] << std::endl;
 
         if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
@@ -149,19 +161,18 @@ int MotorController::getLeftMotorRPM(){
             equalSign = true;
         }
     }
-
   return std::stoi(encoderCount);
 }
 
 int MotorController::getRightMotorRPM(){
   std::string command = "?C 2\r";
-  char readBuffer[15] = {};
+  char readBuffer[16] = {};
   motorSerial.writeString(command.c_str());  
-  motorSerial.readString(readBuffer, '\n', 20, 1000);
+  motorSerial.readString(readBuffer, '\n', 15, 1000);
 
   std::string encoderCount = "";
     bool equalSign = false;
-    for (int i = 0; i < 15; i++) {
+    for (int i = 0; i < 16; i++) {
         std::cout << readBuffer[i] << std::endl;
 
         if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
@@ -172,5 +183,6 @@ int MotorController::getRightMotorRPM(){
         }
     }
 
-  return std::stoi(encoderCount);
+  int test = std::stoi(encoderCount);
+  return test;
 }
