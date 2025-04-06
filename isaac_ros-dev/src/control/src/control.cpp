@@ -67,7 +67,6 @@ class ControlNode : public rclcpp::Node {
     
 
     void joystick_callback(const sensor_msgs::msg::Joy::SharedPtr joy_msg) {
-        std::cout << "Test";
         if(!autonomousMode){
             controller.set_b(joy_msg->buttons[1]);
             controller.set_x(joy_msg->buttons[2]);
@@ -96,9 +95,9 @@ class ControlNode : public rclcpp::Node {
                 motors.shutdown();
             }
             else if (command.cmd == Xbox::CHANGE_MODE){
-                autonomousMode = 1;
-                char buffer[3] = "1\n";
-                arduinoSerial.writeString(buffer);
+                autonomousMode = true;
+                char mode[12] = "AUTONOMOUS\n";
+                arduinoSerial.writeString(mode);
             }
         }
     }
@@ -142,6 +141,8 @@ class ControlNode : public rclcpp::Node {
     void initialize_serial_connections() {
         // Open all serial connections on startup
         //arduinoSerial.openDevice("/dev/ttyACM#", 115200);
+        //char mode[8] = "MANUAL\n";
+        //arduinoSerial.writeString(mode);
         //gpsSerial.openDevice("/dev/ttyACM#", 115200);                        
     }
 
