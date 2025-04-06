@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(autonav_sim)
+project(sam_bot_description)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -17,22 +17,15 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(xacro REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
-#ADDED FILES FOR CAMERA SIMULATION
-find_package(rclcpp REQUIRED)
-find_package(sensor_msgs REQUIRED)
-find_package(cv_bridge REQUIRED)
-find_package(OpenCV REQUIRED)
-
-add_executable(opencv_node launch/opencv_node.cpp)
-ament_target_dependencies(opencv_node rclcpp sensor_msgs cv_bridge OpenCV)
-
-install(TARGETS
-  opencv_node
-  DESTINATION lib/${PROJECT_NAME})
+install(
+  DIRECTORY src launch rviz config world
+  DESTINATION share/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -44,10 +37,5 @@ if(BUILD_TESTING)
   #set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
-
-install(
-  DIRECTORY config description launch worlds custom_models
-  DESTINATION share/${PROJECT_NAME}
-)
 
 ament_package()
