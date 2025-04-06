@@ -99,6 +99,14 @@ class ControlNode : public rclcpp::Node {
                 char mode[12] = "AUTONOMOUS\n";
                 arduinoSerial.writeString(mode);
             }
+            
+            std::string arduinoRPMs = "L:";
+            arduinoRPMs += motors.getLeftRPM();
+            arduinoRPMs += " R:";
+            arduinoRPMs += motors.getRightRPM();
+            arduinoRPMs += "\n";
+            arduinoSerial.writeString(arduinoRPMs.c_str());
+            
         }
     }
 
@@ -131,8 +139,8 @@ class ControlNode : public rclcpp::Node {
 
     /*void publish_encoder_data() {
         autonav_interfaces::msg::Encoders encoder_msg;
-        encoder_msg.leftMotorRPM = motors.getLeftMotorRPM();
-        encoder_msg.rightMotorRPM = motors.getRightMotorRPM();
+        encoder_msg.leftMotorRPM = motors.getLeftEncoderCount();
+        encoder_msg.rightMotorRPM = motors.getRightEncoderCount();
         navigationEncoderPub->publish(encoder_msg);
 
         arduinoSerial.write("L" + std::to_string(encoder_msg.leftMotorRPM) + " R" + std::to_string(encoder_msg.rightMotorRPM));
