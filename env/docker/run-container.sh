@@ -22,6 +22,10 @@ DOCKER_ARGS+=("-e USER")
 DOCKER_ARGS+=("-e HOST_USER_UID=`id -u`")
 DOCKER_ARGS+=("-e HOST_USER_GID=`id -g`")
 DOCKER_ARGS+=("-e WORKDIR=$WORKDIR")
+DOCKER_ARGS+=("-v /var/run/dbus:/var/run/dbus")
+DOCKER_ARGS+=("-v /sys/class/bluetooth:/sys/class/bluetooth")
+
+
 
 
 
@@ -49,7 +53,7 @@ if [[ $PLATFORM == "aarch64" ]]; then
     DOCKER_ARGS+=("-v /usr/src/jetson_multimedia_api:/usr/src/jetson_multimedia_api")
        DOCKER_ARGS+=("--pid=host")
     DOCKER_ARGS+=("-v /usr/share/vpi3:/usr/share/vpi3")
-       DOCKER_ARGS+=("-v /dev/input:/dev/input")
+       DOCKER_ARGS+=("-v /dev:/dev")
 
        if [[ $(getent group jtop) ]]; then
 	       DOCKER_ARGS+=("-v /run/jtop.sock:/run/jtop.sock:ro")
