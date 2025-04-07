@@ -188,7 +188,7 @@ int MotorController::getRightEncoderCount(){
   return test;
 }
 
-std::string MotorController::getleftRPM(){
+std::string MotorController::getLeftRPM(){
   std::string command = "?BS 1\r";
   char readBuffer[16] = {};
   motorSerial.writeString(command.c_str());  

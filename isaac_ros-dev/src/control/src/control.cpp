@@ -4,11 +4,10 @@
 #include "xbox.hpp"
 #include "motor_controller.hpp"
 #include "sensor_msgs/msg/joy.hpp"
-#include "geometry_msgs/msg/twist.hpp" 
+#include "geometry_msgs/msg/twist.hpp"
+#include "autonav_interfaces/msg/encoders.hpp" 
 #include <queue>
 #include <iostream>
-
-//#include "autonav_interfaces/msg/Encoders.msg"
 
 
 class ControlNode : public rclcpp::Node {
@@ -30,16 +29,19 @@ class ControlNode : public rclcpp::Node {
         //XBOX SUB
         controllerSub = this->create_subscription<sensor_msgs::msg::Joy>(
             "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
+
+        //NAVIGATION ENCODER PUB
+        navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_topic", 10);
+        
+        timer_ = this->create_wall_timer(
+            std::chrono::milliseconds(100),
+            std::bind(&ControlNode::publish_encoder_data, this)
+        );
         
         //PATH PLANNING SUB
         /*pathPlanningSub = this->create_subscription<geometry_msgs::msg::Twist>(
             "cmd_vel", 10, std::bind(&ControlNode::path_planning_callback, this, std::placeholders::_1));
         
-        
-        //NAVIGATION ENCODER PUB
-        //navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_data", 10);
-
-
         //GPS PUB
         gpsPub = this->create_subscription<sensor_msgs::msg::Joy>(
             "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
@@ -64,9 +66,7 @@ class ControlNode : public rclcpp::Node {
 
     //rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr pathPlanningSub;
 
-    
-
-    void joystick_callback(const sensor_msgs::msg::Joy::SharedPtr joy_msgx) {
+    void joystick_callback(const sensor_msgs::msg::Joy::SharedPtr joy_msg) {
         if(!autonomousMode){
             controller.set_b(joy_msg->buttons[1]);
             controller.set_x(joy_msg->buttons[2]);
@@ -103,19 +103,28 @@ class ControlNode : public rclcpp::Node {
         else{
             //TODO: logic for checking if B button is pressed 
         }
-        std::string arduinoRPMs = "L:";
-        arduinoRPMs += motors.getLeftRPM();
-        arduinoRPMs += " R:";
-        arduinoRPMs += motors.getRightRPM();
-        arduinoRPMs += "\n";
-        arduinoSerial.writeString(arduinoRPMs.c_str());
+        // std::string arduinoRPMs = "L:";
+        // arduinoRPMs += motors.getLeftRPM();
+        // arduinoRPMs += " R:";
+        // arduinoRPMs += motors.getRightRPM();
+        // arduinoRPMs += "\n";
+        // arduinoSerial.writeString(arduinoRPMs.c_str());
     }
 
-
-
-    void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
-        //TODO: send motor commands based on pose
+    void publish_encoder_data() {
+        autonav_interfaces::msg::Encoders encoder_msg;
+        encoder_msg.left_motor_rpm = motors.getLeftRPM();
+        encoder_msg.right_motor_rpm = motors.getRightRPM();
+        navigationEncoderPub->publish(encoder_msg);
     }
+
+    rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr navigationEncoderPub;
+    rclcpp::TimerBase::SharedPtr timer_;
+
+
+    // void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
+    //     //TODO: send motor commands based on pose
+    // }
 
     /*void publish_encoder_data() {
         autonav_interfaces::msg::Encoders encoder_msg;

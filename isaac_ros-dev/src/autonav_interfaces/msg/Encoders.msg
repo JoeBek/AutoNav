@@ -1,2 +1,2 @@
-int leftMotorRPM
-int rightMotorRPM
+string left_motor_rpm
+string right_motor_rpm
