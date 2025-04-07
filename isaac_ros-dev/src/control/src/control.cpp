@@ -5,7 +5,8 @@
 #include "motor_controller.hpp"
 #include "sensor_msgs/msg/joy.hpp"
 #include "geometry_msgs/msg/twist.hpp"
-#include "autonav_interfaces/msg/encoders.hpp" 
+#include "autonav_interfaces/msg/encoders.hpp"
+#include "autonav_interfaces/msg/gps_data.hpp"  
 #include <queue>
 #include <iostream>
 
@@ -33,18 +34,22 @@ class ControlNode : public rclcpp::Node {
         //NAVIGATION ENCODER PUB
         navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_topic", 10);
         
-        timer_ = this->create_wall_timer(
+        encoder_timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100),
             std::bind(&ControlNode::publish_encoder_data, this)
+        );
+
+        //GPS PUB
+        gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>("gps_topic", 10);
+
+        gps_timer_ = this->create_wall_timer(
+            std::chrono::milliseconds(100),
+            std::bind(&ControlNode::publish_gps_data, this)
         );
         
         //PATH PLANNING SUB
         /*pathPlanningSub = this->create_subscription<geometry_msgs::msg::Twist>(
             "cmd_vel", 10, std::bind(&ControlNode::path_planning_callback, this, std::placeholders::_1));
-        
-        //GPS PUB
-        gpsPub = this->create_subscription<sensor_msgs::msg::Joy>(
-            "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
 
         arduinoSerial.write("0");*/
     }
@@ -118,22 +123,23 @@ class ControlNode : public rclcpp::Node {
         navigationEncoderPub->publish(encoder_msg);
     }
 
+    void publish_gps_data() {
+        autonav_interfaces::msg::GpsData gps_msg;
+        //gps_msg.latitude = gpsSerial.getLatitude();
+        //gps_msg.longitude = gpsSerial.getLongitude();
+        gpsPub->publish(gps_msg);
+    }
+
+    rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
+    rclcpp::TimerBase::SharedPtr gps_timer_;
+
     rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr navigationEncoderPub;
-    rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::TimerBase::SharedPtr encoder_timer_;
 
 
     // void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
     //     //TODO: send motor commands based on pose
     // }
-
-    /*void publish_encoder_data() {
-        autonav_interfaces::msg::Encoders encoder_msg;
-        encoder_msg.leftMotorRPM = motors.getLeftEncoderCount();
-        encoder_msg.rightMotorRPM = motors.getRightEncoderCount();
-        navigationEncoderPub->publish(encoder_msg);
-
-        arduinoSerial.write("L" + std::to_string(encoder_msg.leftMotorRPM) + " R" + std::to_string(encoder_msg.rightMotorRPM));
-    }*/
 
     void initialize_serial_connections() {
         // Open all serial connections on startup
