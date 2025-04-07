@@ -71,9 +71,7 @@ DOCKER_ARGS+=("--entrypoint $ENTRYPOINT")
 
 # Re-use existing container.
 if [ "$(docker ps -a --quiet --filter status=running --filter name=$CONTAINER_NAME)" ]; then
-    print_info "Attaching to running container: $CONTAINER_NAME"
     C_WORKDIR=$(docker exec $CONTAINER_NAME printenv WORKDIR)
-    print_info "Docker workspace: $C_WORKDIR"
     docker exec -i -t -u admin --workdir $C_WORKDIR $CONTAINER_NAME /bin/bash $@
     exit 0
 fi
