@@ -103,12 +103,12 @@ class ControlNode : public rclcpp::Node {
         else{
             //TODO: logic for checking if B button is pressed 
         }
-        // std::string arduinoRPMs = "L:";
-        // arduinoRPMs += motors.getLeftRPM();
-        // arduinoRPMs += " R:";
-        // arduinoRPMs += motors.getRightRPM();
-        // arduinoRPMs += "\n";
-        // arduinoSerial.writeString(arduinoRPMs.c_str());
+        std::string arduinoRPMs = "L:";
+        arduinoRPMs += motors.getLeftRPM();
+        arduinoRPMs += " R:";
+        arduinoRPMs += motors.getRightRPM();
+        arduinoRPMs += "\n";
+        arduinoSerial.writeString(arduinoRPMs.c_str());
     }
 
     void publish_encoder_data() {
