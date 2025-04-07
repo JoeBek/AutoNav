@@ -66,7 +66,7 @@ class ControlNode : public rclcpp::Node {
 
     
 
-    void joystick_callback(const sensor_msgs::msg::Joy::SharedPtr joy_msg) {
+    void joystick_callback(const sensor_msgs::msg::Joy::SharedPtr joy_msgx) {
         if(!autonomousMode){
             controller.set_b(joy_msg->buttons[1]);
             controller.set_x(joy_msg->buttons[2]);
@@ -98,44 +98,24 @@ class ControlNode : public rclcpp::Node {
                 autonomousMode = true;
                 char mode[12] = "AUTONOMOUS\n";
                 arduinoSerial.writeString(mode);
-            }
-            
-            std::string arduinoRPMs = "L:";
-            arduinoRPMs += motors.getLeftRPM();
-            arduinoRPMs += " R:";
-            arduinoRPMs += motors.getRightRPM();
-            arduinoRPMs += "\n";
-            arduinoSerial.writeString(arduinoRPMs.c_str());
-            
+            }  
         }
+        else{
+            //TODO: logic for checking if B button is pressed 
+        }
+        std::string arduinoRPMs = "L:";
+        arduinoRPMs += motors.getLeftRPM();
+        arduinoRPMs += " R:";
+        arduinoRPMs += motors.getRightRPM();
+        arduinoRPMs += "\n";
+        arduinoSerial.writeString(arduinoRPMs.c_str());
     }
 
 
 
-    // void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
-    //     struct AutonomousCmd{
-    //         double linearX;
-    //         double linearY;
-    //         double angularZ;
-    //     }
-    //     std::queue<AutonomousCmd> pathCommands;
-
-    //     if (autonomousMode) {
-    //         for(int i = 0; i < msg.size(); i++){
-    //             AutonomousCmd cmd;
-    //             cmd.linearX = msg[i].linearX;
-    //             cmd.linearY = msg[i].linearY;
-    //             cmd.angularZ = msg[i].angularZ;
-    //             pathCommands.push(cmd);
-    //         }
-
-    //         while(!queue.empty()){
-                    
-
-    //             queue.pop();
-    //         }
-    //     }
-    // }
+    void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
+        //TODO: send motor commands based on pose
+    }
 
     /*void publish_encoder_data() {
         autonav_interfaces::msg::Encoders encoder_msg;
