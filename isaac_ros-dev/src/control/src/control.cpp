@@ -46,7 +46,7 @@ class ControlNode : public rclcpp::Node {
         gpsPub = this->create_subscription<sensor_msgs::msg::Joy>(
             "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
 
-        arduinoSerial.write("0");*/
+        */
     }
 
 
@@ -103,18 +103,21 @@ class ControlNode : public rclcpp::Node {
         else{
             //TODO: logic for checking if B button is pressed 
         }
-        std::string arduinoRPMs = "L:";
-        arduinoRPMs += motors.getLeftRPM();
-        arduinoRPMs += " R:";
-        arduinoRPMs += motors.getRightRPM();
-        arduinoRPMs += "\n";
-        arduinoSerial.writeString(arduinoRPMs.c_str());
+        
     }
 
     void publish_encoder_data() {
         autonav_interfaces::msg::Encoders encoder_msg;
         encoder_msg.left_motor_rpm = motors.getLeftRPM();
         encoder_msg.right_motor_rpm = motors.getRightRPM();
+
+        std::string arduinoRPMs = "L:";
+        arduinoRPMs += motors.encoder_msg.left_motor_rpm;
+        arduinoRPMs += " R:";
+        arduinoRPMs += encoder_msg.right_motor_rpm;
+        arduinoRPMs += "\n";
+        arduinoSerial.writeString(arduinoRPMs.c_str());
+
         navigationEncoderPub->publish(encoder_msg);
     }
 
@@ -126,23 +129,14 @@ class ControlNode : public rclcpp::Node {
     //     //TODO: send motor commands based on pose
     // }
 
-    /*void publish_encoder_data() {
-        autonav_interfaces::msg::Encoders encoder_msg;
-        encoder_msg.leftMotorRPM = motors.getLeftEncoderCount();
-        encoder_msg.rightMotorRPM = motors.getRightEncoderCount();
-        navigationEncoderPub->publish(encoder_msg);
-
-        arduinoSerial.write("L" + std::to_string(encoder_msg.leftMotorRPM) + " R" + std::to_string(encoder_msg.rightMotorRPM));
-    }*/
 
     void initialize_serial_connections() {
         // Open all serial connections on startup
-        //arduinoSerial.openDevice("/dev/ttyACM#", 115200);
-        //char mode[8] = "MANUAL\n";
-        //arduinoSerial.writeString(mode);
+        arduinoSerial.openDevice("/dev/ttyACM#", 9600);
+        char mode[8] = "MANUAL\n";
+        arduinoSerial.writeString(mode);
         //gpsSerial.openDevice("/dev/ttyACM#", 115200);                        
     }
-
 
 };
 
