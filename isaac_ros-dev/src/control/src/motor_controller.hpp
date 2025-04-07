@@ -33,6 +33,6 @@ public:
     int getSpeed();
     int getLeftEncoderCount();
     int getRightEncoderCount();
-    std::string getLeftRPM();
-    std::string getRightRPM();
+    int getLeftRPM();
+    int getRightRPM();
 };

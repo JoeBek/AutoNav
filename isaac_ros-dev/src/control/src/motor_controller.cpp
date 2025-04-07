@@ -188,7 +188,7 @@ int MotorController::getRightEncoderCount(){
   return test;
 }
 
-std::string MotorController::getLeftRPM(){
+int MotorController::getLeftRPM(){
   std::string command = "?BS 1\r";
   char readBuffer[16] = {};
   motorSerial.writeString(command.c_str());  
@@ -207,10 +207,10 @@ std::string MotorController::getLeftRPM(){
         }
     }
 
-  return rpm;
+  return std::stoi(rpm);
 }
 
-std::string MotorController::getRightRPM(){
+int MotorController::getRightRPM(){
   std::string command = "?BS 2\r";
   char readBuffer[16] = {};
   motorSerial.writeString(command.c_str());  
@@ -229,6 +229,6 @@ std::string MotorController::getRightRPM(){
         }
     }
 
-  return rpm;
+    return std::stoi(rpm);
 }
 

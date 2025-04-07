@@ -108,11 +108,11 @@ class ControlNode : public rclcpp::Node {
 
     void publish_encoder_data() {
         autonav_interfaces::msg::Encoders encoder_msg;
-        encoder_msg.left_motor_rpm = motors.getLeftRPM();
-        encoder_msg.right_motor_rpm = motors.getRightRPM();
+        encoder_msg.left_motor_rpm = std::to_string(motors.getLeftRPM() / 20);
+        encoder_msg.right_motor_rpm = std::to_string(motors.getRightRPM() / 20);
 
         std::string arduinoRPMs = "L:";
-        arduinoRPMs += motors.encoder_msg.left_motor_rpm;
+        arduinoRPMs += encoder_msg.left_motor_rpm;
         arduinoRPMs += " R:";
         arduinoRPMs += encoder_msg.right_motor_rpm;
         arduinoRPMs += "\n";
