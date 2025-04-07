@@ -4,11 +4,10 @@
 #include "xbox.hpp"
 #include "motor_controller.hpp"
 #include "sensor_msgs/msg/joy.hpp"
-#include "geometry_msgs/msg/twist.hpp" 
+#include "geometry_msgs/msg/twist.hpp"
+#include "autonav_interfaces/msg/encoders.hpp" 
 #include <queue>
 #include <iostream>
-
-//#include "autonav_interfaces/msg/Encoders.msg"
 
 
 class ControlNode : public rclcpp::Node {
@@ -30,21 +29,24 @@ class ControlNode : public rclcpp::Node {
         //XBOX SUB
         controllerSub = this->create_subscription<sensor_msgs::msg::Joy>(
             "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
+
+        //NAVIGATION ENCODER PUB
+        navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_topic", 10);
+        
+        timer_ = this->create_wall_timer(
+            std::chrono::milliseconds(100),
+            std::bind(&ControlNode::publish_encoder_data, this)
+        );
         
         //PATH PLANNING SUB
         /*pathPlanningSub = this->create_subscription<geometry_msgs::msg::Twist>(
             "cmd_vel", 10, std::bind(&ControlNode::path_planning_callback, this, std::placeholders::_1));
         
-        
-        //NAVIGATION ENCODER PUB
-        //navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_data", 10);
-
-
         //GPS PUB
         gpsPub = this->create_subscription<sensor_msgs::msg::Joy>(
             "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
 
-        arduinoSerial.write("0");*/
+        */
     }
 
 
@@ -64,10 +66,7 @@ class ControlNode : public rclcpp::Node {
 
     //rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr pathPlanningSub;
 
-    
-
     void joystick_callback(const sensor_msgs::msg::Joy::SharedPtr joy_msg) {
-        std::cout << "Test";
         if(!autonomousMode){
             controller.set_b(joy_msg->buttons[1]);
             controller.set_x(joy_msg->buttons[2]);
@@ -96,55 +95,48 @@ class ControlNode : public rclcpp::Node {
                 motors.shutdown();
             }
             else if (command.cmd == Xbox::CHANGE_MODE){
-                autonomousMode = 1;
-                char buffer[3] = "1\n";
-                arduinoSerial.writeString(buffer);
-            }
+                autonomousMode = true;
+                char mode[12] = "AUTONOMOUS\n";
+                arduinoSerial.writeString(mode);
+            }  
         }
+        else{
+            //TODO: logic for checking if B button is pressed 
+        }
+        
     }
 
+    void publish_encoder_data() {
+        autonav_interfaces::msg::Encoders encoder_msg;
+        encoder_msg.left_motor_rpm = std::to_string(motors.getLeftRPM() / 20);
+        encoder_msg.right_motor_rpm = std::to_string(motors.getRightRPM() / 20);
+
+        std::string arduinoRPMs = "L:";
+        arduinoRPMs += encoder_msg.left_motor_rpm;
+        arduinoRPMs += " R:";
+        arduinoRPMs += encoder_msg.right_motor_rpm;
+        arduinoRPMs += "\n";
+        arduinoSerial.writeString(arduinoRPMs.c_str());
+
+        navigationEncoderPub->publish(encoder_msg);
+    }
+
+    rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr navigationEncoderPub;
+    rclcpp::TimerBase::SharedPtr timer_;
 
 
     // void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
-    //     struct AutonomousCmd{
-    //         double linearX;
-    //         double linearY;
-    //         double angularZ;
-    //     }
-    //     std::queue<AutonomousCmd> pathCommands;
-
-    //     if (autonomousMode) {
-    //         for(int i = 0; i < msg.size(); i++){
-    //             AutonomousCmd cmd;
-    //             cmd.linearX = msg[i].linearX;
-    //             cmd.linearY = msg[i].linearY;
-    //             cmd.angularZ = msg[i].angularZ;
-    //             pathCommands.push(cmd);
-    //         }
-
-    //         while(!queue.empty()){
-                    
-
-    //             queue.pop();
-    //         }
-    //     }
+    //     //TODO: send motor commands based on pose
     // }
 
-    /*void publish_encoder_data() {
-        autonav_interfaces::msg::Encoders encoder_msg;
-        encoder_msg.leftMotorRPM = motors.getLeftMotorRPM();
-        encoder_msg.rightMotorRPM = motors.getRightMotorRPM();
-        navigationEncoderPub->publish(encoder_msg);
-
-        arduinoSerial.write("L" + std::to_string(encoder_msg.leftMotorRPM) + " R" + std::to_string(encoder_msg.rightMotorRPM));
-    }*/
 
     void initialize_serial_connections() {
         // Open all serial connections on startup
-        //arduinoSerial.openDevice("/dev/ttyACM#", 115200);
+        arduinoSerial.openDevice("/dev/ttyACM#", 9600);
+        char mode[8] = "MANUAL\n";
+        arduinoSerial.writeString(mode);
         //gpsSerial.openDevice("/dev/ttyACM#", 115200);                        
     }
-
 
 };
 
