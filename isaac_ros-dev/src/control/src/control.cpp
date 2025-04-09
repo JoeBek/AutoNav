@@ -18,11 +18,6 @@ class ControlNode : public rclcpp::Node {
     ControlNode() 
       : Node("control_node")
        {
-        
-        /*encoder_timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(100),
-            std::bind(&ControlNode::publish_encoder_data, this)
-        );*/
 
         initialize_serial_connections();
 
@@ -102,6 +97,7 @@ class ControlNode : public rclcpp::Node {
         }
         else{
             //TODO: logic for checking if B button is pressed 
+            
         }
         
     }
@@ -132,10 +128,13 @@ class ControlNode : public rclcpp::Node {
 
     void initialize_serial_connections() {
         // Open all serial connections on startup
-        arduinoSerial.openDevice("/dev/ttyACM#", 9600);
+        arduinoSerial.openDevice("/dev/ttyTHS1", 9600);
         char mode[8] = "MANUAL\n";
         arduinoSerial.writeString(mode);
-        //gpsSerial.openDevice("/dev/ttyACM#", 115200);                        
+
+        gpsSerial.openDevice("/dev/ttyACM#", 115200);
+        char gpsStartCmd[8] = "log bestpos ontime 2\r\n";
+        gpsSerial.writeString(gpsStartCmd);                        
     }
 
 };

@@ -94,8 +94,8 @@ Xbox::CommandData Xbox::calculateCommand(){
 
   if(TANKDRIVE){
     cmd.cmd = MOVE;
-    cmd.left_motor_speed = left_stick_y_pos;
-    cmd.right_motor_speed = right_stick_y_pos;
+    cmd.right_motor_speed = left_stick_y_pos;
+    cmd.left_motor_speed = right_stick_y_pos;
     return cmd;
   }
   else{
