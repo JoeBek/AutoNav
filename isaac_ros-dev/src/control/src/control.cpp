@@ -132,9 +132,24 @@ class ControlNode : public rclcpp::Node {
         autonav_interfaces::msg::GpsData gps_msg;
         char gpsBuffer[1024] = {};
         gpsSerial.readString(gpsBuffer, '\n', 1023, 1000);
-        //gps_msg.latitude = gpsSerial.getLatitude();
-        //gps_msg.longitude = gpsSerial.getLongitude();
-        gpsPub->publish(gps_msg);
+
+
+        std::string message(gpsBuffer);
+        std::istringstream iss(message);
+        std::string word;
+        std::vector<std::string> tokens;
+
+        while (iss >> word) {
+            tokens.push_back(word);
+        }
+        if (tokens.size() == 22) {
+
+            //std::cout << gpsBuffer << std::endl;
+            gps_msg.latitude = tokens[3];
+            gps_msg.longitude = tokens[4];
+
+            gpsPub->publish(gps_msg);
+        }
     }
 
     rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
