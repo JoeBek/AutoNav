@@ -4,15 +4,18 @@
   <name>control</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="jb5@vt.edu">joe</maintainer>
-  <license>TODO: License declaration</license>
+  <maintainer email="jshebey@vt.edu">john</maintainer>
+  <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+
 
   <depend>rclcpp</depend>
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
-  <depend>boost</depend>
+  <depend>autonav_interfaces</depend>
+
+
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

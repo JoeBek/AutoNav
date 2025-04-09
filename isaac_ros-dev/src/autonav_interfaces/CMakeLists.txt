@@ -17,10 +17,19 @@ find_package(geometry_msgs REQUIRED)
 
 find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
+
+  #msg/Object.msg
+  #msg/ObjectList.msg
+  msg/Encoders.msg
 	srv/AnvLines.srv
 	DEPENDENCIES geometry_msgs
 )
 
+# rosidl_target_interfaces(${PROJECT_NAME}
+#   ${PROJECT_NAME}_rosidl_typesupport_cpp
+# )
+
+ament_export_dependencies(rosidl_default_runtime)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
