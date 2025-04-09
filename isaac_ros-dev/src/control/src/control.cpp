@@ -156,7 +156,7 @@ class ControlNode : public rclcpp::Node {
         arduinoSerial.writeString(mode);
 
         gpsSerial.openDevice("/dev/ttyACM#", 115200);
-        char gpsStartCmd[32] = "log bestpos ontime 2\r\n";
+        char gpsStartCmd[32] = "log bestposa ontime 2\r\n";
         gpsSerial.writeString("unlogall\r\n");
         gpsSerial.writeString(gpsStartCmd);                        
     }
