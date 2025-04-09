@@ -5,7 +5,8 @@
 #include "motor_controller.hpp"
 #include "sensor_msgs/msg/joy.hpp"
 #include "geometry_msgs/msg/twist.hpp"
-#include "autonav_interfaces/msg/encoders.hpp" 
+#include "autonav_interfaces/msg/encoders.hpp"
+#include "autonav_interfaces/msg/gps_data.hpp"  
 #include <queue>
 #include <iostream>
 
@@ -28,9 +29,17 @@ class ControlNode : public rclcpp::Node {
         //NAVIGATION ENCODER PUB
         navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_topic", 10);
         
-        timer_ = this->create_wall_timer(
+        encoder_timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100),
             std::bind(&ControlNode::publish_encoder_data, this)
+        );
+
+        //GPS PUB
+        gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>("gps_topic", 10);
+
+        gps_timer_ = this->create_wall_timer(
+            std::chrono::milliseconds(100),
+            std::bind(&ControlNode::publish_gps_data, this)
         );
         
         //PATH PLANNING SUB
@@ -117,8 +126,20 @@ class ControlNode : public rclcpp::Node {
         navigationEncoderPub->publish(encoder_msg);
     }
 
+    void publish_gps_data() {
+        autonav_interfaces::msg::GpsData gps_msg;
+        char gpsBuffer[1024] = {};
+        gpsSerial.readString(gpsBuffer, '\n', 1023, 1000);
+        //gps_msg.latitude = gpsSerial.getLatitude();
+        //gps_msg.longitude = gpsSerial.getLongitude();
+        gpsPub->publish(gps_msg);
+    }
+
+    rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
+    rclcpp::TimerBase::SharedPtr gps_timer_;
+
     rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr navigationEncoderPub;
-    rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::TimerBase::SharedPtr encoder_timer_;
 
 
     // void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
@@ -133,7 +154,7 @@ class ControlNode : public rclcpp::Node {
         arduinoSerial.writeString(mode);
 
         gpsSerial.openDevice("/dev/ttyACM#", 115200);
-        char gpsStartCmd[8] = "log bestpos ontime 2\r\n";
+        char gpsStartCmd[32] = "log bestpos ontime 2\r\n";
         gpsSerial.writeString(gpsStartCmd);                        
     }
 
