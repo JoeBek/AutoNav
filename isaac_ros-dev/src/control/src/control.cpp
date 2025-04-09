@@ -115,6 +115,8 @@ class ControlNode : public rclcpp::Node {
         autonav_interfaces::msg::Encoders encoder_msg;
         encoder_msg.left_motor_rpm = std::to_string(motors.getLeftRPM() / 20);
         encoder_msg.right_motor_rpm = std::to_string(motors.getRightRPM() / 20);
+        encoder_msg.left_motor_count = motors.getLeftEncoderCount();
+        encoder_msg.right_motor_count = motors.getRightEncoderCount();
 
         std::string arduinoRPMs = "L:";
         arduinoRPMs += encoder_msg.left_motor_rpm;
