@@ -8,6 +8,7 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(autonav_interfaces REQUIRED)
 find_package(rclcpp REQUIRED)
 
 add_executable(control src/control.cpp
@@ -16,7 +17,22 @@ add_executable(control src/control.cpp
   src/motor_controller.cpp 
   src/serialib.cpp
 )
-ament_target_dependencies(control rclcpp sensor_msgs)
+ament_target_dependencies(control 
+  rclcpp 
+  sensor_msgs 
+  autonav_interfaces
+)
+
+target_include_directories(control PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../autonav_interfaces>
+  $<INSTALL_INTERFACE:include>
+)
+
+
+# rosidl_target_interfaces(${PROJECT_NAME}
+#   ${PROJECT_NAME}
+#   rosidl_typesupport_cpp)
+
 
 install(TARGETS 
   control

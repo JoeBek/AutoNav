@@ -7,7 +7,7 @@
 class MotorController {
 private:
     serialib motorSerial;
-    int stepSize;
+    int stepSize = 10;
     std::pair<int, int> right_turn_speeds = {-10, -10};
     std::pair<int, int> left_turn_speeds = {10, 10};
     int speed = 10;
@@ -31,6 +31,8 @@ public:
     int getStepSize();
     void setSpeed(int s);
     int getSpeed();
-    int getLeftMotorRPM();
-    int getRightMotorRPM();
+    int getLeftEncoderCount();
+    int getRightEncoderCount();
+    int getLeftRPM();
+    int getRightRPM();
 };
