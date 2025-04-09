@@ -157,6 +157,7 @@ class ControlNode : public rclcpp::Node {
 
         gpsSerial.openDevice("/dev/ttyACM#", 115200);
         char gpsStartCmd[32] = "log bestpos ontime 2\r\n";
+        gpsSerial.writeString("unlogall\r\n");
         gpsSerial.writeString(gpsStartCmd);                        
     }
 
