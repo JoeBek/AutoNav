@@ -21,6 +21,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   #msg/Object.msg
   #msg/ObjectList.msg
   msg/Encoders.msg
+  msg/GpsData.msg
 	srv/AnvLines.srv
 	DEPENDENCIES geometry_msgs
 )
