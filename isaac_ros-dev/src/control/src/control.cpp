@@ -9,6 +9,7 @@
 #include "autonav_interfaces/msg/gps_data.hpp"  
 #include <queue>
 #include <iostream>
+#include <string>
 
 
 class ControlNode : public rclcpp::Node {
@@ -29,15 +30,12 @@ class ControlNode : public rclcpp::Node {
         //NAVIGATION ENCODER PUB
         //navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_topic", 10);
         
-       /* timer_ = this->create_wall_timer(
+       /* encoder_timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100),
             std::bind(&ControlNode::publish_encoder_data, this)
         );
         */
-        encoder_timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(100),
-            std::bind(&ControlNode::publish_encoder_data, this)
-        );
+        
                 //GPS PUB
         gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>("gps_topic", 10);
 
@@ -149,36 +147,20 @@ class ControlNode : public rclcpp::Node {
         if (tokens.size() == 22) {
 
             //std::cout << gpsBuffer << std::endl;
-            gps_msg.latitude = tokens[3];
-            gps_msg.longitude = tokens[4];
+
+	    try {
+
+		    gps_msg.latitude = std::stof(tokens[3]);
+		    gps_msg.longitude = std::stof(tokens[4]);
+  	    }
+	    catch (const std::exception & e) {
+		    RCLCPP_ERROR(this->get_logger(), "GPS string parsing failed: %s", e.what());
+	    }
 
             gpsPub->publish(gps_msg);
         }
     }
 
-    void publish_gps_data() {
-        autonav_interfaces::msg::GpsData gps_msg;
-        char gpsBuffer[1024] = {};
-        gpsSerial.readString(gpsBuffer, '\n', 1023, 1000);
-
-
-        std::string message(gpsBuffer);
-        std::istringstream iss(message);
-        std::string word;
-        std::vector<std::string> tokens;
-
-        while (iss >> word) {
-            tokens.push_back(word);
-        }
-        if (tokens.size() == 22) {
-
-            //std::cout << gpsBuffer << std::endl;
-            gps_msg.latitude = tokens[3];
-            gps_msg.longitude = tokens[4];
-
-            gpsPub->publish(gps_msg);
-        }
-    }
 
     rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
     rclcpp::TimerBase::SharedPtr gps_timer_;
