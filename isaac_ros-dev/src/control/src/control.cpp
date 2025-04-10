@@ -38,8 +38,7 @@ class ControlNode : public rclcpp::Node {
             std::chrono::milliseconds(100),
             std::bind(&ControlNode::publish_encoder_data, this)
         );
-
-        //GPS PUB
+                //GPS PUB
         gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>("gps_topic", 10);
 
         gps_timer_ = this->create_wall_timer(
@@ -157,6 +156,30 @@ class ControlNode : public rclcpp::Node {
         }
     }
 
+    void publish_gps_data() {
+        autonav_interfaces::msg::GpsData gps_msg;
+        char gpsBuffer[1024] = {};
+        gpsSerial.readString(gpsBuffer, '\n', 1023, 1000);
+
+
+        std::string message(gpsBuffer);
+        std::istringstream iss(message);
+        std::string word;
+        std::vector<std::string> tokens;
+
+        while (iss >> word) {
+            tokens.push_back(word);
+        }
+        if (tokens.size() == 22) {
+
+            //std::cout << gpsBuffer << std::endl;
+            gps_msg.latitude = tokens[3];
+            gps_msg.longitude = tokens[4];
+
+            gpsPub->publish(gps_msg);
+        }
+    }
+
     rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
     rclcpp::TimerBase::SharedPtr gps_timer_;
 
@@ -175,8 +198,8 @@ class ControlNode : public rclcpp::Node {
         char mode[8] = "MANUAL\n";
         arduinoSerial.writeString(mode);
 
-	
         gpsSerial.openDevice("/dev/ttyTCU0", 115200);
+
         char gpsStartCmd[32] = "log bestposa ontime 2\r\n";
         gpsSerial.writeString("unlogall\r\n");
         gpsSerial.writeString(gpsStartCmd);                        
