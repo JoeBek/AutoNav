@@ -31,13 +31,13 @@ class ControlNode : public rclcpp::Node {
             "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
 
         //NAVIGATION ENCODER PUB
-        navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_topic", 10);
+        //navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_topic", 10);
         
-        timer_ = this->create_wall_timer(
+       /* timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100),
             std::bind(&ControlNode::publish_encoder_data, this)
         );
-        
+        */
         //PATH PLANNING SUB
         /*pathPlanningSub = this->create_subscription<geometry_msgs::msg::Twist>(
             "cmd_vel", 10, std::bind(&ControlNode::path_planning_callback, this, std::placeholders::_1));
@@ -106,8 +106,8 @@ class ControlNode : public rclcpp::Node {
         
     }
 
-    void publish_encoder_data() {
-        autonav_interfaces::msg::Encoders encoder_msg;
+   /* void publish_encoder_data() {
+       // autonav_interfaces::msg::Encoders encoder_msg;
         encoder_msg.left_motor_rpm = std::to_string(motors.getLeftRPM() / 20);
         encoder_msg.right_motor_rpm = std::to_string(motors.getRightRPM() / 20);
 
@@ -119,7 +119,7 @@ class ControlNode : public rclcpp::Node {
         arduinoSerial.writeString(arduinoRPMs.c_str());
 
         navigationEncoderPub->publish(encoder_msg);
-    }
+    }*/
 
     rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr navigationEncoderPub;
     rclcpp::TimerBase::SharedPtr timer_;
@@ -132,7 +132,7 @@ class ControlNode : public rclcpp::Node {
 
     void initialize_serial_connections() {
         // Open all serial connections on startup
-        arduinoSerial.openDevice("/dev/ttyACM#", 9600);
+        arduinoSerial.openDevice("/dev/ttyTHS2", 9600);
         char mode[8] = "MANUAL\n";
         arduinoSerial.writeString(mode);
         //gpsSerial.openDevice("/dev/ttyACM#", 115200);                        

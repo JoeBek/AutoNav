@@ -1,6 +1,6 @@
 #include "motor_controller.hpp"
 
-#define SERIAL_PORT "/dev/ttyACM12"
+#define SERIAL_PORT "/dev/ttyACM0"
 
 // constructor
 MotorController::MotorController(){
@@ -20,10 +20,10 @@ MotorController::MotorController(){
   //getLeftEncoderCount();
   //std::cout << getLeftEncoderCount();
 
-  while(getLeftEncoderCount() < (78400 * 0.1)){
+ /* while(getLeftEncoderCount() < (78400 * 0.1)){
     move(-10,10);
     std::this_thread::sleep_for(std::chrono::milliseconds(1));
-  }
+  }*/
   stop();
 }
 
@@ -99,7 +99,7 @@ void MotorController::turnRight(){
 void MotorController::move(float right_speed, float left_speed){
   
     int leftMotorSpeed = (int)(stepSize * left_speed);
-    int rightMotorSpeed = (int)(stepSize * right_speed);
+    int rightMotorSpeed = (int)(-stepSize * right_speed);
 
     std::string leftMotorCommand = "!G 1 " + std::to_string(leftMotorSpeed) + "\r";
     std::string rightMotorCommand = "!G 2 " + std::to_string(rightMotorSpeed) + "\r";
