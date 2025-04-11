@@ -5,9 +5,11 @@
 #include "motor_controller.hpp"
 #include "sensor_msgs/msg/joy.hpp"
 #include "geometry_msgs/msg/twist.hpp"
-#include "autonav_interfaces/msg/encoders.hpp" 
+#include "autonav_interfaces/msg/encoders.hpp"
+#include "autonav_interfaces/msg/gps_data.hpp"  
 #include <queue>
 #include <iostream>
+#include <string>
 
 
 class ControlNode : public rclcpp::Node {
@@ -18,11 +20,6 @@ class ControlNode : public rclcpp::Node {
     ControlNode() 
       : Node("control_node")
        {
-        
-        /*encoder_timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(100),
-            std::bind(&ControlNode::publish_encoder_data, this)
-        );*/
 
         initialize_serial_connections();
 
@@ -31,11 +28,20 @@ class ControlNode : public rclcpp::Node {
             "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
 
         //NAVIGATION ENCODER PUB
-        navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_topic", 10);
+        //navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_topic", 10);
         
-        timer_ = this->create_wall_timer(
+       /* encoder_timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100),
             std::bind(&ControlNode::publish_encoder_data, this)
+        );
+        */
+        
+                //GPS PUB
+        gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>("gps_topic", 10);
+
+        gps_timer_ = this->create_wall_timer(
+            std::chrono::milliseconds(100),
+            std::bind(&ControlNode::publish_gps_data, this)
         );
         
         //PATH PLANNING SUB
@@ -102,14 +108,17 @@ class ControlNode : public rclcpp::Node {
         }
         else{
             //TODO: logic for checking if B button is pressed 
+            
         }
         
     }
 
-    void publish_encoder_data() {
-        autonav_interfaces::msg::Encoders encoder_msg;
+   /* void publish_encoder_data() {
+       // autonav_interfaces::msg::Encoders encoder_msg;
         encoder_msg.left_motor_rpm = std::to_string(motors.getLeftRPM() / 20);
         encoder_msg.right_motor_rpm = std::to_string(motors.getRightRPM() / 20);
+        encoder_msg.left_motor_count = motors.getLeftEncoderCount();
+        encoder_msg.right_motor_count = motors.getRightEncoderCount();
 
         std::string arduinoRPMs = "L:";
         arduinoRPMs += encoder_msg.left_motor_rpm;
@@ -119,10 +128,45 @@ class ControlNode : public rclcpp::Node {
         arduinoSerial.writeString(arduinoRPMs.c_str());
 
         navigationEncoderPub->publish(encoder_msg);
+    }*/
+
+    void publish_gps_data() {
+        autonav_interfaces::msg::GpsData gps_msg;
+        char gpsBuffer[1024] = {};
+        gpsSerial.readString(gpsBuffer, '\n', 1023, 1000);
+
+
+        std::string message(gpsBuffer);
+        std::istringstream iss(message);
+        std::string word;
+        std::vector<std::string> tokens;
+
+        while (iss >> word) {
+            tokens.push_back(word);
+        }
+        if (tokens.size() == 22) {
+
+            //std::cout << gpsBuffer << std::endl;
+
+	    try {
+
+		    gps_msg.latitude = std::stof(tokens[3]);
+		    gps_msg.longitude = std::stof(tokens[4]);
+  	    }
+	    catch (const std::exception & e) {
+		    RCLCPP_ERROR(this->get_logger(), "GPS string parsing failed: %s", e.what());
+	    }
+
+            gpsPub->publish(gps_msg);
+        }
     }
 
+
+    rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
+    rclcpp::TimerBase::SharedPtr gps_timer_;
+
     rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr navigationEncoderPub;
-    rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::TimerBase::SharedPtr encoder_timer_;
 
 
     // void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
@@ -132,10 +176,15 @@ class ControlNode : public rclcpp::Node {
 
     void initialize_serial_connections() {
         // Open all serial connections on startup
-        arduinoSerial.openDevice("/dev/ttyACM#", 9600);
+        arduinoSerial.openDevice("/dev/ttyTHS2", 9600);
         char mode[8] = "MANUAL\n";
         arduinoSerial.writeString(mode);
-        //gpsSerial.openDevice("/dev/ttyACM#", 115200);                        
+
+        gpsSerial.openDevice("/dev/ttyTCU0", 115200);
+
+        char gpsStartCmd[32] = "log bestposa ontime 2\r\n";
+        gpsSerial.writeString("unlogall\r\n");
+        gpsSerial.writeString(gpsStartCmd);                        
     }
 
 };

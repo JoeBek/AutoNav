@@ -2,4 +2,10 @@ FROM autonav:koopa-kingdom
 
 # deps
 RUN apt-get update && apt-get install -y \
-	gosu	
+	gosu	\
+	bluez \
+	bluez-tools \
+	dbus \
+	evtest \
+	joystick \
+	udev \

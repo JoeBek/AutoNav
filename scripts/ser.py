@@ -6,8 +6,8 @@ from serial import Serial
 
 
 # serial parameters
-baudrate = 115200 
-cereal = Serial('/dev/ttyUSB0', baudrate, timeout=1)
+baudrate = 9600 
+cereal = Serial('/dev/ttyTHS2', baudrate, timeout=3)
 cereal.stopbits = 1
 cereal.parity = 'N'
 cereal.bytesize = 8
