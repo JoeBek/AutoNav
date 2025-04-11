@@ -34,7 +34,7 @@ class ControlNode : public rclcpp::Node {
         this->declare_parameter("arduino_port", "/dev/ttyACM2");
 
         configure_server = this->create_service<autonav_interfaces::srv::ConfigureControl>
-             ("configure_control", std::bind(&configure, this, std::placeholders::_1, std::placeholders::_2));
+             ("configure_control", std::bind(&ControlNode::configure, this, std::placeholders::_1, std::placeholders::_2));
 
     }
 
@@ -182,7 +182,7 @@ class ControlNode : public rclcpp::Node {
         ret = arduinoSerial.openDevice(arduino_port, 9600);
         
         if (ret != 1) {
-            RCLCPP_ERROR(this->get_logger(), "Arduino serial error: %s", arduinoSerial.error_map[ret]);
+            RCLCPP_ERROR(this->get_logger(), "Arduino serial error: %s", arduinoSerial.error_map.at(ret).c_str());
         }
 
         char mode[8] = "MANUAL\n";
@@ -192,9 +192,10 @@ class ControlNode : public rclcpp::Node {
 
     void init_serial_gps(const char * gps_port) {
 
+        char ret;
         ret = gpsSerial.openDevice(gps_port, 115200);
         if (ret != 1) {
-            RCLCPP_ERROR(this->get_logger(), "GPS serial error: %s", gpsSerial.error_map[ret]);
+            RCLCPP_ERROR(this->get_logger(), "GPS serial error: %s", gpsSerial.error_map.at(ret).c_str());
         }
 
         char gpsStartCmd[32] = "log bestposa ontime 2\r\n";
@@ -204,8 +205,8 @@ class ControlNode : public rclcpp::Node {
     }
 
 
-    void configure(const std::shared_ptr<autonav_interfaces::srv::ConfigureControl::request> request, 
-                         std::shared_ptr<autonav_interfaces::srv::ConfigureControl::response> response) {
+    void configure(const std::shared_ptr<autonav_interfaces::srv::ConfigureControl::Request> request, 
+                         std::shared_ptr<autonav_interfaces::srv::ConfigureControl::Response> response) {
         
 
         // configure serial
@@ -215,13 +216,13 @@ class ControlNode : public rclcpp::Node {
 
 
         if (request->arduino) {
-            init_serial_arduino(arduino_port);
+            init_serial_arduino(arduino_port.c_str());
         }
         if (request->motors) {
-            motors.configure(motor_port);
+            motors.configure(motor_port.c_str());
         }
         if (request->gps) {
-            init_serial_gps(gps_port);
+            init_serial_gps(gps_port.c_str());
         }
                 
         // configure topics
@@ -245,7 +246,7 @@ class ControlNode : public rclcpp::Node {
         
         //GPS PUB
 
-        if (request.gps) {
+        if (request->gps) {
 
             gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>(gps_topic, 10);
 
