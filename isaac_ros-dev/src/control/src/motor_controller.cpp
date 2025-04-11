@@ -1,6 +1,6 @@
 #include "motor_controller.hpp"
 
-#define SERIAL_PORT "/dev/ttyACM2"
+#define SERIAL_PORT "/dev/ttyACM0"
 
 // constructor
 MotorController::MotorController(){
@@ -149,11 +149,11 @@ int MotorController::getLeftEncoderCount(){
   char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
   motorSerial.readString(readBuffer, '\n', 40, 100);
-  std::cout << readBuffer << std::endl;
+  //std::cout << readBuffer << std::endl;
   std::string encoderCount = "";
     bool equalSign = false;
     for (int i = 0; i < 40; i++) {
-        std::cout << readBuffer[i] << std::endl;
+        //std::cout << readBuffer[i] << std::endl;
 
         if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           encoderCount += readBuffer[i];
@@ -174,7 +174,7 @@ int MotorController::getRightEncoderCount(){
   std::string encoderCount = "";
     bool equalSign = false;
     for (int i = 0; i < 16; i++) {
-        std::cout << readBuffer[i] << std::endl;
+        //std::cout << readBuffer[i] << std::endl;
 
         if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           encoderCount += readBuffer[i];
@@ -192,11 +192,11 @@ int MotorController::getLeftRPM(){
   char readBuffer[16] = {};
   motorSerial.writeString(command.c_str());  
   motorSerial.readString(readBuffer, '\n', 15, 1000);
-
+  std::cout << readBuffer << std::endl;
   std::string rpm = "";
     bool equalSign = false;
     for (int i = 0; i < 16; i++) {
-        std::cout << readBuffer[i] << std::endl;
+        //std::cout << readBuffer[i] << std::endl;
 
         if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           rpm += readBuffer[i];
@@ -218,7 +218,7 @@ int MotorController::getRightRPM(){
   std::string rpm = "";
     bool equalSign = false;
     for (int i = 0; i < 16; i++) {
-        std::cout << readBuffer[i] << std::endl;
+        //std::cout << readBuffer[i] << std::endl;
 
         if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           rpm += readBuffer[i];
