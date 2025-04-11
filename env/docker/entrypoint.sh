@@ -38,6 +38,8 @@ adduser ${USERNAME} dialout  >/dev/null
 adduser ${USERNAME} bluetooth  >/dev/null
 adduser ${USERNAME} systemd-journal >/dev/null
 
+source /opt/ros/humble/setup.bash # source ros setup
+
 
 # If jtop present, give the user access
 if [ -S /run/jtop.sock ]; then

@@ -1,17 +1,11 @@
 #include "lib.hpp"
 
 #define BAUDRATE 9600
-#define LIGHT_PIN 9
-
-//TODO: Update these pins
-#define WHEEL_PIN 10
-#define THROTTLE_PIN 11
+#define PIN 9
 
 
 String command; // global definition
 Signal signal = Signal::UNKNOWN; // global definition
-int leftRPM; // global definition
-int rightRPM; // global definition
 
 void setup(){
 
@@ -45,19 +39,15 @@ void loop(){
 
 
   switch(signal) {
-    case Signal::ENCODERS:
-      leftRPM = getLeft(command);
-      rightRPM = getRight(command);
-      bowser_drive(WHEEL_PIN, THROTTLE_PIN, leftRPM, rightRPM);
-      break;
+
     case Signal::STOP:
-      toggle_light(LIGHT_PIN, false);
+      toggle_light(PIN, false);
       break;
-    case Signal::MANUAL:
-      solid_light(LIGHT_PIN);
+    case Signal::SOLID:
+      toggle_light(PIN, true);
       break;
-    case Signal::AUTONOMOUS:
-      flash_light(LIGHT_PIN);
+    case Signal::FLASHING:
+      flash_light(PIN);
       break;
     default:
       break;
