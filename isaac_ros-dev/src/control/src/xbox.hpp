@@ -38,6 +38,8 @@ public:
 
     void adjust_joysticks();
 
+    bool switchMode();
+
 private:
     bool b_button_state;
     bool x_button_state;

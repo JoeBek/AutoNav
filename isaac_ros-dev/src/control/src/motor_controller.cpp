@@ -1,6 +1,6 @@
 #include "motor_controller.hpp"
 
-#define SERIAL_PORT "/dev/ttyACM0"
+#define SERIAL_PORT "/dev/ttyACM2"
 
 // constructor
 MotorController::MotorController(){
@@ -13,10 +13,10 @@ MotorController::MotorController(){
     printf ("Successful connection to %s\n",SERIAL_PORT);
   }
 
-  std::string leftMotorCommand = "!C 1 0\r";
+  /*std::string leftMotorCommand = "!C 1 0\r";
   std::string rightMotorCommand = "!C 2 0 \r";
   motorSerial.writeString(leftMotorCommand.c_str());
-  motorSerial.writeString(rightMotorCommand.c_str());
+  motorSerial.writeString(rightMotorCommand.c_str());*/
   //getLeftEncoderCount();
   //std::cout << getLeftEncoderCount();
 
@@ -24,7 +24,7 @@ MotorController::MotorController(){
     move(-10,10);
     std::this_thread::sleep_for(std::chrono::milliseconds(1));
   }*/
-  stop();
+  //stop();
 }
 
 // moves the robot forward
@@ -155,7 +155,7 @@ int MotorController::getLeftEncoderCount(){
     for (int i = 0; i < 40; i++) {
         std::cout << readBuffer[i] << std::endl;
 
-        if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
+        if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           encoderCount += readBuffer[i];
         }
         if (readBuffer[i] == 61) {
@@ -176,7 +176,7 @@ int MotorController::getRightEncoderCount(){
     for (int i = 0; i < 16; i++) {
         std::cout << readBuffer[i] << std::endl;
 
-        if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
+        if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           encoderCount += readBuffer[i];
         }
         if (readBuffer[i] == 61) {
@@ -184,8 +184,7 @@ int MotorController::getRightEncoderCount(){
         }
     }
 
-  int test = std::stoi(encoderCount);
-  return test;
+  return std::stoi(encoderCount);
 }
 
 int MotorController::getLeftRPM(){
@@ -199,7 +198,7 @@ int MotorController::getLeftRPM(){
     for (int i = 0; i < 16; i++) {
         std::cout << readBuffer[i] << std::endl;
 
-        if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
+        if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           rpm += readBuffer[i];
         }
         if (readBuffer[i] == 61) {
@@ -221,7 +220,7 @@ int MotorController::getRightRPM(){
     for (int i = 0; i < 16; i++) {
         std::cout << readBuffer[i] << std::endl;
 
-        if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
+        if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           rpm += readBuffer[i];
         }
         if (readBuffer[i] == 61) {
