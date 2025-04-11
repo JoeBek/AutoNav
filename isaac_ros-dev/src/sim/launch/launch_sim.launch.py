@@ -6,6 +6,8 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_ros.substitutions import FindPackageShare
+from launch.substitutions import Command, LaunchConfiguration
  
 from launch_ros.actions import Node
  
@@ -17,7 +19,11 @@ def generate_launch_description():
     # Include the robot_state_publisher launch file, provided by our own package. Force sim time to be enabled
     # !!! MAKE SURE YOU SET THE PACKAGE NAME CORRECTLY !!!
  
-    package_name='autonav_sim' #<--- CHANGE ME
+    package_name='sim' #<--- CHANGE ME
+
+
+    pkg_share = FindPackageShare(package='sim').find('sim')
+    default_model_path = os.path.join(pkg_share, 'description', 'custom_robot', 'robot.urdf.xacro')
  
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
@@ -36,7 +42,15 @@ def generate_launch_description():
                         arguments=['-topic', 'robot_description',
                                    '-entity', 'my_bot', '-z 0.5', '-Y -1.570'],
                         output='screen')
- 
+   
+
+    robot_localization_node = Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_node',
+        output='screen',
+        parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+        )
  
  
     # Launch them all!
@@ -44,4 +58,5 @@ def generate_launch_description():
         rsp,
         gazebo,
         spawn_entity,
+        #robot_localization_node,
     ])
