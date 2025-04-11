@@ -17,10 +17,14 @@ def generate_launch_description():
     config = os.path.join(
         get_package_share_directory('control'),
         'config',
-        'params.yaml'
+        'node_params.yaml'
     )
-
-    with open('service_params.yaml', 'r') as f:
+    config_config = os.path.join(
+        get_package_share_directory('control'),
+        'config',
+        'config_params.yaml'
+    ) # bruh
+    with open(config_config, 'r') as f:
         all_params = yaml.safe_load(f)
         service_params = all_params.get('configure', {})  
         param_str = str(service_params).replace("'", '"')
@@ -29,7 +33,7 @@ def generate_launch_description():
     control = Node(
             package='control',
             executable='control',
-            name='control',
+            name='control_node',
             parameters=[config]
         )
 
