@@ -1,16 +1,20 @@
 #include "motor_controller.hpp"
 
-#define SERIAL_PORT "/dev/ttyACM0"
 
 // constructor
 MotorController::MotorController(){
-  char errorOpening = motorSerial.openDevice(SERIAL_PORT, 115200);
+  
+}
+
+int MotorController::configure(const char * port){
+
+   char errorOpening = motorSerial.openDevice(port, 115200);
   //motorSerial.write("!MG\r");
   if (errorOpening!=1){
-    printf ("Unsuccessful connection to %s\n",SERIAL_PORT);
+    printf ("Unsuccessful connection to %s\n",port);
   }
   else{
-    printf ("Successful connection to %s\n",SERIAL_PORT);
+    printf ("Successful connection to %s\n",port);
   }
 
   /*std::string leftMotorCommand = "!C 1 0\r";
@@ -24,7 +28,9 @@ MotorController::MotorController(){
     move(-10,10);
     std::this_thread::sleep_for(std::chrono::milliseconds(1));
   }*/
-  //stop();
+ 
+
+
 }
 
 // moves the robot forward

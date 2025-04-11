@@ -7,6 +7,7 @@
 #include "geometry_msgs/msg/twist.hpp"
 #include "autonav_interfaces/msg/encoders.hpp"
 #include "autonav_interfaces/msg/gps_data.hpp"  
+#include "autonav_interfaces/srv/configure_control.hpp"
 #include <queue>
 #include <iostream>
 #include <string>
@@ -21,32 +22,20 @@ class ControlNode : public rclcpp::Node {
       : Node("control_node")
        {
 
-        initialize_serial_connections();
-
-        //XBOX SUB
-        controllerSub = this->create_subscription<sensor_msgs::msg::Joy>(
-            "joy", 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
-
-        //ENCODER PUB
-        encodersPub = this->create_publisher<autonav_interfaces::msg::Encoders>("encoder_topic", 10);
-
-        encoder_timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(100),
-            std::bind(&ControlNode::publish_encoder_data, this)
-        );
+        // topic names
+        this->declare_parameter("controller_topic", "joy");
+        this->declare_parameter("encoder_topic", "encoders");
+        this->declare_parameter("gps_topic", "gps");
+        this->declare_parameter("path_planning_topic", "cmd_vel");
         
-        
-        //GPS PUB
-        gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>("gps_topic", 10);
+        // serial ports
+        this->declare_parameter("motor_port", "/dev/ttyACM0");
+        this->declare_parameter("gps_port", "/dev/ttyTCU0");
+        this->declare_parameter("arduino_port", "/dev/ttyACM2");
 
-        gps_timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(100),
-            std::bind(&ControlNode::publish_gps_data, this)
-        );
-        
-        //PATH PLANNING SUB
-        /*pathPlanningSub = this->create_subscription<geometry_msgs::msg::PoseStamped>(
-            "/amcl_pose", 10, std::bind(&ControlNode::path_planning_callback, this, std::placeholders::_1));*/
+        configure_server = this->create_service<autonav_interfaces::srv::ConfigureControl>
+             ("configure_control", std::bind(&ControlNode::configure, this, std::placeholders::_1, std::placeholders::_2));
+
     }
 
 
@@ -57,11 +46,14 @@ class ControlNode : public rclcpp::Node {
     MotorController motors;
     //Autonomous currPose;
 
+
     bool autonomousMode = false;
 
 
     // subscription for joystick
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr controllerSub;
+    //configuration server 
+    rclcpp::Service<autonav_interfaces::srv::ConfigureControl>::SharedPtr configure_server;
 
     // publisher for gps data
     rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
@@ -184,30 +176,94 @@ class ControlNode : public rclcpp::Node {
     }*/
 
 
-    void initialize_serial_connections() {
-        // Open all serial connections on startup
+    void init_serial_arduino(const char * arduino_port) {
+
+        char ret;
+        ret = arduinoSerial.openDevice(arduino_port, 9600);
         
-        char arduinoStatus = arduinoSerial.openDevice("/dev/ttyACM0", 9600);
-        if (arduinoStatus != 1){
-            printf ("Unsuccessful connection to Arduino\n");
-          }
-        else{
-            printf ("Successful connection to Arduino\n");
+        if (ret != 1) {
+            RCLCPP_ERROR(this->get_logger(), "Arduino serial error: %s", arduinoSerial.error_map.at(ret).c_str());
         }
 
         char mode[8] = "MANUAL\n";
-        //arduinoSerial.writeString(mode);
+        arduinoSerial.writeString(mode);
+                   
+    }
 
-        char gpsStatus = gpsSerial.openDevice("/dev/ttyACM1", 115200);
-        if (gpsStatus != 1){
-            printf ("Unsuccessful connection to GPS\n");
+    void init_serial_gps(const char * gps_port) {
+
+        char ret;
+        ret = gpsSerial.openDevice(gps_port, 115200);
+        if (ret != 1) {
+            RCLCPP_ERROR(this->get_logger(), "GPS serial error: %s", gpsSerial.error_map.at(ret).c_str());
         }
-        else{
-            printf ("Successful connection to GPS\n");
-        }
+
         char gpsStartCmd[32] = "log bestposa ontime 2\r\n";
-        //gpsSerial.writeString("unlogall\r\n");
-        //gpsSerial.writeString(gpsStartCmd);                        
+        gpsSerial.writeString("unlogall\r\n");
+        gpsSerial.writeString(gpsStartCmd);     
+
+    }
+
+
+    void configure(const std::shared_ptr<autonav_interfaces::srv::ConfigureControl::Request> request, 
+                         std::shared_ptr<autonav_interfaces::srv::ConfigureControl::Response> response) {
+        
+
+        // configure serial
+        std::string motor_port = this->get_parameter("motor_port").as_string();
+        std::string arduino_port = this->get_parameter("arduino_port").as_string();
+        std::string gps_port = this->get_parameter("gps_port").as_string();
+
+
+        if (request->arduino) {
+            init_serial_arduino(arduino_port.c_str());
+        }
+        if (request->motors) {
+            motors.configure(motor_port.c_str());
+        }
+        if (request->gps) {
+            init_serial_gps(gps_port.c_str());
+        }
+                
+        // configure topics
+        std::string controller_topic = this->get_parameter("controller_topic").as_string();
+        std::string encoder_topic = this->get_parameter("encoder_topic").as_string();
+        std::string gps_topic = this->get_parameter("gps_topic").as_string();
+        std::string path_planning_topic = this->get_parameter("gps_topic").as_string();
+
+        //XBOX SUB
+        controllerSub = this->create_subscription<sensor_msgs::msg::Joy>(
+            controller_topic, 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
+
+        //NAVIGATION ENCODER PUB
+        //navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>(encoder_topic, 10);
+        
+       /* encoder_timer_ = this->create_wall_timer(
+            std::chrono::milliseconds(100),
+            std::bind(&ControlNode::publish_encoder_data, this)
+        );
+        */
+        
+        //GPS PUB
+
+        if (request->gps) {
+
+            gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>(gps_topic, 10);
+
+            gps_timer_ = this->create_wall_timer(
+                std::chrono::milliseconds(100),
+                std::bind(&ControlNode::publish_gps_data, this)
+            );
+    
+        }
+       
+        //PATH PLANNING SUB
+        /*pathPlanningSub = this->create_subscription<geometry_msgs::msg::Twist>(
+            "cmd_vel", 10, std::bind(&ControlNode::path_planning_callback, this, std::placeholders::_1));
+              */
+
+        response->ret = 0;
+
     }
 
 };

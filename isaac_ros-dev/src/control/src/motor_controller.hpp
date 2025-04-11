@@ -13,9 +13,12 @@ private:
     int speed = 10;
     std::string comPort;
 
+
 public:
     // Constructor
     MotorController();
+    // configuration
+    int configure(const char * port);
 
     // Moveeeeeee
     void forward();
