@@ -17,10 +17,10 @@ int MotorController::configure(const char * port){
     printf ("Successful connection to %s\n",port);
   }
 
-  std::string leftMotorCommand = "!C 1 0\r";
+  /*std::string leftMotorCommand = "!C 1 0\r";
   std::string rightMotorCommand = "!C 2 0 \r";
   motorSerial.writeString(leftMotorCommand.c_str());
-  motorSerial.writeString(rightMotorCommand.c_str());
+  motorSerial.writeString(rightMotorCommand.c_str());*/
   //getLeftEncoderCount();
   //std::cout << getLeftEncoderCount();
 
@@ -161,7 +161,7 @@ int MotorController::getLeftEncoderCount(){
     for (int i = 0; i < 40; i++) {
         std::cout << readBuffer[i] << std::endl;
 
-        if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
+        if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           encoderCount += readBuffer[i];
         }
         if (readBuffer[i] == 61) {
@@ -182,7 +182,7 @@ int MotorController::getRightEncoderCount(){
     for (int i = 0; i < 16; i++) {
         std::cout << readBuffer[i] << std::endl;
 
-        if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
+        if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           encoderCount += readBuffer[i];
         }
         if (readBuffer[i] == 61) {
@@ -190,8 +190,7 @@ int MotorController::getRightEncoderCount(){
         }
     }
 
-  int test = std::stoi(encoderCount);
-  return test;
+  return std::stoi(encoderCount);
 }
 
 int MotorController::getLeftRPM(){
@@ -205,7 +204,7 @@ int MotorController::getLeftRPM(){
     for (int i = 0; i < 16; i++) {
         std::cout << readBuffer[i] << std::endl;
 
-        if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
+        if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           rpm += readBuffer[i];
         }
         if (readBuffer[i] == 61) {
@@ -227,7 +226,7 @@ int MotorController::getRightRPM(){
     for (int i = 0; i < 16; i++) {
         std::cout << readBuffer[i] << std::endl;
 
-        if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
+        if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           rpm += readBuffer[i];
         }
         if (readBuffer[i] == 61) {
