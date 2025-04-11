@@ -19,6 +19,8 @@ This is a licence-free software, it can be used by anyone who try to build a bet
 #ifndef SERIALIB_H
 #define SERIALIB_H
 
+#include <unordered_map>
+
 #if defined(__CYGWIN__)
     // This is Cygwin special case
     #include <sys/time.h>
@@ -210,6 +212,30 @@ public:
 
     // Get CTR status (Data Terminal Ready, pin 4)
     bool    isDTR();
+
+   /*
+      \return 1 success
+      \return -1 device not found
+      \return -2 error while opening the device
+      \return -3 error while getting port parameters
+      \return -4 Speed (Bauds) not recognized
+      \return -5 error while writing port parameters
+      \return -6 error while writing timeout parameters
+      \return -7 Databits not recognized
+      \return -8 Stopbits not recognized
+      \return -9 Parity not recognized
+   */
+  const std::unordered_map<char, std::string> error_map = {
+    {-1, "device not found"},
+    {-2, "error opening device"},
+    {-3, "error getting port params"},
+    {-4, "baudrate not recognized"},
+    {-5, "error writing port parameters"},
+    {-6, "error writing timeout parameters"},
+    {-7, "databits not recognized"},
+    {-8, "stopbits not recognized"},
+    {-9, "parity not recognized"}
+  };
 
 
 private:

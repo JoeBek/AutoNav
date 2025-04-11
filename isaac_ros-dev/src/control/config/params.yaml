@@ -1,0 +1,17 @@
+control:
+  ros__parameters:
+    # \/ ------------------configure serial ports here 
+    motor_port: "/dev/ttyACM0"
+    arduino_port: "/dev/ttyACM1"
+    gps_port: "/dev/ttyTCU0"
+    # \/ ------------------configure topic names here
+    controller_topic: "joy"
+    encoder_topic: "encoders"
+    gps_topic: "gps"
+    path_planning_topic: "cmd_vel"
+
+# \/ -----------------------configure serial port usage here (true: configure serial port)
+configure:
+  arduino: true
+  motors: true
+  gps: true
