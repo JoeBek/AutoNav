@@ -76,7 +76,9 @@ DOCKER_ARGS+=("--entrypoint $ENTRYPOINT")
 # Re-use existing container.
 if [ "$(docker ps -a --quiet --filter status=running --filter name=$CONTAINER_NAME)" ]; then
     C_WORKDIR=$(docker exec $CONTAINER_NAME printenv WORKDIR)
+
     docker exec -i -t -u admin --workdir "/workspace/isaac_ros-dev" $CONTAINER_NAME /bin/bash $@
+
     exit 0
 fi
 
