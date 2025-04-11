@@ -69,8 +69,8 @@ class ControlNode : public rclcpp::Node {
     void joystick_callback(const sensor_msgs::msg::Joy::SharedPtr joy_msg) {
         if(!autonomousMode){
             controller.set_b(joy_msg->buttons[1]);
-            controller.set_x(joy_msg->buttons[2]);
-            controller.set_y(joy_msg->buttons[3]);
+            controller.set_x(joy_msg->buttons[3]);
+            controller.set_y(joy_msg->buttons[2]);
 
             controller.set_right_bumper(joy_msg->buttons[4]);
             controller.set_left_bumper(joy_msg->buttons[5]);
@@ -102,28 +102,28 @@ class ControlNode : public rclcpp::Node {
         }
         else{
         
-            if(controller.switchMode()){
+            /*if(controller.switchMode()){
                 autonomousMode = false;
                 char mode[8] = "MANUAL\n";
                 arduinoSerial.writeString(mode);
-            }
+            }*/
         }
         
     }
 
     void publish_encoder_data() {
         autonav_interfaces::msg::Encoders encoder_msg;
-        encoder_msg.left_motor_rpm = std::to_string(motors.getLeftRPM() / 20);
-        encoder_msg.right_motor_rpm = std::to_string(motors.getRightRPM() / 20);
+        encoder_msg.left_motor_rpm = 5;
+        encoder_msg.right_motor_rpm = 5;
         encoder_msg.left_motor_count = motors.getLeftEncoderCount();
         encoder_msg.right_motor_count = motors.getRightEncoderCount();
 
-        std::string arduinoRPMs = "L:";
+        /*std::string arduinoRPMs = "L:";
         arduinoRPMs += encoder_msg.left_motor_rpm;
         arduinoRPMs += " R:";
         arduinoRPMs += encoder_msg.right_motor_rpm;
         arduinoRPMs += "\n";
-        arduinoSerial.writeString(arduinoRPMs.c_str());
+        arduinoSerial.writeString(arduinoRPMs.c_str());*/
 
         encodersPub->publish(encoder_msg);
     }
