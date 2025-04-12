@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../line_costmap_plugin"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../autonav_interfaces"
+		}
+	],
+	"settings": {}
+}

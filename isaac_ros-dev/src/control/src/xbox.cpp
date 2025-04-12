@@ -94,8 +94,10 @@ Xbox::CommandData Xbox::calculateCommand(){
 
   if(TANKDRIVE){
     cmd.cmd = MOVE;
-    cmd.left_motor_speed = left_stick_y_pos;
-    cmd.right_motor_speed = right_stick_y_pos;
+
+    cmd.right_motor_speed = left_stick_y_pos;
+    cmd.left_motor_speed = right_stick_y_pos;
+
     return cmd;
   }
   else{
@@ -113,5 +115,12 @@ Xbox::CommandData Xbox::calculateCommand(){
     cmd.right_motor_speed = magnitude * cos(angle + M_PI / 4); // Adjust for robot orientation 
     return cmd;
   }
+}
+
+bool Xbox::switchMode(){
+  if(x_button_state){
+    return true;
+  }
+  return false;
 }
 

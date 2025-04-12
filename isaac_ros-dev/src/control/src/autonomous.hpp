@@ -3,24 +3,18 @@
 
 class Autonomous {
 private:
-
+  
+public:
+ 
   double positionX;
   double positionY;
   double positionZ;
+  
   double orientationX;
   double orientationY;
   double orientationZ;
   double orientationW;
-  
-public:
-  double getCurrPositionX();
-  double getCurrPositionY();
-  double getCurrPositionZ();
 
-  double getCurrOrientationX();
-  double getCurrOrientationY();
-  double getCurrOrientationZ();
-  double getCurrOrientationW();
-    
   double getYawFromQuaternion(double x, double y, double z, double w);
+
 };

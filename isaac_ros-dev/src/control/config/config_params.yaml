@@ -1,0 +1,6 @@
+
+  # \/ -----------------------configure serial port usage here (true: configure serial port)
+  configure:
+    arduino: true
+    motors: true
+    gps: true
