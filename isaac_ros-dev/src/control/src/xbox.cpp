@@ -117,3 +117,10 @@ Xbox::CommandData Xbox::calculateCommand(){
   }
 }
 
+bool Xbox::switchMode(){
+  if(x_button_state){
+    return true;
+  }
+  return false;
+}
+
