@@ -13,8 +13,7 @@ public:
       SPEED_UP = 2,
       SPEED_DOWN = 3,
       NONE = 4,
-      CHANGE_MODE = 5,
-      GET_CURRENT = 6
+      GET_CURRENT = 5
   };
 
     struct CommandData {

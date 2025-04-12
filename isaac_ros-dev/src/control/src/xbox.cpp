@@ -71,12 +71,6 @@ Xbox::CommandData Xbox::calculateCommand(){
     cmd.right_motor_speed = 0.0f;
     return cmd;
   }
-  else if(x_button_state){
-    cmd.cmd = CHANGE_MODE;
-    cmd.left_motor_speed = 0.0f;
-    cmd.right_motor_speed = 0.0f;
-    return cmd;
-  }
   else if(left_bumper_state){
     cmd.cmd = SPEED_UP;
     cmd.left_motor_speed = 0.0f;
