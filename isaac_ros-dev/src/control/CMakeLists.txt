@@ -54,8 +54,8 @@ endif()
 
 
 install (
-  DIRECTORY src
-  DESTINATION share/$(PROJECT_NAME)
+  DIRECTORY src config launch
+  DESTINATION share/${PROJECT_NAME}
 )
 
 

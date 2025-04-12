@@ -1,22 +1,26 @@
 #include "motor_controller.hpp"
 
-#define SERIAL_PORT "/dev/ttyACM0"
 
 // constructor
 MotorController::MotorController(){
-  char errorOpening = motorSerial.openDevice(SERIAL_PORT, 115200);
+  
+}
+
+int MotorController::configure(const char * port){
+
+   char errorOpening = motorSerial.openDevice(port, 115200);
   //motorSerial.write("!MG\r");
   if (errorOpening!=1){
-    printf ("Unsuccessful connection to %s\n",SERIAL_PORT);
+    printf ("Unsuccessful connection to %s\n",port);
   }
   else{
-    printf ("Successful connection to %s\n",SERIAL_PORT);
+    printf ("Successful connection to %s\n",port);
   }
 
-  std::string leftMotorCommand = "!C 1 0\r";
+  /*std::string leftMotorCommand = "!C 1 0\r";
   std::string rightMotorCommand = "!C 2 0 \r";
   motorSerial.writeString(leftMotorCommand.c_str());
-  motorSerial.writeString(rightMotorCommand.c_str());
+  motorSerial.writeString(rightMotorCommand.c_str());*/
   //getLeftEncoderCount();
   //std::cout << getLeftEncoderCount();
 
@@ -24,7 +28,9 @@ MotorController::MotorController(){
     move(-10,10);
     std::this_thread::sleep_for(std::chrono::milliseconds(1));
   }*/
-  stop();
+ 
+
+
 }
 
 // moves the robot forward
@@ -149,13 +155,13 @@ int MotorController::getLeftEncoderCount(){
   char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
   motorSerial.readString(readBuffer, '\n', 40, 100);
-  std::cout << readBuffer << std::endl;
+  //std::cout << readBuffer << std::endl;
   std::string encoderCount = "";
     bool equalSign = false;
     for (int i = 0; i < 40; i++) {
-        std::cout << readBuffer[i] << std::endl;
+        //std::cout << readBuffer[i] << std::endl;
 
-        if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
+        if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           encoderCount += readBuffer[i];
         }
         if (readBuffer[i] == 61) {
@@ -174,9 +180,9 @@ int MotorController::getRightEncoderCount(){
   std::string encoderCount = "";
     bool equalSign = false;
     for (int i = 0; i < 16; i++) {
-        std::cout << readBuffer[i] << std::endl;
+        //std::cout << readBuffer[i] << std::endl;
 
-        if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
+        if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           encoderCount += readBuffer[i];
         }
         if (readBuffer[i] == 61) {
@@ -184,8 +190,7 @@ int MotorController::getRightEncoderCount(){
         }
     }
 
-  int test = std::stoi(encoderCount);
-  return test;
+  return std::stoi(encoderCount);
 }
 
 int MotorController::getLeftRPM(){
@@ -193,13 +198,13 @@ int MotorController::getLeftRPM(){
   char readBuffer[16] = {};
   motorSerial.writeString(command.c_str());  
   motorSerial.readString(readBuffer, '\n', 15, 1000);
-
+  std::cout << readBuffer << std::endl;
   std::string rpm = "";
     bool equalSign = false;
     for (int i = 0; i < 16; i++) {
-        std::cout << readBuffer[i] << std::endl;
+        //std::cout << readBuffer[i] << std::endl;
 
-        if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
+        if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           rpm += readBuffer[i];
         }
         if (readBuffer[i] == 61) {
@@ -219,9 +224,9 @@ int MotorController::getRightRPM(){
   std::string rpm = "";
     bool equalSign = false;
     for (int i = 0; i < 16; i++) {
-        std::cout << readBuffer[i] << std::endl;
+        //std::cout << readBuffer[i] << std::endl;
 
-        if (readBuffer[i] >= 48 && readBuffer[i] <= 57 &&  equalSign) {
+        if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
           rpm += readBuffer[i];
         }
         if (readBuffer[i] == 61) {
