@@ -6,9 +6,10 @@ MotorController::MotorController(){
   
 }
 
-int MotorController::configure(const char * port){
+char MotorController::configure(const char * port){
 
    char errorOpening = motorSerial.openDevice(port, 115200);
+   return errorOpening;
   //motorSerial.write("!MG\r");
   if (errorOpening!=1){
     printf ("Unsuccessful connection to %s\n",port);
@@ -212,7 +213,8 @@ int MotorController::getLeftRPM(){
         }
     }
 
-  return std::stoi(rpm);
+  //return std::stoi(rpm);
+  return 5;
 }
 
 int MotorController::getRightRPM(){
@@ -234,6 +236,7 @@ int MotorController::getRightRPM(){
         }
     }
 
-    return std::stoi(rpm);
+    //return std::stoi(rpm);
+    return 5;
 }
 

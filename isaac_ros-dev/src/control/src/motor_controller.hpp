@@ -18,7 +18,7 @@ public:
     // Constructor
     MotorController();
     // configuration
-    int configure(const char * port);
+    char configure(const char * port);
 
     // Moveeeeeee
     void forward();

@@ -66,7 +66,27 @@ class ControlNode : public rclcpp::Node {
     // subscription for Nav2 pose
     //rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr pathPlanningSub;
 
+    bool currX = false;
+    bool prevX = false;
+
     void joystick_callback(const sensor_msgs::msg::Joy::SharedPtr joy_msg) {
+        currX = joy_msg->buttons[3];
+
+        // Detect rising edge
+        if (!prevX && currX) {
+            autonomousMode = !autonomousMode;
+
+            if (autonomousMode) {
+                char mode[12] = "AUTONOMOUS\n";
+                arduinoSerial.writeString(mode);
+            } else {
+                char mode[8] = "MANUAL\n";
+                arduinoSerial.writeString(mode);
+            }
+        }
+
+        prevX = currX;
+
         if(!autonomousMode){
             controller.set_b(joy_msg->buttons[1]);
             controller.set_x(joy_msg->buttons[3]);
@@ -100,15 +120,6 @@ class ControlNode : public rclcpp::Node {
                 arduinoSerial.writeString(mode);
             }  
         }
-        else{
-        
-            /*if(controller.switchMode()){
-                autonomousMode = false;
-                char mode[8] = "MANUAL\n";
-                arduinoSerial.writeString(mode);
-            }*/
-        }
-        
     }
 
     void publish_encoder_data() {
@@ -219,7 +230,13 @@ class ControlNode : public rclcpp::Node {
             init_serial_arduino(arduino_port.c_str());
         }
         if (request->motors) {
-            motors.configure(motor_port.c_str());
+            char ret = motors.configure(motor_port.c_str());
+            if (ret != 1) {
+                RCLCPP_ERROR(this->get_logger(), "Motor serial error: %s", gpsSerial.error_map.at(ret).c_str());
+            }
+            else{
+                RCLCPP_INFO(this->get_logger(), "Motor serial connection success!");
+            }
         }
         if (request->gps) {
             init_serial_gps(gps_port.c_str());
@@ -236,13 +253,13 @@ class ControlNode : public rclcpp::Node {
             controller_topic, 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
 
         //NAVIGATION ENCODER PUB
-        //navigationEncoderPub = this->create_publisher<autonav_interfaces::msg::Encoders>(encoder_topic, 10);
+        encodersPub = this->create_publisher<autonav_interfaces::msg::Encoders>(encoder_topic, 10);
         
-       /* encoder_timer_ = this->create_wall_timer(
+        encoder_timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100),
             std::bind(&ControlNode::publish_encoder_data, this)
         );
-        */
+        
         
         //GPS PUB
 

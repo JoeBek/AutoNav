@@ -41,13 +41,13 @@ def generate_launch_description():
             cmd=[
                 [FindExecutable(name='ros2')],
                 ' service call ',
-                '/control/configure_control ',
+                '/configure_control ',
                 'autonav_interfaces/srv/ConfigureControl ',
                 f"'{param_str}'"
             ],
             shell=True,
             # delay to ensure the node is running before calling the service
-            prefix='sleep 5 && '
+            prefix='sleep 3 && '
         )
 
     return LaunchDescription([
