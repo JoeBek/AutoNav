@@ -18,10 +18,10 @@ char MotorController::configure(const char * port){
     printf ("Successful connection to %s\n",port);
   }
 
-  std::string leftMotorCommand = "!C 1 0\r";
-  std::string rightMotorCommand = "!C 2 0 \r";
-  motorSerial.writeString(leftMotorCommand.c_str());
-  motorSerial.writeString(rightMotorCommand.c_str());
+  //std::string leftMotorCommand = "!C 1 0\r";
+  //std::string rightMotorCommand = "!C 2 0 \r";
+  //motorSerial.writeString(leftMotorCommand.c_str());
+  //motorSerial.writeString(rightMotorCommand.c_str());
   //getLeftEncoderCount();
   //std::cout << getLeftEncoderCount();
 
@@ -29,10 +29,10 @@ char MotorController::configure(const char * port){
     move(-10,10);
     std::this_thread::sleep_for(std::chrono::milliseconds(1));
   }*/
-  while(motors.getLeftEncoderCount() < 67800){
-    motors.move(-10, 10);
+  /*while(motors.getLeftEncoderCount() < 67800){
+    move(-10, 10);
   }
-
+  stop();*/
 }
 
 // moves the robot forward
@@ -214,7 +214,7 @@ int MotorController::getLeftRPM(){
         }
     }
 
-  //return std::stoi(rpm);
+  return std::stoi(rpm);
   return 5;
 }
 
@@ -238,7 +238,7 @@ int MotorController::getRightRPM(){
     }
     //std::cout <<"RIGHT RPM: " << rpm << std::endl;
     RCLCPP_INFO(rclcpp::get_logger("MotorController"), "RIGHT RPM: %s", rpm.c_str());
-    //return std::stoi(rpm);
-    return 5;
+    return std::stoi(rpm);
+    //return 5;
 }
 

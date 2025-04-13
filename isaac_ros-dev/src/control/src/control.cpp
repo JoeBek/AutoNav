@@ -61,8 +61,8 @@ class ControlNode : public rclcpp::Node {
     //rclcpp::TimerBase::SharedPtr gps_timer_;
 
     // publisher for encoder values
-    //rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr encodersPub;
-    //rclcpp::TimerBase::SharedPtr encoder_timer_;
+    rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr encodersPub;
+    rclcpp::TimerBase::SharedPtr encoder_timer_;
 
     // subscription for Nav2 pose
     //rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr pathPlanningSub;
@@ -120,19 +120,19 @@ class ControlNode : public rclcpp::Node {
 
     void publish_encoder_data() {
         autonav_interfaces::msg::Encoders encoder_msg;
-        encoder_msg.left_motor_rpm = 3;
-        encoder_msg.right_motor_rpm = 5;
+        encoder_msg.left_motor_rpm = motors.getLeftRPM();
+        encoder_msg.right_motor_rpm = motors.getRightRPM();
         encoder_msg.left_motor_count = motors.getLeftEncoderCount();
         encoder_msg.right_motor_count = motors.getRightEncoderCount();
 
-        /*std::string arduinoRPMs = "L:";
+        std::string arduinoRPMs = "L:";
         arduinoRPMs += encoder_msg.left_motor_rpm;
         arduinoRPMs += " R:";
         arduinoRPMs += encoder_msg.right_motor_rpm;
         arduinoRPMs += "\n";
-        arduinoSerial.writeString(arduinoRPMs.c_str());*/
+        arduinoSerial.writeString(arduinoRPMs.c_str());
 
-        //encodersPub->publish(encoder_msg);
+        encodersPub->publish(encoder_msg);
     }
 
     void publish_gps_data() {
@@ -166,7 +166,7 @@ class ControlNode : public rclcpp::Node {
         }
     }
 
-    void path_planning_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
+    //void path_planning_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
 
         /*if (autonomousMode) {
             currPose.positionX = msg->pose.position.x,
@@ -201,7 +201,7 @@ class ControlNode : public rclcpp::Node {
                 }
             }
         }*/
-    }
+    //}
 
 
     void init_serial_arduino(const char * arduino_port) {
@@ -270,12 +270,12 @@ class ControlNode : public rclcpp::Node {
             controller_topic, 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
 
         //NAVIGATION ENCODER PUB
-        /*encodersPub = this->create_publisher<autonav_interfaces::msg::Encoders>(encoder_topic, 10);
+        encodersPub = this->create_publisher<autonav_interfaces::msg::Encoders>(encoder_topic, 10);
         
         encoder_timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100),
             std::bind(&ControlNode::publish_encoder_data, this)
-        );*/
+        );
         
         
         //GPS PUB
@@ -297,6 +297,7 @@ class ControlNode : public rclcpp::Node {
               */
 
         response->ret = 0;
+        motors.getRightRPM();
     }
 
 };
