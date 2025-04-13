@@ -11,6 +11,7 @@
 #include <queue>
 #include <iostream>
 #include <string>
+#include <cmath>
 
 
 class ControlNode : public rclcpp::Node {
@@ -119,7 +120,7 @@ class ControlNode : public rclcpp::Node {
 
     void publish_encoder_data() {
         autonav_interfaces::msg::Encoders encoder_msg;
-        encoder_msg.left_motor_rpm = 5;
+        encoder_msg.left_motor_rpm = 3;
         encoder_msg.right_motor_rpm = 5;
         encoder_msg.left_motor_count = motors.getLeftEncoderCount();
         encoder_msg.right_motor_count = motors.getRightEncoderCount();
@@ -165,9 +166,9 @@ class ControlNode : public rclcpp::Node {
         }
     }
 
-    /*void path_planning_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
+    void path_planning_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
 
-        if (autonomousMode) {
+        /*if (autonomousMode) {
             currPose.positionX = msg->pose.position.x,
             currPose.positionY = msg->pose.position.y,
             currPose.positionZ = msg->pose.position.z;
@@ -177,9 +178,30 @@ class ControlNode : public rclcpp::Node {
             currPose.orientationZ = msg->pose.orientation.z;
             currPose.orientationW = msg->pose.orientation.w;
 
-            double yaw = currPose.getYawFromQuaternion();
-        }
-    }*/
+            double absoluteYaw = currPose.getYawFromQuaternion();
+            double relativeYaw = ........
+            double relativeX = ........
+            double relativeY = ........
+            double initialTurnAngle = std::atan2(relativeY, relativeX) * (180 / M_PI);
+            double totalDistance = std::sqrt((relativeX * relativeX) + (relativeY * relativeY))
+
+            while(motors.getLeftEncoderCount() < ((initialTurnAngle / 360) * 67800)){
+                motors.move(-10, 10);
+            }
+
+            //1.275 is 50.2 inches in meters
+            if(totalDistance > 1.275){
+                while(motors.getLeftEncoderCount() < ((totalDistance / 1.275) * 80000)){
+                    motors.move(10, 10);
+                }
+            }
+            else {
+                while(motors.getLeftEncoderCount() < ((totalDistance / 1.275) * 67800)){
+                    motors.move(10, 10);
+                }
+            }
+        }*/
+    }
 
 
     void init_serial_arduino(const char * arduino_port) {
@@ -275,7 +297,6 @@ class ControlNode : public rclcpp::Node {
               */
 
         response->ret = 0;
-
     }
 
 };

@@ -1,5 +1,5 @@
 #include "motor_controller.hpp"
-
+#include <rclcpp/rclcpp.hpp>
 
 // constructor
 MotorController::MotorController(){
@@ -30,7 +30,6 @@ char MotorController::configure(const char * port){
     std::this_thread::sleep_for(std::chrono::milliseconds(1));
   }*/
  
-
 
 }
 
@@ -235,7 +234,8 @@ int MotorController::getRightRPM(){
             equalSign = true;
         }
     }
-
+    //std::cout <<"RIGHT RPM: " << rpm << std::endl;
+    RCLCPP_INFO(rclcpp::get_logger("MotorController"), "RIGHT RPM: %s", rpm.c_str());
     //return std::stoi(rpm);
     return 5;
 }
