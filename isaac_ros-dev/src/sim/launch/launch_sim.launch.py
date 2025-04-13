@@ -2,7 +2,7 @@ import os
  
 from ament_index_python.packages import get_package_share_directory
  
- 
+import launch
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
@@ -30,6 +30,12 @@ def generate_launch_description():
                     get_package_share_directory(package_name),'launch','rsp.launch.py'
                 )]), launch_arguments={'use_sim_time': 'true'}.items()
     )
+    jsp = Node(
+        package='joint_state_publisher',
+        executable='joint_state_publisher',
+        name='joint_state_publisher',
+        arguments=[default_model_path]
+    )
  
     # Include the Gazebo launch file, provided by the gazebo_ros package
     gazebo = IncludeLaunchDescription(
@@ -56,7 +62,8 @@ def generate_launch_description():
     # Launch them all!
     return LaunchDescription([
         rsp,
-        gazebo,
+        jsp,
+        launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so'], output='screen'),
         spawn_entity,
         #robot_localization_node,
     ])

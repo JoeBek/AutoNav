@@ -1,3 +1,4 @@
+import os
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import DeclareLaunchArgument
@@ -14,10 +15,16 @@ The transforms published are the requirements for the rest of NAV2 to work prope
 
 def generate_launch_description():
         # Launch Arguments
-    DeclareLaunchArgument(
+    use_sim_time = DeclareLaunchArgument(
             'use_sim_time',
             default_value='false',
-            description='Use simulation clock if true'),
+            description='Use simulation clock if true')
+    
+
+    pkg_share = FindPackageShare(package='slam').find('slam')
+    slam_config = os.path.join(pkg_share, 'config', 'slam.yaml')
+    ekf_local_config = os.path.join(pkg_share, 'config', 'ekf_local_sim.yaml')
+    ekf_global_config = os.path.join(pkg_share, 'config', 'ekf_global.yaml')
         
         # 1. LiDAR PointCloud to LaserScan Conversion
     point2laser = Node(
@@ -37,7 +44,7 @@ def generate_launch_description():
             ('cloud_in', '/multiscan100/points'),
             ('scan', '/scan')
         ]
-    ),
+    )
 
     # 2. SLAM Toolbox (Online Async)
     slam_toolbox = Node(
@@ -45,58 +52,37 @@ def generate_launch_description():
         executable='async_slam_toolbox_node',
         name='slam_toolbox',
         output='screen',
-        parameters=[
-            PathJoinSubstitution([
-                FindPackageShare('your_pkg'),
-                'config',
-                'slam_config.yaml'
-            ]),
-            {'use_sim_time': LaunchConfiguration('use_sim_time')}
-        ],
+        parameters=[slam_config, {"use_sim_time": LaunchConfiguration('use_sim_time')}]
+    )
+    '''
         remappings=[
             ('/scan', '/scan'),
             ('/tf', 'tf'),
             ('/tf_static', 'tf_static')
         ]
-    ),
+    '''
 
     # 3. Local EKF (odom -> base_link)
-    local_ekf = Node(
+    ekf_local = Node(
         package='robot_localization',
         executable='ekf_node',
-        name='local_ekf',
+        name='ekf_node',
         output='screen',
-        parameters=[
-            PathJoinSubstitution([
-                FindPackageShare('your_pkg'),
-                'config',
-                'local_ekf.yaml'
-            ]),
-            {'use_sim_time': LaunchConfiguration('use_sim_time')}
-        ],
-        remappings=[
-            ('odometry/filtered', 'local_ekf/odom')
-        ]
-    ),
+        parameters=[ekf_local_config , {"use_sim_time": LaunchConfiguration('use_sim_time')}],
+        # remappings=[      ('odometry/filtered', 'local_ekf/odom') ]
+    )
 
     # 4. Global EKF (map -> odom)
-    global_ekf = Node(
+    ekf_global = Node(
         package='robot_localization',
         executable='ekf_node',
-        name='global_ekf',
+        name='ekf_global',
         output='screen',
-        parameters=[
-            PathJoinSubstitution([
-                FindPackageShare('your_pkg'),
-                'config',
-                'global_ekf.yaml'
-            ]),
-            {'use_sim_time': LaunchConfiguration('use_sim_time')}
-        ],
+        parameters=[ekf_global_config , {"use_sim_time": LaunchConfiguration('use_sim_time')}],
         remappings=[
             ('odometry/filtered', 'global_ekf/odom')
         ]
-    ),
+    )
 
     # 5. GPS Transformation Node
     gps_transform = Node(
@@ -116,10 +102,11 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        point2laser,
-        slam_toolbox,
-        local_ekf,
-        gps_transform,
-        global_ekf
+        use_sim_time,
+        #point2laser,
+        #slam_toolbox,
+        ekf_local,
+       # gps_transform,
+       # ekf_global 
         
     ])
