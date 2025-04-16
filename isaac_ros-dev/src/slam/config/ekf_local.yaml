@@ -1,0 +1,35 @@
+ekf_local:
+  ros__parameters:
+    # Local EKF (e.g., ekf_local.yaml)
+    frequency: 50.0              # High update rate for control
+    world_frame: odom          # Output odom->base_link
+
+
+    imu0: imu1/data            # First IMU (orientation/angular velocity)
+    imu0_config: [false, false, false,
+                  false, true, true,
+                  false, false, false,
+                  false, false, false,
+                  false, false, false] # TODO tune based on what sensor reads
+    imu0_differential: true
+
+    imu1: imu2/data            # Second IMU (redundancy/fault tolerance)
+    imu1_config: [false, false, false,
+                  false, true, true,
+                  false, false, false,
+                  false, false, false,
+                  false, false, false] #TODO tune based on what sensor reads
+    imu1_differential: true
+
+    odom0: wheel_encoder/odom  # Wheel encoder odometry
+    odom0_config: [false, false, false,
+                  false, false, false,
+                  true, true, false,
+                  false, false, true,
+                  false, false, false] #TODO tune based on what sensor reads
+    odom0_differential: true
+
+
+
+
+
