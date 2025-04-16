@@ -1,10 +1,11 @@
 ekf_global:
   ros__parameters:
-    frequency: 50.0
+    frequency: 5.0
     sensor_timeout: 0.1
     map_frame: map
     odom_frame: odom
     base_link_frame: base_link
+    world_frame: map
     
     
 
@@ -15,7 +16,7 @@ ekf_global:
     #   ax ay az ]
 
     # SLAM configuration
-    pose0: /slam/pose,
+    pose0: /pose
     # x y yw dx dyw
     pose0_config: [true, true, false,
                   false, false, true,
@@ -25,7 +26,7 @@ ekf_global:
     pose0_differential: false
 
     # local EKF configuration
-    odom0: /local_ekf/odom,
+    odom0: /local_ekf/odom
     odom0_config: [true, true, false,
                   false, false, true,
                   true, false, false,

@@ -19,7 +19,22 @@ def generate_launch_description():
             'use_sim_time',
             default_value='false',
             description='Use simulation clock if true')
+
+    pointcloud_topic = DeclareLaunchArgument( 
+                            'pointcloud_topic',
+                            default_value='/depth_camera/points',
+                            description='cloud topic to use for cloud 2 scan' )
     
+    publish_period = DeclareLaunchArgument(
+        'publish_period',
+        # 0.02 if you want to publish
+        default_value='0.00',
+        description="if you want SLAM to publish map->odom... (sim yes real no)"
+    )
+    
+    # rest in peace ... i will eternalize it in these comments
+    # magic_spell = lambda x : 0.02 if x else 0.00
+                                            
 
     pkg_share = FindPackageShare(package='slam').find('slam')
     slam_config = os.path.join(pkg_share, 'config', 'slam.yaml')
@@ -27,6 +42,14 @@ def generate_launch_description():
     ekf_global_config = os.path.join(pkg_share, 'config', 'ekf_global.yaml')
         
         # 1. LiDAR PointCloud to LaserScan Conversion
+
+        # deps for Lidar 2 pointcloud (remove)
+        #sudo apt update
+        #sudo apt install ros-humble-vision-msgs ros-humble-tf2-sensor-msgs
+        # sudo apt install ros-humble-tf2 ros-humble-tf2-ros ros-humble-tf2-sensor-msgs
+
+
+        # !!!
     point2laser = Node(
         package='pointcloud_to_laserscan',
         executable='pointcloud_to_laserscan_node',
@@ -41,7 +64,7 @@ def generate_launch_description():
             'transform_tolerance': 0.03
         }],
         remappings=[
-            ('cloud_in', '/multiscan100/points'),
+            ('cloud_in', LaunchConfiguration('pointcloud_topic')),
             ('scan', '/scan')
         ]
     )
@@ -52,7 +75,9 @@ def generate_launch_description():
         executable='async_slam_toolbox_node',
         name='slam_toolbox',
         output='screen',
-        parameters=[slam_config, {"use_sim_time": LaunchConfiguration('use_sim_time')}]
+        parameters=[slam_config, {"use_sim_time": LaunchConfiguration('use_sim_time'),
+                                  "transform_publish_period": LaunchConfiguration('publish_period')
+                                  }]
     )
     '''
         remappings=[
@@ -66,10 +91,10 @@ def generate_launch_description():
     ekf_local = Node(
         package='robot_localization',
         executable='ekf_node',
-        name='ekf_node',
+        name='ekf_node', # this has to be called ekf_node or slam toolbox freaks the fuck out
         output='screen',
         parameters=[ekf_local_config , {"use_sim_time": LaunchConfiguration('use_sim_time')}],
-        # remappings=[      ('odometry/filtered', 'local_ekf/odom') ]
+        remappings=[('odometry/filtered', 'local_ekf/odom')]
     )
 
     # 4. GPS Transformation Node
@@ -102,13 +127,15 @@ def generate_launch_description():
         ]
     )
 
-
     return LaunchDescription([
+        publish_period,
+        pointcloud_topic,
         use_sim_time,
-        #point2laser,
+        point2laser,
         ekf_local,
         slam_toolbox,
        # gps_transform,
-       # ekf_global 
+       ekf_global 
         
     ])
+
