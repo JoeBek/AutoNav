@@ -310,7 +310,7 @@ class ControlNode : public rclcpp::Node {
 
 
         
-        const double PI = 3.14159265358979323846;
+        /*const double PI = 3.14159265358979323846;
         double relativeYaw = 270;
         double relativeX = 3;
         double relativeY = 4;
@@ -347,7 +347,7 @@ class ControlNode : public rclcpp::Node {
         std::string leftStop = "!MS 1\r";
         std::string rightStop = "!MS 2\r";
 
-        int count = 0;
+        int count = 0;*/
         /*while(motors.getLeftEncoderCount() < 96000){
           
             motors.move(10, 10);
