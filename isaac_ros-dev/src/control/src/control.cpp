@@ -157,6 +157,7 @@ class ControlNode : public rclcpp::Node {
 
 		    gps_msg.latitude = std::stof(tokens[3]);
 		    gps_msg.longitude = std::stof(tokens[4]);
+            gps_msg.altitude = std::stof(tokens[5]);
   	    }
 	    catch (const std::exception & e) {
 		    RCLCPP_ERROR(this->get_logger(), "GPS string parsing failed: %s", e.what());
@@ -297,7 +298,76 @@ class ControlNode : public rclcpp::Node {
               */
 
         response->ret = 0;
-        motors.getRightRPM();
+        std::string leftMotorCommand = "!C 1 0\r";
+        std::string rightMotorCommand = "!C 2 0 \r";
+        motors.motorSerial.writeString(leftMotorCommand.c_str());
+        motors.motorSerial.writeString(rightMotorCommand.c_str());
+        /*while(motors.getLeftEncoderCount() < 122500){ ccw
+            move(-10, 10);
+            std::this_thread::sleep_for(std::chrono::milliseconds(1))
+        }
+        stop();*/
+
+
+        
+        const double PI = 3.14159265358979323846;
+        double relativeYaw = 270;
+        double relativeX = 3;
+        double relativeY = 4;
+        double initialTurnAngle = std::atan2(relativeY, relativeX) * (180 / PI);
+        double totalDistance = std::sqrt((relativeX * relativeX) + (relativeY * relativeY));
+
+        int totalEncoderCount = motors.getLeftEncoderCount();
+
+        while(static_cast<double>(motors.getLeftEncoderCount()) < (static_cast<double>(initialTurnAngle / 360) * 122500)){
+            motors.move(-10, 10);
+            std::this_thread::sleep_for(std::chrono::milliseconds(1));
+        }
+        motors.stop();
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        totalEncoderCount = motors.getLeftEncoderCount();
+        //1.275 is 50.2 inches in meters
+        if(totalDistance > 1.275){
+            while(static_cast<double>(motors.getLeftEncoderCount()) < ((static_cast<double>((totalDistance / 1.275) * 76000)) + totalEncoderCount)){
+                motors.move(10, 10);
+                //std::this_thread::sleep_for(std::chrono::milliseconds(1));
+            }
+        }
+        else {
+            while(static_cast<double>(motors.getLeftEncoderCount()) < ((static_cast<double>((totalDistance / 1.275) * 67800)) + totalEncoderCount)){
+                motors.move(10, 10);
+                //std::this_thread::sleep_for(std::chrono::milliseconds(1));
+            }
+        }
+        motors.stop();
+
+        std::string stoppp = "!EX\r";
+        std::string starttt = "!MG\r";
+        std::string clear = "# C\r";
+        std::string leftStop = "!MS 1\r";
+        std::string rightStop = "!MS 2\r";
+
+        int count = 0;
+        /*while(motors.getLeftEncoderCount() < 96000){
+          
+            motors.move(10, 10);
+                 //motors.motorSerial.writeString(clear.c_str());
+            //std::this_thread::sleep_for(std::chrono::milliseconds(1));
+        }
+        
+        //motors.motorSerial.writeString(clear.c_str());
+        motors.stop();
+
+        count = 0;
+        while(motors.getLeftEncoderCount() > 0){
+            
+            motors.move(-10, -10);
+                 //motors.motorSerial.writeString(clear.c_str());
+            
+            //std::this_thread::sleep_for(std::chrono::milliseconds(1));
+        }
+
+        motors.stop();*/
     }
 
 };

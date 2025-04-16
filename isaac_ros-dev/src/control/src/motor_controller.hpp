@@ -6,7 +6,6 @@
 
 class MotorController {
 private:
-    serialib motorSerial;
     int stepSize = 10;
     std::pair<int, int> right_turn_speeds = {-10, -10};
     std::pair<int, int> left_turn_speeds = {10, 10};
@@ -17,6 +16,7 @@ private:
 public:
     // Constructor
     MotorController();
+    serialib motorSerial;
     // configuration
     char configure(const char * port);
 
