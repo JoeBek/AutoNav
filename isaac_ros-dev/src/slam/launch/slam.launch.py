@@ -72,19 +72,7 @@ def generate_launch_description():
         # remappings=[      ('odometry/filtered', 'local_ekf/odom') ]
     )
 
-    # 4. Global EKF (map -> odom)
-    ekf_global = Node(
-        package='robot_localization',
-        executable='ekf_node',
-        name='ekf_global',
-        output='screen',
-        parameters=[ekf_global_config , {"use_sim_time": LaunchConfiguration('use_sim_time')}],
-        remappings=[
-            ('odometry/filtered', 'global_ekf/odom')
-        ]
-    )
-
-    # 5. GPS Transformation Node
+    # 4. GPS Transformation Node
     gps_transform = Node(
         package='robot_localization',
         executable='navsat_transform_node',
@@ -101,11 +89,25 @@ def generate_launch_description():
         ]
     )
 
+
+    # 5. Global EKF (map -> odom)
+    ekf_global = Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_global',
+        output='screen',
+        parameters=[ekf_global_config , {"use_sim_time": LaunchConfiguration('use_sim_time')}],
+        remappings=[
+            ('odometry/filtered', 'global_ekf/odom')
+        ]
+    )
+
+
     return LaunchDescription([
         use_sim_time,
         #point2laser,
-        #slam_toolbox,
         ekf_local,
+        slam_toolbox,
        # gps_transform,
        # ekf_global 
         

@@ -8,6 +8,7 @@ from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.substitutions import FindPackageShare
 from launch.substitutions import Command, LaunchConfiguration
+from launch.actions import DeclareLaunchArgument
  
 from launch_ros.actions import Node
  
@@ -20,6 +21,10 @@ def generate_launch_description():
     # !!! MAKE SURE YOU SET THE PACKAGE NAME CORRECTLY !!!
  
     package_name='sim' #<--- CHANGE ME
+
+    DeclareLaunchArgument('world,',
+                          default_value='src/sim/worlds/autonav_igvc_course.world',
+                          description='path to world file')
 
 
     pkg_share = FindPackageShare(package='sim').find('sim')
@@ -49,21 +54,10 @@ def generate_launch_description():
                                    '-entity', 'my_bot', '-z 0.5', '-Y -1.570'],
                         output='screen')
    
-
-    robot_localization_node = Node(
-        package='robot_localization',
-        executable='ekf_node',
-        name='ekf_node',
-        output='screen',
-        parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
-        )
  
- 
-    # Launch them all!
     return LaunchDescription([
         rsp,
         jsp,
-        launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so'], output='screen'),
+        launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so', LaunchConfiguration('world')], output='screen'),
         spawn_entity,
-        #robot_localization_node,
     ])
