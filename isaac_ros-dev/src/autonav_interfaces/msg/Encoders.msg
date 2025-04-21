@@ -1,4 +1,4 @@
-string left_motor_rpm
-string right_motor_rpm
+int32 left_motor_rpm
+int32 right_motor_rpm
 int32 left_motor_count
 int32 right_motor_count

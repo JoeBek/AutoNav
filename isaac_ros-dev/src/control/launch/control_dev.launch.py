@@ -47,7 +47,7 @@ def generate_launch_description():
             ],
             shell=True,
             # delay to ensure the node is running before calling the service
-            prefix='sleep 5 && '
+            prefix='sleep 3 && '
         )
 
     return LaunchDescription([
