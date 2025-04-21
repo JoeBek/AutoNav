@@ -1,0 +1,68 @@
+<?xml version="1.0"?> 
+<robot name="new_bot" xmlns:xacro="http://ros.org/wiki/xacro"> 
+
+  <link name="base_link"> 
+
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/> 
+
+  </link> 
+
+ 
+
+  <link name="base_footprint"/> 
+
+ 
+
+  <joint name="base_joint" type="fixed"> 
+
+    <parent link="base_link"/> 
+
+    <child link="base_footprint"/> 
+
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/> 
+
+  </joint> 
+
+ 
+
+  <link name="camera_footprint"/> 
+
+  <joint name="camera_joint" type="fixed"> 
+
+    <parent link="base_link"/> 
+
+    <child link="camera_footprint"/> 
+
+    <origin xyz="0.4 0.0 0.3" rpy="0 0.785398 0"/> 
+
+  </joint> 
+
+ 
+
+  <link name="lidar_footprint"/> 
+
+  <joint name="lidar_joint" type="fixed"> 
+
+    <parent link="base_link"/> 
+
+    <child link="lidar_footprint"/> 
+
+    <origin xyz="0.44 0.0 0.15" rpy="0 3.14159 0"/> 
+
+  </joint> 
+
+ 
+
+  <link name="gps_footprint"/> 
+
+  <joint name="gps_joint" type="fixed"> 
+
+    <parent link="base_link"/> 
+
+    <child link="gps_footprint"/> 
+
+    <origin xyz="-0.38 0.0 0.56" rpy="0 0 0"/> 
+
+  </joint> 
+
+</robot> 
