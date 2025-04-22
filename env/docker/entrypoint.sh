@@ -37,6 +37,7 @@ adduser ${USERNAME} sudo  >/dev/null
 adduser ${USERNAME} dialout  >/dev/null
 adduser ${USERNAME} bluetooth  >/dev/null
 adduser ${USERNAME} systemd-journal >/dev/null
+adduser ${USERNAME} zed >/dev/null
 
 source /opt/ros/humble/setup.bash # source ros setup
 
