@@ -61,8 +61,8 @@ class ControlNode : public rclcpp::Node {
     //rclcpp::TimerBase::SharedPtr gps_timer_;
 
     // publisher for encoder values
-    rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr encodersPub;
-    rclcpp::TimerBase::SharedPtr encoder_timer_;
+   // rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr encodersPub;
+   // rclcpp::TimerBase::SharedPtr encoder_timer_;
 
     // subscription for Nav2 pose
     //rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr pathPlanningSub;
@@ -132,7 +132,7 @@ class ControlNode : public rclcpp::Node {
         arduinoRPMs += "\n";
         arduinoSerial.writeString(arduinoRPMs.c_str());
 
-        encodersPub->publish(encoder_msg);
+        //encodersPub->publish(encoder_msg);
     }
 
     void publish_gps_data() {
@@ -271,12 +271,12 @@ class ControlNode : public rclcpp::Node {
             controller_topic, 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
 
         //NAVIGATION ENCODER PUB
-        encodersPub = this->create_publisher<autonav_interfaces::msg::Encoders>(encoder_topic, 10);
+        //encodersPub = this->create_publisher<autonav_interfaces::msg::Encoders>(encoder_topic, 10);
         
-        encoder_timer_ = this->create_wall_timer(
+       /* encoder_timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100),
             std::bind(&ControlNode::publish_encoder_data, this)
-        );
+        );*/
         
         
         //GPS PUB
