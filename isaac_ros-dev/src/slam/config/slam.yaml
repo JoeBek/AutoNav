@@ -1,0 +1,23 @@
+slam_toolbox:
+  ros__parameters:
+    mapper:
+      frame_id: base_link
+      resolution: 0.05 # not sure
+      max_laser_range: 20.0 # maybe adjust
+      enable_interactive_mode: false # no idea
+      use_scan_matching: true  # no idea
+      scan_buffer_size: 500 # heuristic
+      scan_buffer_max_scan_angle: 3.14159 # heuristic
+      max_keyframes: 30 # similar to time allocated forgetting, distance allocated forgetting
+      loop_closure_enabled: false # no need to remember what's behind us
+      sliding_window: true  # see above
+      sliding_window_duration: 30  # 30 seconds of retention
+      retain_pointcloud: false         # Discard raw scans immediately  
+      debug: true
+
+      mode: "mapping"  # mapping mode! we map 
+
+    #gpu_acceleration:
+    #  use_cuda: true
+    #  max_gpu_mem: 4096  # MB allocated for SLAM
+    #  feature_extractors: 2  # Parallel CUDA streams

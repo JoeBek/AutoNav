@@ -1,7 +1,24 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
+
+
+    <xacro:property name="base_width" value="0.31"/>
+    <xacro:property name="base_length" value="0.42"/>
+    <xacro:property name="base_height" value="0.18"/>
+
+
+
     <xacro:include filename="inertial_macros.xacro"/>
+    <xacro:property name="wheel_radius" value="0.10"/>
+    <xacro:property name="wheel_width" value="0.04"/>
+    <xacro:property name="wheel_ygap" value="0.025"/>
+    <xacro:property name="wheel_zoff" value="0.05"/>
+    <xacro:property name="wheel_xoff" value="0.12"/>
+
+
+
+
 
     <material name="white">
         <color rgba="1 1 1 1"/>
@@ -25,9 +42,20 @@
 
     <!--START OF BASE LINK-->
     <link name="base_link">
-
     </link>
     <!--END OF BASE LINK-->
+
+    <!-- Robot Footprint -->
+    <link name="base_footprint"/>
+
+    <joint name="base_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+        <origin xyz="0.0 0.0 ${-(wheel_radius+wheel_zoff)}" rpy="0 0 0"/>
+    </joint>
+
+
+
 
     <!--START OF CHASSIS LINK-->
     <joint name="chassis_joint" type="fixed">
@@ -58,11 +86,7 @@
         <xacro:inertial_box mass="0.5" x="0.8636" y="0.4572" z="0.41021">
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_box>
-        <inertial>
-            <mass value="5.0"/>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
-        </inertial>
+        
     </link>
 
     <gazebo reference="chassis">
@@ -200,6 +224,7 @@
     </gazebo>
     <!--END OF BACK CASTER WHEEL MODEL-->
     <!--END OF BACK CASTER WHEEL LINK-->
+        
 
 
 </robot>
