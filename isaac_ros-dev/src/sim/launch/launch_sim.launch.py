@@ -22,7 +22,7 @@ def generate_launch_description():
  
     package_name='sim' #<--- CHANGE ME
 
-    DeclareLaunchArgument('world,',
+    world = DeclareLaunchArgument('world',
                           default_value='src/sim/worlds/autonav_igvc_course.world',
                           description='path to world file')
 
@@ -56,6 +56,7 @@ def generate_launch_description():
    
  
     return LaunchDescription([
+        world,
         rsp,
         jsp,
         launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so', LaunchConfiguration('world')], output='screen'),

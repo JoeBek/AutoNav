@@ -27,11 +27,12 @@ std::pair<int2*, int*> lines::detect_line_pixels(const cv::Mat &image) {
     }
     int height = gray_img.rows;
     int width = gray_img.cols;
+    RCLCPP_INFO(rclcpp::get_logger("lines"), "input image r x c : %d x %d ", height, width);
 
 
     // get mask
     cv::Mat mask;
-    double threshold = 180;
+    double threshold = 0;
     cv::threshold(gray_img, mask, threshold, 255, cv::THRESH_BINARY);
 
     
@@ -100,18 +101,18 @@ std::pair<int2*, int*> lines::detect_line_pixels(const cv::Mat &image) {
 
 
     //return output;
-    int2 *output_return;
-    int *counter_return;
+    int *counter_return = new int;
+    HANDLE_ERROR( cudaMemcpy(counter_return, counter, sizeof(int), cudaMemcpyDeviceToHost) );
 
-
-
-    HANDLE_ERROR( cudaMemcpy(output_return, output, total * sizeof(int2), cudaMemcpyDeviceToHost) );
-    HANDLE_ERROR( cudaMemcpy(counter_return, output, sizeof(int), cudaMemcpyDeviceToHost) );
+    int2 *output_return = new int2[*counter_return];
+    HANDLE_ERROR( cudaMemcpy(output_return, output, *counter_return * sizeof(int2), cudaMemcpyDeviceToHost) );
 
     cudaDeviceSynchronize();
 
+
     return std::make_pair(output_return, counter_return);
 
+    // deallocate in main
     
 
 
