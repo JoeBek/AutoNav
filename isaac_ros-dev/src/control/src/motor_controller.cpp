@@ -157,7 +157,7 @@ int MotorController::getLeftEncoderCount(){
   std::string command = "?C 1\r";
   char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
-  motorSerial.readString(readBuffer, '\n', 40, 100);
+  motorSerial.readString(readBuffer, '\n', 40, 20);
   //std::cout << readBuffer << std::endl;
   std::string encoderCount = "";
     bool equalSign = false;
@@ -176,13 +176,13 @@ int MotorController::getLeftEncoderCount(){
 
 int MotorController::getRightEncoderCount(){
   std::string command = "?C 2\r";
-  char readBuffer[16] = {};
+  char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
-  motorSerial.readString(readBuffer, '\n', 15, 1000);
+  motorSerial.readString(readBuffer, '\n', 40, 20);
 
   std::string encoderCount = "";
     bool equalSign = false;
-    for (int i = 0; i < 16; i++) {
+    for (int i = 0; i < 40; i++) {
         //std::cout << readBuffer[i] << std::endl;
 
         if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
@@ -200,7 +200,7 @@ int MotorController::getLeftRPM(){
   std::string command = "?BS 1\r";
   char readBuffer[16] = {};
   motorSerial.writeString(command.c_str());  
-  motorSerial.readString(readBuffer, '\n', 15, 1000);
+  motorSerial.readString(readBuffer, '\n', 15, 20);
   std::cout << readBuffer << std::endl;
   std::string rpm = "";
     bool equalSign = false;
@@ -216,14 +216,14 @@ int MotorController::getLeftRPM(){
     }
 
   return std::stoi(rpm);
-  return 5;
+  //return 5;
 }
 
 int MotorController::getRightRPM(){
   std::string command = "?BS 2\r";
   char readBuffer[16] = {};
   motorSerial.writeString(command.c_str());  
-  motorSerial.readString(readBuffer, '\n', 15, 1000);
+  motorSerial.readString(readBuffer, '\n', 15, 20);
 
   std::string rpm = "";
     bool equalSign = false;

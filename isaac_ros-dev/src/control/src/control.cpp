@@ -310,36 +310,67 @@ class ControlNode : public rclcpp::Node {
 
 
         
-        /*const double PI = 3.14159265358979323846;
+        const double PI = 3.14159265358979323846;
         double relativeYaw = 270;
-        double relativeX = 3;
-        double relativeY = 4;
+        double relativeX = 1;
+        double relativeY = 2;
         double initialTurnAngle = std::atan2(relativeY, relativeX) * (180 / PI);
         double totalDistance = std::sqrt((relativeX * relativeX) + (relativeY * relativeY));
-
-        int totalEncoderCount = motors.getLeftEncoderCount();
-
-        while(static_cast<double>(motors.getLeftEncoderCount()) < (static_cast<double>(initialTurnAngle / 360) * 122500)){
-            motors.move(-10, 10);
-            std::this_thread::sleep_for(std::chrono::milliseconds(1));
-        }
-        motors.stop();
-        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-        totalEncoderCount = motors.getLeftEncoderCount();
-        //1.275 is 50.2 inches in meters
-        if(totalDistance > 1.275){
-            while(static_cast<double>(motors.getLeftEncoderCount()) < ((static_cast<double>((totalDistance / 1.275) * 76000)) + totalEncoderCount)){
-                motors.move(10, 10);
-                //std::this_thread::sleep_for(std::chrono::milliseconds(1));
+        if(initialTurnAngle < 0){
+            initialTurnAngle *= -1;
+            int totalEncoderCount = motors.getRightEncoderCount();
+            while(static_cast<double>(motors.getRightEncoderCount()) > (static_cast<double>(initialTurnAngle / 360) * -122500)){
+                motors.move(10, -10);
+                std::this_thread::sleep_for(std::chrono::milliseconds(1));
             }
-        }
-        else {
-            while(static_cast<double>(motors.getLeftEncoderCount()) < ((static_cast<double>((totalDistance / 1.275) * 67800)) + totalEncoderCount)){
-                motors.move(10, 10);
-                //std::this_thread::sleep_for(std::chrono::milliseconds(1));
+
+            motors.stop();
+            std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+            totalEncoderCount = motors.getRightEncoderCount();
+            //1.275 is 50.2 inches in meters
+            if(totalDistance > 1.275){
+                while(static_cast<double>(motors.getRightEncoderCount()) > -1*((static_cast<double>((totalDistance / 1.275) * 76000)) + totalEncoderCount)){
+                    motors.move(30, 30);
+                    //std::this_thread::sleep_for(std::chrono::milliseconds(1));
+                }
             }
+            else {
+                while(static_cast<double>(motors.getRightEncoderCount()) > -1 * ((static_cast<double>((totalDistance / 1.275) * 67800)) + totalEncoderCount)){
+                    motors.move(30, 30);
+                    //std::this_thread::sleep_for(std::chrono::milliseconds(1));
+                }
+            }
+            motors.stop();
+           
         }
-        motors.stop();
+        else{
+            int totalEncoderCount = motors.getLeftEncoderCount();
+
+            while(static_cast<double>(motors.getLeftEncoderCount()) < (static_cast<double>(initialTurnAngle / 360) * 122000)){
+                motors.move(-10, 10);
+                std::this_thread::sleep_for(std::chrono::milliseconds(1));
+            }
+
+            motors.stop();
+            std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+            totalEncoderCount = motors.getLeftEncoderCount();
+            //1.275 is 50.2 inches in meters
+            if(totalDistance > 1.275){
+                while(static_cast<double>(motors.getLeftEncoderCount()) < ((static_cast<double>((totalDistance / 1.275) * 76000)) + totalEncoderCount)){
+                    motors.move(10, 10);
+                    //std::this_thread::sleep_for(std::chrono::milliseconds(1));
+                }
+            }
+            else {
+                while(static_cast<double>(motors.getLeftEncoderCount()) < ((static_cast<double>((totalDistance / 1.275) * 67800)) + totalEncoderCount)){
+                    motors.move(10, 10);
+                    //std::this_thread::sleep_for(std::chrono::milliseconds(1));
+                }
+            }
+            motors.stop();
+        }
+        
+        
 
         std::string stoppp = "!EX\r";
         std::string starttt = "!MG\r";
@@ -347,7 +378,7 @@ class ControlNode : public rclcpp::Node {
         std::string leftStop = "!MS 1\r";
         std::string rightStop = "!MS 2\r";
 
-        int count = 0;*/
+        int count = 0;
         /*while(motors.getLeftEncoderCount() < 96000){
           
             motors.move(10, 10);
