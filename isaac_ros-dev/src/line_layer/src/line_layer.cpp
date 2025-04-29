@@ -40,7 +40,7 @@
  * Reference tutorial:
  * https://navigation.ros.org/tutorials/docs/writing_new_costmap2d_plugin.html
  *********************************************************************/
-#include "line_costmap_plugin/gradient_layer.hpp"
+#include "line_layer/line_layer.hpp"
 
 #include "nav2_costmap_2d/costmap_math.hpp"
 #include "nav2_costmap_2d/footprint.hpp"
@@ -58,7 +58,7 @@ bool within_bounds(T value, T min, T max) {
   return (value >= min) && (value <= max);
 }
 
-namespace nav2_gradient_costmap_plugin
+namespace line_layer
 {
 
 LineLayer::LineLayer()
@@ -177,7 +177,7 @@ LineLayer::updateCosts(
 
   // create service client
   auto node = node_.lock();
-  auto client = node->create_client<autonav_interfaces::srv::anv_lines>("line_service");
+  auto client = node->create_client<autonav_interfaces::srv::AnvLines>("line_service");
 
   if (!client->wait_for_service(std::chrono::seconds(1))) {
     RCLCPP_ERROR(node->get_logger(), "Service not available");
@@ -185,17 +185,20 @@ LineLayer::updateCosts(
   }
 
   // create request
-  auto request = std::make_shared<autonav_interfaces::srv::anv_lines::Request>();
+  auto request = std::make_shared<autonav_interfaces::srv::AnvLines::Request>();
   // call service
-  geometry_msgs::msg::Vector3 result = client->async_send_request(request);
+  
+  // rclcpp::Client<autonav_interfaces::srv::AnvLines>::FutureAndRequestId type ...
+  auto result = client->async_send_request(request);
 
   // await result
   if (rclcpp::spin_until_future_complete(node, result) != rclcpp::FutureReturnCode::SUCCESS) {
     RCLCPP_ERROR(node->get_logger(), "service call failed: line detection");
   }
 
+  auto points = result.get()->points;
   // add points to costmap, include bounds checking
-  for (auto &point : result) {
+  for (auto &point : points) {
 
     int x = static_cast<int>(point.x);
     int y = static_cast<int>(point.y);
@@ -206,9 +209,10 @@ LineLayer::updateCosts(
     int index_costmap = master_grid.getIndex(x, y);
 
     unsigned char cost = LETHAL_OBSTACLE; // maybe more dynamic down the line
-    master_array[index] = cost; // overwrites cost map
+    master_array[index_costmap] = cost; // overwrites cost map
 
   }
+}
 
 
 }  // namespace nav2_gradient_costmap_plugin
@@ -217,4 +221,4 @@ LineLayer::updateCosts(
 // to be registered in order to be dynamically loadable of base type nav2_costmap_2d::Layer.
 // Usually places in the end of cpp-file where the loadable class written.
 #include "pluginlib/class_list_macros.hpp"
-PLUGINLIB_EXPORT_CLASS(nav2_gradient_costmap_plugin::LineLayer, nav2_costmap_2d::Layer)
+PLUGINLIB_EXPORT_CLASS(line_layer::LineLayer, nav2_costmap_2d::Layer)

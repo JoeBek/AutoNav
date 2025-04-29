@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>nav2_gradient_costmap_plugin</name>
+  <name>line_layer</name>
   <version>1.0.0</version>
-  <description>Run-time plugin for Costmap2D gradient later</description>
-  <maintainer email="alexey.merzlyakov@samsung.com">Alexey Merzlyakov</maintainer>
+  <description>boom shaka laka</description>
+  <maintainer email="jb5@vt.edu">joe</maintainer>
   <license>BSD-3-Clause</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
@@ -15,9 +15,12 @@
   <depend>nav2_costmap_2d</depend>
   <depend>pluginlib</depend>
   <depend>rclcpp</depend>
+  <depend>autonav_interfaces</depend>
+  <depend>tf2_geometry_msgs</depend>
+  
 
   <export>
-    <costmap_2d plugin="${prefix}/gradient_layer.xml" />
+    <costmap_2d plugin="${prefix}/line_layer.xml" />
     <build_type>ament_cmake</build_type>
   </export>
 </package>

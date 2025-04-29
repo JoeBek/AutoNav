@@ -7,9 +7,12 @@
 #include <opencv2/opencv.hpp>
 #include <tf2_ros/buffer.h>
 #include <tf2_ros/transform_listener.h>
+#include <tf2/convert.h>  // For tf2::getTimestamp, tf2::getFrameI
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp> 
 #include <geometry_msgs/msg/transform_stamped.hpp>
 #include <tf2_eigen/tf2_eigen.hpp>
 #include <Eigen/Geometry>
+#include <image_geometry/pinhole_camera_model.h>
 #include <mutex>
 
 #define DEBUG_LOG
@@ -25,22 +28,38 @@ class LineDetectorNode : public rclcpp::Node {
 		// set parameters
 
 		this->declare_parameter("camera_topic", "rgb_gray/image_rect_gray");
+		// TODO TODO OOODO fix this and below 
+		this->declare_parameter("depth_camera_topic", "rgb_gray/depth/raw");
+		this->declare_parameter("camera_info_topic", "rbg_gray/info/");
+		
 
 		std::string camera_topic = this->get_parameter("camera_topic").as_string();
+		std::string depth_camera_topic = this->get_parameter("depth_camera_topic").as_string();
+		std::string camera_info_topic = this->get_parameter("camera_info_topic").as_string();
 
 		// subscribe to zed topic
 		   auto get_latest_msg = [this](sensor_msgs::msg::Image::SharedPtr msg) {
 				std::lock_guard<std::mutex> lock(callback_lock);
 				latest_img = msg;
 		   };
+		   auto get_latest_depth_msg = [this](sensor_msgs::msg::Image::SharedPtr msg) {
+				std::lock_guard<std::mutex> lock(depth_callback_lock);
+				latest_depth_img = msg;
+		   };
 		   _zed_subscriber = this->create_subscription<sensor_msgs::msg::Image>(
 		   camera_topic, 10, get_latest_msg);
+
+		   _zed_depth_subscriber = this->create_subscription<sensor_msgs::msg::Image>(
+		   depth_camera_topic, 10, get_latest_depth_msg);
+
+		   _camera_model_sub = this->create_subscription<sensor_msgs::msg::CameraInfo>(
+			camera_info_topic, 1, std::bind(&LineDetectorNode::cameraInfoCallback, this, std::placeholders::_1));
+
 
 			// create service for line detection
 		   _line_service = this->create_service<autonav_interfaces::srv::AnvLines>("line_service",
 			 std::bind(&LineDetectorNode::line_service, this, std::placeholders::_1, std::placeholders::_2));
-	   
-
+			
 
 	}
 
@@ -49,14 +68,18 @@ class LineDetectorNode : public rclcpp::Node {
 
 	// TODO create publisher for cost map
 	rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr _zed_subscriber;
+	rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr _zed_depth_subscriber;
+	rclcpp::Subscription<sensor_msgs::msg::CameraInfo>::SharedPtr _camera_model_sub;
 
 	rclcpp::Service<autonav_interfaces::srv::AnvLines>::SharedPtr _line_service;
 
 	std::mutex callback_lock;
+	std::mutex depth_callback_lock;
 	sensor_msgs::msg::Image::SharedPtr latest_img;
+	sensor_msgs::msg::Image::SharedPtr latest_depth_img;
 	tf2_ros::Buffer tf_buffer;
 	tf2_ros::TransformListener tf_listener;
-
+	image_geometry::PinholeCameraModel camera_model_;
 
 
 	void line_service(const std::shared_ptr<autonav_interfaces::srv::AnvLines::Request> request,
@@ -64,64 +87,69 @@ class LineDetectorNode : public rclcpp::Node {
 
 	std::vector<Eigen::Vector3d> map_transform(const sensor_msgs::msg::Image::SharedPtr depth_msg, int2* line_points, int line_points_len); 
 
+	void cameraInfoCallback(const sensor_msgs::msg::CameraInfo::SharedPtr msg);
 
 
 };
 
-/**
- * Converts a list of image indicies to depth image indicies
- */
-std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::msg::Image::SharedPtr depth_msg, int2* line_points, int line_points_len) {
-
-    // validate depth image format
-    if (depth_msg->encoding != "16UC1") {
-      RCLCPP_WARN(get_logger(), "Unsupported depth format: %s", 
-                 depth_msg->encoding.c_str());
-      return;
+// gets camera params
+void LineDetectorNode::cameraInfoCallback(const sensor_msgs::msg::CameraInfo::SharedPtr msg) {
+    if (!camera_model_.initialized()) {
+        camera_model_.fromCameraInfo(*msg);
+		RCLCPP_INFO(this->get_logger(), "hello, its me, bowser. I am sentient. tell no one");
     }
+}
 
-    // extract depth value (in millimeters) TODO validate
-    const uint16_t* depth_data = reinterpret_cast<const uint16_t*>(depth_msg->data.data());
+
+/**
+ * Converts a list of image indicies to map frame coordinates  
+ * */
+std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::msg::Image::SharedPtr depth_msg, int2* line_points, int line_points_len) {
 
 	std::vector<Eigen::Vector3d> depth_line_points;
 
+    // extract depth value TODO validate
+    const float* depth_data = reinterpret_cast<const float*>(depth_msg->data.data());
+
+
 	for (int i=0; i < line_points_len; i++){
 
-		const uint16_t depth_mm = depth_data[line_points[i].y * depth_msg->width + line_points[i].x];
+		const float depth_cm = depth_data[line_points[i].y * depth_msg->width + line_points[i].x];
 		
-		if (depth_mm == 0) {
-		RCLCPP_WARN(get_logger(), "Invalid depth at (%d,%d)", target_u, target_v);
-		return;
+		if (depth_cm <= 0.0 || std::isnan(depth_cm)) {
+			RCLCPP_WARN(get_logger(), "Invalid depth at (%d,%d)", line_points[i].x, line_points[i].y);
+			continue;
 		}
 
-		// Convert to meters and project to 3D
-		const double depth_m = depth_mm / 1000.0;
+		RCLCPP_INFO(this->get_logger(), "detected image index: %d, %d", line_points[i].x, line_points[i].y);
+
+		// convert to meters and project to 3D
+		const double depth_m = depth_cm / 100.0;
 		const cv::Point3d ray = camera_model_.projectPixelTo3dRay(
-		cv::Point2d(target_u, target_v));
+		cv::Point2d(line_points[i].x, line_points[i].y));
 		
-		// Create camera-frame point
+		// create camera-frame point
 		geometry_msgs::msg::PointStamped camera_point;
 		camera_point.header = depth_msg->header;
-		camera_point.point.x = ray.x * depth_m;
-		camera_point.point.y = ray.y * depth_m;
-		camera_point.point.z = ray.z * depth_m;
+		camera_point.point.x = ray.x * depth_cm;
+		camera_point.point.y = ray.y * depth_cm;
+		camera_point.point.z = ray.z * depth_cm;
 
-		// Transform to map frame
+		// transform to map frame
 		try {
 		geometry_msgs::msg::PointStamped map_point = 
-			tf_buffer_.transform(camera_point, "map", tf2::durationFromSec(1.0));
+			tf_buffer.transform(camera_point, "map", tf2::durationFromSec(1.0));
 		
 		RCLCPP_INFO(this->get_logger(), "Map coordinates: (%.2f, %.2f, %.2f)",
 					map_point.point.x, map_point.point.y, map_point.point.z);
 		
 		// append to map point coords
-		depth_line_points.emplace_back(camera_point.x, camera_points.y, 0);
+		depth_line_points.emplace_back(map_point.point.x, map_point.point.y, 0);
 		
 		} catch (const tf2::TransformException& ex) {
 		RCLCPP_ERROR(get_logger(), "TF error: %s", ex.what());
 
 		}
-
 
 	}
 
@@ -144,6 +172,12 @@ void LineDetectorNode::line_service(const std::shared_ptr<autonav_interfaces::sr
 		return latest_img;
 		
 	}();
+	sensor_msgs::msg::Image::SharedPtr depth_camera_msg = [this]() {
+		std::lock_guard<std::mutex> lock(depth_callback_lock);
+		return latest_depth_img;
+		
+	}();
+
 
 	#ifdef DEBUG_LOG
 	RCLCPP_INFO(this->get_logger(), "camera message read");
@@ -211,7 +245,7 @@ void LineDetectorNode::line_service(const std::shared_ptr<autonav_interfaces::sr
 	#endif
 
 
-	std::vector<Eigen::Vector3d> map_points = map_transform(/*topic*/, line_points, *line_points_len);
+	std::vector<Eigen::Vector3d> map_points = map_transform(depth_camera_msg, line_points, *line_points_len);
 
 
 	#ifdef DEBUG_LOG

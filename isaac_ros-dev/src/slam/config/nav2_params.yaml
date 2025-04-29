@@ -12,7 +12,10 @@ local_costmap:
     origin_y: -5
     resolution: 0.05
     footprint: "[ [0.21, 0.195], [0.21, -0.195], [-0.21, -0.195], [-0.21, 0.195] ]"
-    plugins: ["voxel_layer", "inflation_layer"]
+    plugins: ["voxel_layer", "lines_layer", "inflation_layer"]
+    lines_layer:
+      plugin: "lines_plugin::LineLayer"
+      enabled: True
     inflation_layer:
       plugin: "nav2_costmap_2d::InflationLayer"
       cost_scaling_factor: 3.0
@@ -50,7 +53,10 @@ global_costmap:
     robot_radius: 0.3
     resolution: 0.05
     track_unknown_space: true
-    plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
+    plugins: ["static_layer", "obstacle_layer", "lines_layer", "inflation_layer" ]
+    lines_layer:
+      plugin: "lines_plugin::LineLayer"
+      enabled: True
     obstacle_layer:
       plugin: "nav2_costmap_2d::ObstacleLayer"
       enabled: True
@@ -73,7 +79,7 @@ global_costmap_rclcpp_node:
   ros__parameters:
     use_sim_time: True
 
-    
+  
 controller_server:
   ros__parameters:
     controller_plugins: ["FollowPath"]
@@ -84,6 +90,19 @@ controller_server:
       path_distance_bias: 32.0 # Stay on path vs avoid obstacles
       goal_distance_bias: 20.0
       costmap_weight_obstacle: 0.8
+      critics: ["ObstacleFootprint", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
+      ObstacleFootprint:
+        scale: 1.0
+      GoalAlign:
+        scale: 24.0
+      PathAlign:
+        scale: 32.0
+      PathDist:
+        scale: 32.0
+      GoalDist:
+        scale: 24.0
+
+
 
 behavior_server:
   ros__parameters:
@@ -95,4 +114,4 @@ behavior_server:
 
 bt_navigator:
   ros__parameters:
-    default_bt_xml_filename: "$(find slam)/config/bt.xml"
+    default_bt_xml_filename: "$(find-pkg-share slam)/config/bt.xml"

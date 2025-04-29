@@ -40,22 +40,22 @@
  * Reference tutorial:
  * https://navigation.ros.org/tutorials/docs/writing_new_costmap2d_plugin.html
  *********************************************************************/
-#ifndef GRADIENT_LAYER_HPP_
-#define GRADIENT_LAYER_HPP_
+#ifndef LINE_LAYER_HPP_
+#define LINE_LAYER_HPP_
 
 #include "rclcpp/rclcpp.hpp"
 #include "nav2_costmap_2d/layer.hpp"
 #include "nav2_costmap_2d/layered_costmap.hpp"
 #include "autonav_interfaces/srv/anv_lines.hpp"
-#include "geometry_msgs/msg/Vector3.hpp"
+#include "geometry_msgs/msg/vector3.hpp"
 
-namespace lines_plugin
+namespace line_layer
 {
 
-class GradientLayer : public nav2_costmap_2d::Layer
+class LineLayer : public nav2_costmap_2d::Layer
 {
 public:
-  LinesLayer();
+  LineLayer();
 
   virtual void onInitialize();
   virtual void updateBounds(
@@ -90,4 +90,4 @@ private:
 
 }  // namespace nav2_gradient_costmap_plugin
 
-#endif  // GRADIENT_LAYER_HPP_
+#endif  // LINE_LAYER_HPP_
