@@ -59,8 +59,8 @@ void MotorController::backward(){
     return;
   }
   else{
-    int leftMotorSpeed = (int)(stepSize * speed);
-    int rightMotorSpeed = -1 * (int)(stepSize * speed);
+    int leftMotorSpeed = -1 * (int)(stepSize * speed);
+    int rightMotorSpeed = (int)(stepSize * speed);
 
     std::string leftMotorCommand = "!G 1 " + std::to_string(leftMotorSpeed) + "\r";
     std::string rightMotorCommand = "!G 2 " + std::to_string(rightMotorSpeed) + "\r";
@@ -107,8 +107,8 @@ void MotorController::turnRight(){
 // moves the robot at specific motor speeds
 void MotorController::move(float right_speed, float left_speed){
   
-    int leftMotorSpeed = (int)(stepSize * left_speed);
-    int rightMotorSpeed = (int)(-stepSize * right_speed);
+    int leftMotorSpeed = (int)(-stepSize * left_speed);
+    int rightMotorSpeed = (int)(stepSize * right_speed);
 
     std::string leftMotorCommand = "!G 1 " + std::to_string(leftMotorSpeed) + "\r";
     std::string rightMotorCommand = "!G 2 " + std::to_string(rightMotorSpeed) + "\r";
@@ -153,11 +153,11 @@ int MotorController::getSpeed(){
   return speed;
 }
 
-int MotorController::getLeftEncoderCount(){
+int  MotorController::getLeftEncoderCount(){
   std::string command = "?C 1\r";
   char readBuffer[41] = {};
-  motorSerial.writeString(command.c_str());  
-  motorSerial.readString(readBuffer, '\n', 40, 100);
+  motorSerial.writeString(command.c_str());
+  motorSerial.readString(readBuffer, '\n', 40, 10);
   //std::cout << readBuffer << std::endl;
   std::string encoderCount = "";
     bool equalSign = false;
@@ -171,18 +171,19 @@ int MotorController::getLeftEncoderCount(){
             equalSign = true;
         }
     }
-  return std::stoi(encoderCount);
+    return std::stoi(encoderCount);
+    //return 5;
 }
 
 int MotorController::getRightEncoderCount(){
   std::string command = "?C 2\r";
-  char readBuffer[16] = {};
+  char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
-  motorSerial.readString(readBuffer, '\n', 15, 1000);
+  motorSerial.readString(readBuffer, '\n', 40, 10);
 
   std::string encoderCount = "";
     bool equalSign = false;
-    for (int i = 0; i < 16; i++) {
+    for (int i = 0; i < 40; i++) {
         //std::cout << readBuffer[i] << std::endl;
 
         if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
@@ -194,17 +195,18 @@ int MotorController::getRightEncoderCount(){
     }
 
   return std::stoi(encoderCount);
+  //return 5;
 }
 
 int MotorController::getLeftRPM(){
   std::string command = "?BS 1\r";
-  char readBuffer[16] = {};
+  char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
-  motorSerial.readString(readBuffer, '\n', 15, 1000);
+  motorSerial.readString(readBuffer, '\n', 40, 10);
   std::cout << readBuffer << std::endl;
   std::string rpm = "";
     bool equalSign = false;
-    for (int i = 0; i < 16; i++) {
+    for (int i = 0; i < 40; i++) {
         //std::cout << readBuffer[i] << std::endl;
 
         if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
@@ -216,18 +218,18 @@ int MotorController::getLeftRPM(){
     }
 
   return std::stoi(rpm);
-  return 5;
+  //return 5;
 }
 
 int MotorController::getRightRPM(){
   std::string command = "?BS 2\r";
-  char readBuffer[16] = {};
+  char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
-  motorSerial.readString(readBuffer, '\n', 15, 1000);
+  motorSerial.readString(readBuffer, '\n', 40, 10);
 
   std::string rpm = "";
     bool equalSign = false;
-    for (int i = 0; i < 16; i++) {
+    for (int i = 0; i < 40; i++) {
         //std::cout << readBuffer[i] << std::endl;
 
         if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
@@ -238,7 +240,7 @@ int MotorController::getRightRPM(){
         }
     }
     //std::cout <<"RIGHT RPM: " << rpm << std::endl;
-    RCLCPP_INFO(rclcpp::get_logger("MotorController"), "RIGHT RPM: %s", rpm.c_str());
+    //RCLCPP_INFO(rclcpp::get_logger("MotorController"), "RIGHT RPM: %s", rpm.c_str());
     return std::stoi(rpm);
     //return 5;
 }

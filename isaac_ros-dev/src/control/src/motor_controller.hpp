@@ -9,7 +9,7 @@ private:
     int stepSize = 10;
     std::pair<int, int> right_turn_speeds = {-10, -10};
     std::pair<int, int> left_turn_speeds = {10, 10};
-    int speed = 25;
+    int speed = 11;
     std::string comPort;
 
 
@@ -34,7 +34,7 @@ public:
     int getStepSize();
     void setSpeed(int s);
     int getSpeed();
-    int getLeftEncoderCount();
+    int  getLeftEncoderCount();
     int getRightEncoderCount();
     int getLeftRPM();
     int getRightRPM();
