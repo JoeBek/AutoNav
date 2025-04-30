@@ -40,22 +40,27 @@
  * Reference tutorial:
  * https://navigation.ros.org/tutorials/docs/writing_new_costmap2d_plugin.html
  *********************************************************************/
-#ifndef GRADIENT_LAYER_HPP_
-#define GRADIENT_LAYER_HPP_
+#ifndef LINE_LAYER_HPP_
+#define LINE_LAYER_HPP_
 
 #include "rclcpp/rclcpp.hpp"
 #include "nav2_costmap_2d/layer.hpp"
 #include "nav2_costmap_2d/layered_costmap.hpp"
+#include "nav2_costmap_2d/costmap_2d.hpp"
 #include "autonav_interfaces/srv/anv_lines.hpp"
-#include "geometry_msgs/msg/Vector3.hpp"
+#include "autonav_interfaces/msg/line_points.hpp"
+#include "geometry_msgs/msg/vector3.hpp"
+#include "nav2_costmap_2d/observation_buffer.hpp"
+#include "line_layer/line_buffer.hpp"
+#include <optional>
 
-namespace lines_plugin
+namespace line_layer
 {
 
-class GradientLayer : public nav2_costmap_2d::Layer
+class LineLayer : public nav2_costmap_2d::Layer
 {
 public:
-  LinesLayer();
+  LineLayer();
 
   virtual void onInitialize();
   virtual void updateBounds(
@@ -86,8 +91,18 @@ private:
   int GRADIENT_SIZE = 20;
   // Step of increasing cost per one cell in gradient
   int GRADIENT_FACTOR = 10;
+
+  rclcpp::Subscription<autonav_interfaces::msg::LinePoints>::SharedPtr line_sub_;
+  std::string line_topic_;
+  // turns out you can type anything you want in a comment
+  // poop
+
+  // when the wrapper sucks so you write a chiller one
+  LineBuffer<autonav_interfaces::msg::LinePoints::SharedPtr> buffer_;
+
+  void linePointCallback(autonav_interfaces::msg::LinePoints::ConstSharedPtr message);
 };
 
 }  // namespace nav2_gradient_costmap_plugin
 
-#endif  // GRADIENT_LAYER_HPP_
+#endif  // LINE_LAYER_HPP_

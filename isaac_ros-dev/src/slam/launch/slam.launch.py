@@ -4,6 +4,10 @@ from launch_ros.actions import Node
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
+from launch.actions import IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from ament_index_python.packages import get_package_share_directory
+
 
 '''
 Launch file for slam launch. This version is not GPU dependent.
@@ -28,9 +32,20 @@ def generate_launch_description():
     publish_period = DeclareLaunchArgument(
         'publish_period',
         # 0.02 if you want to publish
-        default_value='0.00',
+        default_value='0.02',
         description="if you want SLAM to publish map->odom... (sim yes real no)"
     )
+    nav2_params = DeclareLaunchArgument(
+        'nav2_params',
+        default_value=PathJoinSubstitution([
+            get_package_share_directory('slam'),
+            'config',
+            'nav2_params.yaml'
+        ]),
+        description='Path to your custom Nav2 parameters file'
+    )
+
+
     
     # rest in peace ... i will eternalize it in these comments
     # magic_spell = lambda x : 0.02 if x else 0.00
@@ -79,6 +94,22 @@ def generate_launch_description():
                                   "transform_publish_period": LaunchConfiguration('publish_period')
                                   }]
     )
+   
+    # 2. Include the Nav2 bringup launch file with your params
+    nav2 = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            PathJoinSubstitution([
+                get_package_share_directory('nav2_bringup'),
+                'launch',
+                'navigation_launch.py'
+            ])
+        ]),
+        launch_arguments={
+            'use_sim_time': LaunchConfiguration('use_sim_time'), 
+            # 'params_file': LaunchConfiguration('nav2_params')
+        }.items()
+    )
+    
     '''
         remappings=[
             ('/scan', '/scan'),
@@ -128,14 +159,18 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        # params
         publish_period,
         pointcloud_topic,
         use_sim_time,
+        nav2_params,
+        #nodes
         point2laser,
         ekf_local,
         slam_toolbox,
        # gps_transform,
-       ekf_global 
+        #ekf_global, 
+        #nav2
         
     ])
 

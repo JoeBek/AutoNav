@@ -1,0 +1,5 @@
+<library path="line_layer_core">
+  <class type="line_layer::LineLayer" base_class_type="nav2_costmap_2d::Layer">
+    <description>This plugin maps detected line points to the cost map</description>
+  </class>
+</library>

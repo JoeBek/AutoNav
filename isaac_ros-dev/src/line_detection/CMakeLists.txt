@@ -20,6 +20,8 @@ find_package(tf2_ros REQUIRED)
 find_package(tf2_eigen REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(CUDA REQUIRED)
+find_package(image_geometry REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 # set arch and nvcc flags
 set(CMAKE_CUDA_ARCHITECTURES 60)
@@ -32,10 +34,14 @@ cuda_add_executable(line_detector ${SRC_FILES})
 
 
 # set include paths
-ament_target_dependencies(line_detector rclcpp autonav_interfaces cv_bridge OpenCV tf2_ros tf2_eigen Eigen3)
+ament_target_dependencies(line_detector rclcpp autonav_interfaces cv_bridge OpenCV tf2_ros tf2_eigen Eigen3 image_geometry tf2_geometry_msgs)
 
 # target local library
-target_include_directories(line_detector PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(line_detector PRIVATE
+ ${CMAKE_CURRENT_SOURCE_DIR}
+ ${image_geometry_INCLUDE_DIRS} 
+ ${tf2_geometry_msgs_INCLUDE_DIRS})
+
 target_include_directories(line_detector PUBLIC 
 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
 	$<INSTALL_INTERFACE:include>

@@ -23,6 +23,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   msg/Encoders.msg
   msg/GpsData.msg
 	srv/ConfigureControl.srv
+  msg/LinePoints.msg
 	srv/AnvLines.srv
 	DEPENDENCIES geometry_msgs
 )
