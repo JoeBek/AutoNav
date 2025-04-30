@@ -40,7 +40,7 @@
  * Reference tutorial:
  * https://navigation.ros.org/tutorials/docs/writing_new_costmap2d_plugin.html
  *********************************************************************/
-#include "line_costmap_plugin/gradient_layer.hpp"
+#include "line_layer/line_layer.hpp"
 
 #include "nav2_costmap_2d/costmap_math.hpp"
 #include "nav2_costmap_2d/footprint.hpp"
@@ -50,6 +50,8 @@ using nav2_costmap_2d::LETHAL_OBSTACLE;
 using nav2_costmap_2d::INSCRIBED_INFLATED_OBSTACLE;
 using nav2_costmap_2d::NO_INFORMATION;
 
+#define DEBUG_
+
 // helper methods outside namespace
 
 template <typename T>
@@ -58,7 +60,8 @@ bool within_bounds(T value, T min, T max) {
   return (value >= min) && (value <= max);
 }
 
-namespace nav2_gradient_costmap_plugin
+
+namespace line_layer
 {
 
 LineLayer::LineLayer()
@@ -77,11 +80,32 @@ LineLayer::onInitialize()
 {
   auto node = node_.lock(); 
   declareParameter("enabled", rclcpp::ParameterValue(true));
+  declareParameter(name_ + "." + "line_topic", rclcpp::ParameterValue("line_points"));
   node->get_parameter(name_ + "." + "enabled", enabled_);
+  node->get_parameter("line_topic", line_topic_);
+
+  line_sub_ = node->create_subscription<autonav_interfaces::msg::LinePoints>(line_topic_, 1, 
+    std::bind(&LineLayer::linePointCallback, this, std::placeholders::_1));
 
   need_recalculation_ = false;
   current_ = true;
+  
+  RCLCPP_INFO(rclcpp::get_logger("nav_costmap_2d"), "hello from line land");
+  
 }
+/// @brief I just accidentally did this wtf.... this is a line callback that mimics the cool other costmap plugins
+/// @param message 
+/// @param buffer 
+void LineLayer::linePointCallback(autonav_interfaces::msg::LinePoints::ConstSharedPtr message) {
+
+      autonav_interfaces::msg::LinePoints::SharedPtr line;
+      line->points = message->points;
+
+      buffer_.buffer(line);
+
+}
+
+
 
 // The method is called to ask the plugin: which area of costmap it needs to update.
 // Inside this method window bounds are re-calculated if need_recalculation_ is true
@@ -175,40 +199,48 @@ LineLayer::updateCosts(
 
   // joe was here
 
-  // create service client
-  auto node = node_.lock();
-  auto client = node->create_client<autonav_interfaces::srv::anv_lines>("line_service");
+  // std::vector<geometry_msgs::msg::Vector3> points;
 
-  if (!client->wait_for_service(std::chrono::seconds(1))) {
-    RCLCPP_ERROR(node->get_logger(), "Service not available");
+  // why even use the name thingys if auto works for all of them
+  auto last = buffer_.read();
+  if (!last){
+    RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "buffa empty... nothing to buf");
     return;
   }
-
-  // create request
-  auto request = std::make_shared<autonav_interfaces::srv::anv_lines::Request>();
-  // call service
-  geometry_msgs::msg::Vector3 result = client->async_send_request(request);
-
-  // await result
-  if (rclcpp::spin_until_future_complete(node, result) != rclcpp::FutureReturnCode::SUCCESS) {
-    RCLCPP_ERROR(node->get_logger(), "service call failed: line detection");
-  }
-
+  auto last_msg = *last;
+  std::vector<geometry_msgs::msg::Vector3> points = last_msg->points;
+  
   // add points to costmap, include bounds checking
-  for (auto &point : result) {
+  for (auto &point : points) {
+    // now we need to compute the map coordinates for the observation
 
-    int x = static_cast<int>(point.x);
-    int y = static_cast<int>(point.y);
-    if (!within_bounds(x, min_i, max_i) || !within_bounds(y, min_j, max_j)) {
+
+    int x = point.x;
+    int y = point.y;
+
+    unsigned int mx, my;
+    if (!master_grid.worldToMap(x, y, mx, my)) {
+        RCLCPP_DEBUG(rclcpp::get_logger("nav_costmap_2d"), "Computing map coords failed");
+        continue;
+    }
+    
+
+    if (!within_bounds(static_cast<int>(mx), min_i, max_i) || !within_bounds(static_cast<int>(my), min_j, max_j)) {
 
       continue;
     }
-    int index_costmap = master_grid.getIndex(x, y);
+    int index_costmap = master_grid.getIndex(mx, my);
+    #ifdef DEBUG_
+    RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "writing grid coords: (%u,%u)", mx, my); 
+    #endif
 
     unsigned char cost = LETHAL_OBSTACLE; // maybe more dynamic down the line
-    master_array[index] = cost; // overwrites cost map
+    master_array[index_costmap] = cost; // overwrites cost map
 
   }
+}
+
+
 
 
 }  // namespace nav2_gradient_costmap_plugin
@@ -217,4 +249,4 @@ LineLayer::updateCosts(
 // to be registered in order to be dynamically loadable of base type nav2_costmap_2d::Layer.
 // Usually places in the end of cpp-file where the loadable class written.
 #include "pluginlib/class_list_macros.hpp"
-PLUGINLIB_EXPORT_CLASS(nav2_gradient_costmap_plugin::LineLayer, nav2_costmap_2d::Layer)
+PLUGINLIB_EXPORT_CLASS(line_layer::LineLayer, nav2_costmap_2d::Layer)

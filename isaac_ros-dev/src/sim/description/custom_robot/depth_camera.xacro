@@ -58,7 +58,7 @@
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
         <frame_name>camera_depth_frame</frame_name>
-        <pointCloudCutoff>0.5</pointCloudCutoff>
+        <pointCloudCutoff>1.5</pointCloudCutoff>
         <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
         </plugin>
     </sensor>
