@@ -46,9 +46,13 @@
 #include "rclcpp/rclcpp.hpp"
 #include "nav2_costmap_2d/layer.hpp"
 #include "nav2_costmap_2d/layered_costmap.hpp"
+#include "nav2_costmap_2d/costmap_2d.hpp"
 #include "autonav_interfaces/srv/anv_lines.hpp"
+#include "autonav_interfaces/msg/line_points.hpp"
 #include "geometry_msgs/msg/vector3.hpp"
 #include "nav2_costmap_2d/observation_buffer.hpp"
+#include "line_layer/line_buffer.hpp"
+#include <optional>
 
 namespace line_layer
 {
@@ -88,15 +92,15 @@ private:
   // Step of increasing cost per one cell in gradient
   int GRADIENT_FACTOR = 10;
 
-  std::shared_ptr<nav2_costmap_2d::ObservationBuffer> buffer_;
-  rclcpp::Subscription<autonav_interfaces::msg::LinePoints> line_sub_;
+  rclcpp::Subscription<autonav_interfaces::msg::LinePoints>::SharedPtr line_sub_;
   std::string line_topic_;
   // turns out you can type anything you want in a comment
   // poop
 
+  // when the wrapper sucks so you write a chiller one
+  LineBuffer<autonav_interfaces::msg::LinePoints::SharedPtr> buffer_;
 
-  void linePointCallback(autonav_interfaces::msg::LinePoints::ConstSharedPtr message, 
-    const std::shared_ptr<nav2_costmap_2d::ObservationBuffer> & buffer);
+  void linePointCallback(autonav_interfaces::msg::LinePoints::ConstSharedPtr message);
 };
 
 }  // namespace nav2_gradient_costmap_plugin

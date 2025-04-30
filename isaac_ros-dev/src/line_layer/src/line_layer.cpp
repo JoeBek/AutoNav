@@ -58,6 +58,7 @@ bool within_bounds(T value, T min, T max) {
   return (value >= min) && (value <= max);
 }
 
+
 namespace line_layer
 {
 
@@ -77,12 +78,12 @@ LineLayer::onInitialize()
 {
   auto node = node_.lock(); 
   declareParameter("enabled", rclcpp::ParameterValue(true));
-  declareParameter("line_topic", "line_points");
+  declareParameter(name_ + "." + "line_topic", rclcpp::ParameterValue("line_points"));
   node->get_parameter(name_ + "." + "enabled", enabled_);
   node->get_parameter("line_topic", line_topic_);
 
-  node->create_subscription<autonav_interfaces::msg::LinePoints>(line_topic_, 1, 
-    std::bind(&linePointCallback, this, std::placeholders::_1,buffer_));
+  line_sub_ = node->create_subscription<autonav_interfaces::msg::LinePoints>(line_topic_, 1, 
+    std::bind(&LineLayer::linePointCallback, this, std::placeholders::_1));
 
   need_recalculation_ = false;
   current_ = true;
@@ -93,15 +94,12 @@ LineLayer::onInitialize()
 /// @brief I just accidentally did this wtf.... this is a line callback that mimics the cool other costmap plugins
 /// @param message 
 /// @param buffer 
-void linePointCallback(autonav_interfaces::msg::LinePoints::ConstSharedPtr message, 
-    const std::shared_ptr<nav2_costmap_2d::ObservationBuffer> & buffer) {
+void LineLayer::linePointCallback(autonav_interfaces::msg::LinePoints::ConstSharedPtr message) {
 
-      autonav::interfaces::msg::LinePoints line;
-      line.points = message->points;
+      autonav_interfaces::msg::LinePoints::SharedPtr line;
+      line->points = message->points;
 
-      buffer_.lock();
       buffer_.buffer(line);
-      buffer_.unlock();
 
 }
 
@@ -201,40 +199,44 @@ LineLayer::updateCosts(
 
   std::vector<nav2_costmap_2d::Observation> observations;
   // std::vector<geometry_msgs::msg::Vector3> points;
-  buffer_->lock();
-  buffer.getObservations(observations);
-  if (!observations.empty()) {
-    const auto &last_obs = observations.back();
-    const auto &points = obs->points;
-    
-    // add points to costmap, include bounds checking
-    for (auto &point : points) {
-        // now we need to compute the map coordinates for the observation
 
-
-      int x = point.x;
-      int y = point.y;
-
-      unsigned int mx, my;
-      if (!worldToMap(x, y, mx, my)) {
-          RCLCPP_DEBUG(rclcpp::get_logger("nav_costmap_2d"), "Computing map coords failed");
-          continue;
-      }
-
-      if (!within_bounds(mx, min_i, max_i) || !within_bounds(my, min_j, max_j)) {
-
-        continue;
-      }
-      int index_costmap = master_grid.getIndex(mx, my);
-
-      unsigned char cost = LETHAL_OBSTACLE; // maybe more dynamic down the line
-      master_array[index_costmap] = cost; // overwrites cost map
-
-    }
+  // why even use the name thingys if auto works for all of them
+  auto last = buffer_.read();
+  if (!last){
+    RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "buffa empty... nothing to buf");
+    return;
   }
+  auto last_msg = *last;
+  std::vector<geometry_msgs::msg::Vector3> points = last_msg->points;
+  
+  // add points to costmap, include bounds checking
+  for (auto &point : points) {
+    // now we need to compute the map coordinates for the observation
 
-  buffer_->unlock():
+
+    int x = point.x;
+    int y = point.y;
+
+    unsigned int mx, my;
+    if (!master_grid.worldToMap(x, y, mx, my)) {
+        RCLCPP_DEBUG(rclcpp::get_logger("nav_costmap_2d"), "Computing map coords failed");
+        continue;
+    }
+    
+
+    if (!within_bounds(static_cast<int>(mx), min_i, max_i) || !within_bounds(static_cast<int>(my), min_j, max_j)) {
+
+      continue;
+    }
+    int index_costmap = master_grid.getIndex(mx, my);
+
+    unsigned char cost = LETHAL_OBSTACLE; // maybe more dynamic down the line
+    master_array[index_costmap] = cost; // overwrites cost map
+
+  }
 }
+
+
 
 
 }  // namespace nav2_gradient_costmap_plugin
