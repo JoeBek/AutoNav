@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(line_layer)
+project(nav2_gradient_costmap_plugin)
 
 set(lib_name ${PROJECT_NAME}_core)
 
@@ -24,23 +24,17 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(nav2_costmap_2d REQUIRED)
-find_package(nav2_common REQUIRED)
 find_package(pluginlib REQUIRED)
-find_package(autonav_interfaces REQUIRED)
-find_package(tf2_geometry_msgs REQUIRED)
 
 set(dep_pkgs
     rclcpp
     nav2_costmap_2d
-    nav2_common
-    pluginlib
-    autonav_interfaces
-    tf2_geometry_msgs)
+    pluginlib)
 
 # === Build ===
 
 add_library(${lib_name} SHARED
-            src/line_layer.cpp)
+            src/gradient_layer.cpp)
 include_directories(include)
 
 # === Installation ===
@@ -53,6 +47,6 @@ install(TARGETS ${lib_name}
 # pluginlib_export_plugin_description_file() installs gradient_layer.xml
 # file into "share" directory and sets ament indexes for it.
 # This allows the plugin to be discovered as a plugin of required type.
-pluginlib_export_plugin_description_file(nav2_costmap_2d line_layer.xml)
+pluginlib_export_plugin_description_file(nav2_costmap_2d gradient_layer.xml)
 ament_target_dependencies(${lib_name} ${dep_pkgs})
 ament_package()
