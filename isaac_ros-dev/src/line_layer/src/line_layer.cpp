@@ -50,6 +50,8 @@ using nav2_costmap_2d::LETHAL_OBSTACLE;
 using nav2_costmap_2d::INSCRIBED_INFLATED_OBSTACLE;
 using nav2_costmap_2d::NO_INFORMATION;
 
+#define DEBUG_
+
 // helper methods outside namespace
 
 template <typename T>
@@ -197,7 +199,6 @@ LineLayer::updateCosts(
 
   // joe was here
 
-  std::vector<nav2_costmap_2d::Observation> observations;
   // std::vector<geometry_msgs::msg::Vector3> points;
 
   // why even use the name thingys if auto works for all of them
@@ -229,6 +230,9 @@ LineLayer::updateCosts(
       continue;
     }
     int index_costmap = master_grid.getIndex(mx, my);
+    #ifdef DEBUG_
+    RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "writing grid coords: (%u,%u)", mx, my); 
+    #endif
 
     unsigned char cost = LETHAL_OBSTACLE; // maybe more dynamic down the line
     master_array[index_costmap] = cost; // overwrites cost map

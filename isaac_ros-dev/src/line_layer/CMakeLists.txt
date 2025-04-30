@@ -40,7 +40,8 @@ set(dep_pkgs
 # === Build ===
 
 add_library(${lib_name} SHARED
-            src/line_layer.cpp)
+            src/line_layer.cpp
+            src/line_buffer.cpp)
 include_directories(include)
 
 # === Installation ===
