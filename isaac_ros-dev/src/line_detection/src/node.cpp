@@ -16,7 +16,7 @@
 #include <image_geometry/pinhole_camera_model.h>
 #include <mutex>
 
-#define DEBUG_LOG
+//#define DEBUG_LOG
 
 class LineDetectorNode : public rclcpp::Node {
 
@@ -145,7 +145,9 @@ std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::
 			continue;
 		}
 
+		#ifdef DEBUG_LOG
 		RCLCPP_INFO(this->get_logger(), "detected image index: %d, %d", line_points[i].x, line_points[i].y);
+		#endif
 
 		// convert to meters and project to 3D
 		const double depth_m = depth_cm / 100.0;
@@ -164,8 +166,10 @@ std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::
 		geometry_msgs::msg::PointStamped map_point = 
 			tf_buffer.transform(camera_point, "map", tf2::durationFromSec(1.0));
 		
+		#ifdef DEBUG_LOG
 		RCLCPP_INFO(this->get_logger(), "Map coordinates: (%.2f, %.2f, %.2f)",
 					map_point.point.x, map_point.point.y, map_point.point.z);
+		#endif
 		
 		// append to map point coords
 		depth_line_points.emplace_back(map_point.point.x, map_point.point.y, 0);

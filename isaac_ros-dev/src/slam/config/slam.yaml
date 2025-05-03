@@ -17,7 +17,7 @@ slam_toolbox:
 
       mode: "mapping"  # mapping mode! we map 
 
-    #gpu_acceleration:
-    #  use_cuda: true
-    #  max_gpu_mem: 4096  # MB allocated for SLAM
-    #  feature_extractors: 2  # Parallel CUDA streams
+    gpu_acceleration:
+      use_cuda: true
+      max_gpu_mem: 4096  # MB allocated for SLAM
+      feature_extractors: 2  # Parallel CUDA streams
