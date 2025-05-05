@@ -3,16 +3,16 @@
 #include "serialib.hpp"
 #include "xbox.hpp"
 #include "motor_controller.hpp"
+#include "autonomous.hpp"
 #include "sensor_msgs/msg/joy.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 #include "autonav_interfaces/msg/encoders.hpp"
 #include "autonav_interfaces/msg/gps_data.hpp"  
 #include "autonav_interfaces/srv/configure_control.hpp"
-#include <queue>
 #include <iostream>
 #include <string>
-#include <cmath>
 
+#define WHEEL_BASE 0.6858
 
 class ControlNode : public rclcpp::Node {
 
@@ -39,14 +39,17 @@ class ControlNode : public rclcpp::Node {
 
     }
 
-
-    private:
     serialib arduinoSerial;
     serialib gpsSerial;
     Xbox controller;
     MotorController motors;
-    //Autonomous currPose;
+    Autonomous currPose;
 
+    private:
+    
+    float last_long = 0;
+    float last_lat = 0;
+    float last_alt = 0;
 
     bool autonomousMode = false;
 
@@ -57,15 +60,15 @@ class ControlNode : public rclcpp::Node {
     rclcpp::Service<autonav_interfaces::srv::ConfigureControl>::SharedPtr configure_server;
 
     // publisher for gps data
-    //rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
-    //rclcpp::TimerBase::SharedPtr gps_timer_;
+    rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
+    rclcpp::TimerBase::SharedPtr gps_timer_;
 
     // publisher for encoder values
     rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr encodersPub;
     rclcpp::TimerBase::SharedPtr encoder_timer_;
 
     // subscription for Nav2 pose
-    //rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr pathPlanningSub;
+    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr pathPlanningSub;
 
     bool currX = false;
     bool prevX = false;
@@ -120,17 +123,17 @@ class ControlNode : public rclcpp::Node {
 
     void publish_encoder_data() {
         autonav_interfaces::msg::Encoders encoder_msg;
-        encoder_msg.left_motor_rpm = motors.getLeftRPM();
-        encoder_msg.right_motor_rpm = motors.getRightRPM();
+        encoder_msg.left_motor_rpm = 0;
+        encoder_msg.right_motor_rpm = 0;
         encoder_msg.left_motor_count = motors.getLeftEncoderCount();
         encoder_msg.right_motor_count = motors.getRightEncoderCount();
 
-        std::string arduinoRPMs = "L:";
-        arduinoRPMs += encoder_msg.left_motor_rpm;
-        arduinoRPMs += " R:";
-        arduinoRPMs += encoder_msg.right_motor_rpm;
-        arduinoRPMs += "\n";
-        arduinoSerial.writeString(arduinoRPMs.c_str());
+        std::string arduinoEncoderCounts = "L:";
+        arduinoEncoderCounts += encoder_msg.left_motor_count;
+        arduinoEncoderCounts += " R:";
+        arduinoEncoderCounts += encoder_msg.right_motor_count;
+        arduinoEncoderCounts += "\n";
+        arduinoSerial.writeString(arduinoEncoderCounts.c_str());
 
         encodersPub->publish(encoder_msg);
     }
@@ -138,7 +141,7 @@ class ControlNode : public rclcpp::Node {
     void publish_gps_data() {
         autonav_interfaces::msg::GpsData gps_msg;
         char gpsBuffer[1024] = {};
-        gpsSerial.readString(gpsBuffer, '\n', 1023, 1000);
+        gpsSerial.readString(gpsBuffer, '\n', 1023, 100);
 
 
         std::string message(gpsBuffer);
@@ -158,51 +161,52 @@ class ControlNode : public rclcpp::Node {
 		    gps_msg.latitude = std::stof(tokens[3]);
 		    gps_msg.longitude = std::stof(tokens[4]);
             gps_msg.altitude = std::stof(tokens[5]);
+
+            last_lat = std::stof(tokens[3]);
+            last_long = std::stof(tokens[4]);
+            last_alt = std::stof(tokens[5]);
   	    }
 	    catch (const std::exception & e) {
 		    RCLCPP_ERROR(this->get_logger(), "GPS string parsing failed: %s", e.what());
 	    }
 
-            //gpsPub->publish(gps_msg);
         }
+        else{
+            gps_msg.latitude = last_lat;
+		    gps_msg.longitude = last_long;
+            gps_msg.altitude = last_alt;
+        }
+
+        gpsPub->publish(gps_msg);
     }
 
-    //void path_planning_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
+    void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
 
-        /*if (autonomousMode) {
-            currPose.positionX = msg->pose.position.x,
-            currPose.positionY = msg->pose.position.y,
-            currPose.positionZ = msg->pose.position.z;
+        if (autonomousMode) {
+            /*Move to Pose Way*/
+            // currPose.linearX = msg->linear.x;
+            // currPose.linearY = msg->linear.y;
+            //currPose.linearZ = msg->linear.z;
 
-            currPose.orientationX = msg->pose.orientation.x,
-            currPose.orientationY = msg->pose.orientation.y,
-            currPose.orientationZ = msg->pose.orientation.z;
-            currPose.orientationW = msg->pose.orientation.w;
+            // currPose.angularZ = msg->angular.z;
 
-            double absoluteYaw = currPose.getYawFromQuaternion();
-            double relativeYaw = ........
-            double relativeX = ........
-            double relativeY = ........
-            double initialTurnAngle = std::atan2(relativeY, relativeX) * (180 / M_PI);
-            double totalDistance = std::sqrt((relativeX * relativeX) + (relativeY * relativeY))
+            // currPose.goToPose(linearX, linearY, motors);
 
-            while(motors.getLeftEncoderCount() < ((initialTurnAngle / 360) * 67800)){
-                motors.move(-10, 10);
-            }
+            /*Direct Speed to Motor Way*/
+            float linear_move;
+            float angular_move;
+            float left_wheel_speed;
+            float right_wheel_speed;
 
-            //1.275 is 50.2 inches in meters
-            if(totalDistance > 1.275){
-                while(motors.getLeftEncoderCount() < ((totalDistance / 1.275) * 80000)){
-                    motors.move(10, 10);
-                }
-            }
-            else {
-                while(motors.getLeftEncoderCount() < ((totalDistance / 1.275) * 67800)){
-                    motors.move(10, 10);
-                }
-            }
-        }*/
-    //}
+            linear_move = msg->linear.x;
+            angular_move = msg->angular.z;
+
+            left_wheel_speed = (linear_move - angular_move) * (WHEEL_BASE/2);
+            right_wheel_speed = (linear_move + angular_move) * (WHEEL_BASE/2);
+
+            motors.move(-left_wheel_speed, -right_wheel_speed);
+        }
+    }
 
 
     void init_serial_arduino(const char * arduino_port) {
@@ -255,6 +259,7 @@ class ControlNode : public rclcpp::Node {
             else{
                 RCLCPP_INFO(this->get_logger(), "Motor serial connection success!");
             }
+            
         }
         if (request->gps) {
             init_serial_gps(gps_port.c_str());
@@ -283,122 +288,26 @@ class ControlNode : public rclcpp::Node {
 
         if (request->gps) {
 
-            /*gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>(gps_topic, 10);
+            gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>(gps_topic, 10);
 
             gps_timer_ = this->create_wall_timer(
-                std::chrono::milliseconds(100),
+                std::chrono::milliseconds(150),
                 std::bind(&ControlNode::publish_gps_data, this)
-            );*/
+            );
     
         }
        
         //PATH PLANNING SUB
-        /*pathPlanningSub = this->create_subscription<geometry_msgs::msg::Twist>(
+        pathPlanningSub = this->create_subscription<geometry_msgs::msg::Twist>(
             "cmd_vel", 10, std::bind(&ControlNode::path_planning_callback, this, std::placeholders::_1));
-              */
+              
 
         response->ret = 0;
-        std::string leftMotorCommand = "!C 1 0\r";
-        std::string rightMotorCommand = "!C 2 0 \r";
-        motors.motorSerial.writeString(leftMotorCommand.c_str());
-        motors.motorSerial.writeString(rightMotorCommand.c_str());
-        /*while(motors.getLeftEncoderCount() < 122500){ ccw
-            move(-10, 10);
-            std::this_thread::sleep_for(std::chrono::milliseconds(1))
-        }
-        stop();*/
-
-
         
-        const double PI = 3.14159265358979323846;
-        double relativeYaw = 270;
-        double relativeX = 1;
+        double relativeX = 2;
         double relativeY = 2;
-        double initialTurnAngle = std::atan2(relativeY, relativeX) * (180 / PI);
-        double totalDistance = std::sqrt((relativeX * relativeX) + (relativeY * relativeY));
-        if(initialTurnAngle < 0){
-            initialTurnAngle *= -1;
-            int totalEncoderCount = motors.getRightEncoderCount();
-            while(static_cast<double>(motors.getRightEncoderCount()) > (static_cast<double>(initialTurnAngle / 360) * -122500)){
-                motors.move(10, -10);
-                std::this_thread::sleep_for(std::chrono::milliseconds(1));
-            }
 
-            motors.stop();
-            std::this_thread::sleep_for(std::chrono::milliseconds(5000));
-            totalEncoderCount = motors.getRightEncoderCount();
-            //1.275 is 50.2 inches in meters
-            if(totalDistance > 1.275){
-                while(static_cast<double>(motors.getRightEncoderCount()) > -1*((static_cast<double>((totalDistance / 1.275) * 76000)) + totalEncoderCount)){
-                    motors.move(30, 30);
-                    //std::this_thread::sleep_for(std::chrono::milliseconds(1));
-                }
-            }
-            else {
-                while(static_cast<double>(motors.getRightEncoderCount()) > -1 * ((static_cast<double>((totalDistance / 1.275) * 67800)) + totalEncoderCount)){
-                    motors.move(30, 30);
-                    //std::this_thread::sleep_for(std::chrono::milliseconds(1));
-                }
-            }
-            motors.stop();
-           
-        }
-        else{
-            int totalEncoderCount = motors.getLeftEncoderCount();
-
-            while(static_cast<double>(motors.getLeftEncoderCount()) < (static_cast<double>(initialTurnAngle / 360) * 122000)){
-                motors.move(-10, 10);
-                std::this_thread::sleep_for(std::chrono::milliseconds(1));
-            }
-
-            motors.stop();
-            std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-            totalEncoderCount = motors.getLeftEncoderCount();
-            //1.275 is 50.2 inches in meters
-            if(totalDistance > 1.275){
-                while(static_cast<double>(motors.getLeftEncoderCount()) < ((static_cast<double>((totalDistance / 1.275) * 76000)) + totalEncoderCount)){
-                    motors.move(10, 10);
-                    //std::this_thread::sleep_for(std::chrono::milliseconds(1));
-                }
-            }
-            else {
-                while(static_cast<double>(motors.getLeftEncoderCount()) < ((static_cast<double>((totalDistance / 1.275) * 67800)) + totalEncoderCount)){
-                    motors.move(10, 10);
-                    //std::this_thread::sleep_for(std::chrono::milliseconds(1));
-                }
-            }
-            motors.stop();
-        }
-        
-        
-
-        std::string stoppp = "!EX\r";
-        std::string starttt = "!MG\r";
-        std::string clear = "# C\r";
-        std::string leftStop = "!MS 1\r";
-        std::string rightStop = "!MS 2\r";
-
-        int count = 0;
-        /*while(motors.getLeftEncoderCount() < 96000){
-          
-            motors.move(10, 10);
-                 //motors.motorSerial.writeString(clear.c_str());
-            //std::this_thread::sleep_for(std::chrono::milliseconds(1));
-        }
-        
-        //motors.motorSerial.writeString(clear.c_str());
-        motors.stop();
-
-        count = 0;
-        while(motors.getLeftEncoderCount() > 0){
-            
-            motors.move(-10, -10);
-                 //motors.motorSerial.writeString(clear.c_str());
-            
-            //std::this_thread::sleep_for(std::chrono::milliseconds(1));
-        }
-
-        motors.stop();*/
+        currPose.goToPose(relativeX, relativeY, motors);
     }
 
 };
