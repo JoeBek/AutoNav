@@ -103,7 +103,9 @@ LineLayer::onInitialize()
 /// @param buffer 
 void LineLayer::linePointCallback(autonav_interfaces::msg::LinePoints::ConstSharedPtr message) {
 
+      #ifdef DEBUG_
       RCLCPP_INFO(rclcpp::get_logger("nav_costmap_2d"), "CALM LUH CALLBACK");
+      #endif
       auto line = std::make_shared<autonav_interfaces::msg::LinePoints>(); 
       line->points = message->points;
 
@@ -206,7 +208,9 @@ LineLayer::updateCosts(
   // joe was here
 
   // std::vector<geometry_msgs::msg::Vector3> points;
+  #ifdef DEBUG_
   RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "HEEEEEEEEEEEELP HEEEELP ME HEEEEEEEEEELP");
+  #endif
 
   // why even use the name thingys if auto works for all of them
   auto last = buffer_.read();
