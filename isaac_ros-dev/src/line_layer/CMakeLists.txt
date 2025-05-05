@@ -41,8 +41,17 @@ set(dep_pkgs
 
 add_library(${lib_name} SHARED
             src/line_layer.cpp
-            src/line_buffer.cpp)
-include_directories(include)
+            )
+#include_directories(include)
+
+target_include_directories(${lib_name}
+  PUBLIC 
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
+)
+
+
+ 
 
 # === Installation ===
 

@@ -46,11 +46,16 @@
 #include "nav2_costmap_2d/footprint.hpp"
 #include "rclcpp/parameter_events_filter.hpp"
 
+template class LineBuffer<std::shared_ptr<autonav_interfaces::msg::LinePoints>>;
+
 using nav2_costmap_2d::LETHAL_OBSTACLE;
 using nav2_costmap_2d::INSCRIBED_INFLATED_OBSTACLE;
 using nav2_costmap_2d::NO_INFORMATION;
 
-#define DEBUG_
+//#define DEBUG_
+//#define DEBUG_2
+//#define DEBUG_3
+//#define DEBUG_4
 
 // helper methods outside namespace
 
@@ -80,9 +85,9 @@ LineLayer::onInitialize()
 {
   auto node = node_.lock(); 
   declareParameter("enabled", rclcpp::ParameterValue(true));
-  declareParameter(name_ + "." + "line_topic", rclcpp::ParameterValue("line_points"));
+  declareParameter("line_topic", rclcpp::ParameterValue("line_points"));
   node->get_parameter(name_ + "." + "enabled", enabled_);
-  node->get_parameter("line_topic", line_topic_);
+  node->get_parameter(name_ + "." + "line_topic", line_topic_);
 
   line_sub_ = node->create_subscription<autonav_interfaces::msg::LinePoints>(line_topic_, 1, 
     std::bind(&LineLayer::linePointCallback, this, std::placeholders::_1));
@@ -98,7 +103,10 @@ LineLayer::onInitialize()
 /// @param buffer 
 void LineLayer::linePointCallback(autonav_interfaces::msg::LinePoints::ConstSharedPtr message) {
 
-      autonav_interfaces::msg::LinePoints::SharedPtr line;
+      #ifdef DEBUG_
+      RCLCPP_INFO(rclcpp::get_logger("nav_costmap_2d"), "CALM LUH CALLBACK");
+      #endif
+      auto line = std::make_shared<autonav_interfaces::msg::LinePoints>(); 
       line->points = message->points;
 
       buffer_.buffer(line);
@@ -200,42 +208,71 @@ LineLayer::updateCosts(
   // joe was here
 
   // std::vector<geometry_msgs::msg::Vector3> points;
+  #ifdef DEBUG_
+  RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "HEEEEEEEEEEEELP HEEEELP ME HEEEEEEEEEELP");
+  #endif
 
   // why even use the name thingys if auto works for all of them
   auto last = buffer_.read();
-  if (!last){
+  if (!last ){
     RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "buffa empty... nothing to buf");
     return;
   }
   auto last_msg = *last;
+  if (!last_msg) {
+    RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "last message is gone... in the wind");
+    return;
+  }
+  
   std::vector<geometry_msgs::msg::Vector3> points = last_msg->points;
+
+  #ifdef DEBUG_2
+  RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "line point len: %zu", points.size());
+  #endif
+
+
+  bool mybool = true;
   
   // add points to costmap, include bounds checking
   for (auto &point : points) {
     // now we need to compute the map coordinates for the observation
 
 
-    int x = point.x;
-    int y = point.y;
+    double x = point.x;
+    double y = point.y;
+
+    #ifdef DEBUG_3 
+    RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "x, y = (%f, %f)", x, y);
+    #endif
 
     unsigned int mx, my;
     if (!master_grid.worldToMap(x, y, mx, my)) {
-        RCLCPP_DEBUG(rclcpp::get_logger("nav_costmap_2d"), "Computing map coords failed");
-        continue;
+      
+      #ifdef DEBUG_
+        RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "grid coords: (%u,%u)", mx, my); 
+        //RCLCPP_WARN(rclcpp::get_logger("nav_costmap_2d"), "LISTEN UP Computing map coords failed");
+      #endif
     }
-    
+
 
     if (!within_bounds(static_cast<int>(mx), min_i, max_i) || !within_bounds(static_cast<int>(my), min_j, max_j)) {
 
+      #ifdef DEBUG_4
+      RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "bounds: (%d, %d), (%d, %d)",min_i, max_i, min_j, max_j); 
+      RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "input: (%u), (%u)", mx, my); 
+      #endif
       continue;
     }
     int index_costmap = master_grid.getIndex(mx, my);
-    #ifdef DEBUG_
-    RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "writing grid coords: (%u,%u)", mx, my); 
-    #endif
-
     unsigned char cost = LETHAL_OBSTACLE; // maybe more dynamic down the line
     master_array[index_costmap] = cost; // overwrites cost map
+
+    #ifdef DEBUG_
+    RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "grid coords: (%u,%u)", mx, my); 
+    #endif
+    mybool = false;
+
+
 
   }
 }

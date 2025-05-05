@@ -98,7 +98,7 @@ private:
   // poop
 
   // when the wrapper sucks so you write a chiller one
-  LineBuffer<autonav_interfaces::msg::LinePoints::SharedPtr> buffer_;
+  LineBuffer<std::shared_ptr<autonav_interfaces::msg::LinePoints>> buffer_;
 
   void linePointCallback(autonav_interfaces::msg::LinePoints::ConstSharedPtr message);
 };
