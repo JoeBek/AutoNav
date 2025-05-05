@@ -16,6 +16,7 @@ add_executable(control src/control.cpp
   src/xbox.cpp 
   src/motor_controller.cpp 
   src/serialib.cpp
+  src/autonomous.cpp
 )
 ament_target_dependencies(control 
   rclcpp 

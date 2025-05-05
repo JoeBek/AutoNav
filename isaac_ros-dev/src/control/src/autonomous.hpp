@@ -1,20 +1,25 @@
-#include <tf2/LinearMath/Quaternion.h>
-#include <tf2/LinearMath/Matrix3x3.h>
+//#include <tf2/LinearMath/Quaternion.h>
+//#include <tf2/LinearMath/Matrix3x3.h>
+#include <cmath>
+#include <iostream>
+#include <string>
+#include <thread>
+#include <chrono>
+#include "motor_controller.hpp"
 
 class Autonomous {
 private:
   
 public:
  
-  double positionX;
-  double positionY;
-  double positionZ;
+  double linearX;
+  double linearY;
+  double linearZ;
   
-  double orientationX;
-  double orientationY;
-  double orientationZ;
-  double orientationW;
+  double angularZ;
 
-  double getYawFromQuaternion(double x, double y, double z, double w);
-
+  Autonomous();
+  void goToPose(double relativeX, double relativeY, MotorController& motors);
+  
+  double one_roatation = 125000;
 };
