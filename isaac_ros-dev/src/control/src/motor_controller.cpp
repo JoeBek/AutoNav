@@ -48,8 +48,8 @@ void MotorController::backward(){
     return;
   }
   else{
-    int leftMotorSpeed = (int)(stepSize * speed);
-    int rightMotorSpeed = -1 * (int)(stepSize * speed);
+    int leftMotorSpeed = -1 * (int)(stepSize * speed);
+    int rightMotorSpeed = (int)(stepSize * speed);
 
     std::string leftMotorCommand = "!G 1 " + std::to_string(leftMotorSpeed) + "\r";
     std::string rightMotorCommand = "!G 2 " + std::to_string(rightMotorSpeed) + "\r";
@@ -96,8 +96,8 @@ void MotorController::turnRight(){
 // moves the robot at specific motor speeds
 void MotorController::move(float right_speed, float left_speed){
   
-    int leftMotorSpeed = (int)(stepSize * left_speed);
-    int rightMotorSpeed = (int)(-stepSize * right_speed);
+    int leftMotorSpeed = (int)(-stepSize * left_speed);
+    int rightMotorSpeed = (int)(stepSize * right_speed);
 
     std::string leftMotorCommand = "!G 1 " + std::to_string(leftMotorSpeed) + "\r";
     std::string rightMotorCommand = "!G 2 " + std::to_string(rightMotorSpeed) + "\r";
@@ -142,11 +142,13 @@ int MotorController::getSpeed(){
   return speed;
 }
 
+
 int MotorController::getRightEncoderCount(){
   std::string command = "?C 1\r";
   char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
   motorSerial.readString(readBuffer, '\n', 40, 20);
+
   //std::cout << readBuffer << std::endl;
   std::string encoderCount = "";
   bool equalSign = false;
@@ -170,12 +172,14 @@ int MotorController::getRightEncoderCount(){
     return prevRightEncoderCount;
   } 
 
+
 }
 
 int MotorController::getLeftEncoderCount(){
   std::string command = "?C 2\r";
   char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
+
   motorSerial.readString(readBuffer, '\n', 40, 20);
 
   std::string encoderCount = "";
@@ -197,17 +201,20 @@ int MotorController::getLeftEncoderCount(){
   } catch (const std::invalid_argument& e) {
     return prevLeftEncoderCount;
   } 
+
 }
 
 int MotorController::getRightRPM(){
   std::string command = "?BS 1\r";
-  char readBuffer[16] = {};
+  char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
+
   motorSerial.readString(readBuffer, '\n', 15, 20);
+
   std::cout << readBuffer << std::endl;
   std::string rpm = "";
     bool equalSign = false;
-    for (int i = 0; i < 16; i++) {
+    for (int i = 0; i < 40; i++) {
         //std::cout << readBuffer[i] << std::endl;
 
         if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {
@@ -224,13 +231,15 @@ int MotorController::getRightRPM(){
 
 int MotorController::getLeftRPM(){
   std::string command = "?BS 2\r";
-  char readBuffer[16] = {};
+  char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
+
   motorSerial.readString(readBuffer, '\n', 15, 20);
+
 
   std::string rpm = "";
     bool equalSign = false;
-    for (int i = 0; i < 16; i++) {
+    for (int i = 0; i < 40; i++) {
         //std::cout << readBuffer[i] << std::endl;
 
         if ((readBuffer[i] >= '0' && readBuffer[i] <= '9' && equalSign) || (readBuffer[i] == '-' && equalSign)) {

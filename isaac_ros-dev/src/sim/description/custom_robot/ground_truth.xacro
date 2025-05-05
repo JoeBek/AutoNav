@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<gazebo>
+  <plugin filename="libgazebo_ros_p3d.so" name="ground_truth">
+    <frame_name>base_link</frame_name>  <!-- Your robot's base frame -->
+    <body_name>base_link</body_name>    <!-- Gazebo model link name -->
+    <topic_name>ground_truth/pose</topic_name>
+    <update_rate>30</update_rate>
+    <ros>
+      <namespace>/gt</namespace>
+    </ros>
+  </plugin>
+</gazebo>
+
+</robot>

@@ -9,6 +9,8 @@
     <xacro:include filename="imu.xacro"/>
     <xacro:include filename="depth_camera.xacro"/>
     <!--xacro:include filename="lidar.xacro"/-->
+    <!--xacro:include filename="ground_truth.xacro"/-->
+    
     
 
 </robot>

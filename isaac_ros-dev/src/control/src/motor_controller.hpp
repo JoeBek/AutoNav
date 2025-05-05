@@ -38,7 +38,7 @@ public:
     int getStepSize();
     void setSpeed(int s);
     int getSpeed();
-    int getLeftEncoderCount();
+    int  getLeftEncoderCount();
     int getRightEncoderCount();
     int getLeftRPM();
     int getRightRPM();

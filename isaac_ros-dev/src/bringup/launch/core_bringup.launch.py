@@ -19,7 +19,7 @@ def generate_launch_description():
  
     pkg_name = 'bringup'
     pkg_share = FindPackageShare(package=pkg_name).find(pkg_name)
-    model_path = os.path.join(get_package_share_directory(pkg_share), 'description', 'bowser.urdf.xacro')
+    model_path = os.path.join(get_package_share_directory('bringup'), 'description', 'bowser.urdf.xacro')
     bowser_description_config = xacro.process_file(model_path)
    # Create a robot_state_publisher node
 
@@ -38,7 +38,7 @@ def generate_launch_description():
         arguments=[model_path]
     )
     
-    return LaunchDescription(
+    return LaunchDescription([
         rsp,
         jsp
-    )
+        ])

@@ -64,8 +64,8 @@ class ControlNode : public rclcpp::Node {
     rclcpp::TimerBase::SharedPtr gps_timer_;
 
     // publisher for encoder values
-    rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr encodersPub;
-    rclcpp::TimerBase::SharedPtr encoder_timer_;
+     rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr encodersPub;
+     rclcpp::TimerBase::SharedPtr encoder_timer_;
 
     // subscription for Nav2 pose
     rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr pathPlanningSub;
@@ -96,8 +96,8 @@ class ControlNode : public rclcpp::Node {
             controller.set_x(joy_msg->buttons[3]);
             controller.set_y(joy_msg->buttons[2]);
 
-            controller.set_right_bumper(joy_msg->buttons[4]);
-            controller.set_left_bumper(joy_msg->buttons[5]);
+            controller.set_right_bumper(joy_msg->buttons[6]);
+            controller.set_left_bumper(joy_msg->buttons[7]);
 
             controller.set_left_stick_x(joy_msg->axes[0]);
             controller.set_left_stick_y(joy_msg->axes[1]);
@@ -110,10 +110,13 @@ class ControlNode : public rclcpp::Node {
                 motors.move(command.right_motor_speed * motors.getSpeed(), command.left_motor_speed * motors.getSpeed());
             }
             else if(command.cmd == Xbox::SPEED_DOWN){
-                motors.setSpeed(motors.getSpeed() - 10);
+                motors.setSpeed(motors.getSpeed() - 1);
+                RCLCPP_INFO(this->get_logger(), "speed down. new speed: %d", motors.getSpeed());
+                
             }
             else if(command.cmd == Xbox::SPEED_UP){
-                motors.setSpeed(motors.getSpeed() + 10);
+                motors.setSpeed(motors.getSpeed() + 1);
+                RCLCPP_INFO(this->get_logger(), "speed up! new speed: %d", motors.getSpeed());
             }
             else if(command.cmd == Xbox::STOP){
                 motors.shutdown();
@@ -127,6 +130,8 @@ class ControlNode : public rclcpp::Node {
         encoder_msg.right_motor_rpm = 0;
         encoder_msg.left_motor_count = motors.getLeftEncoderCount();
         encoder_msg.right_motor_count = motors.getRightEncoderCount();
+        //RCLCPP_INFO(this->get_logger(), "LEC: %s", motors.getLeftEncoderCount());
+
 
         std::string arduinoEncoderCounts = "L:";
         arduinoEncoderCounts += encoder_msg.left_motor_count;
@@ -136,13 +141,17 @@ class ControlNode : public rclcpp::Node {
         arduinoSerial.writeString(arduinoEncoderCounts.c_str());
 
         encodersPub->publish(encoder_msg);
+
     }
 
     void publish_gps_data() {
         autonav_interfaces::msg::GpsData gps_msg;
         char gpsBuffer[1024] = {};
+
         gpsSerial.readString(gpsBuffer, '\n', 1023, 100);
 
+
+        //RCLCPP_INFO(this->get_logger(), "Gps string: %s", gpsBuffer);
 
         std::string message(gpsBuffer);
         std::istringstream iss(message);
@@ -216,6 +225,7 @@ class ControlNode : public rclcpp::Node {
         
         if (ret != 1) {
             RCLCPP_ERROR(this->get_logger(), "Arduino serial error: %s", arduinoSerial.error_map.at(ret).c_str());
+
         }
 
         char mode[8] = "MANUAL\n";
@@ -264,6 +274,11 @@ class ControlNode : public rclcpp::Node {
         if (request->gps) {
             init_serial_gps(gps_port.c_str());
         }
+
+        std::string leftMotorCommand = "!C 1 0\r";
+        std::string rightMotorCommand = "!C 2 0 \r";
+        motors.motorSerial.writeString(leftMotorCommand.c_str());
+        motors.motorSerial.writeString(rightMotorCommand.c_str());
                 
         // configure topics
         std::string controller_topic = this->get_parameter("controller_topic").as_string();
@@ -291,7 +306,9 @@ class ControlNode : public rclcpp::Node {
             gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>(gps_topic, 10);
 
             gps_timer_ = this->create_wall_timer(
+
                 std::chrono::milliseconds(150),
+
                 std::bind(&ControlNode::publish_gps_data, this)
             );
     
@@ -303,11 +320,9 @@ class ControlNode : public rclcpp::Node {
               
 
         response->ret = 0;
-        
-        double relativeX = 2;
-        double relativeY = 2;
 
-        currPose.goToPose(relativeX, relativeY, motors);
+        
+
     }
 
 };
@@ -321,3 +336,4 @@ int main(int argc, char** argv) {
     return 0;
 
 }
+

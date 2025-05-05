@@ -71,7 +71,7 @@ if(test_number == 1):
     duration = datetime.timedelta(seconds=TEST1_DURATION)
     while (time - start_time < duration):
         print("Moving...")
-        forward(20)
+        forward(40)
         time = datetime.datetime.now()
     get_BatteryCurrent()
     get_RPMs()

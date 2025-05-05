@@ -9,3 +9,6 @@ RUN apt-get update && apt-get install -y \
 	evtest \
 	joystick \
 	udev \
+	ros-humble-point-cloud-transport \
+	nano \
+
