@@ -32,27 +32,20 @@ def generate_launch_description():
             executable='controller_server',
             name='controller_server',
             output='screen',
-            parameters=['/path/to/nav2_params.yaml', {"use_sim_time": LaunchConfiguration('use_sim_time')}]
+            parameters=[LaunchConfiguration('nav2_params'), {"use_sim_time": LaunchConfiguration('use_sim_time')}]
     )
-    costmap = Node(
-            package='nav2_costmap_2d',
-            executable='costmap_2d_ros',
-            name='local_costmap',
-            output='screen',
-            parameters=['/path/to/nav2_params.yaml', {"use_sim_time": LaunchConfiguration('use_sim_time')}]
-    )
+
     navigator = Node(
             package='nav2_bt_navigator',
             executable='bt_navigator',
             name='bt_navigator',
             output='screen',
-            parameters=['/path/to/nav2_params.yaml', {"use_sim_time": LaunchConfiguration('use_sim_time')}]
+            parameters=[LaunchConfiguration('nav2_params'), {"use_sim_time": LaunchConfiguration('use_sim_time')}]
     )
        
     return LaunchDescription([
         use_sim_time,
         nav2_params,
         controller,
-        costmap,
         navigator
     ])
