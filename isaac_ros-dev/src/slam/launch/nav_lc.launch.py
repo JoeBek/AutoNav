@@ -7,10 +7,10 @@ def generate_launch_description():
 
     lifecycle_nodes = [
         'controller_server',
-        'planner_server',
+        #'planner_server',
         'bt_navigator',
-        'waypoint_follower',
-        'velocity_smoother'
+        # 'waypoint_follower',
+        #'velocity_smoother'
     ]
 
     lifecycle_manager_node = Node(
