@@ -39,15 +39,15 @@
 
  
 
-  <link name="lidar_footprint"/> 
+  <link name="lidar_footprint_6"/> 
 
   <joint name="lidar_joint" type="fixed"> 
 
     <parent link="base_link"/> 
 
-    <child link="lidar_footprint"/> 
+    <child link="lidar_footprint_6"/> 
 
-    <origin xyz="0.44 0.0 0.15" rpy="0 3.14159 0"/> 
+    <origin xyz="0.44 0.0 0.15" rpy="3.1415 0 0"/> 
 
   </joint> 
 

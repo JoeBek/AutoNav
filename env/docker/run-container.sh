@@ -6,7 +6,7 @@ set -e # makes script exit on command failure
 
 IMAGE_TAG="dev:koopa-kingdom"
 CONTAINER_NAME="koopa-kingdom"
-WORKDIR="$HOME/AutoNav/isaac_ros-dev/"
+WORKDIR="$HOME/AutoNav/"
 ENTRYPOINT="/usr/local/bin/scripts/entrypoint.sh"
 SCRIPT_DIR="$(dirname ${BASH_SOURCE[0]})"
 
@@ -62,9 +62,9 @@ fi
 
 
 # mount dev fs, entrypoint, set working directory
-DOCKER_ARGS+=("-v $WORKDIR:/workspace/isaac_ros-dev") # mount workspace 
+DOCKER_ARGS+=("-v $WORKDIR:/autonav") # mount workspace 
 DOCKER_ARGS+=("-v /etc/localtime:/etc/localtime:ro") # sync time or something
-DOCKER_ARGS+=("--workdir /workspace/isaac_ros-dev") # mount workspace 
+DOCKER_ARGS+=("--workdir /autonav/isaac_ros-dev") # mount workspace 
 DOCKER_ARGS+=("-v $SCRIPT_DIR/entrypoint_additions:/usr/local/bin/scripts/entrypoint_additions") # mount entrypoint scripts
 DOCKER_ARGS+=("-v $SCRIPT_DIR/entrypoint.sh:/usr/local/bin/scripts/entrypoint.sh") # mount entrypoint
 #DOCKER_ARGS+=("-e PS1='bowser@koopa-kingdom:\\w # '") # set cool prompt
@@ -77,7 +77,7 @@ DOCKER_ARGS+=("--entrypoint $ENTRYPOINT")
 if [ "$(docker ps -a --quiet --filter status=running --filter name=$CONTAINER_NAME)" ]; then
     C_WORKDIR=$(docker exec $CONTAINER_NAME printenv WORKDIR)
 
-    docker exec -i -t -u admin --workdir "/workspace/isaac_ros-dev" $CONTAINER_NAME /bin/bash $@
+    docker exec -i -t -u admin --workdir "/autonav/isaac_ros-dev" $CONTAINER_NAME /bin/bash $@
 
     exit 0
 fi
