@@ -15,7 +15,7 @@ private:
     std::string comPort;
     int prevLeftEncoderCount = 0;
     int prevRightEncoderCount = 0;
-
+    int temp = 0;
 
 public:
     // Constructor

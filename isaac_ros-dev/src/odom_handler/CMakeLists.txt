@@ -44,7 +44,7 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  DIRECTORY include src
+  DIRECTORY src
   DESTINATION share/${PROJECT_NAME}
 )
 

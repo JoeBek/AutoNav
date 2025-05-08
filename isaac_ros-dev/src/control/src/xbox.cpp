@@ -85,7 +85,10 @@ Xbox::CommandData Xbox::calculateCommand(){
   }
 
   adjust_joysticks();
-
+  if(left_stick_y_pos == 0 && right_stick_y_pos == 0){
+    cmd.cmd = NONE;
+    return cmd;
+  }
   if(TANKDRIVE){
     cmd.cmd = MOVE;
 

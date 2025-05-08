@@ -147,7 +147,7 @@ int MotorController::getRightEncoderCount(){
   std::string command = "?C 1\r";
   char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
-  motorSerial.readString(readBuffer, '\n', 40, 20);
+  motorSerial.readString(readBuffer, '\n', 40, 10);
 
   //std::cout << readBuffer << std::endl;
   std::string encoderCount = "";
@@ -164,13 +164,17 @@ int MotorController::getRightEncoderCount(){
   }
 
   
+    RCLCPP_INFO(rclcpp::get_logger("control"), "REC  %s", encoderCount.c_str());
+
 
   try {
-    prevRightEncoderCount = std::stoi(encoderCount);
+    
+    temp = std::stoi(encoderCount);
+    prevRightEncoderCount = temp;
     return std::stoi(encoderCount);
-  } catch (const std::invalid_argument& e) {
+  } catch (...) {
     return prevRightEncoderCount;
-  } 
+  }
 
 
 }
@@ -180,7 +184,7 @@ int MotorController::getLeftEncoderCount(){
   char readBuffer[41] = {};
   motorSerial.writeString(command.c_str());  
 
-  motorSerial.readString(readBuffer, '\n', 40, 20);
+  motorSerial.readString(readBuffer, '\n', 40, 10);
 
   std::string encoderCount = "";
   bool equalSign = false;
@@ -195,12 +199,17 @@ int MotorController::getLeftEncoderCount(){
       }
   }
 
+    RCLCPP_INFO(rclcpp::get_logger("control"), "LEC  %s", encoderCount.c_str());
+
+
   try {
-    prevLeftEncoderCount = std::stoi(encoderCount);
+    
+    temp = std::stoi(encoderCount);
+    prevLeftEncoderCount = temp;
     return std::stoi(encoderCount);
-  } catch (const std::invalid_argument& e) {
+  } catch (...) {
     return prevLeftEncoderCount;
-  } 
+  }
 
 }
 
@@ -225,7 +234,7 @@ int MotorController::getRightRPM(){
         }
     }
 
-  return std::stoi(rpm);
+  return 6;
   //return 5;
 }
 
@@ -251,7 +260,7 @@ int MotorController::getLeftRPM(){
     }
     //std::cout <<"RIGHT RPM: " << rpm << std::endl;
     //RCLCPP_INFO(rclcpp::get_logger("MotorController"), "RIGHT RPM: %s", rpm.c_str());
-    return std::stoi(rpm);
+    return 6;
     //return 5;
 }
 

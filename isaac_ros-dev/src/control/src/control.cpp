@@ -1,4 +1,3 @@
-
 #include <rclcpp/rclcpp.hpp>
 #include "serialib.hpp"
 #include "xbox.hpp"
@@ -60,13 +59,14 @@ class ControlNode : public rclcpp::Node {
     rclcpp::Service<autonav_interfaces::srv::ConfigureControl>::SharedPtr configure_server;
 
     // publisher for gps data
-    rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
-    rclcpp::TimerBase::SharedPtr gps_timer_;
+   // rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
+   // rclcpp::TimerBase::SharedPtr gps_timer_;
 
     // publisher for encoder values
      rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr encodersPub;
      rclcpp::TimerBase::SharedPtr encoder_timer_;
-
+    
+    // rclcpp::TimerBase::SharedPtr joy_timer_; 
     // subscription for Nav2 pose
     rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr pathPlanningSub;
 
@@ -104,7 +104,34 @@ class ControlNode : public rclcpp::Node {
             controller.set_right_stick_x(joy_msg->axes[2]);
             controller.set_right_stick_y(joy_msg->axes[3]);
 
-            Xbox::CommandData command = controller.calculateCommand();
+        } 
+    }
+
+    void joy_timer_callback(){
+
+
+
+    } 
+
+
+    void publish_encoder_data() {
+        autonav_interfaces::msg::Encoders encoder_msg;
+        encoder_msg.left_motor_rpm = 0;
+        encoder_msg.right_motor_rpm = 0;
+        encoder_msg.left_motor_count = motors.getLeftEncoderCount();
+        encoder_msg.right_motor_count = motors.getRightEncoderCount();
+        //RCLCPP_INFO(this->get_logger(), "LEC: %s", motors.getLeftEncoderCount());
+
+
+        std::string arduinoEncoderCounts = "L:";
+        arduinoEncoderCounts += encoder_msg.left_motor_count;
+        arduinoEncoderCounts += " R:";
+        arduinoEncoderCounts += encoder_msg.right_motor_count;
+
+
+
+
+        Xbox::CommandData command = controller.calculateCommand();
 
             if(command.cmd == Xbox::MOVE){
                 motors.move(command.right_motor_speed * motors.getSpeed(), command.left_motor_speed * motors.getSpeed());
@@ -121,22 +148,8 @@ class ControlNode : public rclcpp::Node {
             else if(command.cmd == Xbox::STOP){
                 motors.shutdown();
             }
-        }
-    }
-
-    void publish_encoder_data() {
-        autonav_interfaces::msg::Encoders encoder_msg;
-        encoder_msg.left_motor_rpm = 0;
-        encoder_msg.right_motor_rpm = 0;
-        encoder_msg.left_motor_count = motors.getLeftEncoderCount();
-        encoder_msg.right_motor_count = motors.getRightEncoderCount();
-        //RCLCPP_INFO(this->get_logger(), "LEC: %s", motors.getLeftEncoderCount());
 
 
-        std::string arduinoEncoderCounts = "L:";
-        arduinoEncoderCounts += encoder_msg.left_motor_count;
-        arduinoEncoderCounts += " R:";
-        arduinoEncoderCounts += encoder_msg.right_motor_count;
         arduinoEncoderCounts += "\n";
         arduinoSerial.writeString(arduinoEncoderCounts.c_str());
 
@@ -186,7 +199,7 @@ class ControlNode : public rclcpp::Node {
             gps_msg.altitude = last_alt;
         }
 
-        gpsPub->publish(gps_msg);
+       // gpsPub->publish(gps_msg);
     }
 
     void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
@@ -294,23 +307,26 @@ class ControlNode : public rclcpp::Node {
         encodersPub = this->create_publisher<autonav_interfaces::msg::Encoders>(encoder_topic, 10);
         
         encoder_timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(100),
+            std::chrono::milliseconds(30),
             std::bind(&ControlNode::publish_encoder_data, this)
         );
         
-        
+       /* joy_timer_ = this->create_wall_timer(
+            std::chrono::milliseconds(20),
+            std::bind(&ControlNode::joy_timer_callback, this)
+        );*/
         //GPS PUB
 
         if (request->gps) {
 
-            gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>(gps_topic, 10);
+           // gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>(gps_topic, 10);
 
-            gps_timer_ = this->create_wall_timer(
+            /*gps_timer_ = this->create_wall_timer(
 
                 std::chrono::milliseconds(150),
 
                 std::bind(&ControlNode::publish_gps_data, this)
-            );
+            );*/
     
         }
        

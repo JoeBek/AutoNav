@@ -48,6 +48,12 @@ class WheelOdomPublisher : public rclcpp::Node
       // Update encoder values when new data is received
       left_encoder_count_ = msg->left_motor_count;
       right_encoder_count_ = msg->right_motor_count;
+      if (left_encoder_count_ > 0) {
+      	left_encoder_count_ = -left_encoder_count_;
+      }
+      else {
+      	left_encoder_count_ = std::abs(left_encoder_count_);
+      }
     }
 
     void update_wheel_odom()
