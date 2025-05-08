@@ -90,6 +90,9 @@ def generate_launch_description():
         executable='async_slam_toolbox_node',
         name='slam_toolbox',
         output='screen',
+        remappings=[
+            ('/scan', '/scan_fullframe')
+        ],
         parameters=[slam_config, {"use_sim_time": LaunchConfiguration('use_sim_time'),
                                   "transform_publish_period": LaunchConfiguration('publish_period')
                                   }]
@@ -165,7 +168,7 @@ def generate_launch_description():
         use_sim_time,
         nav2_params,
         #nodes
-        point2laser,
+        #point2laser,
         ekf_local,
         slam_toolbox,
        # gps_transform,

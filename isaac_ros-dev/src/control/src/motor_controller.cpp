@@ -164,7 +164,9 @@ int MotorController::getRightEncoderCount(){
   }
 
   
+    #ifdef CONTROL_DEBUG
     RCLCPP_INFO(rclcpp::get_logger("control"), "REC  %s", encoderCount.c_str());
+    #endif
 
 
   try {
@@ -199,7 +201,9 @@ int MotorController::getLeftEncoderCount(){
       }
   }
 
+    #ifdef CONTROL_DEBUG
     RCLCPP_INFO(rclcpp::get_logger("control"), "LEC  %s", encoderCount.c_str());
+    #endif
 
 
   try {

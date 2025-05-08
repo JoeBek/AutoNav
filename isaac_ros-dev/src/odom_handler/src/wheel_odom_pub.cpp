@@ -31,7 +31,7 @@ class WheelOdomPublisher : public rclcpp::Node
       // TF2 Broadcaster for odom → base_link transform
       tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
 
-      publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("wheel_odom", 50);
+      publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("odom", 50);
       timer_ = this->create_wall_timer(200ms, std::bind(&WheelOdomPublisher::update_wheel_odom, this));
       last_time_ = this->get_clock()->now();
     }
