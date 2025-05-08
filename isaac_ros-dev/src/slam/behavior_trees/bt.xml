@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="Navigate to Pose">
+      <!-- Checks if the path to the goal is valid -->
+      <CheckPathValid />
+
+      <!-- Main action to navigate to the specified pose -->
+      <NavigateToPose />
+    </Sequence>
+  </BehaviorTree>
+</root>
+

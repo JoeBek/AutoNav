@@ -12,7 +12,7 @@ find_package(rclcpp REQUIRED)
 
 
 install (
-  DIRECTORY config launch
+  DIRECTORY config launch behavior_trees
   DESTINATION share/${PROJECT_NAME}
 )
 
