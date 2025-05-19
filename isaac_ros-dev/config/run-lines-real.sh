@@ -1,0 +1,1 @@
+ros2 run line_detection line_detector --ros-args -p camera_topic:="/zed/zed_node/rgb/image_rect_color" -p depth_camera_topic:="/zed/zed_node/depth/depth_registered" -p camera_info_topic:="/zed/zed_node/rgb/camera_info"
