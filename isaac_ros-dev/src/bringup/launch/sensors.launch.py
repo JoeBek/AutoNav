@@ -40,8 +40,17 @@ def generate_launch_description():
             PythonLaunchDescriptionSource ([zed_pkg]), launch_arguments={'camera_model':LaunchConfiguration('camera_model')}.items()
     )
 
+    sick_args = {
+        'hostname':'192.168.0.1',
+        'udp_receiver_ip':'192.168.0.2',
+        'publish_frame_id':'lidar_footprint',
+        'tf_publish_rate':'0'
+    }
+
+
+
     sick = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource ([sick_pkg]), launch_arguments={'hostname':LaunchConfiguration('hostname'), 'udp_receiver_ip':LaunchConfiguration('udp_receiver_ip')}.items()
+            PythonLaunchDescriptionSource ([sick_pkg]), launch_arguments=sick_args.items()
     )
     return LaunchDescription([
         camera_model,
