@@ -45,6 +45,21 @@ class WheelOdomPublisher : public rclcpp::Node
   private:
     void encoder_callback(const autonav_interfaces::msg::Encoders::SharedPtr msg)
     {
+      int temp_left_encoder_count = left_encoder_count_;
+      if (left_encoder_count_ > 0){
+      	temp_left_encoder_count = -left_encoder_count_;
+      }
+      else{
+      	temp_left_encoder_count = std::abs(left_encoder_count_);
+      }
+      int left_delta_count = std::abs(msg->left_motor_count - temp_left_encoder_count);
+      int right_delta_count = std::abs(msg->right_motor_count - right_encoder_count_);
+      const int MAX_ENCODER_DELTA = 20000;
+
+      if (left_delta_count > MAX_ENCODER_DELTA || right_delta_count > MAX_ENCODER_DELTA){
+      	printf("Encountered Bad Encoder Count Reading\n");
+      	return;
+      }
       // Update encoder values when new data is received
       left_encoder_count_ = msg->left_motor_count;
       right_encoder_count_ = msg->right_motor_count;
@@ -144,7 +159,9 @@ class WheelOdomPublisher : public rclcpp::Node
       transform.transform.rotation.w = q.w();
 
       // Send the transform
+      #ifdef PUBLISH_TRANSFORM
       tf_broadcaster_->sendTransform(transform);
+      #endif
     }
 
     double x_, y_, theta_;  // Robot's position (x, y) and orientation (theta)

@@ -51,7 +51,10 @@ class ControlNode : public rclcpp::Node {
     float last_alt = 0;
 
     bool autonomousMode = false;
-
+    float linear_move;
+    float angular_move;
+    float left_wheel_speed;
+    float right_wheel_speed;
 
     // subscription for joystick
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr controllerSub;
@@ -59,8 +62,8 @@ class ControlNode : public rclcpp::Node {
     rclcpp::Service<autonav_interfaces::srv::ConfigureControl>::SharedPtr configure_server;
 
     // publisher for gps data
-   // rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
-   // rclcpp::TimerBase::SharedPtr gps_timer_;
+    rclcpp::Publisher<autonav_interfaces::msg::GpsData>::SharedPtr gpsPub;
+    rclcpp::TimerBase::SharedPtr gps_timer_;
 
     // publisher for encoder values
      rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr encodersPub;
@@ -130,8 +133,8 @@ class ControlNode : public rclcpp::Node {
 
 
 
-
-        Xbox::CommandData command = controller.calculateCommand();
+        if(!autonomousMode){
+            Xbox::CommandData command = controller.calculateCommand();
 
             if(command.cmd == Xbox::MOVE){
                 motors.move(command.right_motor_speed * motors.getSpeed(), command.left_motor_speed * motors.getSpeed());
@@ -148,7 +151,11 @@ class ControlNode : public rclcpp::Node {
             else if(command.cmd == Xbox::STOP){
                 motors.shutdown();
             }
-
+        }
+        else {
+           motors.move(left_wheel_speed * 40, right_wheel_speed * 40);
+           
+        }
 
         arduinoEncoderCounts += "\n";
         arduinoSerial.writeString(arduinoEncoderCounts.c_str());
@@ -164,7 +171,7 @@ class ControlNode : public rclcpp::Node {
         gpsSerial.readString(gpsBuffer, '\n', 1023, 100);
 
 
-        //RCLCPP_INFO(this->get_logger(), "Gps string: %s", gpsBuffer);
+        RCLCPP_INFO(this->get_logger(), "Gps string: %s", gpsBuffer);
 
         std::string message(gpsBuffer);
         std::istringstream iss(message);
@@ -199,7 +206,7 @@ class ControlNode : public rclcpp::Node {
             gps_msg.altitude = last_alt;
         }
 
-       // gpsPub->publish(gps_msg);
+        gpsPub->publish(gps_msg);
     }
 
     void path_planning_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
@@ -215,18 +222,13 @@ class ControlNode : public rclcpp::Node {
             // currPose.goToPose(linearX, linearY, motors);
 
             /*Direct Speed to Motor Way*/
-            float linear_move;
-            float angular_move;
-            float left_wheel_speed;
-            float right_wheel_speed;
 
             linear_move = msg->linear.x;
             angular_move = msg->angular.z;
 
-            left_wheel_speed = (linear_move - angular_move) * (WHEEL_BASE/2);
-            right_wheel_speed = (linear_move + angular_move) * (WHEEL_BASE/2);
+            left_wheel_speed = linear_move - ( angular_move * (WHEEL_BASE/2));
+            right_wheel_speed = linear_move +( angular_move * (WHEEL_BASE/2));
 
-            motors.move(-left_wheel_speed, -right_wheel_speed);
         }
     }
 
@@ -319,14 +321,14 @@ class ControlNode : public rclcpp::Node {
 
         if (request->gps) {
 
-           // gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>(gps_topic, 10);
+            gpsPub = this->create_publisher<autonav_interfaces::msg::GpsData>(gps_topic, 10);
 
-            /*gps_timer_ = this->create_wall_timer(
+            gps_timer_ = this->create_wall_timer(
 
                 std::chrono::milliseconds(150),
 
                 std::bind(&ControlNode::publish_gps_data, this)
-            );*/
+            );
     
         }
        

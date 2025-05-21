@@ -6,7 +6,7 @@ local_costmap:
       publish_frequency: 2.0
       global_frame: odom
       robot_base_frame: base_link
-      use_sim_time: True
+      use_sim_time: False
       rolling_window: true
       transform_tolerance: 0.5
       width: 9
@@ -32,9 +32,9 @@ local_costmap:
         z_voxels: 16
         max_obstacle_height: 2.0
         mark_threshold: 0
-        observation_sources: scan
-        scan:
-          topic: /scan
+        observation_sources: cloud
+        cloud:
+          topic: /scan_fullframe
           max_obstacle_height: 2.0
           clearing: True
           marking: True
@@ -42,7 +42,7 @@ local_costmap:
           raytrace_max_range: 3.0
           raytrace_min_range: 0.0
           obstacle_max_range: 2.5
-          obstacle_min_range: 0.0
+          obstacle_min_range: 0.3
           track_unknown_space: true
           unknown_cost_value: 0
       static_layer:
@@ -52,7 +52,7 @@ local_costmap:
 
 controller_server:
   ros__parameters:
-    use_sim_time: True
+    use_sim_time: False
     controller_frequency: 20.0
     min_x_velocity_threshold: 0.001
     min_y_velocity_threshold: 0.5
@@ -125,9 +125,9 @@ controller_server:
 
 bt_navigator:
   ros__parameters:
-    use_sim_time: True
-    default_nav_to_pose_bt_xml: "/home/vtcro/AutoNav/isaac_ros-dev/install/slam/share/slam/behavior_trees/bt_2.xml"
-    default_nav_through_poses_bt_xml: "/home/vtcro/AutoNav/isaac_ros-dev/install/slam/share/slam/behavior_trees/bt_2.xml"
+    use_sim_time: False
+    default_nav_to_pose_bt_xml: "/autonav/isaac_ros-dev/install/slam/share/slam/behavior_trees/bt_2.xml"
+    default_nav_through_poses_bt_xml: "/autonav/isaac_ros-dev/install/slam/share/slam/behavior_trees/bt_2.xml"
     plugin_lib_names:
       - nav2_is_path_valid_condition_bt_node
       - nav2_navigate_to_pose_action_bt_node
