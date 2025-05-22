@@ -9,7 +9,7 @@
 #define WINDOW_SIZE  2 * HALF_WINDOW_SIZE + 1
 #define WINDOW_SIZE_SQ  (WINDOW_SIZE) * (WINDOW_SIZE)
 #define SIGMA_THRESHOLD  5
-#define MEW_THRESHOLD 100
+#define MEW_THRESHOLD 200
 
 
 // dim3 block (16,16,1)

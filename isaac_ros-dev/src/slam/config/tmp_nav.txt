@@ -1,0 +1,30 @@
+
+
+
+# this is my current minimal path config
+
+controller_server:
+  ros__parameters:
+    use_sim_time: True
+    goal_checker_plugin: "simple_goal_checker"
+    goal_checker:
+      plugin: "nav2_controller::SimpleGoalChecker"
+      xy_goal_tolerance: 0.25
+    controller_plugins: ["FollowPath"]
+    global_frame: odom
+    FollowPath:
+      plugin: "dwb_core::DWBLocalPlanner"
+      min_vel_x: -0.1
+      max_vel_x: 0.26
+      min_vel_theta: -0.5
+      max_vel_theta: 0.5
+      acc_lim_x: 0.5
+      critics: [ "ObstacleFootprint", "Oscillation"]
+      debug_trajectory_details: true  # Add this line
+      publish_evaluation: True
+      publish_global_plan: True 
+      publish_transformed_plan: True
+      publish_local_plan: True
+      publish_trajectories: True
+      publish_cost_grid_pc: True
+
