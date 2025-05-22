@@ -32,7 +32,7 @@ std::pair<int2*, int*> lines::detect_line_pixels(const cv::Mat &image) {
 
     // get mask
     cv::Mat mask;
-    double threshold = 0;
+    double threshold = 200;
     cv::threshold(gray_img, mask, threshold, 255, cv::THRESH_BINARY);
 
     
