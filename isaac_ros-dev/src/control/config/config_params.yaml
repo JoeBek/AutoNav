@@ -3,4 +3,3 @@
   configure:
     arduino: true
     motors: true
-    gps: true

@@ -5,9 +5,7 @@ control_node:
     motor_port: "/dev/ttyACM0"
     arduino_port: "/dev/ttyACM1"
 
-    gps_port: "/dev/ttyUSB0"
     # \/ ------------------configure topic names here
     controller_topic: "joy"
     encoder_topic: "encoders"
-    gps_topic: "gps"
     path_planning_topic: "cmd_vel"

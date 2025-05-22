@@ -72,34 +72,31 @@ def generate_launch_description():
     )
 
     odom = Node(
-        pacakge='odom_handler',
+        package='odom_handler',
         executable='wheel_odometry_publisher',
         name='wheel_odom'
     )
 
-    control_event = RegisterEventHandler(
-        OnProcessIO(
-            target_action=joy,
-            on_stdout=[
+    control_event = TimerAction(
+            period=1.0,
+            actions=[
                 LogInfo(msg='Control node booting up...'),
                 control
             ]
-        )
+        
     )
-    odom_event = RegisterEventHandler(
-        OnProcessIO(
-            target_action=control,
-            on_stdout=[
+    odom_event = TimerAction(
+            period=5.0,
+            actions=[
                 LogInfo(msg='Odom node booting up...'),
                 odom
             ]
-        )
+        
     )
 
 
     return LaunchDescription([
         joy,
-        sick,
         core,
         control_event,
         odom_event

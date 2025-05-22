@@ -92,7 +92,7 @@ class GPSPublisher : public rclcpp::Node {
             std::string gps_data;
             if (bytes_read > 0) {   // Check if message has any relevant data 
                 gps_data = std::string(gps_buffer, bytes_read);
-                // printf("Current GPS Data: %s\n", gps_data.c_str());	// For Debugging
+                printf("Current GPS Data: %s\n", gps_data.c_str());	// For Debugging
             }
             else {  // If message does not have any relevant data do not publish anything and just wait for next callback
                 printf("No data received within timeout!\n");
@@ -102,7 +102,7 @@ class GPSPublisher : public rclcpp::Node {
             // Check if GPS data recieved has a valid Header and Data segment
             size_t semicolon_pos = gps_data.find(';'); // Header and Data segment is seperated via semi-colon ';'
             if (semicolon_pos == std::string::npos) {
-                printf("Encountered Invalid GPS data!\n");
+                printf("Encountered Invalid GPS data!(No Header or Data Segment)\n");
                 return;
             }
             std::string header = gps_data.substr(0, semicolon_pos);  // GPS Header Segment
@@ -141,7 +141,7 @@ class GPSPublisher : public rclcpp::Node {
 		publisher_->publish(gps_msg);
 	    }
 	    else {
-	    	printf("Encountered Invalid GPS Data!\n");
+	    	printf("Encountered Invalid GPS Data!(Invalid Data Segment)\n");
 		return;
 	    }
 

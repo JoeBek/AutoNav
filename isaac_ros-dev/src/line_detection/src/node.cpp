@@ -16,6 +16,9 @@
 #include <image_geometry/pinhole_camera_model.h>
 #include <mutex>
 
+//#define DEBUG_2
+#define DEBUG_3
+
 //#define DEBUG_LOG
 
 class LineDetectorNode : public rclcpp::Node {
@@ -31,7 +34,7 @@ class LineDetectorNode : public rclcpp::Node {
 		this->declare_parameter("camera_topic", "rgb_gray/image_rect_gray");
 		// TODO TODO OOODO fix this and below 
 		this->declare_parameter("depth_camera_topic", "rgb_gray/depth/raw");
-		this->declare_parameter("camera_info_topic", "rbg_gray/info/");
+		this->declare_parameter("camera_info_topic", "rgb_gray/info");
 		this->declare_parameter("line_points_topic", "line_points");
 		this->declare_parameter("enable_timer", true); 
 		
@@ -140,6 +143,9 @@ std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::
 
 		const float depth_cm = depth_data[line_points[i].y * depth_msg->width + line_points[i].x];
 		
+		#ifdef DEBUG_2
+		RCLCPP_INFO(get_logger(), "x: %d, y: %d, depth: %f\n", line_points[i].y, line_points[i].x, depth_cm);
+		#endif
 		if (depth_cm <= 0.0 || std::isnan(depth_cm)) {
 			RCLCPP_WARN(get_logger(), "Invalid depth at (%d,%d)", line_points[i].x, line_points[i].y);
 			continue;
@@ -163,10 +169,12 @@ std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::
 
 		// transform to map frame
 		try {
-		geometry_msgs::msg::PointStamped map_point = 
-			tf_buffer.transform(camera_point, "map", tf2::durationFromSec(1.0));
+
+		geometry_msgs::msg::TransformStamped transform = tf_buffer.lookupTransform("map", camera_point.header.frame_id, tf2::TimePointZero);
+		geometry_msgs::msg::PointStamped map_point;
+		tf2::doTransform(camera_point,map_point, transform);
 		
-		#ifdef DEBUG_LOG
+		#ifdef DEBUG_3
 		RCLCPP_INFO(this->get_logger(), "Map coordinates: (%.2f, %.2f, %.2f)",
 					map_point.point.x, map_point.point.y, map_point.point.z);
 		#endif
