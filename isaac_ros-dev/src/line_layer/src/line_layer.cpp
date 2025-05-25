@@ -120,7 +120,7 @@ void LineLayer::linePointCallback(autonav_interfaces::msg::LinePoints::ConstShar
 // and updated independently on its value.
 void
 LineLayer::updateBounds(
-  double /*robot_x*/, double /*robot_y*/, double /*robot_yaw*/, double * min_x,
+  double robot_x, double robot_y, double /*robot_yaw*/, double * min_x,
   double * min_y, double * max_x, double * max_y)
 {
   if (need_recalculation_) {
@@ -135,6 +135,15 @@ LineLayer::updateBounds(
     *min_y = -std::numeric_limits<float>::max();
     *max_x = std::numeric_limits<float>::max();
     *max_y = std::numeric_limits<float>::max();
+
+      // Set a 20x20 meter area around the robot
+    double half_size = 10.0; // 10 meters in each direction = 20x20 total
+    
+    *min_x = std::min(*min_x, robot_x - half_size);
+    *min_y = std::min(*min_y, robot_y - half_size);
+    *max_x = std::max(*max_x, robot_x + half_size);
+    *max_y = std::max(*max_y, robot_y + half_size)
+
     need_recalculation_ = false;
   } else {
     double tmp_min_x = last_min_x_;
