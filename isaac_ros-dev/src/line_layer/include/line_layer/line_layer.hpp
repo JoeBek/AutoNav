@@ -47,6 +47,8 @@
 #include "nav2_costmap_2d/layer.hpp"
 #include "nav2_costmap_2d/layered_costmap.hpp"
 #include "nav2_costmap_2d/costmap_2d.hpp"
+#include "nav2_costmap_2d/costmap_math.hpp"
+#include "nav2_costmap_2d/costmap_layer.hpp"
 #include "autonav_interfaces/srv/anv_lines.hpp"
 #include "autonav_interfaces/msg/line_points.hpp"
 #include "geometry_msgs/msg/vector3.hpp"
@@ -57,7 +59,7 @@
 namespace line_layer
 {
 
-class LineLayer : public nav2_costmap_2d::Layer
+class LineLayer : public nav2_costmap_2d::CostmapLayer
 {
 public:
   LineLayer();

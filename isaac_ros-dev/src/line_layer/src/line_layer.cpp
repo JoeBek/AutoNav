@@ -191,8 +191,10 @@ LineLayer::updateCosts(
   // In this case using master_array pointer is equal to modifying local costmap_
   // pointer and then calling updateWithTrueOverwrite():
 
+  // below is a testament to my stupidity. Do not be like me. There is always a reason they have it set up the way they do.
+
   // Idgaf I'm overwriting just like they did
-  unsigned char * master_array = master_grid.getCharMap();
+  //unsigned char * master_array = master_grid.getCharMap();
   unsigned int size_x = master_grid.getSizeInCellsX(), size_y = master_grid.getSizeInCellsY();
 
   // {min_i, min_j} - {max_i, max_j} - are update-window coordinates.
@@ -231,7 +233,6 @@ LineLayer::updateCosts(
   #endif
 
 
-  bool mybool = true;
   
   // add points to costmap, include bounds checking
   for (auto &point : points) {
@@ -263,18 +264,23 @@ LineLayer::updateCosts(
       #endif
       continue;
     }
-    int index_costmap = master_grid.getIndex(mx, my);
+    //int index_costmap = master_grid.getIndex(mx, my);
+    int index_new = my * size_x_ + mx;
+    //costmap_->setCost(mx, my, LETHAL_OBSTACLE);
     unsigned char cost = LETHAL_OBSTACLE; // maybe more dynamic down the line
-    master_array[index_costmap] = cost; // overwrites cost map
+    //master_array[index_costmap] = cost; // overwrites cost map
+    costmap_[index_new] = cost; // overwrites cost map
 
     #ifdef DEBUG_
     RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "grid coords: (%u,%u)", mx, my); 
     #endif
-    mybool = false;
 
 
 
   }
+
+  updateWithMax(master_grid, min_i, min_j, max_i, max_j);
+  
 }
 
 
