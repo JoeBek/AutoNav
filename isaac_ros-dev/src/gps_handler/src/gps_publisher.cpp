@@ -134,8 +134,10 @@ class GPSPublisher : public rclcpp::Node {
 		gps_msg.longitude = longitude;
 		gps_msg.altitude = altitude;
 
-		gps_msg.position_covariance = {latitude_sd * latitude_sd, 0.0, 0.0, 0.0, longitude_sd * longitude_sd, 0.0, 0.0, 0.0, altitude_sd * altitude_sd};
-		gps_msg.position_covariance_type = sensor_msgs::msg::NavSatFix::COVARIANCE_TYPE_DIAGONAL_KNOWN;
+		gps_msg.position_covariance = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+		gps_msg.position_covariance_type = sensor_msgs::msg::NavSatFix::COVARIANCE_TYPE_UNKNOWN;
+		// gps_msg.position_covariance = {latitude_sd * latitude_sd, 0.0, 0.0, 0.0, longitude_sd * longitude_sd, 0.0, 0.0, 0.0, altitude_sd * altitude_sd};
+		// gps_msg.position_covariance_type = sensor_msgs::msg::NavSatFix::COVARIANCE_TYPE_DIAGONAL_KNOWN;
 
 		// Publish the GPS data
 		publisher_->publish(gps_msg);

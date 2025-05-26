@@ -22,8 +22,8 @@ import launch.actions
 
 
 def generate_launch_description():
-    pkg_share = FindPackageShare(package='ekf_handler').find('ekf_handler')
-    dual_ekf_config = os.path.join(pkg_share, 'config', 'slam.yaml')
+    pkg_share = FindPackageShare(package='slam').find('slam')
+    dual_ekf_config = os.path.join(pkg_share, 'config', 'dual_ekf_navsat_params.yaml')
 
     return LaunchDescription(
         [

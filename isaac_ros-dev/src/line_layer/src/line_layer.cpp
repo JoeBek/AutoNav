@@ -70,10 +70,10 @@ namespace line_layer
 {
 
 LineLayer::LineLayer()
-: last_min_x_(-std::numeric_limits<float>::max()),
-  last_min_y_(-std::numeric_limits<float>::max()),
-  last_max_x_(std::numeric_limits<float>::max()),
-  last_max_y_(std::numeric_limits<float>::max())
+: last_min_x_(0.0),
+  last_min_y_(0.0),
+  last_max_x_(0.0),
+  last_max_y_(0.0)
 {
 }
 
@@ -131,10 +131,10 @@ LineLayer::updateBounds(
     // For some reason when I make these -<double>::max() it does not
     // work with Costmap2D::worldToMapEnforceBounds(), so I'm using
     // -<float>::max() instead.
-    *min_x = -std::numeric_limits<float>::max();
-    *min_y = -std::numeric_limits<float>::max();
-    *max_x = std::numeric_limits<float>::max();
-    *max_y = std::numeric_limits<float>::max();
+    //*min_x = -std::numeric_limits<float>::max();
+    //*min_y = -std::numeric_limits<float>::max();
+    //*max_x = std::numeric_limits<float>::max();
+    //*max_y = std::numeric_limits<float>::max();
 
       // Set a 20x20 meter area around the robot
     double half_size = 10.0; // 10 meters in each direction = 20x20 total
@@ -142,7 +142,7 @@ LineLayer::updateBounds(
     *min_x = std::min(*min_x, robot_x - half_size);
     *min_y = std::min(*min_y, robot_y - half_size);
     *max_x = std::max(*max_x, robot_x + half_size);
-    *max_y = std::max(*max_y, robot_y + half_size)
+    *max_y = std::max(*max_y, robot_y + half_size);
 
     need_recalculation_ = false;
   } else {

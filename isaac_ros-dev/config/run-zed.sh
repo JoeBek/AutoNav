@@ -1,3 +1,3 @@
 #!/bin/bash
-
-ros2 launch zed_wrapper zed_camera.launch.py camera_model:='zed2i' --ros-args --log-level error
+export RCUTILS_LOGGING_LEVEL_SEVERITY='ERROR'
+ros2 launch zed_wrapper zed_camera.launch.py camera_model:='zed2i' 
