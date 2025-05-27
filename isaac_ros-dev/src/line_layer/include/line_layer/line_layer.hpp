@@ -88,6 +88,8 @@ private:
 
   // Indicates that the entire gradient should be recalculated next time.
   bool need_recalculation_;
+  bool rolling_window_;
+  void updateOrigin(double new_origin_x, double new_origin_y);
 
   // Size of gradient in cells
   int GRADIENT_SIZE = 20;
