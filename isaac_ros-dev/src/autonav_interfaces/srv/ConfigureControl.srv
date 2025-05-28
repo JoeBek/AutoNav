@@ -1,5 +1,6 @@
 bool arduino
 bool motors
 bool gps
+bool estop
 ---
 int32 ret

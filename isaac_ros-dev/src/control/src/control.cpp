@@ -12,6 +12,8 @@
 
 #define WHEEL_BASE 0.6858
 
+#define DEBUG_ESTOP
+
 class ControlNode : public rclcpp::Node {
 
     public:
@@ -29,13 +31,16 @@ class ControlNode : public rclcpp::Node {
         // serial ports
         this->declare_parameter("motor_port", "/dev/ttyACM0");
         this->declare_parameter("arduino_port", "/dev/ttyACM2");
+        this->declare_parameter("estop_port", "/dev/THS0");
 
         configure_server = this->create_service<autonav_interfaces::srv::ConfigureControl>
              ("configure_control", std::bind(&ControlNode::configure, this, std::placeholders::_1, std::placeholders::_2));
 
+
     }
 
     serialib arduinoSerial;
+    serialib estopSerial;
     Xbox controller;
     MotorController motors;
     Autonomous currPose;
@@ -55,6 +60,7 @@ class ControlNode : public rclcpp::Node {
     // publisher for encoder values
      rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr encodersPub;
      rclcpp::TimerBase::SharedPtr encoder_timer_;
+     rclcpp::TimerBase::SharedPtr estop_timer_;
 
     // rclcpp::TimerBase::SharedPtr joy_timer_;
     // subscription for Nav2 pose
@@ -97,9 +103,41 @@ class ControlNode : public rclcpp::Node {
         }
     }
 
-    void joy_timer_callback(){
+    void check_estop(){
 
+        char buf[41] = {};
+        
+        int ret = estopSerial.readString(buf, '\n', 40, 10);
 
+        // >0 success, 0 timeout, <0 error
+        if (ret <= 0) {
+            return;
+        }
+
+        try {
+            buf[40] = '\0';
+
+            std::string incoming(buf);
+            incoming.erase(incoming.find_last_not_of(" \t\n\r\f\v") + 1); // remove whitespace, newlines
+            
+            if (incoming.empty()) {
+                return;
+            }
+
+            #ifdef DEBUG_ESTOP
+            RCLCPP_INFO(this->get_logger(), "incoming string: %s", incoming.c_str());
+            #endif
+
+            if (incoming == "STOP") {
+                RCLCPP_WARN(this->get_logger(), "ESTOP PRESSED: MOTORS SHUTTING DOWN");
+                motors.shutdown();
+            }
+
+        }  
+        catch(const std::exception& e [[maybe_unused]]) {
+            
+            // We are not handling this one. Robot can handle itself.
+        }
 
     }
 
@@ -189,6 +227,19 @@ class ControlNode : public rclcpp::Node {
         arduinoSerial.writeString(mode);
     }
 
+    void init_serial_estop(const char * port) {
+
+        char ret;
+        ret = estopSerial.openDevice(port, 9600);
+
+        if (ret != 1) {
+            RCLCPP_ERROR(this->get_logger(), "Arduino serial error: %s", estopSerial.error_map.at(ret).c_str());
+
+        }
+
+    }
+
+
     void configure(const std::shared_ptr<autonav_interfaces::srv::ConfigureControl::Request> request, 
                          std::shared_ptr<autonav_interfaces::srv::ConfigureControl::Response> response) {
 
@@ -196,6 +247,7 @@ class ControlNode : public rclcpp::Node {
         // configure serial
         std::string motor_port = this->get_parameter("motor_port").as_string();
         std::string arduino_port = this->get_parameter("arduino_port").as_string();
+        std::string estop_port = this->get_parameter("estop_port").as_string();
 
 
         if (request->arduino) {
@@ -212,6 +264,11 @@ class ControlNode : public rclcpp::Node {
 
         }
 
+        if (request->estop){
+            init_serial_estop(estop_port.c_str());
+        }
+
+
         std::string leftMotorCommand = "!C 1 0\r";
         std::string rightMotorCommand = "!C 2 0 \r";
         motors.motorSerial.writeString(leftMotorCommand.c_str());
@@ -225,6 +282,13 @@ class ControlNode : public rclcpp::Node {
         //XBOX SUB
         controllerSub = this->create_subscription<sensor_msgs::msg::Joy>(
             controller_topic, 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
+
+        // ESTOP CALLBACK
+        estop_timer_ = this->create_wall_timer(
+            std::chrono::milliseconds(30),
+            std::bind(&ControlNode::check_estop, this)
+        );
+
 
         //NAVIGATION ENCODER PUB
         encodersPub = this->create_publisher<autonav_interfaces::msg::Encoders>(encoder_topic, 10);
