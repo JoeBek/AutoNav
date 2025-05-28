@@ -72,8 +72,8 @@ namespace line_layer
 LineLayer::LineLayer()
 : last_min_x_(0.0),
   last_min_y_(0.0),
-  last_max_x_(0.0),
-  last_max_y_(0.0)
+  last_max_x_(1.0),
+  last_max_y_(1.0)
 {
 }
 
@@ -118,6 +118,8 @@ void LineLayer::linePointCallback(autonav_interfaces::msg::LinePoints::ConstShar
 // used in obstacle layer and voxel layer to correct bounds for the local costmap. 
 void LineLayer::updateOrigin(double new_origin_x, double new_origin_y)
 {
+  if (!costmap_)
+	  return;
   // project the new origin into the grid
   int cell_ox, cell_oy;
   cell_ox = static_cast<int>((new_origin_x - origin_x_) / resolution_);
@@ -189,6 +191,8 @@ LineLayer::updateBounds(
       updateOrigin(robot_x - getSizeInMetersX() / 2, robot_y - getSizeInMetersY() / 2);
     }
 
+    
+
     last_min_x_ = *min_x;
     last_min_y_ = *min_y;
     last_max_x_ = *max_x;
@@ -251,6 +255,8 @@ LineLayer::updateCosts(
   if (!enabled_) {
     return;
   }
+  if (!costmap_) 
+	  return;
 
   // master_array - is a direct pointer to the resulting master_grid.
   // master_grid - is a resulting costmap combined from all layers.
