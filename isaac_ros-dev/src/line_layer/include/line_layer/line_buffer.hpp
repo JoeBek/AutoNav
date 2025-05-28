@@ -24,6 +24,10 @@ class LineBuffer {
     void buffer(T data) {
     std::lock_guard<std::mutex> lock(the_great_line_guardian_);
     q_.push_back(data);
+    // no more mr. infinite vector
+    if (q_.size() > buf_size) {
+      q_.erase(q_.begin());
+    }
     
     }
 
@@ -32,6 +36,7 @@ class LineBuffer {
   private:
 
   std::vector<T> q_;
+  long unsigned int buf_size = 10;
 
 
 

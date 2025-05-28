@@ -86,8 +86,10 @@ LineLayer::onInitialize()
   auto node = node_.lock(); 
   declareParameter("enabled", rclcpp::ParameterValue(true));
   declareParameter("line_topic", rclcpp::ParameterValue("line_points"));
+  declareParameter("rolling_window", rclcpp::ParameterValue(false));
   node->get_parameter(name_ + "." + "enabled", enabled_);
   node->get_parameter(name_ + "." + "line_topic", line_topic_);
+  node->get_parameter(name_ + "." + "rolling_window", rolling_window_);
 
   line_sub_ = node->create_subscription<autonav_interfaces::msg::LinePoints>(line_topic_, 1, 
     std::bind(&LineLayer::linePointCallback, this, std::placeholders::_1));
@@ -113,6 +115,63 @@ void LineLayer::linePointCallback(autonav_interfaces::msg::LinePoints::ConstShar
 
 }
 
+// used in obstacle layer and voxel layer to correct bounds for the local costmap. 
+void LineLayer::updateOrigin(double new_origin_x, double new_origin_y)
+{
+  // project the new origin into the grid
+  int cell_ox, cell_oy;
+  cell_ox = static_cast<int>((new_origin_x - origin_x_) / resolution_);
+  cell_oy = static_cast<int>((new_origin_y - origin_y_) / resolution_);
+
+  // compute the associated world coordinates for the origin cell
+  // because we want to keep things grid-aligned
+  double new_grid_ox, new_grid_oy;
+  new_grid_ox = origin_x_ + cell_ox * resolution_;
+  new_grid_oy = origin_y_ + cell_oy * resolution_;
+
+  // To save casting from unsigned int to int a bunch of times
+  int size_x = size_x_;
+  int size_y = size_y_;
+
+  // we need to compute the overlap of the new and existing windows
+  int lower_left_x, lower_left_y, upper_right_x, upper_right_y;
+  lower_left_x = std::min(std::max(cell_ox, 0), size_x);
+  lower_left_y = std::min(std::max(cell_oy, 0), size_y);
+  upper_right_x = std::min(std::max(cell_ox + size_x, 0), size_x);
+  upper_right_y = std::min(std::max(cell_oy + size_y, 0), size_y);
+
+  unsigned int cell_size_x = upper_right_x - lower_left_x;
+  unsigned int cell_size_y = upper_right_y - lower_left_y;
+
+  // we need a map to store the obstacles in the window temporarily
+  unsigned char * local_map = new unsigned char[cell_size_x * cell_size_y];
+
+  // copy the local window in the costmap to the local map
+  copyMapRegion(
+    costmap_, lower_left_x, lower_left_y, size_x_, local_map, 0, 0, cell_size_x,
+    cell_size_x,
+    cell_size_y);
+
+  // we'll reset our maps to unknown space if appropriate
+  resetMaps();
+
+  // update the origin with the appropriate world coordinates
+  origin_x_ = new_grid_ox;
+  origin_y_ = new_grid_oy;
+
+  // compute the starting cell location for copying data back in
+  int start_x = lower_left_x - cell_ox;
+  int start_y = lower_left_y - cell_oy;
+
+  // now we want to copy the overlapping information back into the map, but in its new location
+  copyMapRegion(
+    local_map, 0, 0, cell_size_x, costmap_, start_x, start_y, size_x_, cell_size_x,
+    cell_size_y);
+  // make sure to clean up
+  delete[] local_map;
+}
+
+
 
 
 // The method is called to ask the plugin: which area of costmap it needs to update.
@@ -124,6 +183,12 @@ LineLayer::updateBounds(
   double * min_y, double * max_x, double * max_y)
 {
   if (need_recalculation_) {
+    
+    if (rolling_window_) {
+
+      updateOrigin(robot_x - getSizeInMetersX() / 2, robot_y - getSizeInMetersY() / 2);
+    }
+
     last_min_x_ = *min_x;
     last_min_y_ = *min_y;
     last_max_x_ = *max_x;

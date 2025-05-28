@@ -97,7 +97,11 @@ def main(args=None):
     gps_waypoint_handler.process_multiple_targets(targets)
 
     # Write GPS Waypoint Conversions to txt file for later use (MAKE SURE TO CHANGE ABSOLUTE PATH ON JETSON)
+<<<<<<< HEAD
     waypoints_file = open("/autonav/isaac_ros-dev/src/gps_waypoint_handler/gps_waypoint_handler/stored_waypoints.txt", "w")
+=======
+    waypoints_file = open("/home/vtcro/AutoNav/isaac_ros-dev/src/gps_waypoint_handler/gps_waypoint_handler/stored_waypoints.txt", "w")
+>>>>>>> 532ff0bac17e1252e9f206fc398b0b191d1c84df
     for waypoint in gps_waypoint_handler.current_waypoints.values():
         lat = waypoint[0]
         long = waypoint[1]

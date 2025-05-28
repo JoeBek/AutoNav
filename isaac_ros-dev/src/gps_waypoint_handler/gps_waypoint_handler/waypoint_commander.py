@@ -10,7 +10,7 @@ def main():
     # Extract the cartesian coordinates for each GPS waypoint (Calculated in gps_conversions.py)
     waypoint_positions = []
     with open("/autonav/isaac_ros-dev/src/gps_waypoint_handler/gps_waypoint_handler/stored_waypoints.txt") as waypoint_file:
-        for cur_line in waypoint_file:
+       for cur_line in waypoint_file:
             x_str, y_str = cur_line.strip().split(',')
             waypoint_positions.append((float(x_str), float(y_str)))
 
