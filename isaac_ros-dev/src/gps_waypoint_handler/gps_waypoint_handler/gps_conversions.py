@@ -61,9 +61,15 @@ class GPSHandler:
             
             # Apply heading adjustment
             adjusted_x, adjusted_y = self.apply_heading_offset(x, y)
-            
+
+            # The map that NAV2 generates is rotated 90 degrees counterclockwise about our current
+	    # robot's orientation so we have to rotate our coordinates 90 degrees clockwise to align
+	    # with NAV2's map
+            final_x = adjusted_y
+            final_y = -adjusted_x
+
             # Store the adjusted target coordinates
-            self.current_waypoints[waypoint_dict_key] = [adjusted_x, adjusted_y]
+            self.current_waypoints[waypoint_dict_key] = [final_x, final_y]
             cur_num_of_targets += 1        
 
 def main(args=None):
@@ -73,14 +79,12 @@ def main(args=None):
         # Current Longitude of stationary robot position -> Degrees
         # Current Heading of robot in degrees with respect to Magnetic North -> Degrees
         # Current Magnetic Declination for robot's location (look this up) -> Degrees
-    gps_waypoint_handler = GPSHandler(37.23504782779209, -80.42416397891978, -65.0, 0.0)
+    gps_waypoint_handler = GPSHandler(37.23141563653532, -80.4243882640172, -141.5, 0.0)
 
     # <-------------------------------------- CHANGE DURING COMPETITION -------------------------------------->
     # Populate this list with the current GPS Target Waypoints (Latitude, Longitude)
     targets = [
-        (37.23442796015905, -80.4237165761265),
-        (37.23442796015910, -80.4237165761275),
-        (37.23442796015915, -80.4237165761280),
+        (37.23127661772232, -80.42445879127482),
         # (40.749000, -73.986000),  # Target 2
         # (40.747500, -73.984500),  # Target 3
     ]
@@ -93,7 +97,7 @@ def main(args=None):
     gps_waypoint_handler.process_multiple_targets(targets)
 
     # Write GPS Waypoint Conversions to txt file for later use (MAKE SURE TO CHANGE ABSOLUTE PATH ON JETSON)
-    waypoints_file = open("/home/vtuser/ros2_ws/src/gps_waypoint_handler/gps_waypoint_handler/stored_waypoints.txt", "w")
+    waypoints_file = open("/autonav/isaac_ros-dev/src/gps_waypoint_handler/gps_waypoint_handler/stored_waypoints.txt", "w")
     for waypoint in gps_waypoint_handler.current_waypoints.values():
         lat = waypoint[0]
         long = waypoint[1]

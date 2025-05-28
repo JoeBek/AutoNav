@@ -9,7 +9,7 @@ def main():
 
     # Extract the cartesian coordinates for each GPS waypoint (Calculated in gps_conversions.py)
     waypoint_positions = []
-    with open("/home/vtuser/ros2_ws/src/gps_waypoint_handler/gps_waypoint_handler/stored_waypoints.txt") as waypoint_file:
+    with open("/autonav/isaac_ros-dev/src/gps_waypoint_handler/gps_waypoint_handler/stored_waypoints.txt") as waypoint_file:
         for cur_line in waypoint_file:
             x_str, y_str = cur_line.strip().split(',')
             waypoint_positions.append((float(x_str), float(y_str)))
@@ -26,16 +26,15 @@ def main():
         goal_pose.pose.orientation.z = 0.0
         goal_poses.append(goal_pose)
 
-    # path = navigator.getPathThroughPoses(initial_pose, goal_poses)
-
     navigator.followWaypoints(goal_poses)
     while not navigator.isTaskComplete():
-        print('Task not Completed Yet!')
+        current_waypoint = navigator.getFeedback().current_waypoint + 1
+        print(f"Currently Navigating to Goal {current_waypoint}")
 
     # Do something depending on the return code
     result = navigator.getResult()
     if result == TaskResult.SUCCEEDED:
-        print('Goal succeeded!')
+        print('All Goals Navigated!')
     elif result == TaskResult.CANCELED:
         print('Goal was canceled!')
     elif result == TaskResult.FAILED:
@@ -43,7 +42,7 @@ def main():
     else:
         print('Goal has an invalid return status!')
 
-    navigator.lifecycleShutdown()
+    # navigator.lifecycleShutdown() # Shuts down all of NAV2's BT Behavior
     exit(0)
 
 if __name__ == '__main__':
