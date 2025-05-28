@@ -7,6 +7,8 @@
 #include "geometry_msgs/msg/twist.hpp"
 #include "autonav_interfaces/msg/encoders.hpp"
 #include "autonav_interfaces/srv/configure_control.hpp"
+#include "std_msgs/msg/string.hpp"
+
 #include <iostream>
 #include <string>
 
@@ -31,7 +33,7 @@ class ControlNode : public rclcpp::Node {
         // serial ports
         this->declare_parameter("motor_port", "/dev/ttyACM0");
         this->declare_parameter("arduino_port", "/dev/ttyACM2");
-        this->declare_parameter("estop_port", "/dev/THS0");
+        this->declare_parameter("estop_port", "/dev/ttyTHS1");
 
         configure_server = this->create_service<autonav_interfaces::srv::ConfigureControl>
              ("configure_control", std::bind(&ControlNode::configure, this, std::placeholders::_1, std::placeholders::_2));
@@ -40,7 +42,6 @@ class ControlNode : public rclcpp::Node {
     }
 
     serialib arduinoSerial;
-    serialib estopSerial;
     Xbox controller;
     MotorController motors;
     Autonomous currPose;
@@ -59,8 +60,8 @@ class ControlNode : public rclcpp::Node {
 
     // publisher for encoder values
      rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr encodersPub;
+     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr estop_sub_;
      rclcpp::TimerBase::SharedPtr encoder_timer_;
-     rclcpp::TimerBase::SharedPtr estop_timer_;
 
     // rclcpp::TimerBase::SharedPtr joy_timer_;
     // subscription for Nav2 pose
@@ -103,25 +104,21 @@ class ControlNode : public rclcpp::Node {
         }
     }
 
-    void check_estop(){
+    void estop_callback(const std_msgs::msg::String::SharedPtr msg){
 
-        char buf[41] = {};
-        
-        int ret = estopSerial.readString(buf, '\n', 40, 10);
 
-        // >0 success, 0 timeout, <0 error
-        if (ret <= 0) {
-            return;
-        }
+	   
+            
+	    std::string incoming = msg->data;
 
-        try {
-            buf[40] = '\0';
-
-            std::string incoming(buf);
-            incoming.erase(incoming.find_last_not_of(" \t\n\r\f\v") + 1); // remove whitespace, newlines
             
             if (incoming.empty()) {
+	       #ifdef DEBUG_ESTOP
+	       RCLCPP_INFO(this->get_logger(), "incoming string empty");
+	       #endif
+
                 return;
+
             }
 
             #ifdef DEBUG_ESTOP
@@ -133,13 +130,8 @@ class ControlNode : public rclcpp::Node {
                 motors.shutdown();
             }
 
-        }  
-        catch(const std::exception& e [[maybe_unused]]) {
-            
-            // We are not handling this one. Robot can handle itself.
-        }
-
-    }
+    }  
+    
 
 
     void publish_encoder_data() {
@@ -222,22 +214,15 @@ class ControlNode : public rclcpp::Node {
             RCLCPP_ERROR(this->get_logger(), "Arduino serial error: %s", arduinoSerial.error_map.at(ret).c_str());
 
         }
+	else {
+	    RCLCPP_INFO(this->get_logger(), "estop connection success!");
+	}
+
 
         char mode[8] = "MANUAL\n";
         arduinoSerial.writeString(mode);
     }
 
-    void init_serial_estop(const char * port) {
-
-        char ret;
-        ret = estopSerial.openDevice(port, 9600);
-
-        if (ret != 1) {
-            RCLCPP_ERROR(this->get_logger(), "Arduino serial error: %s", estopSerial.error_map.at(ret).c_str());
-
-        }
-
-    }
 
 
     void configure(const std::shared_ptr<autonav_interfaces::srv::ConfigureControl::Request> request, 
@@ -264,9 +249,8 @@ class ControlNode : public rclcpp::Node {
 
         }
 
-        if (request->estop){
-            init_serial_estop(estop_port.c_str());
-        }
+	    
+        estop_sub_ = this->create_subscription<std_msgs::msg::String>("/estop", 10, std::bind(&ControlNode::estop_callback, this, std::placeholders::_1));
 
 
         std::string leftMotorCommand = "!C 1 0\r";
@@ -284,10 +268,8 @@ class ControlNode : public rclcpp::Node {
             controller_topic, 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
 
         // ESTOP CALLBACK
-        estop_timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(30),
-            std::bind(&ControlNode::check_estop, this)
-        );
+	
+        
 
 
         //NAVIGATION ENCODER PUB
