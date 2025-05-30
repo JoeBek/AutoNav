@@ -215,7 +215,7 @@ class ControlNode : public rclcpp::Node {
 
         }
 	else {
-	    RCLCPP_INFO(this->get_logger(), "estop connection success!");
+	    RCLCPP_INFO(this->get_logger(), "arduino connection success!");
 	}
 
 
