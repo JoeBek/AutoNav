@@ -6,7 +6,7 @@ from serial import Serial
 
 
 # serial parameters
-baudrate = 115200 
+baudrate = 9600 
 cereal = Serial('/dev/ttyTHS1', baudrate, timeout=3)
 cereal.stopbits = 1
 cereal.parity = 'N'
@@ -29,14 +29,6 @@ def send_message_gps(cereal, message:str):
 try:
     while True:
 
-        message = input("enter message: \n")
-
-        if message == 'break':
-            break
-
-        if message:
-            send_message_gps(cereal, message)
-
         time.sleep(.4)
         # recieve messages
         
@@ -45,7 +37,8 @@ try:
 
 
         print("receiving something ... \n")
-        line = cereal.readline().decode(encoding, errors='ignore')
+        line = cereal.read(5)
+#        line = cereal.readline().decode(encoding, errors='ignore')
         print(line)
         
     

@@ -32,7 +32,7 @@ def generate_launch_description():
     publish_period = DeclareLaunchArgument(
         'publish_period',
         # 0.02 if you want to publish
-        default_value='0.2', #Changed from 0.2
+        default_value='0.02',
         description="if you want SLAM to publish map->odom... (sim yes real no)"
     )
     nav2_params = DeclareLaunchArgument(
@@ -169,7 +169,7 @@ def generate_launch_description():
         nav2_params,
         #nodes
         #point2laser,
-        ekf_local, #MAKE SURE TO UNCOMMENT THIS
+        ekf_local,
         slam_toolbox,
         #gps_transform,
         #ekf_global, 

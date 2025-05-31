@@ -10,5 +10,8 @@ RUN apt-get update && apt-get install -y \
 	joystick \
 	udev \
 	ros-humble-point-cloud-transport \
-	nano \
+	nano
+
+RUN pip install \
+	pyserial
 

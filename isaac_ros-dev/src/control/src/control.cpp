@@ -7,10 +7,14 @@
 #include "geometry_msgs/msg/twist.hpp"
 #include "autonav_interfaces/msg/encoders.hpp"
 #include "autonav_interfaces/srv/configure_control.hpp"
+#include "std_msgs/msg/string.hpp"
+
 #include <iostream>
 #include <string>
 
 #define WHEEL_BASE 0.6858
+
+#define DEBUG_ESTOP
 
 class ControlNode : public rclcpp::Node {
 
@@ -29,9 +33,11 @@ class ControlNode : public rclcpp::Node {
         // serial ports
         this->declare_parameter("motor_port", "/dev/ttyACM0");
         this->declare_parameter("arduino_port", "/dev/ttyACM2");
+        this->declare_parameter("estop_port", "/dev/ttyTHS1");
 
         configure_server = this->create_service<autonav_interfaces::srv::ConfigureControl>
              ("configure_control", std::bind(&ControlNode::configure, this, std::placeholders::_1, std::placeholders::_2));
+
 
     }
 
@@ -54,6 +60,7 @@ class ControlNode : public rclcpp::Node {
 
     // publisher for encoder values
      rclcpp::Publisher<autonav_interfaces::msg::Encoders>::SharedPtr encodersPub;
+     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr estop_sub_;
      rclcpp::TimerBase::SharedPtr encoder_timer_;
 
     // rclcpp::TimerBase::SharedPtr joy_timer_;
@@ -97,11 +104,34 @@ class ControlNode : public rclcpp::Node {
         }
     }
 
-    void joy_timer_callback(){
+    void estop_callback(const std_msgs::msg::String::SharedPtr msg){
 
 
+	   
+            
+	    std::string incoming = msg->data;
 
-    }
+            
+            if (incoming.empty()) {
+	       #ifdef DEBUG_ESTOP
+	       RCLCPP_INFO(this->get_logger(), "incoming string empty");
+	       #endif
+
+                return;
+
+            }
+
+            #ifdef DEBUG_ESTOP
+            RCLCPP_INFO(this->get_logger(), "incoming string: %s", incoming.c_str());
+            #endif
+
+            if (incoming == "STOP") {
+                RCLCPP_WARN(this->get_logger(), "ESTOP PRESSED: MOTORS SHUTTING DOWN");
+                motors.shutdown();
+            }
+
+    }  
+    
 
 
     void publish_encoder_data() {
@@ -184,10 +214,16 @@ class ControlNode : public rclcpp::Node {
             RCLCPP_ERROR(this->get_logger(), "Arduino serial error: %s", arduinoSerial.error_map.at(ret).c_str());
 
         }
+	else {
+	    RCLCPP_INFO(this->get_logger(), "arduino connection success!");
+	}
+
 
         char mode[8] = "MANUAL\n";
         arduinoSerial.writeString(mode);
     }
+
+
 
     void configure(const std::shared_ptr<autonav_interfaces::srv::ConfigureControl::Request> request, 
                          std::shared_ptr<autonav_interfaces::srv::ConfigureControl::Response> response) {
@@ -196,6 +232,7 @@ class ControlNode : public rclcpp::Node {
         // configure serial
         std::string motor_port = this->get_parameter("motor_port").as_string();
         std::string arduino_port = this->get_parameter("arduino_port").as_string();
+        std::string estop_port = this->get_parameter("estop_port").as_string();
 
 
         if (request->arduino) {
@@ -212,6 +249,10 @@ class ControlNode : public rclcpp::Node {
 
         }
 
+	    
+        estop_sub_ = this->create_subscription<std_msgs::msg::String>("/estop", 10, std::bind(&ControlNode::estop_callback, this, std::placeholders::_1));
+
+
         std::string leftMotorCommand = "!C 1 0\r";
         std::string rightMotorCommand = "!C 2 0 \r";
         motors.motorSerial.writeString(leftMotorCommand.c_str());
@@ -225,6 +266,11 @@ class ControlNode : public rclcpp::Node {
         //XBOX SUB
         controllerSub = this->create_subscription<sensor_msgs::msg::Joy>(
             controller_topic, 10, std::bind(&ControlNode::joystick_callback, this, std::placeholders::_1));
+
+        // ESTOP CALLBACK
+	
+        
+
 
         //NAVIGATION ENCODER PUB
         encodersPub = this->create_publisher<autonav_interfaces::msg::Encoders>(encoder_topic, 10);
