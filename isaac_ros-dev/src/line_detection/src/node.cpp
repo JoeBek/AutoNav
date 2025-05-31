@@ -69,6 +69,7 @@ class LineDetectorNode : public rclcpp::Node {
 			);
 		_line_timer = this->create_wall_timer(std::chrono::seconds(1), std::bind(&LineDetectorNode::line_callback, this));
 
+		_line_point_cloud_pub = this->create_publisher<sensor_msgs::msg::PointCloud2>("lines_pointcloud", 10)
 			// create service for line detection
 		    _line_service = this->create_service<autonav_interfaces::srv::AnvLines>("line_service",
 			 std::bind(&LineDetectorNode::line_service, this, std::placeholders::_1, std::placeholders::_2));
@@ -166,6 +167,8 @@ std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::
 		camera_point.point.x = ray.x * depth_cm;
 		camera_point.point.y = ray.y * depth_cm;
 		camera_point.point.z = ray.z * depth_cm;
+
+		
 
 		// transform to map frame
 		try {

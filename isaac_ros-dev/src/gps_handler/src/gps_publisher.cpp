@@ -113,7 +113,7 @@ class GPSPublisher : public rclcpp::Node {
             std::vector<std::string> fields = split(data_payload, ',');
 
 	    // Check if GPS Reading contains valid data
-	    if (fields[POSITION_TYPE_INDEX] == "SINGLE") {
+	    if (fields[POSITION_TYPE_INDEX] == "SINGLE" || fields[POSITION_TYPE_INDEX] == "INS_PSRSP") {
 	    	// printf("Encountered Valid GPS Data!\n");  // For Debugging
 		// Get GPS Information for NavSatFix Message in the publisher
 		double latitude = std::stod(fields[LATITUDE_INDEX]);

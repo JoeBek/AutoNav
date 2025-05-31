@@ -175,7 +175,7 @@ class ControlNode : public rclcpp::Node {
         }
 
         arduinoEncoderCounts += "\n";
-        arduinoSerial.writeString(arduinoEncoderCounts.c_str());
+        // arduinoSerial.writeString(arduinoEncoderCounts.c_str());
 
         encodersPub->publish(encoder_msg);
 

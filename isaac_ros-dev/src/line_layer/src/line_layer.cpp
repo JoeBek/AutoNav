@@ -56,6 +56,7 @@ using nav2_costmap_2d::NO_INFORMATION;
 //#define DEBUG_2
 //#define DEBUG_3
 //#define DEBUG_4
+#define DEBUG_n
 
 // helper methods outside namespace
 
@@ -141,7 +142,12 @@ void LineLayer::publishCostmap() {
 
     }
     else {
-      msg->data[i] = static_cast<int8_t>(cost * 100 / 254);
+      int8_t point = static_cast<int8_t>(cost * 100 / 254);
+      msg->data[i] = point;
+#ifdef DEBUG_n
+  RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "point: %c", point);
+
+#endif
       
     }
 
@@ -290,8 +296,12 @@ LineLayer::updateCosts(
   if (!enabled_) {
     return;
   }
-  if (!costmap_) 
+  if (!costmap_  && !layered_costmap_->isRolling()) { 
+#ifdef DEBUG_n
+  RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "no costmap_");
+#endif
 	  return;
+  }
 
   // master_array - is a direct pointer to the resulting master_grid.
   // master_grid - is a resulting costmap combined from all layers.
@@ -309,7 +319,10 @@ LineLayer::updateCosts(
   // below is a testament to my stupidity. Do not be like me. There is always a reason they have it set up the way they do.
 
   // Idgaf I'm overwriting just like they did
-  //unsigned char * master_array = master_grid.getCharMap();
+  unsigned char * master_array = master_grid.getCharMap();
+  if (!master_array) {
+	  return;
+  }
   unsigned int size_x = master_grid.getSizeInCellsX(), size_y = master_grid.getSizeInCellsY();
 
   // {min_i, min_j} - {max_i, max_j} - are update-window coordinates.
@@ -322,10 +335,14 @@ LineLayer::updateCosts(
   max_i = std::min(static_cast<int>(size_x), max_i);
   max_j = std::min(static_cast<int>(size_y), max_j);
 
+  #ifdef DEBUG_n
+  RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "bounds: (min_x: %d), (min_y: %d), (max_x: %d), (max_y: %d)",min_i, max_i, min_j, max_j );
+  #endif
+
   // joe was here
 
   // std::vector<geometry_msgs::msg::Vector3> points;
-  #ifdef DEBUG_
+  #ifdef DEBUG_n
   RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "HEEEEEEEEEEEELP HEEEELP ME HEEEEEEEEEELP");
   #endif
 
@@ -357,36 +374,47 @@ LineLayer::updateCosts(
     double x = point.x;
     double y = point.y;
 
-    #ifdef DEBUG_3 
+    #ifdef DEBUG_n 
     RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "x, y = (%f, %f)", x, y);
     #endif
 
     unsigned int mx, my;
     if (!master_grid.worldToMap(x, y, mx, my)) {
       
-      #ifdef DEBUG_
+      #ifdef DEBUG_n
         RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "grid coords: (%u,%u)", mx, my); 
-        //RCLCPP_WARN(rclcpp::get_logger("nav_costmap_2d"), "LISTEN UP Computing map coords failed");
-      #endif
+        //RCLCPP_WARN(rclcpp::get_logger("nav_costmap_2d"), "LISTEN UP Computing map coords failed"); 
+	#endif
     }
 
 
     if (!within_bounds(static_cast<int>(mx), min_i, max_i) || !within_bounds(static_cast<int>(my), min_j, max_j)) {
 
-      #ifdef DEBUG_4
-      RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "bounds: (%d, %d), (%d, %d)",min_i, max_i, min_j, max_j); 
+      #ifdef DEBUG_n
+      //RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "bounds: (%d, %d), (%d, %d)",min_i, max_i, min_j, max_j); 
       RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "input: (%u), (%u)", mx, my); 
       #endif
       continue;
     }
-    //int index_costmap = master_grid.getIndex(mx, my);
     int index_new = my * size_x_ + mx;
-    //costmap_->setCost(mx, my, LETHAL_OBSTACLE);
     unsigned char cost = LETHAL_OBSTACLE; // maybe more dynamic down the line
-    //master_array[index_costmap] = cost; // overwrites cost map
+    
+    if (layered_costmap_->isRolling()){
+	    #ifdef DEBUG_n
+	      RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "points for map: (%u), (%u)", mx, my); 
+	      #endif
+	   
+    	int index_costmap = master_grid.getIndex(mx, my);
+    	master_array[index_costmap] = cost; // overwrites cost map
+	continue;
+    }
+    if (layered_costmap_->isRolling()){
+	    return;
+    }
+   
     costmap_[index_new] = cost; // overwrites cost map
 
-    #ifdef DEBUG_
+    #ifdef DEBUG_n
     RCLCPP_INFO(rclcpp::get_logger("nav2_costmap_2d"), "grid coords: (%u,%u)", mx, my); 
     #endif
 
