@@ -86,6 +86,7 @@ class LineDetectorNode : public rclcpp::Node {
 	rclcpp::Subscription<sensor_msgs::msg::CameraInfo>::SharedPtr _camera_model_sub;
 
 	rclcpp::Service<autonav_interfaces::srv::AnvLines>::SharedPtr _line_service;
+	rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr _line_point_cloud_pub; 
 
 	std::mutex callback_lock;
 	std::mutex depth_callback_lock;
