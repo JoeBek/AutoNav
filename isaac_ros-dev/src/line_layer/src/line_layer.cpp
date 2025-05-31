@@ -90,9 +90,17 @@ LineLayer::onInitialize()
   node->get_parameter(name_ + "." + "enabled", enabled_);
   node->get_parameter(name_ + "." + "line_topic", line_topic_);
   node->get_parameter(name_ + "." + "rolling_window", rolling_window_);
+  node->get_parameter(name_ + "." + "publish_costmap", publish_costmap_);
+
 
   line_sub_ = node->create_subscription<autonav_interfaces::msg::LinePoints>(line_topic_, 1, 
     std::bind(&LineLayer::linePointCallback, this, std::placeholders::_1));
+  
+  if (publish_costmap_) {
+    costmap_pub_ = node->create_publisher<nav_msgs::msg::OccupancyGrid>("/line_costmap", 1);
+  }
+
+  
 
   need_recalculation_ = false;
   current_ = true;
@@ -113,6 +121,33 @@ void LineLayer::linePointCallback(autonav_interfaces::msg::LinePoints::ConstShar
 
       buffer_.buffer(line);
 
+}
+
+void LineLayer::publishCostmap() {
+
+  auto msg = std::make_unique<nav_msgs::msg::OccupancyGrid>();
+  
+  msg->header.frame_id = layered_costmap_->getGlobalFrameID();
+  msg->header.stamp = node_.lock()->now();
+  msg->info.width = size_x_;
+  msg->info.height = size_y_;
+  msg->info.origin.position.x = origin_x_;
+  msg->info.origin.position.y = origin_y_;
+  msg->data.resize(size_x_ * size_y_);
+  for (unsigned int i = 0; i < size_x_ * size_y_; ++i) {
+    unsigned char cost = costmap_[i];
+    if (cost == NO_INFORMATION) {
+      msg->data[i] = -1;
+
+    }
+    else {
+      msg->data[i] = static_cast<int8_t>(cost * 100 / 254);
+      
+    }
+
+  }
+  costmap_pub_->publish(std::move(msg));
+  
 }
 
 // used in obstacle layer and voxel layer to correct bounds for the local costmap. 
@@ -360,6 +395,10 @@ LineLayer::updateCosts(
   }
 
   updateWithMax(master_grid, min_i, min_j, max_i, max_j);
+
+  if (publish_costmap_) {
+   publishCostmap();
+  }
   
 }
 

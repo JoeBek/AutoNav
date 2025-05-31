@@ -54,6 +54,7 @@
 #include "geometry_msgs/msg/vector3.hpp"
 #include "nav2_costmap_2d/observation_buffer.hpp"
 #include "line_layer/line_buffer.hpp"
+#include <nav_msgs/msg/occupancy_grid.hpp>
 #include <optional>
 
 namespace line_layer
@@ -81,6 +82,8 @@ public:
 
   virtual void onFootprintChanged();
 
+
+
   virtual bool isClearable() {return false;}
 
 private:
@@ -89,7 +92,9 @@ private:
   // Indicates that the entire gradient should be recalculated next time.
   bool need_recalculation_;
   bool rolling_window_;
+  bool publish_costmap_;
   void updateOrigin(double new_origin_x, double new_origin_y);
+  void publishCostmap();
 
   // Size of gradient in cells
   int GRADIENT_SIZE = 20;
@@ -97,6 +102,7 @@ private:
   int GRADIENT_FACTOR = 10;
 
   rclcpp::Subscription<autonav_interfaces::msg::LinePoints>::SharedPtr line_sub_;
+  rclcpp::Publisher<nav_msgs::msg::OccupancyGrid>::SharedPtr costmap_pub_;
   std::string line_topic_;
   // turns out you can type anything you want in a comment
   // poop

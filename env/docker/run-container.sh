@@ -67,6 +67,9 @@ DOCKER_ARGS+=("-v /etc/localtime:/etc/localtime:ro") # sync time or something
 DOCKER_ARGS+=("--workdir /autonav/isaac_ros-dev") # mount workspace 
 DOCKER_ARGS+=("-v $SCRIPT_DIR/entrypoint_additions:/usr/local/bin/scripts/entrypoint_additions") # mount entrypoint scripts
 DOCKER_ARGS+=("-v $SCRIPT_DIR/entrypoint.sh:/usr/local/bin/scripts/entrypoint.sh") # mount entrypoint
+DOCKER_ARGS+=("-v $HOME/zed/settings:/usr/local/zed/settings") # mount zed config 
+DOCKER_ARGS+=("-v $HOME/zed/resources:/usr/local/zed/resources") # mount zed config 
+
 #DOCKER_ARGS+=("-e PS1='bowser@koopa-kingdom:\\w # '") # set cool prompt
 DOCKER_ARGS+=("--entrypoint $ENTRYPOINT")
 
