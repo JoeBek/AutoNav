@@ -23,6 +23,8 @@ setup(
             'gps_conversions = gps_waypoint_handler.gps_conversions:main',
             'waypoint_commander = gps_waypoint_handler.waypoint_commander:main',
             'get_gps_positioning = gps_waypoint_handler.get_gps_positioning:main',
+            'gps_waypoint_bringup = gps_waypoint_handler.gps_waypoint_bringup:main',
+            'tester_publisher = gps_waypoint_handler.tester_publisher:main',
         ],
     },
 )

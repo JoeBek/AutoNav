@@ -4,6 +4,7 @@ class GPSHandler:
     def __init__(self, ref_lat:float, ref_long:float, cur_heading:float, cur_decl:float):
         self.reference_latitude = ref_lat  # The robot's current GPS waypoint latitude on startup
         self.reference_longitude = ref_long  # The robot's current GPS waypoint longitude on startup
+        self.target_waypoints_in_lat_long = [] # The target waypoints in their latitude and longitude format
         # The robot's heading is the difference in degrees between the robot's current orientation and 
         # MAGNETIC NORTH. For instance if the robot is currently oriented 30 degrees due west with respect
         # to MAGNETIC NORTH then the heading would be -30 degrees. Vise Versa if the robot was oriented
@@ -61,46 +62,31 @@ class GPSHandler:
             
             # Apply heading adjustment
             adjusted_x, adjusted_y = self.apply_heading_offset(x, y)
+            print(f"X: {adjusted_x}, Y: {adjusted_y}")
+
+            # The that NAV2 generates is also rotated 90 degrees for some reason so we have to account for
+            # this rotation in our code as well
+            final_x = adjusted_y
+            final_y = -adjusted_x
             
             # Store the adjusted target coordinates
-            self.current_waypoints[waypoint_dict_key] = [adjusted_x, adjusted_y]
-            cur_num_of_targets += 1        
+            self.current_waypoints[waypoint_dict_key] = [final_x, final_y]
+            cur_num_of_targets += 1      
 
-def main(args=None):
-    # <-------------------------------------- CHANGE DURING COMPETITION -------------------------------------->
-    # Populate the GPSHandler Object with the following:
-        # Current Latitude of stationary robot position -> Degrees
-        # Current Longitude of stationary robot position -> Degrees
-        # Current Heading of robot in degrees with respect to Magnetic North -> Degrees
-        # Current Magnetic Declination for robot's location (look this up) -> Degrees
-    gps_waypoint_handler = GPSHandler(37.23504782779209, -80.42416397891978, -65.0, 0.0)
+    def waypoint_conversions_bringup(self):
+        # Negative Declination means TRUE NORTH IS shifted clockwise by however many degrees specified.
+        # For instance in Blacksburg the magnetic declination is around -8 degrees. Meaning if you are 
+        # facing Magnectic North provided by your IPhone compass you would turn 8 degrees due East, i.e. 
+        # clockwise, to be facing TRUE NORTH. This also means that now referencing that TRUE NORTH orientation
+        # you would take the difference in degrees from the TRUE NORTH and the current orientation of the robot.
+        self.process_multiple_targets(self.target_waypoints_in_lat_long)
 
-    # <-------------------------------------- CHANGE DURING COMPETITION -------------------------------------->
-    # Populate this list with the current GPS Target Waypoints (Latitude, Longitude)
-    targets = [
-        (37.23442796015905, -80.4237165761265),
-        (37.23442796015910, -80.4237165761275),
-        (37.23442796015915, -80.4237165761280),
-        # (40.749000, -73.986000),  # Target 2
-        # (40.747500, -73.984500),  # Target 3
-    ]
-
-    # Negative Declination means TRUE NORTH IS shifted clockwise by however many degrees specified.
-    # For instance in Blacksburg the magnetic declination is around -8 degrees. Meaning if you are 
-    # facing Magnectic North provided by your IPhone compass you would turn 8 degrees due East, i.e. 
-    # clockwise, to be facing TRUE NORTH. This also means that now referencing that TRUE NORTH orientation
-    # you would take the difference in degrees from the TRUE NORTH and the current orientation of the robot.
-    gps_waypoint_handler.process_multiple_targets(targets)
-
-    # Write GPS Waypoint Conversions to txt file for later use (MAKE SURE TO CHANGE ABSOLUTE PATH ON JETSON)
-    waypoints_file = open("/home/vtcro/AutoNav/isaac_ros-dev/src/gps_waypoint_handler/gps_waypoint_handler/stored_waypoints.txt", "w")
-    for waypoint in gps_waypoint_handler.current_waypoints.values():
-        lat = waypoint[0]
-        long = waypoint[1]
-        stored_data = str(lat) + "," + str(long) + "\n"
-        print(stored_data)
-        waypoints_file.write(stored_data)
-    waypoints_file.close()
-
-if __name__ == '__main__':
-    main()
+        # Write GPS Waypoint Conversions to txt file for later use (MAKE SURE TO CHANGE ABSOLUTE PATH ON JETSON)
+        waypoints_file = open("/home/vtuser/ros2_ws/src/gps_waypoint_handler/gps_waypoint_handler/stored_waypoints.txt", "w")
+        for waypoint in self.current_waypoints.values():
+            lat = waypoint[0]
+            long = waypoint[1]
+            stored_data = str(lat) + "," + str(long) + "\n"
+            print(stored_data)
+            waypoints_file.write(stored_data)
+        waypoints_file.close()
