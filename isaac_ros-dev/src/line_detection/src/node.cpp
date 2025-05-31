@@ -138,6 +138,8 @@ std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::
     // extract depth value TODO validate
     const float* depth_data = reinterpret_cast<const float*>(depth_msg->data.data());
 
+	std::vector<std::array<float, 3>> pc_vec;
+
 
 	for (int i=0; i < line_points_len; i++){
 
@@ -163,9 +165,17 @@ std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::
 		// create camera-frame point
 		geometry_msgs::msg::PointStamped camera_point;
 		camera_point.header = depth_msg->header;
-		camera_point.point.x = ray.x * depth_cm;
-		camera_point.point.y = ray.y * depth_cm;
-		camera_point.point.z = ray.z * depth_cm;
+		float point_x = ray.x * depth_cm;
+		float point_y = ray.y * depth_cm;
+		float point_z = ray.z * depth_cm;
+		camera_point.point.x = point_x;
+		camera_point.point.y = point_y;
+		camera_point.point.z = point_z;
+
+		pc_vec.push_back({point_x, point_y, point_z});
+		RCLCPP_INFO(this->get_logger(), "points: %f, %f, %f", point_x, point_y, point_z);
+
+
 
 		// transform to map frame
 		try {
@@ -188,6 +198,8 @@ std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::
 		}
 
 	}
+
+	
 
 	return depth_line_points;
 }
