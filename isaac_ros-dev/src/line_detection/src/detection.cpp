@@ -8,7 +8,6 @@
 
 
 
-
 /**
  * Detects and returns pixels likely belonging to lines. 
  * Most noise detected is either far outside the couse, or is part of an obstacle.

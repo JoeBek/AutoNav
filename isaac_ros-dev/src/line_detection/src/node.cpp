@@ -14,6 +14,8 @@
 #include <tf2_eigen/tf2_eigen.hpp>
 #include <Eigen/Geometry>
 #include <image_geometry/pinhole_camera_model.h>
+#include <sensor_msgs/msg/point_cloud2.hpp>
+#include <sensor_msgs/point_cloud2_iterator.hpp>
 #include <mutex>
 
 //#define DEBUG_2
@@ -69,7 +71,7 @@ class LineDetectorNode : public rclcpp::Node {
 			);
 		_line_timer = this->create_wall_timer(std::chrono::seconds(1), std::bind(&LineDetectorNode::line_callback, this));
 
-		_line_point_cloud_pub = this->create_publisher<sensor_msgs::msg::PointCloud2>("lines_pointcloud", 10)
+		_line_point_cloud_pub = this->create_publisher<sensor_msgs::msg::PointCloud2>("lines_pointcloud", 10);
 			// create service for line detection
 		    _line_service = this->create_service<autonav_interfaces::srv::AnvLines>("line_service",
 			 std::bind(&LineDetectorNode::line_service, this, std::placeholders::_1, std::placeholders::_2));
@@ -129,6 +131,36 @@ void LineDetectorNode::cameraInfoCallback(const sensor_msgs::msg::CameraInfo::Sh
     }
 }
 
+sensor_msgs::msg::PointCloud2 createPointCloud(const std::vector<std::array<float, 3>>& points, 
+											   const std::string& frame_id) {
+	sensor_msgs::msg::PointCloud2 pointcloud;
+	pointcloud.header.frame_id = frame_id;
+	pointcloud.header.stamp = rclcpp::Clock().now();
+	pointcloud.height = 1;
+	pointcloud.width = points.size();
+	pointcloud.is_dense = false;
+	pointcloud.is_bigendian = false;
+
+	sensor_msgs::PointCloud2Modifier modifier(pointcloud);
+	modifier.setPointCloud2FieldsByString(1, "xyz");
+	modifier.resize(points.size());
+
+	sensor_msgs::PointCloud2Iterator<float> iter_x(pointcloud, "x");
+	sensor_msgs::PointCloud2Iterator<float> iter_y(pointcloud, "y");
+	sensor_msgs::PointCloud2Iterator<float> iter_z(pointcloud, "z");
+
+	for (const auto& point : points) {
+		*iter_x = point[0];
+		*iter_y = point[1];
+		*iter_z = point[2];
+		++iter_x;
+		++iter_y;
+		++iter_z;
+	}
+
+	return pointcloud;
+}
+
 
 /**
  * Converts a list of image indicies to map frame coordinates  
@@ -141,6 +173,7 @@ std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::
     const float* depth_data = reinterpret_cast<const float*>(depth_msg->data.data());
 
 	std::vector<std::array<float, 3>> pc_vec;
+	std::string frame_id = depth_msg->header.frame_id;
 
 
 	for (int i=0; i < line_points_len; i++){
@@ -175,11 +208,8 @@ std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::
 		camera_point.point.z = point_z;
 
 		pc_vec.push_back({point_x, point_y, point_z});
-		RCLCPP_INFO(this->get_logger(), "points: %f, %f, %f", point_x, point_y, point_z);
 
 
-
-		
 
 		// transform to map frame
 		try {
@@ -203,7 +233,8 @@ std::vector<Eigen::Vector3d> LineDetectorNode::map_transform(const sensor_msgs::
 
 	}
 
-	
+	sensor_msgs::msg::PointCloud2 pointcloud = createPointCloud(pc_vec, frame_id);
+	_line_point_cloud_pub->publish(pointcloud);
 
 	return depth_line_points;
 }
